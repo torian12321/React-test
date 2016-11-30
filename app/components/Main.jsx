@@ -1,5 +1,8 @@
-var React = require('react');
-var Nav = require('Nav');
+var
+React      = require('react'),
+Nav        = require('Nav'),
+GridLayout = require('./GridLayout.jsx');
+
 
 var Main = React.createClass({
   render: function () {
@@ -7,6 +10,7 @@ var Main = React.createClass({
       <div>
         <Nav/>
         <h2>Main Component</h2>
+        <GridLayout />
       </div>
     );
   }
