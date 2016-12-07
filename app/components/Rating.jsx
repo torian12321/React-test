@@ -16,7 +16,7 @@ class Rating extends React.Component {
             }
         }
         return (
-            <ul className={ 'rating ' + this.props.type }>
+            <ul className={ 'rating ' + this.props.style }>
                 { marks }
             </ul>
         );
@@ -27,11 +27,11 @@ class Rating extends React.Component {
 Rating.propTypes = {
     children: React.PropTypes.number.isRequired,
     of      : React.PropTypes.number.isRequired,
-    type    : React.PropTypes.string.isRequired
+    style   : React.PropTypes.string.isRequired
 };
 Rating.defaultProps = {
     children: 0,
-    type    : '',       // info | success | danger | warning
+    style   : '',       // info | success | danger | warning
     of      : 5
 };
 

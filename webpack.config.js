@@ -15,7 +15,13 @@ module.exports = {
       ProgressBar: 'app/components/ProgressBar.jsx',
       Panel      : 'app/components/Panel.jsx',
       Quote      : 'app/components/Quote.jsx',
-      Accordion  : 'app/components/Accordion.jsx'
+      Accordion  : 'app/components/Accordion.jsx',
+      Card_user  : 'app/components/Card_user.jsx',
+      Radio      : 'app/components/form/Radio.jsx',
+      Checkbox   : 'app/components/form/Checkbox.jsx',
+      Input      : 'app/components/form/Input.jsx',
+      Switch     : 'app/components/form/Switch.jsx',
+      Button     : 'app/components/form/Button.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
