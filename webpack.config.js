@@ -17,6 +17,7 @@ module.exports = {
       Quote      : 'app/components/Quote.jsx',
       Accordion  : 'app/components/Accordion.jsx',
       Card_user  : 'app/components/Card_user.jsx',
+      Toast      : 'app/components/Toast.jsx',
       Radio      : 'app/components/form/Radio.jsx',
       Checkbox   : 'app/components/form/Checkbox.jsx',
       Input      : 'app/components/form/Input.jsx',
