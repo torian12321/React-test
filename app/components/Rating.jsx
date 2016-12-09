@@ -1,27 +1,23 @@
 var React = require('react');
 
-class Rating extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        if(this.props.children > this.props.of) return null;
-
-        var marks = [];
-        for (var i=0; i < this.props.of; i++) {
-            if((i+1) > this.props.children){
-                marks.push(<li className="o"></li>);
-            }else{
-                marks.push(<li></li>);
-            }
+const Rating = props => {
+    var
+    highlights= (props.children > props.of) ? props.of : props.children,
+    marks     = [];
+    for (var i=0; i < props.of; i++) {
+        if((i+1) > highlights){
+            marks.push(<li className="o"></li>);
+        }else{
+            marks.push(<li></li>);
         }
-        return (
-            <ul className={ 'rating ' + this.props.style }>
-                { marks }
-            </ul>
-        );
     }
-}
+
+    return(
+        <ul className={ 'rating ' + props.style }>
+            { marks }
+        </ul>
+    );
+};
 
 
 Rating.propTypes = {
