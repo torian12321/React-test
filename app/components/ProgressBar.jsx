@@ -1,25 +1,13 @@
 var React = require('react');
 
-class ProgressBar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            val: this.props.val
-        };
-    }
-    render() {
-        var label = this.props.label ? <label>{ this.props.label }</label> : null;
-                        
-        return (
-            <div className={ 'progressBar ' + this.props.style }>
-                <div className="bar" style={{ width: this.state.val + '%' }}>
-                    { this.props.children }
-                    { label }
-                </div>
-            </div>
-        );
-    }
-}
+const ProgressBar = (props) =>(
+    <div className={ 'progressBar ' + props.style }>
+        <div className="bar" style={{ width: props.val + '%' }}>
+            { props.children }
+            { props.label ? <label>{ props.label }</label> : null }
+        </div>
+    </div>
+);
 
 
 ProgressBar.propTypes = {

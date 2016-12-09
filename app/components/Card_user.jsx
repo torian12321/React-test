@@ -1,22 +1,14 @@
 var React = require('react');
 
-class Card_user extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return (
-            <div className={ 'card-user ' + this.props.style }>
-                <div className="img" style={{ backgroundImage: 'url(' + this.props.img + ')' }}></div>
-                <div className="text">
-                    <h3>{ this.props.name }</h3>
-                    <span>{ this.props.title }</span>
-                </div>
-            </div>
-        );
-    }
-}
-
+const Card_user = (props) =>(
+    <div className={ 'card-user ' + props.style }>
+        <div className="img" style={{ backgroundImage: 'url(' + props.img + ')' }}></div>
+        <div className="text">
+            <h3>{ props.name }</h3>
+            <span>{ props.title }</span>
+        </div>
+    </div>
+);
 
 Card_user.propTypes = {
     children: React.PropTypes.any,

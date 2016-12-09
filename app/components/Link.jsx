@@ -1,18 +1,10 @@
 var React = require('react');
 
-class Link extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return (
-            <a href={ this.props.href } className={ 'link ' + this.props.style }>
-                { this.props.children }
-            </a>
-        );
-    }
-}
-
+const Link = props =>(
+    <a href={ props.href } className={ 'link ' + props.style }>
+        { props.children }
+    </a>
+);
 
 Link.propTypes = {
     children: React.PropTypes.string.isRequired,
