@@ -18,6 +18,8 @@ module.exports = {
       Accordion  : 'app/components/Accordion.jsx',
       Card_user  : 'app/components/Card_user.jsx',
       Toast      : 'app/components/Toast.jsx',
+      Gallery    : 'app/components/Gallery/index.jsx',
+      Tabs       : 'app/components/Tabs/index.jsx',
       Radio      : 'app/components/form/Radio.jsx',
       Checkbox   : 'app/components/form/Checkbox.jsx',
       Input      : 'app/components/form/Input.jsx',
