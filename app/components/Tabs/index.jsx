@@ -1,5 +1,6 @@
 var
 React       = require('react'),
+PropTypes   = require('prop-types'),
 TabsLabels  = require('./TabsLabels.jsx'),
 TabsBody    = require('./TabsBody.jsx');
 
@@ -35,13 +36,13 @@ class Tabs extends React.Component {
 
 
 Tabs.propTypes = {
-    children : React.PropTypes.oneOfType([
-        React.PropTypes.array,
-        React.PropTypes.element
+    children : PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.element
     ]).isRequired,
-    selected : React.PropTypes.number.isRequired,
-    styleBody: React.PropTypes.string,
-    styleTabs: React.PropTypes.string
+    selected : PropTypes.number.isRequired,
+    styleBody: PropTypes.string,
+    styleTabs: PropTypes.string
 };
 Tabs.defaultProps = {
     selected: 0

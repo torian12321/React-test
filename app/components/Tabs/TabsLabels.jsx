@@ -1,4 +1,6 @@
-var React = require('react');
+var
+React     = require('react'),
+PropTypes = require('prop-types');
 
 const TabsLabels = (props) => {
     var click = function(index){
@@ -20,10 +22,10 @@ const TabsLabels = (props) => {
 
 
 TabsLabels.propTypes = {
-    children: React.PropTypes.any.isRequired,
-    selected: React.PropTypes.number.isRequired,
-    style   : React.PropTypes.string.isRequired,
-    onChange: React.PropTypes.func.isRequired
+    children: PropTypes.any.isRequired,
+    selected: PropTypes.number.isRequired,
+    style   : PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired
 };
 TabsLabels.defaultProps = {
     style: ''

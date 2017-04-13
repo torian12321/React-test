@@ -1,4 +1,6 @@
-var React = require('react');
+var
+React     = require('react'),
+PropTypes = require('prop-types');
 
 class Radio extends React.Component {
     constructor(props) {
@@ -30,10 +32,10 @@ class Radio extends React.Component {
 
 
 Radio.propTypes = {
-    children: React.PropTypes.string,
-    name    : React.PropTypes.string.isRequired,
-    checked : React.PropTypes.bool.isRequired,
-    style   : React.PropTypes.string.isRequired,
+    children: PropTypes.string,
+    name    : PropTypes.string.isRequired,
+    checked : PropTypes.bool.isRequired,
+    style   : PropTypes.string.isRequired,
 };
 Radio.defaultProps = {
     checked: false,

@@ -1,4 +1,6 @@
-var React = require('react');
+var
+React     = require('react'),
+PropTypes = require('prop-types');
 
 class Input extends React.Component {
     constructor(props) {
@@ -34,13 +36,13 @@ class Input extends React.Component {
 
 
 Input.propTypes = {
-    children   : React.PropTypes.string.isRequired,
-    style      : React.PropTypes.string.isRequired,
-    type       : React.PropTypes.string.isRequired,
-    placeholder: React.PropTypes.string.isRequired,
-    onChange   : React.PropTypes.func,
-    onFocusIn  : React.PropTypes.func,
-    onFocusOut : React.PropTypes.func
+    children   : PropTypes.string.isRequired,
+    style      : PropTypes.string.isRequired,
+    type       : PropTypes.string.isRequired,
+    placeholder: PropTypes.string.isRequired,
+    onChange   : PropTypes.func,
+    onFocusIn  : PropTypes.func,
+    onFocusOut : PropTypes.func
 };
 Input.defaultProps = {
     children   : '',

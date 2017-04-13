@@ -1,18 +1,12 @@
 var
 React      = require('react'),
-Nav        = require('Nav'),
-GridLayout = require('./GridLayout.jsx');
+Nav        = require('Nav');
 
-
-class Main extends React.Component {
-    render(){
-        return (
-            <div>
-                <Nav/>
-                <h2>Main Componentt</h2>
-            </div>
-        );
-    }
-}
+const Main = (props) =>(
+    <div>
+        <Nav/>
+        <h2>Main Componentt</h2>
+    </div>
+);
 
 module.exports = Main;

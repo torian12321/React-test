@@ -1,4 +1,6 @@
-var React = require('react');
+var
+React     = require('react'),
+PropTypes = require('prop-types');
 
 const Panel = props => (
     <div className={ 'panel ' + this.props.style }>
@@ -8,8 +10,8 @@ const Panel = props => (
 
 
 Panel.propTypes = {
-    children: React.PropTypes.any.isRequired,
-    style   : React.PropTypes.string.isRequired
+    children: PropTypes.any.isRequired,
+    style   : PropTypes.string.isRequired
 };
 Panel.defaultProps = {
     style: ''        // info | success | danger | warning

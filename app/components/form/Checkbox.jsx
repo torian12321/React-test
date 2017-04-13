@@ -1,4 +1,6 @@
-var React = require('react');
+var
+React     = require('react'),
+PropTypes = require('prop-types');
 
 class Checkbox extends React.Component {
     constructor(props) {
@@ -29,9 +31,9 @@ class Checkbox extends React.Component {
 
 
 Checkbox.propTypes = {
-    children: React.PropTypes.string,
-    checked : React.PropTypes.bool.isRequired,
-    style   : React.PropTypes.string.isRequired,
+    children: PropTypes.string,
+    checked : PropTypes.bool.isRequired,
+    style   : PropTypes.string.isRequired,
 };
 Checkbox.defaultProps = {
     checked: false,

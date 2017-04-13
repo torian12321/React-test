@@ -1,5 +1,6 @@
 var
 React       = require('react'),
+PropTypes   = require('prop-types'),
 GalleryItem = require('./GalleryItem.jsx');
 
 class Gallery extends React.Component {
@@ -58,10 +59,10 @@ class Gallery extends React.Component {
 }
 
 Gallery.propTypes = {
-    loop        : React.PropTypes.bool.isRequired,
-    autoplay    : React.PropTypes.bool.isRequired,
-    autoplayTime: React.PropTypes.number.isRequired,
-    minimap     : React.PropTypes.bool.isRequired
+    loop        : PropTypes.bool.isRequired,
+    autoplay    : PropTypes.bool.isRequired,
+    autoplayTime: PropTypes.number.isRequired,
+    minimap     : PropTypes.bool.isRequired
 };
 Gallery.defaultProps = {
     loop        : true,

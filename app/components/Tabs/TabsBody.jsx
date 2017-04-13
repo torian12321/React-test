@@ -1,4 +1,6 @@
-var React = require('react');
+var
+React     = require('react'),
+PropTypes = require('prop-types');
 
 const TabsBody = props => (
     <div className={'tabs-body ' + props.style }>
@@ -11,8 +13,8 @@ const TabsBody = props => (
 
 
 TabsBody.propTypes = {
-    children: React.PropTypes.any.isRequired,
-    style   : React.PropTypes.string.isRequired
+    children: PropTypes.any.isRequired,
+    style   : PropTypes.string.isRequired
 };
 TabsBody.defaultProps = {
     style: ''

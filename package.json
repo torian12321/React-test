@@ -19,9 +19,9 @@
         "chalk"            : "^1.1.3",
         "express"          : "^4.13.4",
         "ip"               : "^1.1.3",
-        "prop-types"       : "^15.5.0",
+        "prop-types"       : "^15.5.7",
         "react"            : "^15.4.2",
-        "react-dom"        : "^14.4.2",
+        "react-dom"        : "^15.4.2",
         "react-router"     : "^2.0.0",
         "react-grid-layout": "^0.11.3"
     },
@@ -31,7 +31,8 @@
         "babel-preset-es2015" : "^6.5.0",
         "babel-preset-react"  : "^6.5.0",
         "babel-preset-stage-0": "^6.5.0",
-        "webpack"             : "^1.12.13",
+        "uniqid"              : "4.1.1",
+        "webpack"             : "^1.14.0",
         "webpack-dashboard"   : "^0.3.0"
     }
 }

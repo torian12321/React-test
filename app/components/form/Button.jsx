@@ -1,4 +1,6 @@
-var React = require('react');
+var
+React     = require('react'),
+PropTypes = require('prop-types');
 
 class Button extends React.Component {
     constructor(props) {
@@ -23,10 +25,10 @@ class Button extends React.Component {
 
 
 Button.propTypes = {
-    children: React.PropTypes.string.isRequired,
-    disabled: React.PropTypes.bool.isRequired,
-    style   : React.PropTypes.string.isRequired,
-    onClick : React.PropTypes.func
+    children: PropTypes.string.isRequired,
+    disabled: PropTypes.bool.isRequired,
+    style   : PropTypes.string.isRequired,
+    onClick : PropTypes.func
 };
 Button.defaultProps = {
     children: 'Submit',

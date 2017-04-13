@@ -1,4 +1,6 @@
-var React = require('react');
+var
+React     = require('react'),
+PropTypes = require('prop-types');
 
 const ProgressBar = (props) =>(
     <div className={ 'progressBar ' + props.style }>
@@ -11,10 +13,10 @@ const ProgressBar = (props) =>(
 
 
 ProgressBar.propTypes = {
-    children: React.PropTypes.string,
-    label   : React.PropTypes.string,
-    val     : React.PropTypes.number.isRequired,
-    style   : React.PropTypes.string.isRequired
+    children: PropTypes.string,
+    label   : PropTypes.string,
+    val     : PropTypes.number.isRequired,
+    style   : PropTypes.string.isRequired
 };
 ProgressBar.defaultProps = {
     val  : 50,

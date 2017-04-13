@@ -1,4 +1,6 @@
-var React = require('react');
+var
+React     = require('react'),
+PropTypes = require('prop-types');
 
 const Link = props =>(
     <a href={ props.href } className={ 'link ' + props.style }>
@@ -7,9 +9,9 @@ const Link = props =>(
 );
 
 Link.propTypes = {
-    children: React.PropTypes.string.isRequired,
-    href    : React.PropTypes.string.isRequired,
-    style   : React.PropTypes.string.isRequired
+    children: PropTypes.string.isRequired,
+    href    : PropTypes.string.isRequired,
+    style   : PropTypes.string.isRequired
 };
 Link.defaultProps = {
     href : '#',

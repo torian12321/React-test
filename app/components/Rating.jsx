@@ -1,4 +1,6 @@
-var React = require('react');
+var
+React     = require('react'),
+PropTypes = require('prop-types');
 
 const Rating = props => {
     var
@@ -21,9 +23,9 @@ const Rating = props => {
 
 
 Rating.propTypes = {
-    children: React.PropTypes.number.isRequired,
-    of      : React.PropTypes.number.isRequired,
-    style   : React.PropTypes.string.isRequired
+    children: PropTypes.number.isRequired,
+    of      : PropTypes.number.isRequired,
+    style   : PropTypes.string.isRequired
 };
 Rating.defaultProps = {
     children: 0,

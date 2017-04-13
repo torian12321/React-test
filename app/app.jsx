@@ -1,7 +1,8 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var {Route, Router, IndexRoute, hashHistory} = require('react-router');
-var Main = require('Main');
+var
+React    = require('react'),
+ReactDOM = require('react-dom'),
+{Route, Router, IndexRoute, hashHistory} = require('react-router'),
+Main     = require('Main');
 
 ReactDOM.render(
   <Router history={hashHistory}>

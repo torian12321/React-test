@@ -1,4 +1,6 @@
-var React = require('react');
+var
+React     = require('react'),
+PropTypes = require('prop-types');
 
 const Pane = props => (
     <div>{ props.children }</div>
@@ -6,8 +8,8 @@ const Pane = props => (
 
 Pane.displayName = 'Pane';
 Pane.propTypes   = {
-    children: React.PropTypes.any.isRequired,
-    label   : React.PropTypes.string.isRequired
+    children: PropTypes.any.isRequired,
+    label   : PropTypes.string.isRequired
 };
 Pane.defaultProps = {
     label: 'View'

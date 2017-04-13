@@ -1,6 +1,7 @@
 var
 React           = require('react'),
-ReactGridLayout = require('react-grid-layout');
+ReactGridLayout = require('react-grid-layout'),
+PropTypes       = require('prop-types');
 
 var GridLayout = React.createClass({
   render: function() {

@@ -1,4 +1,6 @@
-var React = require('react');
+var
+React     = require('react'),
+PropTypes = require('prop-types');
 
 class Accordion extends React.Component {
     constructor(props) {
@@ -31,9 +33,9 @@ class Accordion extends React.Component {
 }
 
 Accordion.propTypes = {
-    header  : React.PropTypes.string.isRequired,
-    children: React.PropTypes.any.isRequired,
-    isOpen  : React.PropTypes.bool.isRequired
+    header  : PropTypes.string.isRequired,
+    children: PropTypes.any.isRequired,
+    isOpen  : PropTypes.bool.isRequired
 };
 Accordion.defaultProps = {
     header: 'Show Details',

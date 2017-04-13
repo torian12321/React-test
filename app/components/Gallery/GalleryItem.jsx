@@ -1,4 +1,6 @@
-var React = require('react');
+var
+React     = require('react'),
+PropTypes = require('prop-types');
 
 const GalleryItem = (props) =>(
     <div
@@ -10,9 +12,9 @@ const GalleryItem = (props) =>(
 )
 
 GalleryItem.propTypes = {
-    style    : React.PropTypes.string.isRequired,
-    src      : React.PropTypes.string.isRequired,
-    content  : React.PropTypes.any
+    style    : PropTypes.string.isRequired,
+    src      : PropTypes.string.isRequired,
+    content  : PropTypes.any
 };
 GalleryItem.defaultProps = {
     style    : '',

@@ -1,4 +1,6 @@
-var React = require('react');
+var
+React     = require('react'),
+PropTypes = require('prop-types');
 
 const Card_user = (props) =>(
     <div className={ 'card-user ' + props.style }>
@@ -11,11 +13,11 @@ const Card_user = (props) =>(
 );
 
 Card_user.propTypes = {
-    children: React.PropTypes.any,
-    style   : React.PropTypes.string.isRequired,
-    name    : React.PropTypes.string.isRequired,
-    title   : React.PropTypes.string,
-    img     : React.PropTypes.string.isRequired,
+    children: PropTypes.any,
+    style   : PropTypes.string.isRequired,
+    name    : PropTypes.string.isRequired,
+    title   : PropTypes.string,
+    img     : PropTypes.string.isRequired,
     
 };
 Card_user.defaultProps = {

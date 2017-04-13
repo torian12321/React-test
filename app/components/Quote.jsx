@@ -1,4 +1,6 @@
-var React = require('react');
+var
+React     = require('react'),
+PropTypes = require('prop-types');
 
 const Quote = props =>(
     <div className="quote">
@@ -8,8 +10,8 @@ const Quote = props =>(
 );
 
 Quote.propTypes = {
-    children: React.PropTypes.string.isRequired,
-    author  : React.PropTypes.string
+    children: PropTypes.string.isRequired,
+    author  : PropTypes.string
 };
 
 module.exports = Quote;

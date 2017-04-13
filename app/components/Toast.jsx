@@ -1,9 +1,11 @@
-var React = require('react');
+var
+React     = require('react'),
+PropTypes = require('prop-types');
 
 class Toast extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
+        this.state = {´
             lifeTime : this.props.lifeTime
         };
     }
@@ -13,7 +15,7 @@ class Toast extends React.Component {
         }));
         if(this.state.lifeTime < 0){
             this.destroy();
-        }
+        }´´
     }
     componentDidMount() {
         this.interval = setInterval(() => this.countdown(), 1000);
@@ -41,11 +43,11 @@ class Toast extends React.Component {
 }
 
 Toast.propTypes = {
-    children  : React.PropTypes.string.isRequired,
-    title     : React.PropTypes.string,
-    style     : React.PropTypes.string.isRequired,
-    allowClose: React.PropTypes.bool.isRequired,
-    lifeTime  : React.PropTypes.number.isRequired
+    children  : PropTypes.string.isRequired,
+    title     : PropTypes.string,
+    style     : PropTypes.string.isRequired,
+    allowClose: PropTypes.bool.isRequired,
+    lifeTime  : PropTypes.number.isRequired
 };
 Toast.defaultProps = {
     lifeTime  : 2,
