@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './app/app.jsx',
+  entry: './app/app',
   output: {
     path: __dirname,
     filename: './public/bundle.js'
@@ -7,24 +7,27 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: {
-      Main  : 'app/components/Main.jsx',
-      Nav   : 'app/components/Nav.jsx',
-      Loader     : 'app/components/Loader.jsx',
-      Link       : 'app/components/Link.jsx',
-      Rating     : 'app/components/Rating.jsx',
-      ProgressBar: 'app/components/ProgressBar.jsx',
-      Panel      : 'app/components/Panel.jsx',
-      Quote      : 'app/components/Quote.jsx',
-      Accordion  : 'app/components/Accordion.jsx',
-      Card_user  : 'app/components/Card_user.jsx',
-      Toast      : 'app/components/Toast.jsx',
-      Gallery    : 'app/components/Gallery/index.jsx',
-      Tabs       : 'app/components/Tabs/index.jsx',
-      Radio      : 'app/components/form/Radio.jsx',
-      Checkbox   : 'app/components/form/Checkbox.jsx',
-      Input      : 'app/components/form/Input.jsx',
-      Switch     : 'app/components/form/Switch.jsx',
-      Button     : 'app/components/form/Button.jsx'
+      Main  : 'app/components/Main',
+      Nav   : 'app/components/Nav',
+      Loader     : 'app/components/Loader',
+      Link       : 'app/components/Link',
+      Rating     : 'app/components/Rating',
+      ProgressBar: 'app/components/ProgressBar',
+      Panel      : 'app/components/Panel',
+      Quote      : 'app/components/Quote',
+      Accordion  : 'app/components/Accordion',
+      Card_user  : 'app/components/Card_user',
+      Toast      : 'app/components/Toast',
+      Gallery    : 'app/components/Gallery/index',
+      Img        : 'app/components/Img',
+      Tabs       : 'app/components/Tabs/index',
+      
+      // Form
+      Radio      : 'app/components/form/Radio',
+      Checkbox   : 'app/components/form/Checkbox',
+      Input      : 'app/components/form/Input',
+      Switch     : 'app/components/form/Switch',
+      Button     : 'app/components/form/Button'
     },
     extensions: ['', '.js', '.jsx']
   },
