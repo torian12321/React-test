@@ -7,7 +7,7 @@ const Rating = props => {
     rate = (props.val > props.of) ? props.of : props.val,
     marks= [];
 
-    for(let i=0; i < props.of; i++){
+    for(let i=0, m=props.of; i < m; i++){
         marks.push(
             <li
                 key      = {i}
@@ -18,7 +18,7 @@ const Rating = props => {
 
     return(
         <ul className={ 'rating ' + props.className }>
-            { marks }
+            {marks}
         </ul>
     );
 };
