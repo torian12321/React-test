@@ -16,7 +16,7 @@ class Accordion extends React.Component {
     }
     render() {
         return (
-            <div className={ "accordion " + (this.state.isOpen ? 'active' : null) }>
+            <div className={ "accordion" + (this.state.isOpen ? ' active' : null) }>
                 <div className="acc-header" onClick= { this.expand.bind(this) }>
                     { this.props.header }
                 </div>

@@ -5,16 +5,18 @@ Link      = require('Link'),
 Rating      = require('Rating'),
 ProgressBar      = require('ProgressBar'),
 Panel      = require('Panel'),
-React      = require('react'),
+Card_user      = require('Card_user'),
 Nav        = require('Nav');
 
 
 const Main = props =>(
     <div>
         <h2>Main funcition 3337774</h2>
+
+        <Card_user />
         <Link>link test</Link>
         <ProgressBar val={33} />
-        <Rating value={2}/>
+        <Rating val={2}/>
         <Panel>Panelc content</Panel>
     </div>
 );

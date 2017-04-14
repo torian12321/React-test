@@ -4,10 +4,10 @@ PropTypes = require('prop-types');
 
 const Rating = props => {
     let
-    rate = (props.value > props.of) ? props.of : props.value,
+    rate = (props.val > props.of) ? props.of : props.val,
     marks= [];
 
-    for (let i=0; i < props.of; i++) {
+    for(let i=0; i < props.of; i++){
         marks.push(
             <li
                 key      = {i}
@@ -25,13 +25,14 @@ const Rating = props => {
 
 
 Rating.propTypes = {
-    value: PropTypes.number.isRequired,
-    of   : PropTypes.number.isRequired,
-    style: PropTypes.string                 // info | success | danger | warning
+    val      : PropTypes.number.isRequired,
+    of       : PropTypes.number.isRequired,
+    className: PropTypes.string                 // info | success | danger | warning
 };
 Rating.defaultProps = {
-    value: 0,
-    of   : 5
+    val      : 0,
+    of       : 5,
+    className: ''
 };
 
 module.exports = Rating;

@@ -7,7 +7,7 @@ const TabsLabels = (props) => {
         props.onChange(index);
     }
     return (
-        <ul className={ 'tabs-header ' + props.style }>
+        <ul className={ 'tabs-header ' + props.className }>
         { props.children.map((child, index) =>
             <label
                 className= { props.selected === index ? 'active' : '' }
@@ -22,13 +22,13 @@ const TabsLabels = (props) => {
 
 
 TabsLabels.propTypes = {
-    children: PropTypes.any.isRequired,
-    selected: PropTypes.number.isRequired,
-    style   : PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired
+    children : PropTypes.any.isRequired,
+    selected : PropTypes.number.isRequired,
+    className: PropTypes.string,
+    onChange : PropTypes.func.isRequired
 };
 TabsLabels.defaultProps = {
-    style: ''
+    className: ''
 };
 
 module.exports = TabsLabels;
