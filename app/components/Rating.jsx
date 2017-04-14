@@ -3,19 +3,21 @@ React     = require('react'),
 PropTypes = require('prop-types');
 
 const Rating = props => {
-    var
-    highlights= (props.children > props.of) ? props.of : props.children,
-    marks     = [];
-    for (var i=0; i < props.of; i++) {
-        if((i+1) > highlights){
-            marks.push(<li className="o"></li>);
-        }else{
-            marks.push(<li></li>);
-        }
+    let
+    rate = (props.value > props.of) ? props.of : props.value,
+    marks= [];
+
+    for (let i=0; i < props.of; i++) {
+        marks.push(
+            <li
+                key      = {i}
+                className= {(i+1) > rate ? 'o' : null}
+            />
+        );
     }
 
     return(
-        <ul className={ 'rating ' + props.style }>
+        <ul className={ 'rating ' + props.className }>
             { marks }
         </ul>
     );
@@ -23,14 +25,13 @@ const Rating = props => {
 
 
 Rating.propTypes = {
-    children: PropTypes.number.isRequired,
-    of      : PropTypes.number.isRequired,
-    style   : PropTypes.string.isRequired
+    value: PropTypes.number.isRequired,
+    of   : PropTypes.number.isRequired,
+    style: PropTypes.string                 // info | success | danger | warning
 };
 Rating.defaultProps = {
-    children: 0,
-    style   : '',       // info | success | danger | warning
-    of      : 5
+    value: 0,
+    of   : 5
 };
 
 module.exports = Rating;

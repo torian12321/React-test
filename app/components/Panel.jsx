@@ -3,8 +3,8 @@ React     = require('react'),
 PropTypes = require('prop-types');
 
 const Panel = props => (
-    <div className={ 'panel ' + this.props.style }>
-        { this.props.children }
+    <div className={ 'panel ' + props.style }>
+        { props.children }
     </div>
 );
 
