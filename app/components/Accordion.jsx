@@ -6,19 +6,17 @@ class Accordion extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isOpen    : this.props.isOpen,
-            wrappClass: this.props.isOpen ? 'accordion active' : 'accordion'
+            isOpen : this.props.isOpen
         };
     }
     expand(){
         this.setState({
-            isOpen    : !this.state.isOpen,
-            wrappClass: !this.state.isOpen ? 'accordion active' : 'accordion'
+            isOpen : !this.state.isOpen
         });
     }
     render() {
         return (
-            <div className={this.state.wrappClass}>
+            <div className={ "accordion " + (this.state.isOpen ? 'active' : null) }>
                 <div className="acc-header" onClick= { this.expand.bind(this) }>
                     { this.props.header }
                 </div>
