@@ -4,7 +4,7 @@ PropTypes = require('prop-types');
 
 const Link = props =>(
     <a href={ props.href } className={ 'link ' + props.className }>
-        { props.children }
+        {props.children}
     </a>
 );
 

@@ -16,12 +16,12 @@ ProgressBar.propTypes = {
     children : PropTypes.string,
     label    : PropTypes.string,
     val      : PropTypes.number.isRequired,
-    className: PropTypes.string.isRequired
+    className: PropTypes.string.isRequired      // underline | left | right | bordered
+                                                // blue | red | green
 };
 ProgressBar.defaultProps = {
-    val  : 50,
-    className : ''      // underline | left | right | bordered
-                    // blue | red | green
+    val      : 50,
+    className: ''
 };
 
 module.exports = ProgressBar;

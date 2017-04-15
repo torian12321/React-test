@@ -17,7 +17,7 @@ const Rating = props => {
     }
 
     return(
-        <ul className={ 'rating ' + props.className }>
+        <ul className={'rating ' + props.className}>
             {marks}
         </ul>
     );
@@ -32,7 +32,7 @@ Rating.propTypes = {
 Rating.defaultProps = {
     val      : 0,
     of       : 5,
-    className: ''
+    className:''
 };
 
 module.exports = Rating;

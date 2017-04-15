@@ -14,11 +14,10 @@ const Card_user = (props) =>(
 
 Card_user.propTypes = {
     children : PropTypes.any,
-    className: PropTypes.string,            // null ¦¦ polaroid
+    className: PropTypes.string,            // null || polaroid
     name     : PropTypes.string,
     title    : PropTypes.string,
-    img      : PropTypes.string.isRequired,
-    
+    img      : PropTypes.string.isRequired
 };
 Card_user.defaultProps = {
     href     : '#',

@@ -17,7 +17,7 @@ Img.propTypes = {
     className: PropTypes.string
 };
 Img.defaultProps = {
-    src      : './src/img/default/def.png'
+    src: 'http://placehold.it/200x150'
 };
 
 module.exports = Img;
