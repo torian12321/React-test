@@ -4,8 +4,11 @@ Loader      = require('Loader'),
 Link      = require('Link'),
 Rating      = require('Rating'),
 Img      = require('Img'),
+Input      = require('Input'),
 ProgressBar      = require('ProgressBar'),
 Panel      = require('Panel'),
+PropTypes = require('prop-types'),
+Button = require('Button'),
 Nav        = require('Nav');
 
 
@@ -28,13 +31,25 @@ const Main = props =>(
 class Main_test extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: 0};
+    this.state = {value: 22};
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleChange   = this.handleChange.bind(this);
+    this.handleNewNumber= this.handleNewNumber.bind(this);
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    //this.setState({value: event.target.value});
+    this.handleNewNumber(event.target.value);
+  }
+  handleNewNumber(data){
+      console.log('hola ' + data);
+      this.setState({value: data});
+  }
+  aa(){
+    console.log('aa');
+  }
+   bb(){
+    console.log('bb');
   }
 
   render() {
@@ -47,7 +62,11 @@ class Main_test extends React.Component {
             value   = {this.state.value}
             onChange= {this.handleChange}
         />
-        
+<Button />
+<Button onClick={this.aa} />
+<Input onChange={this.handleNewNumber} value={this.state.value} type='number' min={10} max={33} />
+<Input onChange={this.handleNewNumber} disabled={true} type='number' />
+
 
         <ProgressBar val={this.state.value} />
         <Rating val={this.state.value/10} of={10} />
@@ -58,5 +77,6 @@ class Main_test extends React.Component {
     );
   }
 }
+
 
 module.exports = Main_test;
