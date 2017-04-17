@@ -9,6 +9,8 @@ ProgressBar      = require('ProgressBar'),
 Panel      = require('Panel'),
 Accordion = require('Accordion'),
 Button = require('Button'),
+Checkbox = require('Checkbox'),
+Switch = require('Switch'),
 Nav        = require('Nav');
 
 
@@ -60,7 +62,8 @@ class Main_test extends React.Component {
             value   = {this.state.value}
             onChange= {this.handleChange}
         />
-
+<Checkbox>test</Checkbox>
+<Switch />
         <Accordion isOpen={this.state.acc} />
 
         <Button onClick={this.acc.bind(this)} />

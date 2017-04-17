@@ -4,7 +4,7 @@ PropTypes = require('prop-types');
 
 const Card_user = (props) =>(
     <div className={ 'card-user ' + props.className }>
-        <div className="img" style={{ backgroundImage: 'url(' + props.img + ')' }}></div>
+        <div className="img" style={{ backgroundImage: 'url(' + props.img + ')' }} />
         <div className="text">
             { props.name  ? <h3>{ props.name }</h3>      : null }
             { props.title ? <span>{ props.title }</span> : null }
