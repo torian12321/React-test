@@ -7,7 +7,7 @@ Img      = require('Img'),
 Input      = require('Input'),
 ProgressBar      = require('ProgressBar'),
 Panel      = require('Panel'),
-PropTypes = require('prop-types'),
+Accordion = require('Accordion'),
 Button = require('Button'),
 Nav        = require('Nav');
 
@@ -31,7 +31,10 @@ const Main = props =>(
 class Main_test extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: 22};
+    this.state = {
+      value: 22,
+      acc  : true
+    };
 
     this.handleChange   = this.handleChange.bind(this);
     this.handleNewNumber= this.handleNewNumber.bind(this);
@@ -45,11 +48,8 @@ class Main_test extends React.Component {
       console.log('hola ' + data);
       this.setState({value: data});
   }
-  aa(){
-    console.log('aa');
-  }
-   bb(){
-    console.log('bb');
+  acc(){
+      this.setState({acc: !this.state.acc});
   }
 
   render() {
@@ -57,15 +57,14 @@ class Main_test extends React.Component {
       <div>
         <input 
             type    = "number"
-            min     = {0}
-            max     = {100}
             value   = {this.state.value}
             onChange= {this.handleChange}
         />
-<Button />
-<Button onClick={this.aa} />
-<Input onChange={this.handleNewNumber} value={this.state.value} type='number' min={10} max={33} />
-<Input onChange={this.handleNewNumber} disabled={true} type='number' />
+
+        <Accordion isOpen={this.state.acc} />
+
+        <Button onClick={this.acc.bind(this)} />
+        <Input onChange={this.handleNewNumber} value={this.state.value} type='number' min={10} max={33} />
 
 
         <ProgressBar val={this.state.value} />

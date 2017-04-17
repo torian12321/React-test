@@ -20,6 +20,11 @@ class Input extends React.Component {
         this.handleFocusIn = this.handleFocusIn.bind(this);
         this.handleFocusOut= this.handleFocusOut.bind(this);
     }
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.value !== this.state.value) {
+            this.setState({ value: nextProps.value });
+        }
+    }
 
     handleChange(e){
         let v = e.target.value;
