@@ -1,6 +1,7 @@
 var
 React     = require('react'),
-PropTypes = require('prop-types');
+PropTypes = require('prop-types'),
+classNames= require('classnames');;
 
 class Accordion extends React.Component {
     constructor(props) {
@@ -22,7 +23,7 @@ class Accordion extends React.Component {
     }
     render() {
         return (
-            <div className={ "accordion " + (this.state.isOpen ? 'active' : '') }>
+            <div className={classNames('accordion', (this.state.isOpen ? 'active' : ''))}>
                 <div className="acc-header" onClick= { this.expand.bind(this) }>
                     {this.props.header}
                 </div>

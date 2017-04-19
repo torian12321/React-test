@@ -1,7 +1,7 @@
 var
 React    = require('react'),
 ReactDOM = require('react-dom'),
-Main     = require('Main');
+Main     = require('./components/Main_2');
 
 ReactDOM.render(
   <Main />,

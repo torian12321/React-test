@@ -1,6 +1,7 @@
 var
 React     = require('react'),
-PropTypes = require('prop-types');
+PropTypes = require('prop-types'),
+classNames= require('classnames');
 
 class Checkbox extends React.Component {
     constructor(props) {
@@ -22,7 +23,7 @@ class Checkbox extends React.Component {
     }
     render() {
         return (
-            <div className={'form-check ' + this.props.className}>
+            <div className={classNames('form-check', this.props.className)}>
                 <input
                     type   = "checkbox"
                     checked= {this.state.checked ? 'checked' : null}
@@ -39,11 +40,10 @@ class Checkbox extends React.Component {
 Checkbox.propTypes = {
     children : PropTypes.string,
     checked  : PropTypes.bool.isRequired,
-    className: PropTypes.string.isRequired,
+    className: PropTypes.string
 };
 Checkbox.defaultProps = {
-    checked  : false,
-    className: ''
+    checked  : false
 };
 
 module.exports = Checkbox;

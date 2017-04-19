@@ -1,9 +1,10 @@
 var
 React     = require('react'),
-PropTypes = require('prop-types');
+PropTypes = require('prop-types'),
+classNames= require('classnames');
 
 const Link = props =>(
-    <a href={ props.href } className={ 'link ' + props.className }>
+    <a href={props.href} className={classNames('link', props.className)}>
         {props.children}
     </a>
 );
@@ -14,8 +15,7 @@ Link.propTypes = {
     className: PropTypes.string             // arrowed | preview
 };
 Link.defaultProps = {
-    href     : '#',
-    className: ''
+    href: '#'
 };
 
 module.exports = Link;

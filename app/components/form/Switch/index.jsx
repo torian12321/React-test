@@ -1,6 +1,7 @@
 var
 React     = require('react'),
-PropTypes = require('prop-types');
+PropTypes = require('prop-types'),
+classNames= require('classnames');
 
 class Switch extends React.Component {
     constructor(props) {
@@ -22,7 +23,7 @@ class Switch extends React.Component {
     }
     render() {
         return (
-            <div className={'form-switch ' + this.props.className}>
+            <div className={classNames('form-switch', this.props.className)}>
                 <input
                     type   = "checkbox"
                     checked= {this.state.checked ? 'checked' : null}
@@ -36,11 +37,10 @@ class Switch extends React.Component {
 
 Switch.propTypes = {
     checked  : PropTypes.bool.isRequired,
-    className: PropTypes.string.isRequired,
+    className: PropTypes.string             // texted
 };
 Switch.defaultProps = {
-    checked  : false,
-    className: ''       // texted
+    checked: false
 };
 
 module.exports = Switch;

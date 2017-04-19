@@ -1,9 +1,10 @@
 var
 React     = require('react'),
-PropTypes = require('prop-types');
+PropTypes = require('prop-types'),
+classNames= require('classnames');
 
 const Card_user = (props) =>(
-    <div className={ 'card-user ' + props.className }>
+    <div className={classNames('card-user', props.className)}>
         <div className="img" style={{ backgroundImage: 'url(' + props.img + ')' }} />
         <div className="text">
             { props.name  ? <h3>{ props.name }</h3>      : null }
@@ -20,9 +21,8 @@ Card_user.propTypes = {
     img      : PropTypes.string.isRequired
 };
 Card_user.defaultProps = {
-    href     : '#',
-    img      : 'http://placehold.it/200x200',
-    className: ''
+    href: '#',
+    img : 'http://placehold.it/200x200'
 };
 
 module.exports = Card_user;

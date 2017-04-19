@@ -1,6 +1,7 @@
 var
 React     = require('react'),
-PropTypes = require('prop-types');
+PropTypes = require('prop-types'),
+classNames= require('classnames');
 
 const Rating = props => {
     let
@@ -17,7 +18,7 @@ const Rating = props => {
     }
 
     return(
-        <ul className={'rating ' + props.className}>
+        <ul className={classNames('rating', props.className)}>
             {marks}
         </ul>
     );
@@ -30,9 +31,8 @@ Rating.propTypes = {
     className: PropTypes.string                 // info | success | danger | warning
 };
 Rating.defaultProps = {
-    val      : 0,
-    of       : 5,
-    className:''
+    val: 0,
+    of : 5
 };
 
 module.exports = Rating;

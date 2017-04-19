@@ -1,6 +1,7 @@
 var
 React     = require('react'),
-PropTypes = require('prop-types');
+PropTypes = require('prop-types'),
+classNames= require('classnames');
 
 class Radio extends React.Component {
     constructor(props) {
@@ -22,7 +23,7 @@ class Radio extends React.Component {
     }
     render() {
         return (
-            <div className={'form-radio ' + this.props.style}>
+            <div className={classNames('form-radio', this.props.className)}>
                 <input
                     type   = "radio"
                     name   = {this.props.name}
@@ -38,14 +39,13 @@ class Radio extends React.Component {
 
 
 Radio.propTypes = {
-    children: PropTypes.string,
-    name    : PropTypes.string.isRequired,
-    checked : PropTypes.bool.isRequired,
-    style   : PropTypes.string.isRequired,
+    children : PropTypes.string,
+    name     : PropTypes.string.isRequired,
+    checked  : PropTypes.bool.isRequired,
+    className: PropTypes.string
 };
 Radio.defaultProps = {
-    checked: false,
-    style  : ''
+    checked: false
 };
 
 module.exports = Radio;

@@ -1,10 +1,11 @@
 var
 React     = require('react'),
-PropTypes = require('prop-types');
+PropTypes = require('prop-types'),
+classNames= require('classnames');
 
 const Panel = props => (
-    <div className={ 'panel ' + props.className }>
-        { props.children }
+    <div className={classNames('panel', props.className)}>
+        {props.children}
     </div>
 );
 
@@ -12,9 +13,6 @@ const Panel = props => (
 Panel.propTypes = {
     children : PropTypes.any.isRequired,
     className: PropTypes.string.isRequired   // info | success | danger | warning
-};
-Panel.defaultProps = {
-    className: ''       
 };
 
 module.exports = Panel;
