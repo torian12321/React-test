@@ -12,7 +12,7 @@ const Panel = props => (
 
 Panel.propTypes = {
     children : PropTypes.any.isRequired,
-    className: PropTypes.string.isRequired   // info | success | danger | warning
+    className: PropTypes.string             // info | success | danger | warning
 };
 
 module.exports = Panel;
