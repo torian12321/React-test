@@ -1,19 +1,20 @@
 var
 React     = require('react'),
-PropTypes = require('prop-types');
+PropTypes = require('prop-types'),
+classNames= require('classnames');
 
 const TabsLabels = (props) => {
     var click = function(index){
         props.onChange(index);
     }
     return (
-        <ul className={ 'tabs-header ' + props.className }>
+        <ul className={classNames('tabs-header', props.className)}>
         { props.children.map((child, index) =>
             <label
-                className= { props.selected === index ? 'active' : '' }
-                key      = { index }
-                onClick  = { click.bind(this, index) }>
-                { child.props.label }
+                className={classNames({'active' : (props.selected === index)})}
+                key      = {index}
+                onClick  = {click.bind(this, index)}>
+                {child.props.label}
             </label>
         )}
         </ul>
@@ -26,9 +27,6 @@ TabsLabels.propTypes = {
     selected : PropTypes.number.isRequired,
     className: PropTypes.string,
     onChange : PropTypes.func.isRequired
-};
-TabsLabels.defaultProps = {
-    className: ''
 };
 
 module.exports = TabsLabels;

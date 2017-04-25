@@ -1,12 +1,13 @@
 var
 React     = require('react'),
-PropTypes = require('prop-types');
+PropTypes = require('prop-types'),
+classNames= require('classnames');
 
 const TabsBody = props => (
-    <div className={'tabs-body ' + props.style }>
+	<div className={classNames('tabs-body', props.style)}>
         <input type="radio" checked="checked"/>
         <div>
-            { props.children }
+            {props.children}
         </div>
     </div>
 );
@@ -14,10 +15,7 @@ const TabsBody = props => (
 
 TabsBody.propTypes = {
     children: PropTypes.any.isRequired,
-    style   : PropTypes.string.isRequired
-};
-TabsBody.defaultProps = {
-    style: ''
+    style   : PropTypes.string
 };
 
 module.exports = TabsBody;

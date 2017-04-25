@@ -28,7 +28,7 @@ const Rating = props => {
 Rating.propTypes = {
     val      : PropTypes.number.isRequired,
     of       : PropTypes.number.isRequired,
-    className: PropTypes.string                 // info | success | danger | warning
+    className: PropTypes.oneOf(['info', 'success', 'danger', 'warning'])
 };
 Rating.defaultProps = {
     val: 0,

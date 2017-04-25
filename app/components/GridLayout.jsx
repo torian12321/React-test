@@ -11,9 +11,9 @@ const GridLayout = props => {
 
     return (
       <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={30} width={1200}>
-        <div key={'a'}></div>
-        <div key={'b'}></div>
-        <div key={'c'}></div>
+        <div key={'a'} />
+        <div key={'b'} />
+        <div key={'c'} />
       </ReactGridLayout>
     );
 });

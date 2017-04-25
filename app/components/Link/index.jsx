@@ -12,7 +12,7 @@ const Link = props =>(
 Link.propTypes = {
     children : PropTypes.string.isRequired,
     href     : PropTypes.string.isRequired,
-    className: PropTypes.string             // arrowed | preview
+    className: PropTypes.oneOf(['arrowed', 'preview'])
 };
 Link.defaultProps = {
     href: '#'

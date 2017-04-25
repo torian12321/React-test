@@ -7,15 +7,15 @@ const Card_user = (props) =>(
     <div className={classNames('card-user', props.className)}>
         <div className="img" style={{ backgroundImage: 'url(' + props.img + ')' }} />
         <div className="text">
-            { props.name  ? <h3>{ props.name }</h3>      : null }
-            { props.title ? <span>{ props.title }</span> : null }
+            {props.name  ? <h3>{props.name}</h3>      : null}
+            {props.title ? <span>{props.title}</span> : null}
         </div>
     </div>
 );
 
 Card_user.propTypes = {
     children : PropTypes.any,
-    className: PropTypes.string,            // null || polaroid
+    className: PropTypes.oneOf(['polaroid']),
     name     : PropTypes.string,
     title    : PropTypes.string,
     img      : PropTypes.string.isRequired

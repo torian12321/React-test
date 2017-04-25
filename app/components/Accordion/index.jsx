@@ -12,7 +12,7 @@ class Accordion extends React.Component {
     }
     componentWillReceiveProps(nextProps) {
         if (nextProps.isOpen !== this.state.isOpen) {
-            this.setState({ isOpen: nextProps.isOpen });
+            this.setState({isOpen: nextProps.isOpen});
         }
     }
     
@@ -23,8 +23,8 @@ class Accordion extends React.Component {
     }
     render() {
         return (
-            <div className={classNames('accordion', (this.state.isOpen ? 'active' : ''))}>
-                <div className="acc-header" onClick= { this.expand.bind(this) }>
+            <div className={classNames('accordion', {'active': this.state.isOpen})}>
+                <div className="acc-header" onClick= {this.expand.bind(this)}>
                     {this.props.header}
                 </div>
                 <div className="acc-body">
