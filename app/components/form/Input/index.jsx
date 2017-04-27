@@ -3,9 +3,12 @@ React        = require('react'),
 PropTypes    = require('prop-types'),
 InputNumber  = require('./Input_number'),
 InputPassword= require('./Input_password'),
-InputText    = require('./Input_text');
+InputText    = require('./Input_text'),
+uniqid       = require('uniqid');
 
 const Input = props => {
+    const id = props.id || uniqid('input_');
+
     switch(props.type) {
         case 'num':
         case 'number':

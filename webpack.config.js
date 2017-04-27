@@ -26,6 +26,7 @@ module.exports = {
       Radio      : 'app/components/form/Radio',
       Checkbox   : 'app/components/form/Checkbox',
       Input      : 'app/components/form/Input',
+      TextArea   : 'app/components/form/TextArea',
       Switch     : 'app/components/form/Switch',
       Button     : 'app/components/form/Button'
     },

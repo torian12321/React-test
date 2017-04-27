@@ -1,7 +1,8 @@
 var
 React     = require('react'),
 PropTypes = require('prop-types'),
-classNames= require('classnames');
+classNames= require('classnames'),
+uniqid    = require('uniqid');
 
 class Switch extends React.Component {
     constructor(props) {
@@ -22,13 +23,16 @@ class Switch extends React.Component {
         });
     }
     render() {
+        const id = this.props.id || uniqid('switch_');
+
         return (
-            <div className={classNames('form-switch', this.props.className)}>
+            <div className={classNames('form-switch', this.props.style)}>
                 <input
+                    id     = {id}
                     type   = "checkbox"
                     checked= {this.state.checked ? 'checked' : null}
                 />
-                <label onClick= {this.handleClick.bind(this)} />
+                <label htmlFor={id} />
             </div>
         );
     }
@@ -36,8 +40,9 @@ class Switch extends React.Component {
 
 
 Switch.propTypes = {
-    checked  : PropTypes.bool.isRequired,
-    className: PropTypes.string             // texted
+    id     : PropTypes.string,
+    checked: PropTypes.bool.isRequired,
+    style  : PropTypes.oneOf(['texted'])
 };
 Switch.defaultProps = {
     checked: false
