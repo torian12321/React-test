@@ -22,6 +22,7 @@
         "prop-types"       : "15.5.7",
         "react"            : "15.4.2",
         "react-dom"        : "15.4.2",
+        "react-classnames" : "0.1.2",
         "react-router"     : "4.1.1",
         "react-grid-layout": "^0.11.3"
     },
