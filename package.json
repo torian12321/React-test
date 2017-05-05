@@ -25,7 +25,8 @@
         "react-classnames" : "0.1.2",
         "react-router"     : "4.1.1",
         "react-grid-layout": "^0.11.3",
-        "uniquid"          : "1.1.4"
+        "uniquid"          : "1.1.4",
+        "react-demo"       : "1.5.0"
     },
     "devDependencies": {
         "babel-core"          : "^6.5.1",

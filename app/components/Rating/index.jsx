@@ -1,7 +1,6 @@
 var
 React     = require('react'),
-PropTypes = require('prop-types'),
-classNames= require('classnames');
+PropTypes = require('prop-types');
 
 const Rating = props => {
     let
@@ -18,7 +17,7 @@ const Rating = props => {
     }
 
     return(
-        <ul className={classNames('rating', props.className)}>
+        <ul className='rating'>
             {marks}
         </ul>
     );
@@ -26,9 +25,8 @@ const Rating = props => {
 
 
 Rating.propTypes = {
-    val      : PropTypes.number.isRequired,
-    of       : PropTypes.number.isRequired,
-    className: PropTypes.oneOf(['info', 'success', 'danger', 'warning'])
+    val: PropTypes.number.isRequired,
+    of : PropTypes.number.isRequired
 };
 Rating.defaultProps = {
     val: 0,

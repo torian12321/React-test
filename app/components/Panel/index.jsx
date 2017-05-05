@@ -4,15 +4,15 @@ PropTypes = require('prop-types'),
 classNames= require('classnames');
 
 const Panel = props => (
-    <div className={classNames('panel', props.className)}>
+    <div className={classNames('panel', props.type)}>
         {props.children}
     </div>
 );
 
 
 Panel.propTypes = {
-    children : PropTypes.any.isRequired,
-    className: PropTypes.oneOf(['info', 'success', 'danger', 'warning'])
+    children: PropTypes.any.isRequired,
+    type    : PropTypes.oneOf(['info', 'success', 'danger', 'warning'])
 };
 
 module.exports = Panel;

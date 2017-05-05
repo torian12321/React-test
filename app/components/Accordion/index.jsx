@@ -25,7 +25,7 @@ class Accordion extends React.Component {
         return (
             <div className={classNames('accordion', {'active': this.state.isOpen})}>
                 <div className="acc-header" onClick= {this.expand.bind(this)}>
-                    {this.props.header}
+                    {this.props.title}
                 </div>
                 <div className="acc-body">
                     <div className="acc-body-content">
@@ -38,12 +38,12 @@ class Accordion extends React.Component {
 }
 
 Accordion.propTypes = {
-    header  : PropTypes.string.isRequired,
+    title   : PropTypes.string.isRequired,
     children: PropTypes.any.isRequired,
     isOpen  : PropTypes.bool.isRequired
 };
 Accordion.defaultProps = {
-    header: 'Show Details',
+    title : 'Show Details',
     isOpen: false
 };
 
