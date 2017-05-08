@@ -27,8 +27,7 @@ ProgressBar.propTypes = {
     color    : PropTypes.oneOf(['main', 'sec', 'info', 'success', 'danger', 'warning'])
 };
 ProgressBar.defaultProps = {
-    val      : 50,
-    alignment: 'left'
+    val: 50
 };
 
 module.exports = ProgressBar;
