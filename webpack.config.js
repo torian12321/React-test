@@ -17,7 +17,6 @@ module.exports = {
       Quote      : 'app/components/Quote',
       Accordion  : 'app/components/Accordion',
       Card_user  : 'app/components/Card_user',
-      Toast      : 'app/components/Toast',
       Gallery    : 'app/components/Gallery/index',
       Img        : 'app/components/Img',
       Tabs       : 'app/components/Tabs/index',

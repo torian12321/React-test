@@ -13,9 +13,13 @@
         "test" : "echo \"Error: no test specified\" && exit 1",
         "start": "npm run watch",
         "build": "webpack",
-        "watch": "webpack --watch"
+        "watch": "webpack --watch",
+        "styleguide": "styleguidist server",
+        "styleguide:build": "styleguidist build"
     },
     "dependencies": {
+        "dog-names": "^1.0.2",
+        "loaders": "^1.1.2",
         "chalk"            : "^1.1.3",
         "express"          : "^4.13.4",
         "ip"               : "^1.1.3",
@@ -25,7 +29,8 @@
         "react-classnames" : "0.1.2",
         "react-router"     : "4.1.1",
         "react-grid-layout": "^0.11.3",
-        "uniquid"          : "1.1.4"
+        "uniquid"          : "1.1.4",
+        "react-styleguidist": "^5.0.0"
     },
     "devDependencies": {
         "babel-core"          : "^6.5.1",

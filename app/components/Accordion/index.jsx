@@ -38,9 +38,10 @@ class Accordion extends React.Component {
 }
 
 Accordion.propTypes = {
-    header  : PropTypes.string.isRequired,
+    /** Accordion content. */
     children: PropTypes.any.isRequired,
-    isOpen  : PropTypes.bool.isRequired
+    header  : PropTypes.string,
+    isOpen  : PropTypes.bool
 };
 Accordion.defaultProps = {
     header: 'Show Details',
