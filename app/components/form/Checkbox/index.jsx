@@ -29,9 +29,10 @@ class Checkbox extends React.Component {
         return (
             <div className={classNames('form-check', this.props.className)}>
                 <input
-                    id     = {id}
-                    type   = "checkbox"
-                    checked= {this.state.checked ? 'checked' : null}
+                    id      = {id}
+                    type    = "checkbox"
+                    checked = {this.state.checked ? 'checked' : null}
+                    disabled= {this.props.disabled? 'disabled': null}
                 />
                 <label htmlFor={id}>{this.props.children}</label>
             </div>
@@ -42,12 +43,14 @@ class Checkbox extends React.Component {
 
 Checkbox.propTypes = {
     id       : PropTypes.string,
+    disabled : PropTypes.bool,
     children : PropTypes.string,
     checked  : PropTypes.bool,
     className: PropTypes.string
 };
 Checkbox.defaultProps = {
-    checked: false
+    disabled: false,
+    checked : false
 };
 
 module.exports = Checkbox;

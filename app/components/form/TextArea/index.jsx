@@ -9,7 +9,7 @@ const Textarea = props => {
 		<textarea
 			id           = {id}
 			maxLength    = {props.maxlength}
-			placeholder  = {props.placeHolder}
+			placeholder  = {props.placeholder}
 			className    = 'form-control'
 			onChange     = {props.onChange}
 			defaultValue = {props.value}
@@ -20,11 +20,11 @@ const Textarea = props => {
 
 Textarea.propTypes = {
 	id         : PropTypes.string,
-	disabled   : PropTypes.bool.isRequired,
+	disabled   : PropTypes.bool,
 	value      : PropTypes.string,
-	onChange   : PropTypes.func.isRequired,
+	onChange   : PropTypes.func,
 	maxlength  : PropTypes.number,
-	placeHolder: PropTypes.string
+	placeholder: PropTypes.string
 };
 Textarea.defaultProps = {
 	disabled: false,

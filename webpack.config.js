@@ -19,7 +19,6 @@ module.exports = {
       Panel      : 'app/components/Panel',
       Quote      : 'app/components/Quote',
       Accordion  : 'app/components/Accordion',
-      Card_user  : 'app/components/Card_user',
       Gallery    : 'app/components/Gallery/index',
       Img        : 'app/components/Img',
       Tabs       : 'app/components/Tabs/index',
@@ -28,7 +27,7 @@ module.exports = {
       Radio      : 'app/components/form/Radio',
       Checkbox   : 'app/components/form/Checkbox',
       Input      : 'app/components/form/Input',
-      TextArea   : 'app/components/form/TextArea',
+      Textarea   : 'app/components/form/Textarea',
       Switch     : 'app/components/form/Switch',
       Button     : 'app/components/form/Button'
     },
