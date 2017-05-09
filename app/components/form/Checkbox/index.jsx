@@ -43,7 +43,7 @@ class Checkbox extends React.Component {
 Checkbox.propTypes = {
     id       : PropTypes.string,
     children : PropTypes.string,
-    checked  : PropTypes.bool.isRequired,
+    checked  : PropTypes.bool,
     className: PropTypes.string
 };
 Checkbox.defaultProps = {

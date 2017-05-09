@@ -5,7 +5,7 @@ Basic:
 
 Custom title:
 ```
-<Accordion header='Custom title'>Content</Accordion>
+<Accordion title='Custom title'>Content</Accordion>
 ```
 
 Open by default:

@@ -4,7 +4,14 @@ PropTypes = require('prop-types'),
 classNames= require('classnames');
 
 const Link = props =>(
-    <a href={props.href} className={classNames('link', props.arrowed, props.preview)}>
+    <a 
+        href     ={props.href}
+        className={classNames(
+            'link',
+            {'arrowed': props.arrowed},
+            {'preview': props.preview}
+        )}
+    >
         {props.children}
     </a>
 );

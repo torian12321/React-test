@@ -9,6 +9,9 @@ module.exports = {
     alias: {
       Main  : 'app/components/Main',
       Nav   : 'app/components/Nav',
+
+      // UI
+      Modal      : 'app/components/Modal',
       Loader     : 'app/components/Loader',
       Link       : 'app/components/Link',
       Rating     : 'app/components/Rating',
