@@ -1,7 +1,7 @@
 var
 React     = require('react'),
 PropTypes = require('prop-types'),
-classNames= require('classnames');;
+classNames= require('classnames');
 
 class Accordion extends React.Component {
     constructor(props) {
