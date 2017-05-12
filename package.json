@@ -13,6 +13,8 @@
         "test"            : "echo \"Error: no test specified\" && exit 1",
         "start"           : "npm run watch",
         "build"           : "webpack",
+        "build:dist"      : "npm run build:prod",
+        "build:prod"      : "webpack --env=prod --progress -p",
         "watch"           : "webpack --watch",
         "styleguide"      : "styleguidist server",
         "styleguide:build": "styleguidist build"
@@ -41,6 +43,7 @@
         "babel-preset-stage-1": "6.22.0",
         "uniqid"              : "4.1.1",
         "webpack"             : "2.5.1",
+        "webpack-merge"       : "4.1.0",
         "webpack-dashboard"   : "0.3.0",
         "webpack-dev-server"  : "1.14.1",
         "webpack-preset"      : "0.2.0",
