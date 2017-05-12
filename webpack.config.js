@@ -21,6 +21,7 @@ module.exports = {
       Panel      : path.resolve(__dirname, 'app/components/Panel'),
       Quote      : path.resolve(__dirname, 'app/components/Quote'),
       Accordion  : path.resolve(__dirname, 'app/components/Accordion'),
+      Avatar     : path.resolve(__dirname, 'app/components/Avatar'),
       Gallery    : path.resolve(__dirname, 'app/components/Gallery'),
       Img        : path.resolve(__dirname, 'app/components/Img'),
       Tabs       : path.resolve(__dirname, 'app/components/Tabs'),

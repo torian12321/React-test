@@ -10,19 +10,8 @@ Basic:
 Custom Icon:
 ```
 <div>
-	<Icon name='rocket' />
-	<Icon name='android' />
-	<Icon name='amazon' />
-	<Icon name='bed' />
-</div>
-```
-
-Other libraries:
-```
-<div>
-	<Icon library='Octicons' />
-	<Icon library='Ionicons' />
-	<Icon library='Material' />
-	<Icon library='Typicons' />
+	<Icon name='twitter' />
+	<Icon name='facebook' />
+	<Icon name='cog' />
 </div>
 ```
