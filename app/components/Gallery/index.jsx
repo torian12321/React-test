@@ -59,10 +59,10 @@ class Gallery extends React.Component {
 }
 
 Gallery.propTypes = {
-    loop        : PropTypes.bool.isRequired,
-    autoplay    : PropTypes.bool.isRequired,
-    autoplayTime: PropTypes.number.isRequired,
-    minimap     : PropTypes.bool.isRequired
+    loop        : PropTypes.bool,
+    autoplay    : PropTypes.bool,
+    autoplayTime: PropTypes.number,
+    minimap     : PropTypes.bool
 };
 Gallery.defaultProps = {
     loop        : true,

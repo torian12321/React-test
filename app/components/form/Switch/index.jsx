@@ -26,7 +26,7 @@ class Switch extends React.Component {
         const id = this.props.id || uniqid('switch_');
 
         return (
-            <div className={classNames('form-switch', this.props.style)}>
+            <div className={classNames('form-switch', {'texted': this.props.texted})}>
                 <input
                     id     = {id}
                     type   = "checkbox"
@@ -41,11 +41,12 @@ class Switch extends React.Component {
 
 Switch.propTypes = {
     id     : PropTypes.string,
-    checked: PropTypes.bool.isRequired,
-    style  : PropTypes.oneOf(['texted'])
+    checked: PropTypes.bool,
+    texted : PropTypes.bool
 };
 Switch.defaultProps = {
-    checked: false
+    checked: false,
+    texted : false
 };
 
 module.exports = Switch;
