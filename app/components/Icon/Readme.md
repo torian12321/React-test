@@ -1,13 +1,13 @@
-With [ReactIcons](https://www.npmjs.com/package/react-icons) the icons are converted into SVG, so there is no need to add external .css or .js libraries.
+Add SVG icons form [ReactIcons](https://www.npmjs.com/package/react-icons) or similar fonts, so there is *no need to add external .css or .js* libraries.
+You can even add your own SVG files.
 
-Check available icons from [the list](https://gorangajic.github.io/react-icons/index.html)
 
-Basic:
+Default:
 ```
 <Icon />
 ```
 
-Custom Icon:
+Avaliable Icons list:
 ```
 <div>
 	<Icon name='twitter' />

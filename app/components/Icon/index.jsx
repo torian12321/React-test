@@ -32,7 +32,7 @@ const Icon = props => {
 }
 
 Icon.propTypes = {
-  name     : PropTypes.string,
+  name     : PropTypes.oneOf(['twitter', 'facebook', 'google']),
   className: PropTypes.string,
   color    : PropTypes.string,
   rotate   : PropTypes.number,
