@@ -5,7 +5,13 @@ classNames= require('classnames');
 
 const Button = props => (
     <button
-        className= {classNames('btn', props.className)}
+        className= {classNames(
+            'btn',
+            !props.flat ? 'btn-3D'             : null,
+            props.large ? 'btn-large'          : null,
+            props.color ? `btn-${props.color}` : null,
+            props.type  ? `btn-${props.type}`  : null
+        )}
         onClick  = {props.onClick}
         disabled = {props.disabled ? 'disabled' : null}
     >
@@ -15,14 +21,19 @@ const Button = props => (
 
 
 Button.propTypes = {
-    children : PropTypes.string.isRequired,
-    disabled : PropTypes.bool.isRequired,
-    className: PropTypes.string,
-    onClick  : PropTypes.func
+    children: PropTypes.string,
+    disabled: PropTypes.bool,
+    flat    : PropTypes.bool,
+    large   : PropTypes.bool,
+    color   : PropTypes.oneOf(['main', 'sec', 'green', 'red', 'blue', 'white', 'grey', 'black']),
+    type    : PropTypes.oneOf(['success', 'danger', 'warning']),
+    onClick : PropTypes.func
 };
 Button.defaultProps = {
     children : 'Submit',
-    disabled : false
+    disabled : false,
+    large    : false,
+    flat     : true
 };
 
 module.exports = Button;

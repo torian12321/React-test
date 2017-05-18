@@ -40,7 +40,7 @@ Tabs.propTypes = {
         PropTypes.array,
         PropTypes.element
     ]).isRequired,
-    selected : PropTypes.number.isRequired,
+    selected : PropTypes.number,
     styleBody: PropTypes.string,
     styleTabs: PropTypes.string
 };

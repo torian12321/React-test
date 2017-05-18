@@ -4,7 +4,12 @@ PropTypes = require('prop-types'),
 classNames= require('classnames');
 
 const ProgressBar = (props) =>(
-    <div className={classNames('progressBar', props.style, props.alignment, props.color)}>
+    <div className={classNames(
+        'progressBar',
+        props.style,
+        props.alignment ? 'pb-' + props.alignment : null,
+        props.color
+    )}>
         <div className="bar" style={{ width: props.val + '%' }}>
             {props.children}
             {props.label ? <label>{props.label}</label> : null}
@@ -16,10 +21,10 @@ const ProgressBar = (props) =>(
 ProgressBar.propTypes = {
     children : PropTypes.string,
     label    : PropTypes.string,
-    val      : PropTypes.number.isRequired,
+    val      : PropTypes.number,
     style    : PropTypes.oneOf(['underline', 'bordered']),
     alignment: PropTypes.oneOf(['left', 'right']),
-    color    : PropTypes.oneOf(['blue', 'red', 'green'])
+    color    : PropTypes.oneOf(['main', 'sec', 'info', 'success', 'danger', 'warning'])
 };
 ProgressBar.defaultProps = {
     val: 50
