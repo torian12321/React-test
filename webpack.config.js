@@ -16,6 +16,8 @@ common = {
       Modal      : path.resolve(__dirname, 'app/components/Modal'),
       Loader     : path.resolve(__dirname, 'app/components/Loader'),
       Link       : path.resolve(__dirname, 'app/components/Link'),
+      List       : path.resolve(__dirname, 'app/components/List'),
+      ListItem   : path.resolve(__dirname, 'app/components/List/list_item'),
       Rating     : path.resolve(__dirname, 'app/components/Rating'),
       ProgressBar: path.resolve(__dirname, 'app/components/ProgressBar'),
       Panel      : path.resolve(__dirname, 'app/components/Panel'),

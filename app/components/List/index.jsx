@@ -1,14 +1,12 @@
 var
 React     = require('react'),
 PropTypes = require('prop-types'),
+ListItem  = require('./list_item'),
 classNames= require('classnames');
-
-import Ul from './Ul';
-import Wrapper from './Wrapper';
 
 function List(props) {
   const ComponentToRender = props.component;
-  let content = (<div></div>);
+  let content = (<div>hello</div>);
 
   // If we have items, render them
   if (props.items) {
@@ -24,8 +22,12 @@ function List(props) {
 }
 
 List.propTypes = {
-  component: React.PropTypes.func.isRequired,
-  items: React.PropTypes.array,
+  component: React.PropTypes.func,
+  items    : React.PropTypes.array,
 };
 
-export default List;
+List.defaultProps = {
+  component: ListItem,
+};
+
+module.exports = List;
