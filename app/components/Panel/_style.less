@@ -1,11 +1,19 @@
 @import '~LESS_conf';
 
-.panel{
+.message{
 	display          : block;
 	margin           : 20px 0;
 	padding          : 20px 10px;
-    background       : white;
-	border           : solid 1px grey;
+	background       : @white;
+	border           : solid 1px darken(@white, 10%);
 	border-left-width: 10px;
-	border-left-color: @color;
+	border-left-color: @themeColor_1;
+	.rounded();
+	&.important{
+		.shadow(@shadow);
+	}
+	&.info   {border-left-color: @colorState_info;}
+	&.success{border-left-color: @colorState_success;}
+	&.warning{border-left-color: @colorState_warning;}
+	&.danger {border-left-color: @colorState_danger;}
 }

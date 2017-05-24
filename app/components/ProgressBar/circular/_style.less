@@ -1,0 +1,33 @@
+@import '~LESS_conf';
+
+.abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.container,
+.rad-progress {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+.rad-progress {
+  -webkit-transform: translate(-50%, -50%) rotateZ(-90deg);
+          transform: translate(-50%, -50%) rotateZ(-90deg);
+}
+.progress-background {
+  stroke: rgba(0,0,0,0.08);
+  stroke-width: 8;
+  fill: none;
+}
+.progress-bar {
+  stroke: @themeColor_1;
+  stroke-width: 8;
+  fill: none;
+}
+.progress-label {
+  font-family: 'Droid Sans Mono';
+  font-size: 14px;
+}

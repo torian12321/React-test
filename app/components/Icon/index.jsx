@@ -2,9 +2,7 @@ var
 React     = require('react'),
 PropTypes = require('prop-types'),
 classNames= require('classnames'),
-//styles    = require('./styles'),
 icons     = require('./icons');
-
 
 
 const Icon = props => {

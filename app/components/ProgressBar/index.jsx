@@ -1,33 +1,35 @@
 var
 React     = require('react'),
 PropTypes = require('prop-types'),
-classNames= require('classnames');
+classNames= require('classnames'),
+Bar       = require('./bar'),
+Circle    = require('./circular');
 
-const ProgressBar = (props) =>(
-    <div className={classNames(
-        'progressBar',
-        props.style,
-        props.alignment ? 'pb-' + props.alignment : null,
-        props.color
-    )}>
-        <div className="bar" style={{ width: props.val + '%' }}>
-            {props.children}
-            {props.label ? <label>{props.label}</label> : null}
-        </div>
-    </div>
-);
+const Progress = (props) =>{
+    let conf = {
+        val: props.val,
+    };
 
 
-ProgressBar.propTypes = {
-    children : PropTypes.string,
+    if(props.type === 'circular'){
+        return <Circle {...conf} />
+    }else{
+        return <Bar {...conf} />
+    }
+};
+
+
+Progress.propTypes = {
+    type     : PropTypes.oneOf(['bar', 'circular']),
     label    : PropTypes.string,
     val      : PropTypes.number,
     style    : PropTypes.oneOf(['underline', 'bordered']),
     alignment: PropTypes.oneOf(['left', 'right']),
     color    : PropTypes.oneOf(['main', 'sec', 'info', 'success', 'danger', 'warning'])
 };
-ProgressBar.defaultProps = {
-    val: 50
+Progress.defaultProps = {
+    type: 'bar',
+    val : 50
 };
 
-module.exports = ProgressBar;
+module.exports = Progress;
