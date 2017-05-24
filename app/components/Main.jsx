@@ -2,14 +2,18 @@ var
 React  = require('react'),
 Button = require('Button'),
 Icon   = require('Icon'),
-Avatar   = require('Avatar'),
-Modal  = require('Modal');
+Panel   = require('Panel');
 
 const Main = props =>(
     <div>
         Hello world
         <Icon />
-        <Avatar />
+        <Panel>
+            hello world
+        </Panel>
+        <Panel>
+            hello world
+        </Panel>
     </div>
 );
 

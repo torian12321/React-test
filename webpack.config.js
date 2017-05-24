@@ -1,7 +1,9 @@
 const
-webpack = require('webpack'),
-merge   = require('webpack-merge'),
-path    = require('path');
+webpack     = require('webpack'),
+merge       = require('webpack-merge'),
+path        = require('path'),
+ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 
 const
 common = {
@@ -48,6 +50,56 @@ common = {
       { test: /\.json$/, loader: 'json-loader' },
       { test: /\.(mp3|wav)$/, loader: 'url-loader?limit=1' },
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=25000' },
+      //{ test: /\.less$/, use: ExtractTextPlugin.extract({ loader:[ 'css-loader', 'less-loader'], fallbackLoader: 'style-loader' })},
+
+
+//https://github.com/webpack-contrib/less-loader
+
+      // {
+      //       test: /\.less$/,
+      //       use: [{
+      //           loader: "style-loader" // creates style nodes from JS strings
+      //       }, {
+      //           loader: "css-loader" // translates CSS into CommonJS
+      //       }, {
+      //           loader: "less-loader" // compiles Less to CSS
+      //       }]
+      //   },
+      
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
+        // use:[
+        //   {loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'}
+        // ]
+
+
+    //     use: [
+    //       {loader: 'style?sourceMap'},
+    //       {loader: 'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]'}        
+    // ]
+
+// use: [{
+//                 loader: "style-loader"
+//             }, {
+//                 loader: "css-loader", options: {
+//                     sourceMap: true
+//                 }
+//             }]
+       },
+      {test: /\.less$/,
+            use: [{
+                loader: "style-loader"
+            }, {
+                loader: "css-loader", options: {
+                    sourceMap: true
+                }
+            }, {
+                loader: "less-loader", options: {
+                    sourceMap: true
+                }
+            }]
+      }
     ],
   }
 },
@@ -61,10 +113,21 @@ export_default = merge(common, {
 }),
 
 
-export_production = merge(common, {
+export_production = merge.smart(common, {
   output: {
     path    : __dirname,
     filename: './dist/bundle.js'
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader"
+        })
+      }
+    ]
   },
   plugins: [
       new webpack.LoaderOptionsPlugin({
@@ -86,7 +149,8 @@ export_production = merge(common, {
           screw_ie8: true
         },
         comments: false
-      })
+      }),
+      new ExtractTextPlugin("./dist/styles_comp.css"),
     ]
 });
 

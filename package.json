@@ -32,7 +32,12 @@
         "uniquid"           : "1.1.4",
         "react-styleguidist": "5.0.0",
         "react-icons"       : "2.2.5",
-        "camelcase"         : "4.1.0"
+        "camelcase"         : "4.1.0",
+        "less-loader"         : "4.0.3",
+        "less"         : "2.7.2",
+        "css-loader"         : "0.28.2",
+        "style-loader"         : "0.12.0",
+        "react-css-modules"         : "4.3.0"
     },
     "devDependencies": {
         "babel"               : "6.5.2",
@@ -49,6 +54,7 @@
         "webpack-preset"      : "0.2.0",
         "webpack-preset-babel": "0.2.0",
         "webpack-preset-babel-es2015": "0.2.0",
-        "url-loader": "0.5.8"
+        "url-loader": "0.5.8",
+        "extract-text-webpack-plugin"         : "2.1.0"
     }
 }

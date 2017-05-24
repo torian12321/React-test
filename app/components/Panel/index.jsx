@@ -1,10 +1,15 @@
 var
 React     = require('react'),
 PropTypes = require('prop-types'),
-classNames= require('classnames');
+classNames= require('classnames'),
+styles    = require('./_style.css');
+
+//import './test.less';
+//import './_style.css';
+
 
 const Panel = props => (
-    <div className={classNames('panel', props.type)}>
+    <div className={'panel ' + classNames(props.type)}>
         {props.children}
     </div>
 );

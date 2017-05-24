@@ -1,0 +1,9 @@
+.panel{
+	display          : block;
+	margin           : 20px 0;
+	padding          : 20px 10px;
+    background       : white;
+	border           : solid 1px grey;
+	border-left-width: 10px;
+	border-left-color: green;
+}
