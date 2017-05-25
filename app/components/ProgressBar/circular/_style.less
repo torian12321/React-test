@@ -8,12 +8,12 @@
           transform: translate(-50%, -50%);
 }
 .container,
-.rad-progress {
+.pb-circular {
   width: 80px;
   height: 80px;
   border-radius: 100%;
 }
-.rad-progress {
+.pb-circular {
   -webkit-transform: translate(-50%, -50%) rotateZ(-90deg);
           transform: translate(-50%, -50%) rotateZ(-90deg);
 }
@@ -27,7 +27,21 @@
   stroke-width: 8;
   fill: none;
 }
-.progress-label {
-  font-family: 'Droid Sans Mono';
+label{
   font-size: 14px;
+}
+
+
+.pb-container{
+  @size: 100px;
+
+  font-size: @size;
+  position : relative;
+  
+  width: 1em;
+  height: 1em;
+  .pb-circular{
+    width : .8em;
+    height: .8em;
+  }
 }

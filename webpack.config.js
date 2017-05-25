@@ -11,7 +11,8 @@ common = function(sourceMap = true){
   conf = {
     entry  : './app/app',
     resolve: {
-      alias: {
+      extensions: ['.js', '.jsx', '.less'],
+      alias     : {
         LESS_conf: path.resolve(__dirname, './app/styles'),
 
         Main  : path.resolve(__dirname, './app/components/Main'),
@@ -41,8 +42,7 @@ common = function(sourceMap = true){
         Textarea   : path.resolve(__dirname, 'app/components/form/Textarea'),
         Switch     : path.resolve(__dirname, 'app/components/form/Switch'),
         Button     : path.resolve(__dirname, 'app/components/form/Button')
-      },
-      extensions: ['.js', '.jsx', '.less']
+      }
     },
     module: {
       loaders: [
