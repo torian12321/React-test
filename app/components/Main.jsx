@@ -3,13 +3,14 @@ React  = require('react'),
 Button = require('Button'),
 Icon   = require('Icon'),
 ProgressBar   = require('ProgressBar'),
-Panel   = require('Panel');
+Panel   = require('Panel'),
+Avatar   = require('Avatar'),
+Modal  = require('Modal');
 
 const Main = props =>(
     <div>
         Hello world
         <Icon />
-
         <ProgressBar />
         <ProgressBar type='circular' />
         
@@ -19,6 +20,7 @@ const Main = props =>(
         <Panel>
             hello world
         </Panel>
+        <Avatar />
     </div>
 );
 
