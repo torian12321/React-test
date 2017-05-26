@@ -5,5 +5,5 @@ module.exports = {
 	components    : 'app/components/**/index.jsx',
 	template      : './styleguide/template.html',
 	defaultExample: false,
-	webpackConfig : webpack.common(),
+	webpackConfig : webpack.common(sourceMap = false),
 };
