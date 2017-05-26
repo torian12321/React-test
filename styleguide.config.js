@@ -1,14 +1,9 @@
-const path = require('path');
-const loaders = require('loaders');
+const webpack = require('./webpack.config');
 
 module.exports = {
 	title         : 'Components Styleguide',
 	components    : 'app/components/**/index.jsx',
-	template      : path.resolve(__dirname, 'styleguide/template.html'),
+	template      : './styleguide/template.html',
 	defaultExample: false,
-	webpackConfig: {
-		module: {
-			loaders: loaders.all,
-		},
-	},
+	webpackConfig : webpack.common(sourceMap = false),
 };

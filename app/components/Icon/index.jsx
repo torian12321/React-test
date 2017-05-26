@@ -6,7 +6,6 @@ classNames= require('classnames'),
 icons     = require('./icons');
 
 
-
 const Icon = props => {
   const
   iconPaths = props.name ? icons[props.name] : props.paths,
