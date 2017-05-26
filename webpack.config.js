@@ -150,3 +150,5 @@ module.exports = function(env) {
     return export_default;
   }
 }
+
+module.exports.common = common;
