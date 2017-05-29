@@ -1,49 +1,30 @@
 @import '~LESS_conf';
 
-.abs-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.container,
-.pb-circular {
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
-}
-.pb-circular {
-  -webkit-transform: translate(-50%, -50%) rotateZ(-90deg);
-          transform: translate(-50%, -50%) rotateZ(-90deg);
-}
-.progress-background {
-  stroke: rgba(0,0,0,0.08);
-  stroke-width: 8;
-  fill: none;
-}
-.progress-bar {
-  stroke: @themeColor_1;
-  stroke-width: 8;
-  fill: none;
-}
-label{
-  font-size: 14px;
-}
-
-
-.pb-container{
+.pb-circular{
   @size: 100px;
 
   font-size: @size;
   position : relative;
   width    : 1em;
   height   : 1em;
-  .pb-circular{
-    width : .8em;
-    height: .8em;
-  }
 
+  svg{
+    position: absolute;
+    top     : .1em;
+    left    : .1em;
+    width   : .8em;
+    height  : .8em;
+    .rotate(-90deg);
+  }
+  circle{
+    stroke      : rgba(0,0,0,0.08);
+    stroke-width: 8;
+    fill        : none;
+      &.fill {
+      stroke: @themeColor_1;
+      stroke-dasharray: 220;
+    }
+  }
 
   label{
     position   : absolute;

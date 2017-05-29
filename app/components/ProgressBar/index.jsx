@@ -10,7 +10,7 @@ const Progress = (props) =>{
         val      : props.val,
         className: classNames(
             'pb',
-            `pg-${props.type}`,
+            `pb-${props.type}`,
             props.size,
             props.className
         )
