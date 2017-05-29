@@ -3,7 +3,8 @@
 .accordion{
 	@color_main: @themeColor_2;
 	@color_sec : @themeColor_1;
-
+    @icon_w    : 14px;
+    @icon_h    : 3px;
 
 	margin    : 10px 0;
 	width     : 100%;
@@ -13,31 +14,33 @@
 	.rounded();
 	.transition();
 	.smart-text-color(@color_main);
-	.acc-header{
-		@icon_size: 20px;
+	.acc-header{		
 		@gutter_x : 10px;
 
-font-size: 20px;
-line-height: 2;
+        font-size    : 1.2em;
+        line-height  : 2;
 		position     : relative;
 		width        : 100%;
-		padding      : 0 @gutter_x 0 (@gutter_x + @icon_size);
+		padding      : 0 @gutter_x 0 ((@gutter_x * 2) + @icon_w);
 		cursor       : pointer;
 		background   : darken(@color_main, 10%);
 		border-bottom: darken(@color_main, 10%) 2px solid;
 		.transition(background border-color);
 		.smart-text-color(darken(@color_main, 10%));
-		&:before{
-			position  : absolute;
-			content   : '+';
-			top       : 0;
-			left      : @gutter_x / 2;
-			width     : @icon_size;
-			height    : @icon_size;
-			font-size : @icon_size;
-			text-align: center;
-			//.transition(transform color);
+		&:before,
+        &:after{
+			content   : '';
+            position  : absolute;
+			top       :  ~"calc(1em - ((@{icon_h}) / 2))";
+			left      : @gutter_x;
+			width     : @icon_w;
+			height    : @icon_h;
+            .smart-bg-color(@color_main);
+            .rounded(@icon_h);
+			.transition(transform);
 		}
+        &:before{.rotate(90deg);}
+        &:after {.rotate(180deg);}
 	}
 	.acc-body{
 		position  : relative;
@@ -57,9 +60,10 @@ line-height: 2;
 		.acc-header{
 			background  : @color_sec;
 			border-color: darken(@color_sec, 5%);
-			&:before{
-				content: '-'
-			}
+            &:before,
+            &:after{
+                .rotate(0);
+            }
 		}
 		.acc-body{
 			max-height: 500px;
