@@ -37,11 +37,28 @@ label{
 
   font-size: @size;
   position : relative;
-  
-  width: 1em;
-  height: 1em;
+  width    : 1em;
+  height   : 1em;
   .pb-circular{
     width : .8em;
     height: .8em;
   }
+
+
+  label{
+    position   : absolute;
+    left       : ~"calc(50% - 1em)";
+    top        : ~"calc(50% - .5em)";
+    width      : 2em;
+    height     : 1em;
+    font-size  : .2em;
+    line-height: 1;
+    text-align : center
+  }
+
+  // Sizes
+  &.xs{font-size: @size * 0.5;}
+  &.sm{font-size: @size;}
+  &.md{font-size: @size * 1.5;}
+  &.lg{font-size: @size * 2.5;}
 }
