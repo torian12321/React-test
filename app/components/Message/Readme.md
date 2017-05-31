@@ -12,3 +12,13 @@ Different types
 	<Message type='warning'>Warning content</Message>
 </div>
 ```
+
+Show the important (Shadow)
+```
+<div>
+	<Message>Some text</Message>
+	<Message>Some text</Message>
+	<Message important>Some text</Message>
+	<Message>Some text</Message>
+</div>
+```
