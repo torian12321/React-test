@@ -8,7 +8,8 @@ class Accordion extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isOpen: this.props.isOpen
+            isOpen    : this.props.isOpen,
+            body_style: {}
         };
     }
     componentWillReceiveProps(nextProps) {
@@ -18,8 +19,13 @@ class Accordion extends React.Component {
     }
     
     expand(){
+        let accContent_h = this.refs.accContent.clientHeight;
+
         this.setState({
-            isOpen: !this.state.isOpen
+            isOpen    : !this.state.isOpen,
+            body_style: {
+                maxHeight: !this.state.isOpen ? accContent_h : 0
+            }
         });
     }
     render() {
@@ -28,8 +34,8 @@ class Accordion extends React.Component {
                 <div className="acc-header" onClick= {this.expand.bind(this)}>
                     {this.props.title}
                 </div>
-                <div className="acc-body">
-                    <div className="acc-body-content">
+                <div className="acc-body" style={this.state.body_style}>
+                    <div className="acc-body-content" ref="accContent">
                         {this.props.children}
                     </div>
                 </div>
