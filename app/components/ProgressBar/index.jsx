@@ -5,7 +5,7 @@ classNames= require('classnames'),
 Bar       = require('./bar'),
 Circle    = require('./circular');
 
-const Progress = (props) =>{
+const Progress = props =>{
     let conf = {
         val      : props.val,
         className: classNames(

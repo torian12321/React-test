@@ -1,14 +1,14 @@
 var
 React     = require('react'),
 PropTypes = require('prop-types'),
-classNames= require('classnames');
+classNames= require('classnames'),
+styles    = require('./_style.less');
 
 const Link = props =>(
     <a 
         href     ={props.href}
         className={classNames(
             'link',
-            {'arrowed': props.arrowed},
             {'preview': props.preview}
         )}
     >
@@ -19,12 +19,10 @@ const Link = props =>(
 Link.propTypes = {
     children : PropTypes.string.isRequired,
     href     : PropTypes.string,
-    arrowed  : PropTypes.bool,
     preview  : PropTypes.bool
 };
 Link.defaultProps = {
     href   : '#',
-    arrowed: false,
     preview: false
 };
 
