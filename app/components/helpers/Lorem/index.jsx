@@ -10,11 +10,12 @@ const Lorem = props => (
 
 Lorem.propTypes = {
     length: PropTypes.number,
+    /** p->paragraph w->word s->sentence */
     type  : PropTypes.oneOf(['p', 's', 'w'])
 };
 Lorem.defaultProps = {
     length: 1,
-    type  : 'p'
+    type  : 's'
 };
 
 module.exports = Lorem;

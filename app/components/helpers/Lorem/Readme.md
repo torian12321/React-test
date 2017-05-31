@@ -1,4 +1,4 @@
-[LoremJs](https://github.com/f/loremjs)
+Genereate lorem ipsums with [LoremJs](https://github.com/f/loremjs).
 
 
 Basic:
@@ -6,7 +6,7 @@ Basic:
 <Lorem />
 ```
 
-Examples:
+Example inside components:
 ```
 <div>
     <Accordion>
@@ -14,11 +14,11 @@ Examples:
     </Accordion>
 
     <Message>
-        <Lorem />
+        <Lorem type="w" length={100} />
     </Message>
 
     <Accordion>
-        <Lorem />
+        <Lorem type="p" length={2} />
     </Accordion>
 </div>
 ```
