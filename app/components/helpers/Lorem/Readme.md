@@ -18,7 +18,7 @@ Example inside components:
     </Message>
 
     <Accordion>
-        <Lorem type="p" length={2} />
+        <Lorem type="p" length={4} />
     </Accordion>
 </div>
 ```
