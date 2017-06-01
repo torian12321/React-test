@@ -12,7 +12,6 @@
     width     : 1em;
     height    : 1em;   
     .rounded(50%);
-
     &.spinner{
         background      : transparent;
         border          : @colorState_disable .1em solid;
@@ -21,13 +20,12 @@
         .animation(spin; 1s);
     }
     &.pulse{
-        border    : .2em solid transparent;
         width     : .4em;
         height    : .4em;
         margin    : 1em auto;
         background: @color;
         .animation_pulse(@color, .5em);
-        .animation(pulse; 2s);
+        .animation(pulse; 1.5s);
     }
 
     // Sizes

@@ -1,9 +1,9 @@
-Basic
+Default: spinner sm
 ```
 <Loading />
 ```
 
-Spinner
+Pulse
 ```
 <Loading type='pulse' />
 ```
