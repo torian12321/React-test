@@ -196,8 +196,10 @@
     @BG-url   : '@{defImgDir}/img.png';
     @position : center center;
     ){
-	background             : url(@BG-url) @position no-repeat fixed;
-
+	background: url(@BG-url) @position no-repeat fixed;
+	.background-cover();
+}
+.background-cover{
 	background-size        : cover;
 	-moz-background-size   : cover;
 	-webkit-background-size: cover;

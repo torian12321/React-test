@@ -25,6 +25,17 @@ Basic
 <ProgressBar type='circular'/>
 ```
 
+States
+```
+<div>
+	<ProgressBar type='circular' state='main'/>
+	<ProgressBar type='circular' state='sec'/>
+	<ProgressBar type='circular' state='success'/>
+	<ProgressBar type='circular' state='danger'/>
+	<ProgressBar type='circular' state='warning'/>
+</div>
+```
+
 Sizes
 ```
 <div>

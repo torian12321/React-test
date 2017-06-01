@@ -11,6 +11,7 @@ const Progress = props =>{
         className: classNames(
             'pb',
             `pb-${props.type}`,
+            props.state,
             props.size,
             props.className
         )
@@ -32,7 +33,7 @@ Progress.propTypes = {
     style    : PropTypes.oneOf(['underline', 'bordered']),
     size     : PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     alignment: PropTypes.oneOf(['left', 'right']),
-    color    : PropTypes.oneOf(['main', 'sec', 'info', 'success', 'danger', 'warning'])
+    state    : PropTypes.oneOf(['main', 'sec', 'info', 'success', 'danger', 'warning'])
 };
 Progress.defaultProps = {
     type: 'bar',

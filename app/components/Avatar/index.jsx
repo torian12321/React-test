@@ -7,15 +7,20 @@ styles    = require('./_style.less');
 const Avatar = props => (
     <div 
         style    ={{backgroundImage: `url(${props.src})`}}
-        className={classNames = classNames('avatar', props.size, props.className)}
-        alt      ={props.alt}
-        role     ={props.alt ? null : 'presentation'}
+        className={classNames(
+            'avatar',
+            props.size,
+            props.state,
+            props.className
+        )}
     />
 );
 
 
 Avatar.propTypes = {
     src      : PropTypes.string.isRequired,
+    size     : PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
+    state    : PropTypes.oneOf(['main', 'sec', 'success', 'danger', 'warning', 'disable']),
     className: PropTypes.string
 };
 Avatar.defaultProps = {

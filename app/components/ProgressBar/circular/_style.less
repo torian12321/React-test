@@ -37,6 +37,13 @@
     text-align : center
   }
 
+  // States
+  &.main    circle.fill{stroke: @themeColor_1;}
+  &.sec     circle.fill{stroke: @themeColor_2;}
+  &.success circle.fill{stroke: @colorState_success;}
+  &.danger  circle.fill{stroke: @colorState_danger;}
+  &.warning circle.fill{stroke: @colorState_warning;}
+
   // Sizes
   &.xs{font-size: @size * 0.5;}
   &.sm{font-size: @size;}
