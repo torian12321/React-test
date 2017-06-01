@@ -3,7 +3,7 @@ React  = require('react'),
 Button = require('Button'),
 Icon   = require('Icon'),
 ProgressBar   = require('ProgressBar'),
-Panel   = require('Panel'),
+Message   = require('Message'),
 Avatar   = require('Avatar'),
 Modal  = require('Modal');
 
@@ -14,12 +14,12 @@ const Main = props =>(
         <ProgressBar />
         <ProgressBar type='circular' />
         
-        <Panel>
+        <Message>
             hello world
-        </Panel>
-        <Panel>
+        </Message>
+        <Message>
             hello world
-        </Panel>
+        </Message>
         <Avatar />
     </div>
 );

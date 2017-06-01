@@ -1,24 +1,17 @@
 var
 React     = require('react'),
 PropTypes = require('prop-types'),
+classNames= require('classnames'),
 styles    = require('./_style.less');
 
-const Avatar = props => {
-    let className = classNames(
-        'avatar',
-        props.size,
-        props.className
-    );
-
-    return(
-        <div 
-            style    ={{ backgroundImage: `url(${props.src})`}}
-            className={className}
-            alt      ={props.alt}
-            role     ={props.alt ? null : 'presentation'}
-        />
-    );
-}
+const Avatar = props => (
+    <div 
+        style    ={{backgroundImage: `url(${props.src})`}}
+        className={classNames = classNames('avatar', props.size, props.className)}
+        alt      ={props.alt}
+        role     ={props.alt ? null : 'presentation'}
+    />
+);
 
 
 Avatar.propTypes = {
