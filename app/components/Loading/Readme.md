@@ -18,7 +18,7 @@ Sizes
 </div>
 ```
 
-Sizes
+Inside components
 ```
 <div>
     <Button><Loading size='xs' /></Button>
