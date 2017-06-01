@@ -2,7 +2,8 @@ var
 React     = require('react'),
 PropTypes = require('prop-types'),
 classNames= require('classnames'),
-uniqid    = require('uniqid');
+uniqid    = require('uniqid'),
+styles    = require('./_style.less');
 
 class Switch extends React.Component {
     constructor(props) {
