@@ -1,17 +1,17 @@
 @import '~LESS_conf';
 
 .loading{
-	@size : 1.5em;
-    @color: @themeColor_1;
+	@color: @themeColor_1;
 
-    font-size : 10px;
-    width     : @size;
-    height    : @size;
+    font-size : 32px;
+    width     : .5em;
+    height    : .5em;
+    display   : block;
+    margin    : 1em auto;
     background: fadeout(@color, 20%);
-    margin    : 2em;
     .rounded(50%);
-    .animation_pulse(@color, 2em);
-    .animation(pulse; 1.5s);
+    .animation_pulse(@color, .5em);
+    .animation(pulse; 2s);
 }
 
 // .loading_bouncing{

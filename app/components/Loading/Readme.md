@@ -1,4 +1,4 @@
 Basic
 ```
-<Loader />
+<Loading />
 ```
