@@ -1,12 +1,13 @@
 var
 React    = require('react'),
-ReactDOM = require('react-dom');
+ReactDOM = require('react-dom'),
+Modal    = require('./modal');
 
 
-class Modal extends React.Component{
+class ModalWrapper extends React.Component{
 	componentDidMount() {
 		this.modalTarget = document.createElement('div');
-		this.modalTarget.className = 'modal';
+		//this.modalTarget.className = 'modal';
 		document.body.appendChild(this.modalTarget);
 		this._render();
 	}
@@ -19,13 +20,14 @@ class Modal extends React.Component{
 	}
 	_render(){
 		ReactDOM.render(
-			<div>{this.props.children}</div>,
+			<Modal {...this.props} />,
 			this.modalTarget
 		);
 	}
 	render(){
-		return <noscript />;
+		return null;
+		//return <noscript />;
 	}
 }
 
-module.exports = Modal;
+module.exports = ModalWrapper;

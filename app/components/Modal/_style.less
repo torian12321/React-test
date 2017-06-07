@@ -1,0 +1,45 @@
+@import '~LESS_conf';
+
+.modal,
+.modal-bg,
+.modal-container{
+    position: fixed;
+    top     : 0;
+    bottom  : 0;
+    right   : 0;
+    left    : 0;
+}
+
+.modal-bg{
+    background: fadeout(@black, 40%);
+}
+.modal-container{
+    position  : absolute;
+    top       : 20vh;
+    bottom    : auto;
+    width     : 100vw;
+    max-width : 315px;
+    min-width : 200px;
+    min-height: 120px;
+    display   : block;
+    background: @white;
+    margin    : auto;
+    padding   : 24px 10px 10px;
+    box-sizing: border-box;
+    .rounded();
+    .animation_fadein();
+    .animation(
+        @animation : fadein;
+        @time      : .8s;
+        @iterations: 1;
+    );
+}
+.modal-content{
+    position: relative;
+}
+
+
+
+
+
+

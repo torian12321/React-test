@@ -21,6 +21,9 @@ const Main = props =>(
             hello world
         </Message>
         <Avatar />
+
+
+        <Modal>AA</Modal>
     </div>
 );
 

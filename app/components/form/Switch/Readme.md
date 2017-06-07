@@ -3,11 +3,11 @@ Basic
 <div>
 	<Switch />
 	<Switch checked={false}/>
-	<Switch checked={true}/>
+	<Switch checked />
 </div>
 ```
 
 Texted
 ```
-<Switch texted={true}/>
+<Switch texted />
 ```

@@ -7,9 +7,22 @@
 
 // Blink
 .animation_blink(){
-    @-moz-keyframes    blink { 0% { .opacity(0); } 100% { .opacity(1); } }
-    @-webkit-keyframes blink { 0% { .opacity(0); } 100% { .opacity(1); } }
-    @keyframes         blink { 0% { .opacity(0); } 100% { .opacity(1); } }
+    .animation_keyframes(
+    blink,
+    {
+        0%  { .opacity(0);}
+        100%{ .opacity(1);}
+    });
+}
+
+// FadeIn
+.animation_fadein(){
+    .animation_keyframes(
+    fadein,
+    {
+        from {.opacity(0); margin-top: 10px;}
+        to   {.opacity(1); margin-top: 0px; }
+    });
 }
 
 // Pulse
