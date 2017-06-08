@@ -9,31 +9,30 @@ class Modal extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isVisible: this.props.isVisible
+            isOpen: this.props.isOpen
         };
 
         this.handleClose = this.handleClose.bind(this);
     }
     componentWillReceiveProps(nextProps) {
-        if (nextProps.isVisible !== this.state.isVisible) {
-            this.setState({isVisible: nextProps.isVisible});
+        if (nextProps.isOpen !== this.state.isOpen) {
+            this.setState({isOpen: nextProps.isOpen});
         }
     }
 
     handleClose(){
         this.setState({
-            isVisible: false
+            isOpen: false
         });
     }
     
     render(){
-        return (this.state.isVisible ? (
+        return (this.state.isOpen ? (
             <div className={classNames('modal', this.props.className)}>
                 <div className='modal-bg' />
                 <div className='modal-container'>
-                    <div className='modal-close' onClick={this.handleClose}>X</div>
-                    <div className='modal-content'>
-                        
+                    <div className='modal-close' onClick={this.handleClose} />
+                    <div className='modal-content'>   
                         {this.props.children}
                     </div>
                 </div>
@@ -45,12 +44,11 @@ class Modal extends React.Component {
 Modal.propTypes = {
     children : PropTypes.node.isRequired,
     className: PropTypes.string,
-    onClose  : PropTypes.func,
-    isVisible: PropTypes.bool
+    isOpen   : PropTypes.bool
 };
 
 Modal.defaultProps = {
-  isVisible: true
+  isOpen: false
 };
 
 module.exports = Modal;

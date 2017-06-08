@@ -27,12 +27,23 @@ Basic
 
 States
 ```
+initialState = {val: 50};
 <div>
-	<ProgressBar type='circular' state='main'/>
-	<ProgressBar type='circular' state='sec'/>
-	<ProgressBar type='circular' state='success'/>
-	<ProgressBar type='circular' state='danger'/>
-	<ProgressBar type='circular' state='warning'/>
+
+<input 
+	type       = "range"
+	value      = {state.val}
+	min        = {0}
+	max        = {100}
+	onChange ={(e) => setState({val: e.target.value})}
+/>
+
+
+	<ProgressBar val={state.val} type='circular' state='main'/>
+	<ProgressBar val={state.val} type='circular' state='sec'/>
+	<ProgressBar val={state.val} type='circular' state='success'/>
+	<ProgressBar val={state.val} type='circular' state='danger'/>
+	<ProgressBar val={state.val} type='circular' state='warning'/>
 </div>
 ```
 

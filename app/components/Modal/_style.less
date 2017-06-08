@@ -30,7 +30,7 @@
     .animation_fadein();
     .animation(
         @animation : fadein;
-        @time      : .8s;
+        @time      : .6s;
         @iterations: 1;
     );
 }
@@ -39,23 +39,41 @@
 }
 
 .modal-close{
-    @color: @grey2;
+    @color : @grey2;
+    @size  : 1.5em;
+    @icon_w: 1em;
+    @icon_h: .15em;
 
-    position   : absolute;  
-    top        : 10px;
-    right      : 10px;
-    font-size  : 14px;
-    width      : 1.5em;
-    height     : 1.5em;
-    line-height: 1.5em;
+    position   : relative;  
+    top        : -14px;
+    right      : 0;
+    font-size  : 16px;
+    width      : @size;
+    height     : @size;
+    line-height: @size;
     text-align : center;
     cursor     : pointer;
     background : @color;
     opacity    : .6;
+    float : right;
     .rounded(50%);
     .transition(opacity);
-    .smart-text-color(@color);
     &:hover{
         opacity: 1;
     }
+
+    // X simbol
+    &:before,
+    &:after{
+        content   : '';
+        position  : absolute;
+        top       : ~"calc((@{size} - (@{icon_h})) / 2)";
+        left      : ~"calc((@{size} - (@{icon_w})) / 2)";
+        width     : @icon_w;
+        height    : @icon_h;
+        .smart-bg-color(@color);
+        .rounded(@icon_h);
+    }
+    &:before{.rotate(45deg);}
+    &:after {.rotate(135deg);}
 }

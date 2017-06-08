@@ -30,4 +30,5 @@ class ModalWrapper extends React.Component{
 	}
 }
 
+ModalWrapper.displayName = 'Modal';
 module.exports = ModalWrapper;
