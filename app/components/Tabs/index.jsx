@@ -1,8 +1,9 @@
 var
-React       = require('react'),
-PropTypes   = require('prop-types'),
-TabsLabels  = require('./TabsLabels.jsx'),
-TabsBody    = require('./TabsBody.jsx');
+React     = require('react'),
+PropTypes = require('prop-types'),
+TabsLabels= require('./TabsLabels.jsx'),
+TabsBody  = require('./TabsBody.jsx'),
+styles    = require('./_style.less');
 
 class Tabs extends React.Component {
     constructor(props) {
