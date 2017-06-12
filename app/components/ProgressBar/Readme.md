@@ -29,13 +29,11 @@ States
 ```
 initialState = {val: 50};
 <div>
-
-	<input 
-		type       = "range"
-		value      = {state.val}
-		min        = {0}
-		max        = {100}
-		onChange ={(e) => setState({val: e.target.value})}
+	<Range 
+		value    = {state.val}
+		min      = {0}
+		max      = {100}
+		onChange = {(e) => setState({val: e})}
 	/>
 
 	<ProgressBar val={state.val} type='circular' state='main'/>
