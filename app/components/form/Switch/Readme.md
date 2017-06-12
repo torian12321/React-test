@@ -1,4 +1,4 @@
-Basic
+Basic switch
 ```
 <div>
 	<Switch />
