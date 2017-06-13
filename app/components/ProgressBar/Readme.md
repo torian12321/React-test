@@ -31,8 +31,6 @@ initialState = {val: 50};
 <div>
 	<Range 
 		value    = {state.val}
-		min      = {0}
-		max      = {100}
 		onChange = {(e) => setState({val: e})}
 	/>
 

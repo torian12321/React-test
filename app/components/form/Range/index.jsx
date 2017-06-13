@@ -37,6 +37,10 @@ class Range extends React.Component {
     render() {
         return (
             <div className="range-slider">
+                {this.props.label ? 
+                    <span className="range-slider__value">{this.state.value}</span> : 
+                    null
+                }
                 <input
                     type     ="range"
                     className="range-slider__range"
@@ -47,7 +51,6 @@ class Range extends React.Component {
                     max      = {this.max}
                     onChange = {this.handleChange}
                 />
-                <span className="range-slider__value">{this.state.value}</span>
             </div>
         );
     }
@@ -60,7 +63,7 @@ Range.propTypes = {
     step       : PropTypes.number,
     min        : PropTypes.number,
     max        : PropTypes.number,
-    texted     : PropTypes.bool,
+    label      : PropTypes.bool,
     onChange   : PropTypes.func
 };
 Range.defaultProps = {
@@ -69,6 +72,7 @@ Range.defaultProps = {
     step    : 1,
     min     : 0,
     max     : 100,
+    label   : false,
     onChange: function(){}
 };
 

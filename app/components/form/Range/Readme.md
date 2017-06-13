@@ -2,7 +2,7 @@ Basic ragne
 ```
 <div>
 	<Range />
-	<Range checked={false} />
+	<Range label />
 	<Range checked />
 </div>
 ```
