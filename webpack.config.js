@@ -34,6 +34,7 @@ common = function(sourceMap = true){
         Img        : path.resolve(__dirname, 'app/components/Img'),
         Tabs       : path.resolve(__dirname, 'app/components/Tabs'),
         Icon       : path.resolve(__dirname, 'app/components/Icon'),
+        IconBtn    : path.resolve(__dirname, 'app/components/IconBtn'),
         
         // Form
         Radio      : path.resolve(__dirname, 'app/components/form/Radio'),

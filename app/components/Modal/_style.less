@@ -1,5 +1,7 @@
 @import '~LESS_conf';
 
+@modal-BG: @white;
+
 .modal,
 .modal-bg,
 .modal-container{
@@ -25,7 +27,7 @@
     max-width : 315px;
     min-width : 200px;
     min-height: 120px;
-    background: @white;
+    background: @modal-BG;
     padding   : 24px 10px 10px;
     box-sizing: border-box;
     .rounded();
@@ -41,42 +43,15 @@
     position: relative;
 }
 
-.modal-close{
-    @color : @grey2;
-    @size  : 1.5em;
-    @icon_w: 1em;
-    @icon_h: .15em;
-
+.close-icon{
     position   : relative;  
     top        : -14px;
     right      : 0;
     font-size  : 16px;
-    width      : @size;
-    height     : @size;
-    line-height: @size;
-    text-align : center;
-    cursor     : pointer;
-    background : @color;
-    opacity    : .6;
-    float : right;
-    .rounded(50%);
-    .transition(opacity);
-    &:hover{
-        opacity: 1;
+    
+    float      : right;
+    // X icon
+    path{
+        fill: @modal-BG;
     }
-
-    // X simbol
-    &:before,
-    &:after{
-        content   : '';
-        position  : absolute;
-        top       : ~"calc((@{size} - (@{icon_h})) / 2)";
-        left      : ~"calc((@{size} - (@{icon_w})) / 2)";
-        width     : @icon_w;
-        height    : @icon_h;
-        .smart-bg-color(@color);
-        .rounded(@icon_h);
-    }
-    &:before{.rotate(45deg);}
-    &:after {.rotate(135deg);}
 }

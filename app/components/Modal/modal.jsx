@@ -2,7 +2,8 @@ var
 React     = require('react'),
 PropTypes = require('prop-types'),
 classNames= require('classnames'),
-styles    = require('./_style.less');
+styles    = require('./_style.less'),
+IconClose = require('IconBtn/close');
 
 
 class Modal extends React.Component {
@@ -31,7 +32,7 @@ class Modal extends React.Component {
             <div className={classNames('modal', this.props.className)}>
                 <div className='modal-bg' />
                 <div className='modal-container'>
-                    <div className='modal-close' onClick={this.handleClose} />
+                    <IconClose onClick={this.handleClose} className="close-icon" />
                     <div className='modal-content'>   
                         {this.props.children}
                     </div>
