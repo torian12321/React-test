@@ -2,8 +2,8 @@ Basic ragne
 ```
 <div>
 	<Range />
-	<Range label />
-	<Range checked />
+	<Range value={40}/>
+	<Range value={70}/>
 </div>
 ```
 

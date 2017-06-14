@@ -32,6 +32,7 @@ initialState = {val: 50};
 	<Range 
 		value    = {state.val}
 		onChange = {(e) => setState({val: e})}
+		texted
 	/>
 
 	<ProgressBar val={state.val} type='circular' state='main'/>

@@ -1,26 +1,23 @@
-// https://codepen.io/seanstopnik/pen/CeLqA
-// https://codepen.io/wolthers/pen/LkOLQA
-
 var
 React     = require('react'),
 PropTypes = require('prop-types'),
-classNames= require('classnames'),
 styles    = require('./_style.less');
 
 class Range extends React.Component {
     constructor(props){
         super(props);
-        this.state = {
-            value: this.props.value
-        };
-        this.min = this.props.min;
-        this.max = (
-            this.min &&
-            this.props.max &&
-            this.min < this.props.max
-            ) ? this.props.max : null;
+        if(this.props.min < this.props.max){
+            this.min = this.props.min;
+            this.max = this.props.max;
+        }else{
+            this.min = this.props.max;
+            this.max = this.props.min;
+        }
 
         this.handleChange  = this.handleChange.bind(this);
+    }
+    componentWillMount(){
+        this.setStates(this.props.value);
     }
     componentWillReceiveProps(nextProps) {
         if (nextProps.value !== this.state.value) {
@@ -29,21 +26,32 @@ class Range extends React.Component {
     }
 
     handleChange(e){
-        let v = e.target.value;
+        var v = e.target.value;
 
-        this.setState({value: v});
+        this.setStates(v);
         this.props.onChange(v);
+    }
+    setStates(v){
+        var p = (v - this.min) * 100 / (this.max - this.min);
+
+        this.setState({
+            value     : v,
+            percentage: p,
+            style     : {
+                backgroundSize: `${p}% 100%`
+            },
+            styleTxt  : {
+                left     : `${p}%`,
+                transform: `translate(-${p}%, 0%)`
+            }
+        });
     }
     render() {
         return (
-            <div className="range-slider">
-                {this.props.label ? 
-                    <span className="range-slider__value">{this.state.value}</span> : 
-                    null
-                }
+            <div className="form-range">
                 <input
-                    type     ="range"
-                    className="range-slider__range"
+                    type     = "range"
+                    style    = {this.state.style}
                     disabled = {this.props.disabled ? 'disabled' : null}    
                     value    = {this.state.value}
                     step     = {this.props.step}
@@ -51,6 +59,10 @@ class Range extends React.Component {
                     max      = {this.max}
                     onChange = {this.handleChange}
                 />
+                {this.props.texted ? 
+                    <span style = {this.state.styleTxt}>{this.state.value}</span> : 
+                    null
+                }
             </div>
         );
     }
@@ -58,13 +70,13 @@ class Range extends React.Component {
 
 
 Range.propTypes = {
-    disabled   : PropTypes.bool,
-    value      : PropTypes.number,
-    step       : PropTypes.number,
-    min        : PropTypes.number,
-    max        : PropTypes.number,
-    label      : PropTypes.bool,
-    onChange   : PropTypes.func
+    disabled: PropTypes.bool,
+    value   : PropTypes.number,
+    step    : PropTypes.number,
+    min     : PropTypes.number,
+    max     : PropTypes.number,
+    texted  : PropTypes.bool,
+    onChange: PropTypes.func
 };
 Range.defaultProps = {
     disabled: false,
@@ -72,7 +84,7 @@ Range.defaultProps = {
     step    : 1,
     min     : 0,
     max     : 100,
-    label   : false,
+    texted  : false,
     onChange: function(){}
 };
 
