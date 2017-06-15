@@ -7,7 +7,7 @@ Icon      = require('Icon');
 
 const IconBtnClose = props =>(
     <div className={classNames('icon-btn', props.className)} onClick={props.onClick}>
-        <Icon name='star'/>
+        <Icon name='close'/>
     </div>  
 );
 

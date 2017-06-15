@@ -21,7 +21,7 @@ const Icon = props => {
       viewBox  ={`0 0 ${props.viewBox} ${props.viewBox}`}
       style    ={styles}
       className={classNames(
-        'icon2',
+        'icon',
         props.className
       )}
     >
