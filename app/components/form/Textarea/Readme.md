@@ -1,14 +1,13 @@
 Basic
 ```
-<Textarea />
-```
-
-Colors
-```
-<Textarea placeholder='Add your comments' />
+<div style = {{background: '#eee', padding: 10}}>
+    <Textarea placeholder='Add your comments'/>
+</div>
 ```
 
 Disabled
 ```
-<Textarea disabled />
+<div style={{background: '#eee', padding: 10}}>
+    <Textarea placeholder='Add your comments' disabled />
+</div>
 ```

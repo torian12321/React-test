@@ -33,7 +33,7 @@ Rating.propTypes = {
     val  : PropTypes.number,
     of   : PropTypes.number,
     color: PropTypes.string,
-    icon : PropTypes.oneOf(['star', 'chat', 'chat', 'cog', 'heart', 'dollar'])
+    icon : PropTypes.oneOf(['star', 'chat', 'cog', 'heart', 'dollar'])
 };
 Rating.defaultProps = {
     val : 0,

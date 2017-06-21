@@ -56,15 +56,15 @@ class Input extends React.Component {
 
 
 Input.propTypes = {
-    disabled   : PropTypes.bool.isRequired,
+    disabled   : PropTypes.bool,
     value      : PropTypes.number,
-    step       : PropTypes.number.isRequired,
+    step       : PropTypes.number,
     min        : PropTypes.number,
     max        : PropTypes.number,
     placeholder: PropTypes.string,
-    onChange   : PropTypes.func.isRequired,
-    onFocusIn  : PropTypes.func.isRequired,
-    onFocusOut : PropTypes.func.isRequired
+    onChange   : PropTypes.func,
+    onFocusIn  : PropTypes.func,
+    onFocusOut : PropTypes.func
 };
 Input.defaultProps = {
     disabled  : false,
