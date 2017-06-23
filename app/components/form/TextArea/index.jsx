@@ -1,7 +1,8 @@
 var
 React     = require('react'),
 PropTypes = require('prop-types'),
-styles    = require('./_style.less');
+uniqid    = require('uniqid'),
+styles    = require('../Input/_style.less');
 
 class Textarea extends React.Component {
 	constructor(props){
@@ -40,19 +41,21 @@ class Textarea extends React.Component {
 
 
 	render(){
+		const id = this.props.id || uniqid('textArea_');
+
 		return(
 			<div className="styled-input">
-			<textarea
-				id           = {this.props.id}
-				className    = {this.state.filled ? 'filled': null}
-				maxLength    = {this.props.maxlength}
-				rows         = {this.props.rows}
-				onChange     = {this.handleChange}
-				defaultValue = {this.props.value}
-				disabled     = {this.props.disabled ? 'disabled' : null}
-			/>
-			<label>{this.props.placeholder}</label>
-			<span />
+				<textarea
+					id           = {id}
+					className    = {this.state.filled ? 'filled': null}
+					maxLength    = {this.props.maxlength}
+					rows         = {this.props.rows}
+					onChange     = {this.handleChange}
+					defaultValue = {this.props.value}
+					disabled     = {this.props.disabled ? 'disabled' : null}
+				/>
+				<label htmlFor={id}>{this.props.placeholder}</label>
+				<span />
 			</div>
 		);
 	}
@@ -63,7 +66,7 @@ Textarea.propTypes = {
 	disabled   : PropTypes.bool,
 	value      : PropTypes.string,
 	className  : PropTypes.string,
-	rows       : PropTypes.numberstring,
+	rows       : PropTypes.number,
 	maxlength  : PropTypes.number,
 	placeholder: PropTypes.string,
 	onChange   : PropTypes.func,

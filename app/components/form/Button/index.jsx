@@ -22,7 +22,7 @@ const Button = props => (
 
 
 Button.propTypes = {
-    children: PropTypes.string,
+    children: PropTypes.any,
     disabled: PropTypes.bool,
     flat    : PropTypes.bool,
     large   : PropTypes.bool,
