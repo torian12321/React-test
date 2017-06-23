@@ -2,6 +2,7 @@ var
 React     = require('react'),
 PropTypes = require('prop-types'),
 uniqid    = require('uniqid'),
+Wrapper   = require('../_wrapper'),
 styles    = require('../Input/_style.less');
 
 class Textarea extends React.Component {
@@ -44,7 +45,11 @@ class Textarea extends React.Component {
 		const id = this.props.id || uniqid('textArea_');
 
 		return(
-			<div className="styled-input">
+			<Wrapper
+				id        = {id}
+				className = {this.props.className}
+				label     = {this.props.placeholder}
+			>
 				<textarea
 					id           = {id}
 					className    = {this.state.filled ? 'filled': null}
@@ -54,9 +59,7 @@ class Textarea extends React.Component {
 					defaultValue = {this.props.value}
 					disabled     = {this.props.disabled ? 'disabled' : null}
 				/>
-				<label htmlFor={id}>{this.props.placeholder}</label>
-				<span />
-			</div>
+			</Wrapper>
 		);
 	}
 }

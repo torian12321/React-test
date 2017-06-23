@@ -2,7 +2,7 @@ var
 React     = require('react'),
 PropTypes = require('prop-types'),
 uniqid    = require('uniqid'),
-styles    = require('../Input/_style.less');
+Wrapper   = require('../_wrapper');
 
 class Input extends React.Component {
 	constructor(props){
@@ -41,19 +41,23 @@ class Input extends React.Component {
 
 
 	render(){
+        const id = this.props.id || uniqid('textArea_');
+
 		return(
-			<div className="styled-input">
+			<Wrapper
+				id        = {id}
+				className = {this.props.className}
+				label     = {this.props.placeholder}
+			>
 				<input
-					id           = {this.props.id}
+					id           = {id}
 					className    = {this.state.filled ? 'filled': null}
 					maxLength    = {this.props.maxlength}
 					onChange     = {this.handleChange}
 					defaultValue = {this.props.value}
 					disabled     = {this.props.disabled ? 'disabled' : null}
 				/>
-				<label htmlFor={this.props.id}>{this.props.placeholder}</label>
-				<span />
-			</div>
+			</Wrapper>
 		);
 	}
 }
