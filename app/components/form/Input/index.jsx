@@ -4,8 +4,7 @@ PropTypes    = require('prop-types'),
 InputNumber  = require('./Input_number'),
 InputPassword= require('./Input_password'),
 InputText    = require('./Input_text'),
-uniqid       = require('uniqid'),
-styles       = require('./_style.less');
+uniqid       = require('uniqid');
 
 const Input = props => {
     const id = props.id || uniqid('input_');
@@ -14,7 +13,7 @@ const Input = props => {
         case 'num':
         case 'number':
         case 'numeric':
-            return <div className="styled-input"><InputNumber {...props} /></div>
+            return <InputNumber {...props} />
             break;
         case 'password':
         case 'key':
@@ -22,7 +21,7 @@ const Input = props => {
             break;
         case 'text':
         default:
-            return <div className="styled-input"><InputText {...props} /></div>
+            return <InputText {...props} />
     }
 };
 

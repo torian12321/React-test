@@ -2,8 +2,7 @@ var
 React     = require('react'),
 PropTypes = require('prop-types'),
 uniqid    = require('uniqid'),
-Wrapper   = require('../_wrapper'),
-styles    = require('../Input/_style.less');
+Wrapper   = require('../_wrapper');
 
 class Textarea extends React.Component {
 	constructor(props){
