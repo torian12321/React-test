@@ -1,0 +1,44 @@
+@import '~LESS_conf';
+
+@color_main: @themeColor_2;
+@color_sec : @white;
+
+.table{
+	overflow: hidden;
+	.rounded(@BRadious);
+    thead,
+    tfoot,
+    th{
+        background: @color_main;
+        .smart-text-color(@color_main);
+        &.shortable{
+            cursor: pointer;
+            &:hover{
+                background: darken(@color_main, 5%)
+            }
+        }
+    }
+    tr{
+        background: @color_sec;
+        .smart-text-color(@color_sec, @fontColor_white, @fontColor_grey);
+        &:nth-child(odd){
+            background: fadeout(@color_main, 80%);
+        }
+        &:hover{
+            @color: fadeout(@color_main, 50%);
+            
+            background: @color;
+            .smart-text-color(@color, @fontColor_white, @fontColor_grey);
+        }
+    }
+    th,
+    td{
+        position: relative;
+        padding : 10px 40px 10px 16px;
+        i{
+            position: absolute;
+            top     : 5px;
+            right   : 5px;
+        }
+    }
+}

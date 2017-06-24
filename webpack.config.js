@@ -26,7 +26,7 @@ common = function(sourceMap = true){
         ListItem   : path.resolve(__dirname, 'app/components/List/list_item'),
         Rating     : path.resolve(__dirname, 'app/components/Rating'),
         ProgressBar: path.resolve(__dirname, 'app/components/ProgressBar'),
-        Message      : path.resolve(__dirname, 'app/components/Message'),
+        Message    : path.resolve(__dirname, 'app/components/Message'),
         Quote      : path.resolve(__dirname, 'app/components/Quote'),
         Accordion  : path.resolve(__dirname, 'app/components/Accordion'),
         Avatar     : path.resolve(__dirname, 'app/components/Avatar'),
@@ -35,6 +35,7 @@ common = function(sourceMap = true){
         Tabs       : path.resolve(__dirname, 'app/components/Tabs'),
         Icon       : path.resolve(__dirname, 'app/components/Icon'),
         IconBtn    : path.resolve(__dirname, 'app/components/IconBtn'),
+        Table      : path.resolve(__dirname, 'app/components/Table'),
         
         // Form
         Radio      : path.resolve(__dirname, 'app/components/form/Radio'),
