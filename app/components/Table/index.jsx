@@ -18,8 +18,8 @@ const Table = props => (
 Table.propTypes = {
     children : PropTypes.node.isRequired,
     className: PropTypes.string,
-    striped  : PropTypes.string.bool,
-    bordered : PropTypes.string.bool
+    striped  : PropTypes.bool,
+    bordered : PropTypes.bool
 };
 Table.defaultProps = {
     striped : true,
