@@ -121,31 +121,32 @@ export_production = merge.smart(common(sourceMap = false), {
     // ]
   },
   plugins: [
-      new webpack.LoaderOptionsPlugin({
-        minimize: true,
-        debug: false
-      }),
-      new webpack.DefinePlugin({
-        'process.env': {
-          'NODE_ENV': JSON.stringify('production')
-        }
-      }),
-      new webpack.optimize.UglifyJsPlugin({
-        beautify: false,
-        mangle: {
-          screw_ie8: true,
-          keep_fnames: true
-        },
-        compress: {
-          screw_ie8: true
-        },
-        comments: false
-      }),
-    //  new ExtractTextPlugin("./dist/styles_comp.css"),
-    //   new ExtractTextPlugin({
-    //     filename: "[name].[contenthash].css",
-    //     disable: process.env.NODE_ENV === "development"
-    // })
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      beautify: false,
+      mangle: {
+        screw_ie8: true,
+        keep_fnames: true
+      },
+      compress: {
+        screw_ie8: true
+      },
+      comments: false
+    }),
+  //  new ExtractTextPlugin("./dist/styles_comp.css"),
+  //   new ExtractTextPlugin({
+  //     filename: "[name].[contenthash].css",
+  //     disable: process.env.NODE_ENV === "development"
+  // })
     ]
 });
 
