@@ -19,7 +19,7 @@ class Accordion extends React.Component {
     }
     
     expand(){
-        let accContent_h = this.refs.accContent.clientHeight;
+        let accContent_h = this.accContent.clientHeight;
 
         this.setState({
             isOpen    : !this.state.isOpen,
@@ -35,7 +35,7 @@ class Accordion extends React.Component {
                     {this.props.title}
                 </div>
                 <div className="acc-body" style={this.state.body_style}>
-                    <div className="acc-body-content" ref="accContent">
+                    <div className="acc-body-content" ref={(c) => { this.accContent = c; }}>
                         {this.props.children}
                     </div>
                 </div>
