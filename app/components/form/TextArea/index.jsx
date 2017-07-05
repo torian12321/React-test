@@ -16,7 +16,9 @@ class Textarea extends React.Component {
         this.handleFocusIn = this.handleFocusIn.bind(this);
         this.handleFocusOut= this.handleFocusOut.bind(this);
     }
-
+	componentDidMount() {
+		this.focus();
+	}
 	componentWillReceiveProps(nextProps) {
         if (nextProps.value !== this.state.value) {
             this.setState({ value: nextProps.value });
@@ -38,6 +40,11 @@ class Textarea extends React.Component {
 	isEmpty(str) {
 		return (!str || 0 === str.length);
 	}
+	focus(){
+		if (this.props.focus){
+			this.textArea.focus();
+		}
+	}
 
 
 	render(){
@@ -52,6 +59,7 @@ class Textarea extends React.Component {
 				<textarea
 					id           = {id}
 					className    = {this.state.filled ? 'filled': null}
+					ref          = {(r) => { this.textArea = r; }}
 					maxLength    = {this.props.maxlength}
 					rows         = {this.props.rows}
 					onChange     = {this.handleChange}
@@ -71,6 +79,7 @@ Textarea.propTypes = {
 	rows       : PropTypes.number,
 	maxlength  : PropTypes.number,
 	placeholder: PropTypes.string,
+	focus      : PropTypes.bool,
 	onChange   : PropTypes.func,
     onFocusIn  : PropTypes.func,
     onFocusOut : PropTypes.func
@@ -78,6 +87,7 @@ Textarea.propTypes = {
 Textarea.defaultProps = {
 	disabled  : false,
 	rows      : 4,
+	focus     : false,
 	onChange  : function(){},
     onFocusIn : function(){},
     onFocusOut: function(){}

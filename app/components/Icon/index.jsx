@@ -11,7 +11,8 @@ const Icon = props => {
   styles = {
       width : `${props.width}em`,
       height: props.height ? `${props.height}em` : null,
-      fill  : props.color,
+      fill  : props.color || null,
+      transform: props.rotate ? `rotate(${props.rotate}deg)` : null,
       ...props.styles
   };
 
@@ -33,7 +34,6 @@ Icon.propTypes = {
   name     : PropTypes.string,
   className: PropTypes.string,
   color    : PropTypes.string,
-  rotate   : PropTypes.number,
   viewBox  : PropTypes.number,
 
   /** Size in ems */
@@ -42,6 +42,9 @@ Icon.propTypes = {
   /** Size in ems */
   height: PropTypes.number,
 
+  /** Angle in deg */
+  rotate   : PropTypes.number,
+  
   /** The paths of a custom icon */
   paths : PropTypes.array,
 

@@ -16,7 +16,9 @@ class Input extends React.Component {
         this.handleFocusIn = this.handleFocusIn.bind(this);
         this.handleFocusOut= this.handleFocusOut.bind(this);
     }
-
+	componentDidMount() {
+		this.focus();
+	}
 	componentWillReceiveProps(nextProps) {
         if (nextProps.value !== this.state.value) {
             this.setState({ value: nextProps.value });
@@ -38,10 +40,15 @@ class Input extends React.Component {
 	isEmpty(str) {
 		return (!str || 0 === str.length);
 	}
+	focus(){
+		if (this.props.focus){
+			this.input.focus();
+		}
+	}
 
 
 	render(){
-        const id = this.props.id || uniqid('textArea_');
+        const id = this.props.id || uniqid('input_');
 
 		return(
 			<Wrapper
@@ -52,6 +59,7 @@ class Input extends React.Component {
 				<input
 					id           = {id}
 					className    = {this.state.filled ? 'filled': null}
+					ref          = {(r) => { this.input = r; }}
 					maxLength    = {this.props.maxlength}
 					onChange     = {this.handleChange}
 					defaultValue = {this.props.value}
@@ -69,12 +77,14 @@ Input.propTypes = {
 	className  : PropTypes.string,
 	maxlength  : PropTypes.number,
 	placeholder: PropTypes.string,
+	focus      : PropTypes.bool,
 	onChange   : PropTypes.func,
     onFocusIn  : PropTypes.func,
     onFocusOut : PropTypes.func
 };
 Input.defaultProps = {
 	disabled  : false,
+	focus     : false,
 	onChange  : function(){},
     onFocusIn : function(){},
     onFocusOut: function(){}

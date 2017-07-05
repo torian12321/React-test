@@ -53,10 +53,10 @@ class Range extends React.Component {
                     type     = "range"
                     style    = {this.state.style}
                     disabled = {this.props.disabled ? 'disabled' : null}    
-                    value    = {this.state.value}
-                    step     = {this.props.step}
                     min      = {this.min}
                     max      = {this.max}
+                    value    = {this.state.value}
+                    step     = {this.props.step}
                     onChange = {this.handleChange}
                 />
                 {this.props.texted ? 

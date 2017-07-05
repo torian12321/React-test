@@ -28,6 +28,7 @@ Basic
 States
 ```
 initialState = {val: 50};
+
 <div>
 	<Range 
 		value    = {state.val}
