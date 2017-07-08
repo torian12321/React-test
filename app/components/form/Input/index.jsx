@@ -2,7 +2,6 @@ var
 React        = require('react'),
 PropTypes    = require('prop-types'),
 InputNumber  = require('./Input_number'),
-InputPassword= require('./Input_password'),
 InputText    = require('./Input_text'),
 uniqid       = require('uniqid');
 
@@ -16,9 +15,6 @@ const Input = props => {
             return <InputNumber {...props} />
             break;
         case 'password':
-        case 'key':
-            return <InputPassword {...props} />
-            break;
         case 'text':
         default:
             return <InputText {...props} />

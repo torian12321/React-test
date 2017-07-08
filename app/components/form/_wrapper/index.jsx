@@ -5,7 +5,7 @@ classNames= require('classnames'),
 styles    = require('./_style.less');
 
 const Wrapper = props => (
-    <div className="styled-input">
+    <div className={classNames('styled-input', props.className)}>
         {props.children}
         {props.label ?
             <label htmlFor={props.id}>{props.label}</label> :

@@ -9,9 +9,9 @@ const Icon = props => {
   const
   iconPaths = props.name ? icons[props.name] : props.paths,
   styles = {
-      width : `${props.width}em`,
-      height: props.height ? `${props.height}em` : null,
-      fill  : props.color || null,
+      width    : `${props.width}em`,
+      height   : props.height ? `${props.height}em` : null,
+      fill     : props.color || null,
       transform: props.rotate ? `rotate(${props.rotate}deg)` : null,
       ...props.styles
   };
@@ -25,7 +25,9 @@ const Icon = props => {
         props.className
       )}
     >
+    <g transform="scale(1)">
       {iconPaths && iconPaths.map((pathProps, i) => <path {...pathProps} key={i} />)}
+      </g>
     </svg>
   )
 }

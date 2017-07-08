@@ -58,6 +58,7 @@ class Input extends React.Component {
 			>
 				<input
 					id           = {id}
+					type         = {this.props.type}
 					className    = {this.state.filled ? 'filled': null}
 					ref          = {(r) => { this.input = r; }}
 					maxLength    = {this.props.maxlength}
@@ -76,6 +77,7 @@ Input.propTypes = {
 	value      : PropTypes.string,
 	className  : PropTypes.string,
 	maxlength  : PropTypes.number,
+	type       : PropTypes.string,
 	placeholder: PropTypes.string,
 	focus      : PropTypes.bool,
 	onChange   : PropTypes.func,
@@ -83,6 +85,7 @@ Input.propTypes = {
     onFocusOut : PropTypes.func
 };
 Input.defaultProps = {
+	type      : 'text', 
 	disabled  : false,
 	focus     : false,
 	onChange  : function(){},

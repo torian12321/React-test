@@ -2,6 +2,11 @@ With [ReactIcons](https://www.npmjs.com/package/react-icons) the icons are conve
 
 Check available icons from [the list](https://gorangajic.github.io/react-icons/index.html)
 
+On add your own icons, consider to use [SVGOMG](https://jakearchibald.github.io/svgomg/) to optimize the code
+
+[Optimizing SVGs in data URIs](https://codepen.io/davatron5000/pen/owyKJM)
+[reference](https://codepen.io/davatron5000/pen/owyKJM)
+
 Basic:
 ```
 <Icon />
