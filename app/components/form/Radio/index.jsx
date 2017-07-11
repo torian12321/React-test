@@ -4,53 +4,54 @@ PropTypes = require('prop-types'),
 classNames= require('classnames'),
 uniqid    = require('uniqid');
 
-class Radio extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            checked: this.props.checked,
-        };
-    }
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.checked !== this.state.checked) {
-            this.setState({ checked: nextProps.checked });
-        }
-    }
+function RadioOption(props) {
+  return (
+    <label>
+      <input type="radio" value={props.value} name={props.name} />
+      {props.label}
+    </label>
+  )
+}
 
-    handleClick(){
-        this.setState({
-            checked: !this.state.checked
-        });
-    }
-    render() {
-        const id = this.props.id || uniqid('radio_');
-
-        return (
-            <div className={classNames('form-radio', this.props.className)}>
-                <input
-                    id     = {id}
-                    type   = "radio"
-                    name   = {this.props.name}
-                    checked= {this.state.checked ? 'checked' : null}
-                />
-                <label htmlFor={id}>
-                    {this.props.children}
-                </label>
-            </div>
-        );
-    }
+function renderChildren(props) {
+  return React.Children.map(props.children, child => {
+    return React.cloneElement(child, {
+      name: props.name
+    })
+  })
 }
 
 
-Radio.propTypes = {
-    id       : PropTypes.string,
-    children : PropTypes.string,
-    name     : PropTypes.string.isRequired,
-    checked  : PropTypes.bool.isRequired,
-    className: PropTypes.string
-};
-Radio.defaultProps = {
-    checked: false
-};
+
+function RadioGroup(props) {
+  return (
+    <div class="radio-group">
+      {renderChildren(props)}
+    </div>
+  )
+}
+
+// function Radio() {
+//   return (
+//     <RadioGroup name="blizzard-games">
+//       <RadioOption label="Warcraft 2"  value="wc2" />
+//       <RadioOption label="Warcraft 3"  value="wc3" />
+//       <RadioOption label="Starcraft 1" value="sc1" />
+//       <RadioOption label="Starcraft 2" value="sc2" />
+//     </RadioGroup>
+//   )
+// }
+
+const Radio = props => (
+    <label className="control control--radio">Disabled & checked
+      <input
+        type    = "radio"
+        name    = "radio2"
+        disabled= {props.disabled}
+        checked = "checked"
+    />
+      <div className="control__indicator" />
+    </label>
+);
 
 module.exports = Radio;

@@ -4,7 +4,7 @@ PropTypes = require('prop-types'),
 uniqid    = require('uniqid'),
 Wrapper   = require('../_wrapper/check');
 
-class Checkbox extends React.Component {
+class RadioOption extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -34,7 +34,7 @@ class Checkbox extends React.Component {
 			>
                 <input
                     id      = {id}
-                    type    = "checkbox"
+                    type    = "radio"
                     checked = {this.state.checked ? 'checked' : null}
                     disabled= {this.props.disabled? 'disabled': null}
                 />
@@ -44,16 +44,16 @@ class Checkbox extends React.Component {
 }
 
 
-Checkbox.propTypes = {
+RadioOption.propTypes = {
     id       : PropTypes.string,
     label    : PropTypes.string,
     disabled : PropTypes.bool,
     checked  : PropTypes.bool,
     className: PropTypes.string
 };
-Checkbox.defaultProps = {
+RadioOption.defaultProps = {
     disabled: false,
     checked : false
 };
 
-module.exports = Checkbox;
+module.exports = RadioOption;

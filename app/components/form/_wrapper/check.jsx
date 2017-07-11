@@ -1,20 +1,15 @@
-// Wrapper for text inputs and textAreas
-
+// Wrapper for checkboxes and radioButtons
 var
 React     = require('react'),
 PropTypes = require('prop-types'),
 classNames= require('classnames'),
-styles    = require('./_style.less');
+styles    = require('./_style-check.less');
 
 const Wrapper = props => (
-    <div className={classNames('styled-input', props.className)}>
+    <label className={classNames('wrapper-2', props.className)} htmlFor={props.id}>
         {props.children}
-        {props.label ?
-            <label htmlFor={props.id}>{props.label}</label> :
-            null
-        }        
-        <span />
-    </div>
+        <span>{props.label}</span>
+    </label>
 );
 
 

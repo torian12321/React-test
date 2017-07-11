@@ -1,13 +1,17 @@
 Basic
 ```
 <div>
-	<Checkbox />
-	<Checkbox checked />
-	<Checkbox>Label</Checkbox>
+	<Checkbox label='Check-box 1' />
+	<Checkbox label='Check-box 2' />
+	<Checkbox label='Check-box 3' checked/>
+	<Checkbox label='Check-box 4' />
 </div>
 ```
 
-Disabled
+Disable
 ```
-<Checkbox disabled />
+<div>
+	<Checkbox label='Check-box 1 - Disabled' disabled/>
+	<Checkbox label='Check-box 2 - Disabled + Checked' disabled checked/>
+</div>
 ```

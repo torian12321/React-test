@@ -10,8 +10,9 @@
 	background: @color_main;
     box-sizing: content-box;
     font-size : @fontSize_base;
+    box-sizing: border-box;
     .rounded();
-    .border();
+    .shadow(0 2px 5px 0 rgba(0,0,0,.3));
     .smart-text-color(@color_main);
 
     .panel-title,
@@ -28,5 +29,8 @@
             text-transform: capitalize;
             font-size     : 1.25em;
         }
+    }
+    .panel-body{
+        min-height: 100px;
     }
 }

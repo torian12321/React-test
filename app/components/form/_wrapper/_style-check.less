@@ -1,0 +1,82 @@
+@import '~LESS_conf';
+
+@color_main: @grey;
+@color_sec : @themeColor_1;
+
+.wrapper-2 {
+    display    : block;
+    position   : relative;
+    padding    : 0;
+    cursor     : pointer;
+    font-size  : 18px;
+    line-height: 1.5;
+    input{
+        position: absolute;
+        z-index : -1;
+        opacity : 0;
+    }
+
+    span {
+        display: block;
+        padding: 0 0 0 1.5em;
+        .transition(color);
+
+        &:before,
+        &:after{
+            content   : '';
+            position  : absolute;
+            left      : 0;
+            top       : .25em;
+            height    : 1em;
+            width     : 1em;
+            font-size : 1em;
+            background: transparent;
+            box-sizing: border-box;
+            .transition();
+        }
+
+        &:before{
+            border: .15em solid @colorState_disable;
+        }
+    }
+    
+    // Focus
+    // Hover
+    input:focus + span,
+    &:hover input + span{
+        color: @color_sec;
+        &:before{
+            border-color: @color_sec;
+        }
+    }
+
+    // Checked
+    input:checked + span{
+        &:before{
+            border-width: .5em;
+        }
+
+        &:after{
+            content: "";
+            position: absolute;
+            top: .6em;
+            left: .2em;
+            border-right: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            transform: rotate(45deg);
+            transform-origin: 0% 100%;
+            animation: checkbox-check 125ms 250ms cubic-bezier(.4,.0,.23,1) forwards;
+        }
+    }
+
+    // Disabled
+    input:disabled + span{
+        color: @fontColor_disable;
+        cursor    : not-allowed; 
+        &:before,
+        &:after{
+            border-color: @colorState_disable;
+            background  : @colorState_disable; 
+        }
+    }
+}
