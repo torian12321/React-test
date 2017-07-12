@@ -40,7 +40,7 @@ class Input extends React.Component {
         return (
             <input 
                 type       = "number"
-                disabled   = {this.props.disabled ? 'disabled' : null}
+                disabled   = {this.props.disabled}
                 value      = {this.state.value}
                 step       = {this.props.step}
                 min        = {this.min}

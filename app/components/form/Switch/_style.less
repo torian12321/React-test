@@ -27,24 +27,39 @@
 				top       : .15em;
 				height    : .7em;
 				width     : .7em;
-				//background: @themeColor_1;
 				background: darken(@BG_1, 20%);
 				.rounded(50%);
 				.transition(@time: @transition-time);
 			}
 		}
+
+		//----------------------
+		//----    STATES    ----
+		//----------------------
+
+		// Checked
 		&:checked + label{
-			//background: @themeColor_1;
 			&:after{
 				left: 1.15em;
 				background: @themeColor_1;
 			}
 		}
+
+		// Focus
+	    // Hover
 		&:focus + label:after,
 		&:hover + label:after{
 			background: @BG_2;
 		}
-		
+
+		// Disabled
+		&:disabled + label{
+			color : @fontColor_disable;
+        	cursor: not-allowed;
+			&:after{
+				background: darken(@colorState_disable, 30);
+			}
+		}	
 	}
 
 	&.texted input[type="checkbox"]{

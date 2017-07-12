@@ -11,6 +11,8 @@ class Switch extends React.Component {
         this.state = {
             checked: this.props.checked,
         };
+
+        this.handleChange  = this.handleChange.bind(this);
     }
     componentWillReceiveProps(nextProps) {
         if (nextProps.checked !== this.state.checked) {
@@ -18,10 +20,10 @@ class Switch extends React.Component {
         }
     }
 
-    handleClick(){
+    handleChange(){
         this.setState({
-            checked: !this.state.checked
-        });
+			checked : !this.state.checked
+		}, () => this.props.onChange(this.state.checked));
     }
     render() {
         const id = this.props.id || uniqid('switch_');
@@ -29,9 +31,11 @@ class Switch extends React.Component {
         return (
             <div className={classNames('form-switch', {'texted': this.props.texted})}>
                 <input
-                    id     = {id}
-                    type   = "checkbox"
-                    checked= {this.state.checked ? 'checked' : null}
+                    id      = {id}
+                    type    = "checkbox"
+                    checked = {this.state.checked}
+                    disabled= {this.props.disabled}
+                    onChange= {this.handleChange}
                 />
                 <label htmlFor={id} />
             </div>
@@ -41,13 +45,17 @@ class Switch extends React.Component {
 
 
 Switch.propTypes = {
-    id     : PropTypes.string,
-    checked: PropTypes.bool,
-    texted : PropTypes.bool
+    id      : PropTypes.string,
+    checked : PropTypes.bool,
+    texted  : PropTypes.bool,
+    disabled: PropTypes.bool,
+    onChange: PropTypes.func
 };
 Switch.defaultProps = {
     checked: false,
-    texted : false
+    texted : false,
+    disabled: false,
+    onChange: function(){}
 };
 
 module.exports = Switch;

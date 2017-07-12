@@ -35,8 +35,8 @@ class RadioOption extends React.Component {
                 <input
                     id      = {id}
                     type    = "radio"
-                    checked = {this.state.checked ? 'checked' : null}
-                    disabled= {this.props.disabled? 'disabled': null}
+                    checked = {this.state.checked}
+                    disabled= {this.props.disabled}
                 />
             </Wrapper>
         );

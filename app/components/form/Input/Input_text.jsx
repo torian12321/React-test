@@ -64,7 +64,7 @@ class Input extends React.Component {
 					maxLength    = {this.props.maxlength}
 					onChange     = {this.handleChange}
 					defaultValue = {this.props.value}
-					disabled     = {this.props.disabled ? 'disabled' : null}
+					disabled     = {this.props.disabled}
 				/>
 			</Wrapper>
 		);

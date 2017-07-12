@@ -14,7 +14,7 @@ const Button = props => (
             props.type  ? `btn-${props.type}`  : null
         )}
         onClick  = {props.onClick}
-        disabled = {props.disabled ? 'disabled' : null}
+        disabled = {props.disabled}
     >
         {props.children}
     </button>

@@ -9,7 +9,9 @@ class Checkbox extends React.Component {
         super(props);
         this.state = {
             checked: this.props.checked,
-        };        
+        };
+
+        this.handleChange  = this.handleChange.bind(this);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -17,12 +19,12 @@ class Checkbox extends React.Component {
             this.setState({ checked: nextProps.checked });
         }
     }
-
-    handleClick(){
+    handleChange(){
         this.setState({
-            checked: !this.state.checked
-        });
+			checked : !this.state.checked
+		}, () => this.props.onChange(this.state.checked));
     }
+
     render() {
         const id = this.props.id || uniqid('checkBox_');
 
@@ -35,8 +37,9 @@ class Checkbox extends React.Component {
                 <input
                     id      = {id}
                     type    = "checkbox"
-                    checked = {this.state.checked ? 'checked' : null}
-                    disabled= {this.props.disabled? 'disabled': null}
+                    checked = {this.state.checked}
+                    disabled= {this.props.disabled}
+                    onChange= {this.handleChange}
                 />
             </Wrapper>
         );
@@ -49,11 +52,13 @@ Checkbox.propTypes = {
     label    : PropTypes.string,
     disabled : PropTypes.bool,
     checked  : PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.string,
+    onChange : PropTypes.func
 };
 Checkbox.defaultProps = {
     disabled: false,
-    checked : false
+    checked : false,
+    onChange: function(){}
 };
 
 module.exports = Checkbox;

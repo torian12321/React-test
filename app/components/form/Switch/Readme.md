@@ -2,12 +2,26 @@ Basic switch
 ```
 <div>
 	<Switch />
-	<Switch checked={false}/>
 	<Switch checked />
+	<Switch checked={false} />
+	
 </div>
 ```
 
-Texted
+Disabled switch
 ```
-<Switch texted />
+<div>
+	<Switch disabled />
+	<Switch checked disabled />
+</div>
+```
+
+Texted version
+```
+	<Switch texted />
+```
+
+On change events
+```
+	<Switch onChange={(v) => alert('The checkbox value is: ' + v)} />
 ```

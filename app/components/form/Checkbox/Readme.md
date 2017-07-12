@@ -3,15 +3,14 @@ Basic
 <div>
 	<Checkbox label='Check-box 1' />
 	<Checkbox label='Check-box 2' />
-	<Checkbox label='Check-box 3' checked/>
+	<Checkbox label='Check-box 3 - Checked' checked/>
 	<Checkbox label='Check-box 4' />
+	<Checkbox label='Check-box 5 - Disabled' disabled/>
+	<Checkbox label='Check-box 6 - Disabled + Checked' disabled checked />
 </div>
 ```
 
-Disable
+On change events
 ```
-<div>
-	<Checkbox label='Check-box 1 - Disabled' disabled/>
-	<Checkbox label='Check-box 2 - Disabled + Checked' disabled checked/>
-</div>
+<Checkbox label='Show value on alert' onChange={(v) => alert('The checkbox value is: ' + v)} />
 ```

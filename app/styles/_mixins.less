@@ -95,10 +95,15 @@
 	@x-axis: 50%;
 	@y-axis: 50%;
 	){
-	-ms-transform    : rotate(@angle);       /* IE 9 */
-	-webkit-transform: rotate(@angle);       /* Chrome, Safari, Opera */
-	transform        : rotate(@angle);
-
+	.transform(rotate(@angle));
+	.axis_origin(@x-axis, @y-axis);
+}
+.scale(
+	@value : 1;
+	@x-axis: 50%;
+	@y-axis: 50%;
+	){
+	.transform(scale(@value));
 	.axis_origin(@x-axis, @y-axis);
 }
 .axis_origin(
