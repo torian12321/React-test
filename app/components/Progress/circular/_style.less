@@ -21,7 +21,6 @@
     stroke-width: 8;
     fill        : none;
       &.fill {
-      stroke: @themeColor_1;
       stroke-dasharray: 220;
     }
   }
@@ -38,6 +37,7 @@
   }
 
   // States
+  &         circle.fill{stroke: @themeColor_1;}
   &.main    circle.fill{stroke: @themeColor_1;}
   &.sec     circle.fill{stroke: @themeColor_2;}
   &.success circle.fill{stroke: @colorState_success;}

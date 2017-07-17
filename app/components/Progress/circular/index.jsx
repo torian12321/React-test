@@ -8,7 +8,7 @@ const ProgressCircle = (props) =>{
 
     return(
     	<div className={props.className}>
-           <label>{props.val}%</label>
+           <label>{`${props.val}%`}</label>
             <svg viewBox="0 0 80 80">
                 <circle cx="40" cy="40" r="35" />
                 <circle cx="40" cy="40" r="35" className="fill" strokeDashoffset={offset} />
