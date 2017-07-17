@@ -35,7 +35,7 @@ class Input extends React.Component {
 
         <div className="quantity-input">
             <div className="quantity-input__modifier quantity-input__modifier--left" onClick={this.decrement}>&mdash;</div>
-            <input className="quantity-input__screen" type="number" value={this.state.value} readonly />
+            <input className="quantity-input__screen" type="number" value={this.state.value} readOnly />
             <div className="quantity-input__modifier quantity-input__modifier--right" onClick={this.increment}>&#xff0b;</div>  
         </div>
 

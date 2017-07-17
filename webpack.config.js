@@ -51,6 +51,7 @@ common = function(sourceMap = true){
         Switch   : path.resolve(__dirname, 'app/components/form/Switch'),
         Button   : path.resolve(__dirname, 'app/components/form/Button'),
         Range    : path.resolve(__dirname, 'app/components/form/Range'),
+        Select   : path.resolve(__dirname, 'app/components/form/Select'),
 
         // Helpers
         Lorem    : path.resolve(__dirname, 'app/components/helpers/Lorem')
