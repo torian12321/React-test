@@ -2,7 +2,7 @@ var
 React  = require('react'),
 Button = require('Button'),
 Icon   = require('Icon'),
-ProgressBar   = require('ProgressBar'),
+Progress   = require('Progress'),
 Message   = require('Message'),
 Avatar   = require('Avatar'),
 Modal  = require('Modal');
@@ -11,8 +11,8 @@ const Main = props =>(
     <div>
         Hello world
         <Icon />
-        <ProgressBar />
-        <ProgressBar type='circular' />
+        <Progress />
+        <Progress type='circular' />
         
         <Message>
             hello world
