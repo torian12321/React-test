@@ -1,14 +1,18 @@
-Basic:
+### Import
+
+  `import { Accordion } from 'libraryComponents';`
+
+### Basic
 ```
 <Accordion>Content</Accordion>
 ```
 
-Custom title:
+### Custom title
 ```
 <Accordion title='Custom title'>Content</Accordion>
 ```
 
-Open by default:
+### Open by default
 ```
 <Accordion isOpen>Content</Accordion>
 ```

@@ -103,5 +103,5 @@ export const quote = [
   { d: 'M6.4 50.5v36h36v-36H21.7C21.7 39.2 31 30 42.3 30V14.6c-19.8 0-36 16-36 36zM93.6 30V14.6c-20 0-36 16-36 36v35.8h36v-36H73c0-11 9.3-20.4 20.7-20.4z' }
 ]
 export const quote_wrapper = [
-  { transform: 'scale(.5)' }
+  { transform: 'scale(.35)' }
 ]
