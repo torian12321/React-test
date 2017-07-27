@@ -1,9 +1,9 @@
-Basic
+#### Basic
 ```
 <Message>Content</Message>
 ```
 
-Different types
+#### Types
 ```
 <div>
 	<Message type='info'>Info content</Message>
@@ -13,7 +13,8 @@ Different types
 </div>
 ```
 
-Show the important (Shadow)
+#### Important
+Show a shadow
 ```
 <div>
 	<Message>Some text</Message>

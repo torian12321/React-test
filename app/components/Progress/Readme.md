@@ -1,4 +1,4 @@
-Basic
+#### Basic
 ```
 <div>
 	<Progress />
@@ -7,7 +7,7 @@ Basic
 </div>
 ```
 
-States
+#### States
 ```
 initialState = {val: 50};
 
@@ -26,7 +26,7 @@ initialState = {val: 50};
 </div>
 ```
 
-Sizes
+#### Sizes
 ```
 initialState = {val: 50};
 
@@ -44,17 +44,17 @@ initialState = {val: 50};
 </div>
 ```
 
-------------
-Progress - Circular
+
+### Progress - Circular
 ------------
 Check the reference [here](https://codepen.io/mavrK/pen/pRGPNO?editors=1000)
 
-Basic
+#### Basic
 ```
 <Progress type='circular'/>
 ```
 
-States
+#### States
 ```
 initialState = {val: 50};
 
@@ -73,7 +73,7 @@ initialState = {val: 50};
 </div>
 ```
 
-Sizes
+#### Sizes
 ```
 <div>
 	<Progress type='circular' size='xs'/>

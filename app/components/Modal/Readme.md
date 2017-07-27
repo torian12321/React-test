@@ -1,4 +1,4 @@
-Basic:
+#### Basic
 ```
 <div>
   <Button onClick={() => setState({isOpen: true})}>Show the modal</Button>

@@ -1,4 +1,4 @@
-Basic
+#### Basic
 ```
 <div style = {{background: '#eee', padding: 10}}>
     <Input placeholder='Add your comments'/>
@@ -6,7 +6,7 @@ Basic
 </div>
 ```
 
-Basic
+#### Types
 ```
 <div style = {{background: '#eee', padding: 10}}>
     <Input placeholder='Text'     type='text' />
@@ -15,7 +15,7 @@ Basic
 </div>
 ```
 
-Disabled
+#### Disabled
 ```
 <div style={{background: '#eee', padding: 10}}>
     <Input placeholder='Add your comments' disabled />

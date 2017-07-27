@@ -1,9 +1,9 @@
-Basic:
+#### Basic
 ```
 <Link>Link to a place</Link>
 ```
 
-Preview:
+#### Preview
 ```
 <Link preview href='https://www.google.com'>Put the mouse hover me</Link>
 ```

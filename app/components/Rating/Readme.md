@@ -1,9 +1,9 @@
-Basic
+#### Basic
 ```
 <Rating />
 ```
 
-Custom values
+#### Custom values
 ```
 <div>
 	<Rating val={3} of={10} />
@@ -11,7 +11,7 @@ Custom values
 </div>
 ```
 
-Custom color
+#### Custom color
 ```
 <div>
 	<Rating val={3} color='#fb6400' />
@@ -19,21 +19,24 @@ Custom color
 </div>
 ```
 
-Differnet Icons
+#### Icons
 ```
-initialState = {val: 3};
+initialState = {
+	val: 3,
+	max: 20
+};
 <div>
 	<Range 
 		value    = {state.val}
-		max      = {5}
+		max      = {state.max}
 		onChange = {(e) => setState({val: e})}
 		texted
 	/>
 
-	<Rating val={state.val} icon='star' />
-	<Rating val={state.val} icon='chat' />
-	<Rating val={state.val} icon='cog' />
-	<Rating val={state.val} icon='heart' />
-	<Rating val={state.val} icon='dollar' />
+	<Rating val={state.val} of={state.max} icon='star' />
+	<Rating val={state.val} of={state.max} icon='chat' />
+	<Rating val={state.val} of={state.max} icon='cog' />
+	<Rating val={state.val} of={state.max} icon='heart' />
+	<Rating val={state.val} of={state.max} icon='dollar' />
 </div>
 ```

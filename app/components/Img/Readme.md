@@ -1,9 +1,9 @@
-Basic:
+#### Basic
 ```
 <Img />
 ```
 
-With alt text:
+#### Alt text
 ```
 <Img alt='Some text'/>
 ```

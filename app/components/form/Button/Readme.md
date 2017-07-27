@@ -1,9 +1,9 @@
-Basic
+#### Basic
 ```
 <Button />
 ```
 
-Colors
+#### Colors
 ```
 <div>
 	<Button color='main'>Main</Button>
@@ -17,7 +17,7 @@ Colors
 </div>
 ```
 
-Type
+#### Type
 ```
 <div>
 	<Button type='success'>Success</Button>
@@ -26,7 +26,7 @@ Type
 </div>
 ```
 
-More
+#### More
 ```
 <div>
 	<Button large>Large</Button>

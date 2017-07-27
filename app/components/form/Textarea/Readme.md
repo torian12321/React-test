@@ -1,4 +1,4 @@
-Basic
+#### Basic
 ```
 <div style = {{background: '#eee', padding: 10}}>
     <Textarea placeholder='Add your comments'/>
@@ -6,7 +6,7 @@ Basic
 </div>
 ```
 
-Disabled
+#### Disabled
 ```
 <div style={{background: '#eee', padding: 10}}>
     <Textarea placeholder='Add your comments' disabled />

@@ -1,4 +1,4 @@
-Basic
+#### Basic
 ```
 <div>
 	<Checkbox label='Check-box 1' />
@@ -10,7 +10,7 @@ Basic
 </div>
 ```
 
-On change events
+#### On change events
 ```
 <Checkbox label='Show value on alert' onChange={(v) => alert('The checkbox value is: ' + v)} />
 ```

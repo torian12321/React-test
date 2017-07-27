@@ -1,14 +1,14 @@
-Default: spinner sm
+#### Basic
 ```
 <Loading />
 ```
 
-Pulse
+#### Type pulse
 ```
 <Loading type='pulse' />
 ```
 
-Sizes
+#### Sizes
 ```
 <div>
     <Loading size='xs' />
@@ -18,7 +18,7 @@ Sizes
 </div>
 ```
 
-Inside components
+#### Inside components
 ```
 <div>
     <Button><Loading size='xs' /></Button>

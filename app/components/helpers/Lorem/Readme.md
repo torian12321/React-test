@@ -1,12 +1,11 @@
 Genereate lorem ipsums with [LoremJs](https://github.com/f/loremjs).
 
-
-Basic:
+#### Basic
 ```
 <Lorem />
 ```
 
-Example inside components:
+#### Examples
 ```
 <div>
     <Accordion>

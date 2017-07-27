@@ -7,12 +7,12 @@ On add your own icons, consider to use [SVGOMG](https://jakearchibald.github.io/
 [Optimizing SVGs in data URIs](https://codepen.io/davatron5000/pen/owyKJM)
 [reference](https://codepen.io/davatron5000/pen/owyKJM)
 
-Basic:
+#### Basic
 ```
 <Icon />
 ```
 
-List of Icons:
+#### List of Icons
 ```
 <div>
 	<Icon name='twitter' />
@@ -42,7 +42,7 @@ List of Icons:
 </div>
 ```
 
-Set width:
+#### Set width
 ```
 <div>
 	<Icon width={.5} />
@@ -53,7 +53,7 @@ Set width:
 </div>
 ```
 
-Set color:
+#### Set color
 ```
 <div>
 	<Icon color='red' />
@@ -62,7 +62,7 @@ Set color:
 </div>
 ```
 
-Rotation:
+#### Rotation
 ```
 initialState = {val: 180};
 

@@ -1,5 +1,6 @@
 Code from [Toddmoto](https://toddmotto.com/creating-a-tabs-component-with-react/#component-design)
 
+#### Basic
 ```
 <Tabs>
     <Tabs.Panel label="Tab 1">
@@ -15,7 +16,7 @@ Code from [Toddmoto](https://toddmotto.com/creating-a-tabs-component-with-react/
 ```
 
 
-Custom tab open
+#### Custom tab open
 ```
 <Tabs selected={1}>
     <Tabs.Panel label="Tab 1">

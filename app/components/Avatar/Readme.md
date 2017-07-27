@@ -1,9 +1,9 @@
-Basic:
+#### Basic
 ```
 <Avatar />
 ```
 
-States.
+#### States
 May be used for 'online', 'in a meeting' etc.
 ```
 <div>
@@ -16,7 +16,7 @@ May be used for 'online', 'in a meeting' etc.
 </div>
 ```
 
-Sizes
+#### Sizes
 ```
 <div>
 	<Avatar size='xs'/>

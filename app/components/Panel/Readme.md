@@ -1,9 +1,9 @@
-Basic
+#### Basic
 ```
 <Panel><Lorem /></Panel>
 ```
 
-Basic
+#### With title
 ```
 <Panel title='Title'><Lorem /></Panel>
 ```

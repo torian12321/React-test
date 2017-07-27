@@ -1,4 +1,4 @@
-Basic
+#### Basic
 ```
 <Table>
 	<thead>
@@ -40,7 +40,7 @@ Basic
 </Table>
 ```
 
-Bordered table
+#### Bordered table
 ```
 <Table bordered>
 	<thead>
@@ -75,7 +75,7 @@ Bordered table
 </Table>
 ```
 
-Non striped table
+#### Non striped table
 ```
 <Table striped={false}>
 	<thead>
