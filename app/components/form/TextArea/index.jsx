@@ -64,7 +64,7 @@ class Textarea extends React.Component {
 					rows         = {this.props.rows}
 					onChange     = {this.handleChange}
 					defaultValue = {this.props.value}
-					disabled     = {this.props.disabled ? 'disabled' : null}
+					disabled     = {this.props.disabled}
 				/>
 			</Wrapper>
 		);

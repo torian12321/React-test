@@ -5,7 +5,7 @@ classNames= require('classnames'),
 styles    = require('./_style.less');
 
 const Fieldset = props => (
-    <fieldset className={classNames('fieldset', props.className)}>
+    <fieldset disabled={props.disabled} className={classNames('fieldset', props.className)}>
         {props.title ?
             <legend>{props.title}</legend> : 
             null
@@ -18,7 +18,11 @@ Fieldset.propTypes = {
     /** Fieldset content. */
     children: PropTypes.any.isRequired,
     /** Fieldset legend. */
-    title   : PropTypes.string
+    title   : PropTypes.string,
+    disabled: PropTypes.bool
+};
+Fieldset.defaultProps = {
+    disabled: false
 };
 
 module.exports = Fieldset;
