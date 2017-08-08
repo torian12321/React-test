@@ -2,31 +2,11 @@ const
 webpack     = require('webpack'),
 merge       = require('webpack-merge'),
 path        = require('path'),
-HTML        = require('html-webpack-plugin'),
-ExtractTextPlugin = require("extract-text-webpack-plugin");
+HTML        = require('html-webpack-plugin');
 
-const loaders = require('./_config/loaders');
-const alias = require('./_config/alias');
+const wp_common   = require('./_config/wp_common');
 
-
-const
-common = function(){
-  let
-  conf = {
-    entry  : './app/app',
-    resolve: {
-      extensions: ['.js', '.jsx', '.less'],
-      alias     : alias
-    },
-    module: {
-      loaders: loaders
-    }
-  };
-  return conf;
-},
-
-
-export_default = merge(common(), {
+export_default = merge(wp_common, {
   output: {
     path    : __dirname + './public',
     filename: './bundle.js'
@@ -34,24 +14,10 @@ export_default = merge(common(), {
 }),
 
 
-export_production = merge.smart(common(), {
+export_production = merge.smart(wp_common, {
   output: {
     path    : __dirname + '/dist',
     filename: './bundle.js'
-  },
-  module: {
-    // loaders: [
-    //   {
-    //     test: /\.(css|less)$/,
-    //     use: ExtractTextPlugin.extract({
-    //       fallback: "style-loader",
-    //       use: [
-    //         { loader: "css-loader" },
-    //         { loader: "less-loader"}
-    //       ]
-    //     })
-    //   }
-    // ]
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin(),
@@ -89,11 +55,6 @@ export_production = merge.smart(common(), {
 				keepClosingSlash: false
 			}
 		}),
-  //  new ExtractTextPlugin("./dist/styles_comp.css"),
-  //   new ExtractTextPlugin({
-  //     filename: "[name].[contenthash].css",
-  //     disable: process.env.NODE_ENV === "development"
-  // })
     ]
 });
 
@@ -105,5 +66,3 @@ module.exports = function(env) {
     return export_default;
   }
 }
-
-module.exports.common = common;

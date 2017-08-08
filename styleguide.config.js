@@ -1,5 +1,6 @@
-const webpack = require('./webpack.config');
+//const webpack = require('./webpack.config');
 const path = require('path');
+const wp_common   = require('./_config/wp_common');
 
 module.exports = {
 	title         : 'Components Styleguide',
@@ -10,7 +11,7 @@ module.exports = {
 	showCode      : false,
 	highlightTheme: 'material',
 	skipComponentsWithoutExample: true,
-	webpackConfig : webpack.common(),
+	webpackConfig : wp_common,
 	sections: [
 		{ name: 'Components', components: 'app/components/*/index.jsx' },
 		{ name: 'Form'      , components: 'app/components/form/**/index.jsx' },
