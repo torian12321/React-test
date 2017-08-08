@@ -5,17 +5,18 @@ styles    = require('./_style.less'),
 Icon      = require('Icon');
 
 const Quote = props =>(
-    <div className="quote">
+    <blockquote className="quote" cite={props.cite}>
         {props.children}
         {props.author ? <span className="author">{ props.author }</span> : null}
         <Icon className="icon-open"  name="quote" />
         <Icon className="icon-close" name="quote" rotate={180} />
-    </div>
+    </blockquote>
 );
 
 Quote.propTypes = {
     children: PropTypes.string.isRequired,
-    author  : PropTypes.string
+    author  : PropTypes.string,
+    cite    : PropTypes.string
 };
 
 module.exports = Quote;
