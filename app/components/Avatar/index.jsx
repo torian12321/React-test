@@ -24,7 +24,8 @@ Avatar.propTypes = {
     className: PropTypes.string
 };
 Avatar.defaultProps = {
-    src: 'http://lorempixel.com/200/200/people'
+    // src: 'http://lorempixel.com/200/200/people',
+    src: 'http://placeimg.com/200/200/people'
 };
 
 module.exports = Avatar;
