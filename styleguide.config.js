@@ -10,7 +10,7 @@ module.exports = {
 	showCode      : false,
 	highlightTheme: 'material',
 	skipComponentsWithoutExample: true,
-	webpackConfig : webpack.common(sourceMap = false),
+	webpackConfig : webpack.common(),
 	sections: [
 		{ name: 'Components', components: 'app/components/*/index.jsx' },
 		{ name: 'Form'      , components: 'app/components/form/**/index.jsx' },
