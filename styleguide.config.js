@@ -13,9 +13,9 @@ module.exports = {
 	skipComponentsWithoutExample: true,
 	webpackConfig : wp_common,
 	sections: [
-		{ name: 'Components', components: 'app/components/*/index.jsx' },
-		{ name: 'Form'      , components: 'app/components/form/**/index.jsx' },
-		{ name: 'Helpers'   , components: 'app/components/helpers/**/index.jsx' }
+		{ name: 'Components', components: 'src/components/*/index.jsx' },
+		{ name: 'Form'      , components: 'src/components/form/**/index.jsx' },
+		{ name: 'Helpers'   , components: 'src/components/helpers/**/index.jsx' }
 	],
     getComponentPathLine: function (componentPath) {
 		// Use folder name as import reference

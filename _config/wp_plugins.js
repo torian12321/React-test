@@ -11,7 +11,7 @@ module.exports = (outDir, isProd) => {
   const plugins = [
     new Clean([outDir], { root }),
     new HTML({
-      template: path.resolve(__dirname, '../app/index.ejs'),
+      template: path.resolve(__dirname, '../src/index.ejs'),
       minify  : {
         preserveLineBreaks   : false,
         removeComments       : isProd,
