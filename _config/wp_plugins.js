@@ -1,13 +1,15 @@
 const
 webpack = require('webpack'),
 path    = require('path'),
-HTML    = require('html-webpack-plugin');
+Clean   = require('clean-webpack-plugin'),
+HTML    = require('html-webpack-plugin'),
+root    = path.join(__dirname, '..');
 
-module.exports = isProd => {
+module.exports = (outDir, isProd) => {
   
   // base plugins array
   const plugins = [
-    
+    new Clean([outDir], { root }),
     new HTML({
       template: path.resolve(__dirname, '../app/index.ejs'),
       minify  : {
