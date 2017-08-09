@@ -6,6 +6,7 @@ On add your own icons, consider to use [SVGOMG](https://jakearchibald.github.io/
 
 [Optimizing SVGs in data URIs](https://codepen.io/davatron5000/pen/owyKJM)
 [reference](https://codepen.io/davatron5000/pen/owyKJM)
+[icomoon.io](https://icomoon.io)
 
 #### Basic
 ```

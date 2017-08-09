@@ -25,8 +25,8 @@ const Icon = props => {
         props.className
       )}
     >
-    <g transform="scale(1)">
-      {iconPaths && iconPaths.map((pathProps, i) => <path {...pathProps} key={i} />)}
+      <g>
+        {iconPaths && iconPaths.map((pathProps, i) => <path {...pathProps} key={i} />)}
       </g>
     </svg>
   )

@@ -100,8 +100,5 @@ export const warning = [
 ]
 
 export const quote = [
-  { d: 'M6.4 50.5v36h36v-36H21.7C21.7 39.2 31 30 42.3 30V14.6c-19.8 0-36 16-36 36zM93.6 30V14.6c-20 0-36 16-36 36v35.8h36v-36H73c0-11 9.3-20.4 20.7-20.4z' }
-]
-export const quote_wrapper = [
-  { transform: 'scale(.35)' }
+  { d: "M0 16v8h8v-8H4s0-4 4-4V8s-8 0-8 8zm20-4V8s-8 0-8 8v8h8v-8h-4s0-4 4-4z" }
 ]
