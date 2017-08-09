@@ -2,14 +2,19 @@ const
 webpack = require('webpack'),
 path    = require('path'),
 Clean   = require('clean-webpack-plugin'),
+Copy    = require('copy-webpack-plugin'),
 HTML    = require('html-webpack-plugin'),
-root    = path.join(__dirname, '..');
+root    = path.join(__dirname, '..'),
+manifest= require('../src/static/manifest');
+
+
 
 module.exports = (outDir, isProd) => {
   
   // base plugins array
   const plugins = [
     new Clean([outDir], { root }),
+    new Copy([{ context: './src/static/', from: '**/*.*' }]),
     new HTML({
       template: path.resolve(__dirname, '../src/index.ejs'),
       minify  : {
@@ -22,7 +27,8 @@ module.exports = (outDir, isProd) => {
         minifyCSS            : isProd,
         minifyJS             : isProd,
         keepClosingSlash     : false
-      }
+      },
+      data: manifest
 	  }),
   ];
 

@@ -5,5 +5,5 @@ Main     = require('./components/Main');
 
 ReactDOM.render(
   <Main />,
-  document.getElementById('app')
+  document.getElementById('root')
 );

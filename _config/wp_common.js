@@ -5,7 +5,7 @@ alias   = require('./wp_alias');
 
 
 module.exports = {
-    entry  : path.resolve(__dirname, '../src/app'),
+    entry  : path.resolve(__dirname, '../src'),
     resolve: {
         extensions: ['.js', '.jsx', '.less'],
         alias     : alias
