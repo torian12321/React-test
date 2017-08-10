@@ -4,7 +4,7 @@
     "description": "Simple react app for learning",
     "license"    : "MIT",
     "version"    : "0.1.0",
-    "main"       : "index.js",
+    "main"       : "export.js",
     "repository" : {
         "type": "git",
         "url" : "https://github.com/torian12321/React-test"
