@@ -1,9 +1,8 @@
-var
-React        = require('react'),
-PropTypes    = require('prop-types'),
-InputNumber  = require('./Input_number'),
-InputText    = require('./Input_text'),
-uniqid       = require('uniqid');
+import React from 'react';
+import PropTypes from 'prop-types';
+import uniqid from 'uniqid';
+import InputText from './Input_text';
+import InputNumber from './Input_number';
 
 const Input = props => {
     const id = props.id || uniqid('input_');

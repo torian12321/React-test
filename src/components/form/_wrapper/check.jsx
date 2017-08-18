@@ -1,9 +1,8 @@
 // Wrapper for checkboxes and radioButtons
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-classNames= require('classnames'),
-styles    = require('./_style-check.less');
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import styles from './_style-check';
 
 const Wrapper = props => (
     <label className={classNames('wrapper-2', props.className)} htmlFor={props.id}>

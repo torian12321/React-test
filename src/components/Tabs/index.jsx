@@ -1,9 +1,9 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-TabsLabels= require('./TabsLabels.jsx'),
-TabsBody  = require('./TabsBody.jsx'),
-styles    = require('./_style.less');
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import styles from './_style';
+import TabsLabels from './TabsLabels';
+import TabsBody from './TabsBody';
 
 class Tabs extends React.Component {
     constructor(props) {
@@ -19,7 +19,7 @@ class Tabs extends React.Component {
     }
     render() {
     return (
-        <div className="tabs">
+        <div className={classNames('tabs', this.props.className)}>
             <TabsLabels
                 style   = { this.props.styleTabs }
                 selected= { this.state.selected }
@@ -41,6 +41,7 @@ Tabs.propTypes = {
         PropTypes.array,
         PropTypes.element
     ]).isRequired,
+    className: PropTypes.string,
     selected : PropTypes.number,
     styleBody: PropTypes.string,
     styleTabs: PropTypes.string

@@ -1,10 +1,8 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-classNames= require('classnames'),
-styles    = require('./_style.less'),
-IconClose = require('IconBtn/close');
-
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import styles from './_style';
+import IconClose from '../IconBtn/close';
 
 class Modal extends React.Component {
     constructor(props) {

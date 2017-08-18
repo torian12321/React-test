@@ -1,8 +1,6 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-classNames= require('classnames'),
-styles    = require('./_style.less');
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './_style';
 
 const ProgressBar = (props) =>(
     <div className={props.className}>

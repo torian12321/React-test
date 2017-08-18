@@ -1,8 +1,8 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-ListItem  = require('./list_item'),
-classNames= require('classnames');
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+//import styles from './_style.';
+import ListItem from './list_item';
 
 function List(props) {
   const ComponentToRender = props.component;

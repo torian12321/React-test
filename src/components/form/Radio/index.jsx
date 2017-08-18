@@ -1,8 +1,7 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-classNames= require('classnames'),
-uniqid    = require('uniqid');
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import uniqid from 'uniqid';
 
 function RadioOption(props) {
   return (

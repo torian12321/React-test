@@ -1,9 +1,8 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-classNames= require('classnames'),
-Bar       = require('./bar'),
-Circle    = require('./circular');
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import Bar from './bar';
+import Circle from './circular';
 
 const Progress = props =>{
     let conf = {

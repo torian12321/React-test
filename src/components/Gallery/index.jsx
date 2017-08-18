@@ -1,7 +1,6 @@
-var
-React       = require('react'),
-PropTypes   = require('prop-types'),
-GalleryItem = require('./GalleryItem.jsx');
+import React from 'react';
+import PropTypes from 'prop-types';
+import GalleryItem from './GalleryItem';
 
 class Gallery extends React.Component {
     constructor(props) {

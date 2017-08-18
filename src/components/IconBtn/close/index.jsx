@@ -1,9 +1,8 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-classNames= require('classnames'),
-styles    = require('./_style.less'),
-Icon      = require('Icon');
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import styles from './_style';
+import Icon from '../../Icon';
 
 const IconBtnClose = props =>(
     <div className={classNames('icon-btn', props.className)} onClick={props.onClick}>

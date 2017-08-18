@@ -1,9 +1,8 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-classNames= require('classnames'),
-uniqid    = require('uniqid'),
-styles    = require('./_style.less');
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import uniqid from 'uniqid';
+import styles from './_style';
 
 class Switch extends React.Component {
     constructor(props) {

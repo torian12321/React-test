@@ -1,6 +1,5 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class Input extends React.Component {
     constructor(props){

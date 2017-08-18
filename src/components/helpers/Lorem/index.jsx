@@ -1,8 +1,6 @@
-import './lorem.min.js';
-
-var
-React     = require('react'),
-PropTypes = require('prop-types');
+import React from 'react';
+import PropTypes from 'prop-types';
+import './lorem.min';
 
 const Lorem = props => (
     <span data-lorem={`${props.length}${props.type}`} />
