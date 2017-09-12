@@ -20,7 +20,6 @@ Img.propTypes = {
     alt: PropTypes.string.isRequired
 };
 Img.defaultProps = {
-    //src: 'http://placeimg.com/200/150/nature'
     src: ImgDef
 };
 

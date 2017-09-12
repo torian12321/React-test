@@ -1,0 +1,17 @@
+@import '~LESS_conf';
+
+.grid {
+    width        : 100%;
+    margin-right : auto;
+    margin-left  : auto;
+    box-sizing   : border-box;
+    padding-left : floor((@grid-gutter-width / 2));
+    padding-right: ceil((@grid-gutter-width / 2));
+    &:extend(.clearfix all);
+    &:before,
+    &:after{
+        content: '';
+        clear  : both;
+        display: table;
+    }
+}
