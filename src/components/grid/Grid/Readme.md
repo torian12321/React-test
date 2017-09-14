@@ -20,6 +20,35 @@ const imgExample = require ('./_style_styleguide.less');
 </Grid>
 ```
 
+## Grids - Nesting
+```
+<Grid>
+
+  <Col xs={4}>
+    <Col xs={6}><p>Left</p></Col>
+    <Col xs={6}><p>Left</p></Col>
+    <Col xs={12}><p>Left</p></Col>
+    <Col xs={6}><p>Left</p></Col>
+    <Col xs={6}><p>Left</p></Col>
+  </Col>
+  <Col xs={2}>
+    <Col xs={12}><p>Center</p></Col>
+    <Col xs={12}><p>Center</p></Col>
+    <Col xs={12}><p>Center</p></Col>
+    <Col xs={12}><p>Center</p></Col>
+    <Col xs={12}><p>Center</p></Col>
+  </Col>
+  <Col xs={6}>
+    <Col xs={6}><p>Right</p></Col>
+    <Col xs={2}><p>Right</p></Col>
+    <Col xs={4}><p>Right</p></Col>
+    <Col xs={2}><p>Right</p></Col>
+    <Col xs={2}><p>Right</p></Col>
+    <Col xs={6}><p>Right</p></Col>
+  </Col>
+</Grid>
+```
+
 ## Grids - Offset
 ```
 <Grid>
