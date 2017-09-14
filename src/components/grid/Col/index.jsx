@@ -5,20 +5,29 @@ import styles     from './_style';
 
 const Col = props => (
     <div  className={classNames(
+      'col',
       props.xs ? `xs-${props.xs}` : null,
       props.sm ? `sm-${props.sm}` : null,
       props.md ? `md-${props.md}` : null,
       props.lg ? `lg-${props.lg}` : null,
 
-      props.xs_pull ? `xs-pull-${props.xs_pull}` : null,
-      props.sm_pull ? `sm-pull-${props.sm_pull}` : null,
-      props.md_pull ? `md-pull-${props.md_pull}` : null,
-      props.lg_pull ? `lg-pull-${props.lg_pull}` : null,
+      // Pull
+      props.xsPull ? `xs-pull-${props.xsPull}` : null,
+      props.smPull ? `sm-pull-${props.smPull}` : null,
+      props.mdPull ? `md-pull-${props.mdPull}` : null,
+      props.lgPull ? `lg-pull-${props.lgPull}` : null,
 
-      props.xs_push ? `xs-push-${props.xs_push}` : null,
-      props.sm_push ? `sm-push-${props.sm_push}` : null,
-      props.md_push ? `md-push-${props.md_push}` : null,
-      props.lg_push ? `lg-push-${props.lg_push}` : null,
+      // Push
+      props.xsPush ? `xs-push-${props.xsPush}` : null,
+      props.smPush ? `sm-push-${props.smPush}` : null,
+      props.mdPush ? `md-push-${props.mdPush}` : null,
+      props.lgPush ? `lg-push-${props.lgPush}` : null,
+
+      // Offset
+      props.xsOffset ? `xs-offset-${props.xsOffset}` : null,
+      props.smOffset ? `sm-offset-${props.smOffset}` : null,
+      props.mdOffset ? `md-offset-${props.mdOffset}` : null,
+      props.lgOffset ? `lg-offset-${props.lgOffset}` : null,
       
       props.className
     )}>
@@ -36,15 +45,20 @@ Col.propTypes = {
   md       : PropTypes.oneOf(sizes),
   lg       : PropTypes.oneOf(sizes),
 
-  xs_pull  : PropTypes.oneOf(sizes),
-  sm_pull  : PropTypes.oneOf(sizes),
-  md_pull  : PropTypes.oneOf(sizes),
-  lg_pull  : PropTypes.oneOf(sizes),
+  xsPull  : PropTypes.oneOf(sizes),
+  smPull  : PropTypes.oneOf(sizes),
+  mdPull  : PropTypes.oneOf(sizes),
+  lgPull  : PropTypes.oneOf(sizes),
 
-  xs_push  : PropTypes.oneOf(sizes),
-  sm_push  : PropTypes.oneOf(sizes),
-  md_push  : PropTypes.oneOf(sizes),
-  lg_push  : PropTypes.oneOf(sizes)
+  xsPush  : PropTypes.oneOf(sizes),
+  smPush  : PropTypes.oneOf(sizes),
+  mdPush  : PropTypes.oneOf(sizes),
+  lgPush  : PropTypes.oneOf(sizes),
+
+  xsOffset: PropTypes.oneOf(sizes),
+  smOffset: PropTypes.oneOf(sizes),
+  mdOffset: PropTypes.oneOf(sizes),
+  lgOffset: PropTypes.oneOf(sizes)
 };
 Col.defaultProps = {
   xs: 12

@@ -1,92 +1,33 @@
 @import '~LESS_conf';
 
-// Columns, offsets, pushes, and pulls for extra small devices like
-.make-grid(@prefix-xs);
-@media (min-width: @bp_sm) { .make-grid(@prefix-sm); }
-@media (min-width: @bp_md) { .make-grid(@prefix-md); }
-@media (min-width: @bp_lg) { .make-grid(@prefix-lg); }
+@columns: 12;
+@colSize: 8.33%;
 
+// the loop
+.make-rows(@name; @index: 1) when (@index =< @columns) {
+.make-rows(@name; (@index + 1));
+    .@{name}-@{index} {
+        width: calc(@colSize * @index);
+    }
 
-//--------         MIXINS     -------------
-//------- Framework grid generation -------
-//-----------------------------------------
+    .@{name}-pull-@{index} {
+        left: -calc(@colSize * @index);
+    }
 
-.make-grid-columns(@class) {
-    .col(@index) { // initial
-        @item: ~".@{class}-@{index}";
-        .col((@index + 1), @item);
+    .@{name}-push-@{index} {
+        left: calc(@colSize * @index);
     }
-    .col(@index, @list) when (@index =< @grid-columns) { // general
-        @item: ~".@{class}-@{index}";
-        .col((@index + 1), ~"@{list}, @{item}");
-    }
-    .col(@index, @list) when (@index > @grid-columns) { // terminal
-        @{list} {
-            position     : relative;
-            // Prevent columns from collapsing when empty
-            min-height   : 1px;
-            float        : left;
-            box-sizing: border-box;
-        }
-    }
-    .col(1); // kickstart it
-}
 
-.make-grid-columns-spacing(@class) {
-    .col(@index, @list) when (@index > @grid-columns) { // terminal
-        @{list} {
-            // Inner gutter via padding
-            padding-left :  ceil((@grid-gutter-width / 2));
-            padding-right: floor((@grid-gutter-width / 2));
-        }
-    }
-    .col(1); // kickstart it
-}
-
-.calc-grid-column(@index, @class, @type) when (@type = width) and (@index > 0) {
-    .@{class}-@{index} {
-        width: percentage((@index / @grid-columns));
-    }
-}
-.calc-grid-column(@index, @class, @type) when (@type = push) and (@index > 0) {
-    .@{class}-push-@{index} {
-        left: percentage((@index / @grid-columns));
-    }
-}
-.calc-grid-column(@index, @class, @type) when (@type = push) and (@index = 0) {
-    .@{class}-push-0 {
-        left: auto;
-    }
-}
-.calc-grid-column(@index, @class, @type) when (@type = pull) and (@index > 0) {
-    .@{class}-pull-@{index} {
-        right: percentage((@index / @grid-columns));
-    }
-}
-.calc-grid-column(@index, @class, @type) when (@type = pull) and (@index = 0) {
-    .@{class}-pull-0 {
-        right: auto;
-    }
-}
-.calc-grid-column(@index, @class, @type) when (@type = offset) {
-    .@{class}-offset-@{index} {
-        margin-left: percentage((@index / @grid-columns));
+    .@{name}-offset-@{index} {
+        margin-left: calc(@colSize * @index);
     }
 }
 
-// Basic looping in LESS
-.loop-grid-columns(@index, @class, @type) when (@index >= 0) {
-    .calc-grid-column(@index, @class, @type);
-    // next iteration
-    .loop-grid-columns((@index - 1), @class, @type);
+.col{
+    float     : left;
+    box-sizing: border-box;
 }
-
-// Create grid for specific class
-.make-grid(@class) {
-    .make-grid-columns(@class);
-    .make-grid-columns-spacing(@class);
-    .loop-grid-columns(@grid-columns, @class, width);
-    .loop-grid-columns(@grid-columns, @class, pull);
-    .loop-grid-columns(@grid-columns, @class, push);
-    //.loop-grid-columns(@grid-columns, @class, offset);
-}
+.make-rows(@prefix-xs);
+@media (min-width: @bp_sm) { .make-rows(@prefix-sm); }
+@media (min-width: @bp_md) { .make-rows(@prefix-md); }
+@media (min-width: @bp_lg) { .make-rows(@prefix-lg); }

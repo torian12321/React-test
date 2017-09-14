@@ -1,16 +1,17 @@
 @import '~LESS_conf';
 
 .grid > div{
-    padding: 2px;
-    div{
+    padding: 8px;
+    p{
+        margin : 0;
         padding: 4px;
         .rounded();
     }
     
-    &:nth-child(6n + 0) { div{ background: @green }}
-    &:nth-child(6n + 1) { div{ background: @blue }}
-    &:nth-child(6n + 2) { div{ background: @yellow }}
-    &:nth-child(6n + 3) { div{ background: @purple }}
-    &:nth-child(6n + 4) { div{ background: @orange }}
-    &:nth-child(6n + 5) { div{ background: @turquoise }}
+    &:nth-child(6n + 0) { p{ background: @green }}
+    &:nth-child(6n + 1) { p{ background: @blue }}
+    &:nth-child(6n + 2) { p{ background: @yellow }}
+    &:nth-child(6n + 3) { p{ background: @purple }}
+    &:nth-child(6n + 4) { p{ background: @orange }}
+    &:nth-child(6n + 5) { p{ background: @turquoise }}
 }
