@@ -13,7 +13,7 @@ module.exports = {
 
     // Grid
     Col      : path.resolve(__dirname, '../src/components/grid/Col'),
-    Grid     : path.resolve(__dirname, '../src/components/grid/Grid'),
+    Container: path.resolve(__dirname, '../src/components/grid/Container'),
     Row      : path.resolve(__dirname, '../src/components/grid/Row'),
 
     // UI

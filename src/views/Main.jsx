@@ -1,13 +1,15 @@
-import React    from 'react';
-import Button   from 'Button';
-import Icon     from 'Icon';
-import Progress from 'Progress';
-import Message  from 'Message';
-import Avatar   from 'Avatar';
-import Grid     from 'Grid';
+import React      from 'react';
+import Button     from 'Button';
+import Icon       from 'Icon';
+import Progress   from 'Progress';
+import Message    from 'Message';
+import Avatar     from 'Avatar';
+import Container  from 'Container';
+import Row        from 'Row';
 
 const Main = props =>(
-  <Grid>
+  <Container>
+  abc
     Hello world
     <Icon />
     <Progress />
@@ -20,7 +22,7 @@ const Main = props =>(
       hello world
     </Message>
     <Avatar />
-  </Grid>
+  </Container>
 );
 
 

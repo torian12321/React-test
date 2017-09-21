@@ -1,10 +1,10 @@
-Use a Grid system the same as [Bootstrap](https://v4-alpha.getbootstrap.com/layout/grid/) does
+Use a grid system the same as [Bootstrap](https://v4-alpha.getbootstrap.com/layout/grid/) does
 
-## Grids - Estandar
+## Container - Estandar
 ```
 const imgExample = require ('./_style_styleguide.less');
 
-<Grid>
+<Container>
   <Col xs={6} sm={4} md={3} lg={2}><p>xs=6 sm=4 md=3 lg=2</p></Col>
   <Col xs={6} sm={4} md={3} lg={2}><p>xs=6 sm=4 md=3 lg=2</p></Col>
   <Col xs={6} sm={4} md={3} lg={2}><p>xs=6 sm=4 md=3 lg=2</p></Col>
@@ -19,12 +19,12 @@ const imgExample = require ('./_style_styleguide.less');
   <Col xs={6} sm={4} md={3} lg={2}><p>xs=6 sm=4 md=3 lg=2</p></Col>
   <Col xs={6} sm={4} md={3} lg={2}><p>xs=6 sm=4 md=3 lg=2</p></Col>
   <Col xs={6} sm={4} md={3} lg={2}><p>xs=6 sm=4 md=3 lg=2</p></Col>
-</Grid>
+</Container>
 ```
 
-## Grids - Nesting
+## Cols - Nesting
 ```
-<Grid>
+<Container>
   <Col xs={4}>
     <Col xs={6}><p>Left</p></Col>
     <Col xs={6}><p>Left</p></Col>
@@ -47,32 +47,32 @@ const imgExample = require ('./_style_styleguide.less');
     <Col xs={2}><p>Right</p></Col>
     <Col xs={6}><p>Right</p></Col>
   </Col>
-</Grid>
+</Container>
 ```
 
-## Grids - Offset
+## Cols - Offset
 Move the position of the Col component.
 ```
-<Grid>
+<Container>
   <Col xs={6} xsOffset={3}><p>xs=6 xsOffset=3</p></Col>
   <Col xs={6}><p>xs=6</p></Col>
   <Col xs={6}><p>xs=6</p></Col>
-</Grid>
+</Container>
 ```
 
-## Grids - Pull and Push
+## Cols - Pull and Push
 Move the position of the Col component, BUT NOT altering the position of other Cols arround
 ```
-<Grid>
+<Container>
   <Col xs={6} xsPush={6}><p>First item </p></Col>
   <Col xs={6} xsPull={6}><p>Second item</p></Col>
-</Grid>
+</Container>
 ```
 
-## Grids - Rows
+## Rows
 Forces the content to be in a new line.
 ```
-<Grid>
+<Container>
   <Row>
     <Col xs={6} sm={4}><p>xs=6 sm=4</p></Col>
     <Col xs={6} sm={4}><p>xs=6 sm=4</p></Col>
@@ -92,5 +92,5 @@ Forces the content to be in a new line.
     <Col xs={6} sm={4}><p>xs=6 sm=4</p></Col>
     <Col xs={6} sm={4}><p>xs=6 sm=4</p></Col>
   </Row>
-</Grid>
+</Container>
 ```
