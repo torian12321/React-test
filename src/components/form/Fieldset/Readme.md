@@ -2,14 +2,14 @@
 Styled [fieldset](https://www.w3schools.com/tags/tag_fieldset.asp) component
 ```
 <Fieldset>
-    Content
+  Content
 </Fieldset>
 ```
 
 #### Title
 ```
 <Fieldset title='Fieldset'>
-    Content
+  Content
 </Fieldset>
 ```
 
@@ -17,8 +17,8 @@ Styled [fieldset](https://www.w3schools.com/tags/tag_fieldset.asp) component
 All content inside becomes disabled automatically
 ```
 <Fieldset title='Fieldset' disabled>
-    <Button/>
-    <Switch/>
-    <Range/>
+  <Button/>
+  <Switch/>
+  <Range/>
 </Fieldset>
 ```
