@@ -14,6 +14,7 @@ module.exports = {
     // Grid
     Col      : path.resolve(__dirname, '../src/components/grid/Col'),
     Grid     : path.resolve(__dirname, '../src/components/grid/Grid'),
+    Row      : path.resolve(__dirname, '../src/components/grid/Row'),
 
     // UI
     Accordion: path.resolve(__dirname, '../src/components/Accordion'),

@@ -1,3 +1,5 @@
+Use a Grid system the same as [Bootstrap](https://v4-alpha.getbootstrap.com/layout/grid/) does
+
 ## Grids - Estandar
 ```
 const imgExample = require ('./_style_styleguide.less');
@@ -23,7 +25,6 @@ const imgExample = require ('./_style_styleguide.less');
 ## Grids - Nesting
 ```
 <Grid>
-
   <Col xs={4}>
     <Col xs={6}><p>Left</p></Col>
     <Col xs={6}><p>Left</p></Col>
@@ -50,6 +51,7 @@ const imgExample = require ('./_style_styleguide.less');
 ```
 
 ## Grids - Offset
+Move the position of the Col component.
 ```
 <Grid>
   <Col xs={6} xsOffset={3}><p>xs=6 xsOffset=3</p></Col>
@@ -59,6 +61,7 @@ const imgExample = require ('./_style_styleguide.less');
 ```
 
 ## Grids - Pull and Push
+Move the position of the Col component, BUT NOT altering the position of other Cols arround
 ```
 <Grid>
   <Col xs={6} xsPush={6}><p>First item </p></Col>
@@ -67,8 +70,8 @@ const imgExample = require ('./_style_styleguide.less');
 ```
 
 ## Grids - Rows
+Forces the content to be in a new line.
 ```
-
 <Grid>
   <Row>
     <Col xs={6} sm={4}><p>xs=6 sm=4</p></Col>

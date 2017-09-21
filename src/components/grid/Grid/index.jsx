@@ -5,13 +5,17 @@ import styles     from './_style';
 
 const Grid = props => (
     <div  className={classNames('grid', props.className)}>
-        {props.children}
+      {props.children}
     </div>
 );
 
 Grid.propTypes = {
-    children : PropTypes.any.isRequired,
-    className: PropTypes.string
+    className: PropTypes.string,
+    children: PropTypes.oneOfType([
+      PropTypes.element,
+      PropTypes.arrayOf(require('../Col')),
+      PropTypes.arrayOf(require('../Row')),
+    ]).isRequired
 };
 
 module.exports = Grid;
