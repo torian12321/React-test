@@ -87,9 +87,9 @@ Textarea.defaultProps = {
 	disabled  : false,
 	rows      : 4,
 	focus     : false,
-	onChange  : function(){},
-    onFocusIn : function(){},
-    onFocusOut: function(){}
+	onChange  : () => null,
+    onFocusIn : () => null,
+    onFocusOut: () => null
 };
 
 module.exports = Textarea;

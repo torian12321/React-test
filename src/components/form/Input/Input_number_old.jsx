@@ -69,9 +69,9 @@ Input.defaultProps = {
     disabled  : false,
     value     : 0,
     step      : 1,
-    onChange  : function(){},
-    onFocusIn : function(){},
-    onFocusOut: function(){}
+    onChange  : () => null,
+    onFocusIn : () => null,
+    onFocusOut: () => null
 };
 
 module.exports = Input;
