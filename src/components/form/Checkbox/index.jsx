@@ -58,7 +58,7 @@ Checkbox.propTypes = {
 Checkbox.defaultProps = {
     disabled: false,
     checked : false,
-    onChange: function(){}
+    onChange: () => null
 };
 
 module.exports = Checkbox;

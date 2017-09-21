@@ -1,0 +1,11 @@
+@import '~LESS_conf';
+
+.grid-row {
+    display: block;
+    &:before,
+    &:after{
+        content: '';
+        clear  : both;
+        display: table;
+    }
+}

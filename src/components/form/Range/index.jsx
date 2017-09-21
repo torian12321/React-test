@@ -84,7 +84,7 @@ Range.defaultProps = {
     min     : 0,
     max     : 100,
     texted  : false,
-    onChange: function(){}
+    onChange: () => null
 };
 
 module.exports = Range;

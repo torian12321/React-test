@@ -1,7 +1,6 @@
-var
-React    = require('react'),
-ReactDOM = require('react-dom'),
-Main     = require('./views/Main');
+import React    from 'react';
+import ReactDOM from 'react-dom';
+import Main     from './views/Main';
 
 ReactDOM.render(
   <Main />,

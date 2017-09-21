@@ -15,7 +15,7 @@ IconBtnClose.propTypes = {
     onClick  : PropTypes.func
 };
 IconBtnClose.defaultProps = {
-    onClick: function(){}
+    onClick: () => null
 };
 
 module.exports = IconBtnClose;

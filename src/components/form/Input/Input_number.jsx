@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import uniqid from 'uniqid';
-import styles from './_style';
-import Wrapper from '../_wrapper';
+import React      from 'react';
+import PropTypes  from 'prop-types';
+import uniqid     from 'uniqid';
+import styles     from './_style';
+import Wrapper    from '../_wrapper';
 
 class Input extends React.Component {
     constructor(props) {
@@ -22,20 +22,20 @@ class Input extends React.Component {
   }
   
   render() {
-      const id = this.props.id || uniqid('input_');
+    const id = this.props.id || uniqid('input_');
     
     return (
         <Wrapper
-				id        = {id}
-				className = "styled-input-number"
-				label     = {this.props.placeholder}
-			>
+          id        = {id}
+          className = "styled-input-number"
+          label     = {this.props.placeholder}
+		    >
 
 
         <div className="quantity-input">
-            <div className="quantity-input__modifier quantity-input__modifier--left" onClick={this.decrement}>&mdash;</div>
-            <input className="quantity-input__screen" type="number" value={this.state.value} readOnly />
-            <div className="quantity-input__modifier quantity-input__modifier--right" onClick={this.increment}>&#xff0b;</div>  
+          <div className="quantity-input__modifier quantity-input__modifier--left" onClick={this.decrement}>&mdash;</div>
+          <input className="quantity-input__screen" type="number" value={this.state.value} readOnly />
+          <div className="quantity-input__modifier quantity-input__modifier--right" onClick={this.increment}>&#xff0b;</div>  
         </div>
 
         </Wrapper>
@@ -45,24 +45,24 @@ class Input extends React.Component {
 
 
 Input.propTypes = {
-    id         : PropTypes.string,
-    disabled   : PropTypes.bool,
-    value      : PropTypes.number,
-    step       : PropTypes.number,
-    min        : PropTypes.number,
-    max        : PropTypes.number,
-    placeholder: PropTypes.string,
-    onChange   : PropTypes.func,
-    onFocusIn  : PropTypes.func,
-    onFocusOut : PropTypes.func
+  id         : PropTypes.string,
+  disabled   : PropTypes.bool,
+  value      : PropTypes.number,
+  step       : PropTypes.number,
+  min        : PropTypes.number,
+  max        : PropTypes.number,
+  placeholder: PropTypes.string,
+  onChange   : PropTypes.func,
+  onFocusIn  : PropTypes.func,
+  onFocusOut : PropTypes.func
 };
 Input.defaultProps = {
-    disabled  : false,
-    value     : 0,
-    step      : 1,
-    onChange  : function(){},
-    onFocusIn : function(){},
-    onFocusOut: function(){}
+  disabled  : false,
+  value     : 0,
+  step      : 1,
+  onChange  : () => null,
+  onFocusIn : () => null,
+  onFocusOut: () => null
 };
 
 module.exports = Input;

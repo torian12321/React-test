@@ -1,0 +1,33 @@
+@import '~LESS_conf';
+
+@columns: 12;
+@colSize: 8.33%;
+
+// the loop
+.make-rows(@name; @index: 1) when (@index =< @columns) {
+.make-rows(@name; (@index + 1));
+    .@{name}-@{index} {
+      width: calc(@colSize * @index);
+    }
+
+    .@{name}-pull-@{index} {
+      left: -calc(@colSize * @index);
+    }
+
+    .@{name}-push-@{index} {
+      left: calc(@colSize * @index);
+    }
+
+    .@{name}-offset-@{index} {
+      margin-left: calc(@colSize * @index);
+    }
+}
+
+.col{
+  float     : left;
+  box-sizing: border-box;
+}
+.make-rows(@prefix-xs);
+@media (min-width: @bp_sm) { .make-rows(@prefix-sm); }
+@media (min-width: @bp_md) { .make-rows(@prefix-md); }
+@media (min-width: @bp_lg) { .make-rows(@prefix-lg); }

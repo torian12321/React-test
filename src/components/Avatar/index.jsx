@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './_style';
+import ImgDef from '../../img/default/user.png';
 
 const Avatar = props => (
     <div 
@@ -23,8 +24,8 @@ Avatar.propTypes = {
     className: PropTypes.string
 };
 Avatar.defaultProps = {
-    // src: 'http://lorempixel.com/200/200/people',
-    src: 'http://placeimg.com/200/200/people'
+    //src: 'http://placeimg.com/200/200/people'
+    src: ImgDef
 };
 
 module.exports = Avatar;

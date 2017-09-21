@@ -51,10 +51,10 @@ Switch.propTypes = {
     onChange: PropTypes.func
 };
 Switch.defaultProps = {
-    checked: false,
-    texted : false,
+    checked : false,
+    texted  : false,
     disabled: false,
-    onChange: function(){}
+    onChange: () => null
 };
 
 module.exports = Switch;

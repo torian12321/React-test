@@ -11,6 +11,11 @@ module.exports = {
     Main  : path.resolve(__dirname, '../src/components/Main'),
     Nav   : path.resolve(__dirname, '../src/components/Nav'),
 
+    // Grid
+    Col      : path.resolve(__dirname, '../src/components/grid/Col'),
+    Container: path.resolve(__dirname, '../src/components/grid/Container'),
+    Row      : path.resolve(__dirname, '../src/components/grid/Row'),
+
     // UI
     Accordion: path.resolve(__dirname, '../src/components/Accordion'),
     Avatar   : path.resolve(__dirname, '../src/components/Avatar'),
