@@ -1,0 +1,34 @@
+@import '~LESS_conf';
+
+@add-color-passive: @grey;
+@add-color-active : @themeColor_1;
+
+.add{
+    font-size: 20px;
+    
+    position: relative;
+    width: 100%;
+    padding: 1em 1em 1em 2em;
+    line-height: 1em;
+    box-sizing: border-box;
+    border: @add-color-passive 2px dashed;
+    color : @add-color-passive;
+    cursor: pointer;
+    .rounded();
+    &:hover{
+        border-color: @add-color-active;
+        color       : @add-color-active;
+        .add-icon{
+            fill: @add-color-active;
+        }
+    }
+}
+
+.add-icon{
+    position: absolute;
+    //background: red;
+    left: .5em;
+    top: 1em;
+    fill: @add-color-passive;
+
+}

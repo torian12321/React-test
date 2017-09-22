@@ -1,8 +1,9 @@
 export * from './form';
 export * from './grid';
 
-export Article   from './Article';
+export Add       from './Add';
 export Accordion from './Accordion';
+export Article   from './Article';
 export Avatar    from './Avatar';
 export Gallery   from './Gallery';
 export Grid      from './Grid';
