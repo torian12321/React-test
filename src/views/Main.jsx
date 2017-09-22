@@ -1,27 +1,32 @@
-import React      from 'react';
-import Button     from 'Button';
-import Icon       from 'Icon';
-import Progress   from 'Progress';
-import Message    from 'Message';
-import Avatar     from 'Avatar';
-import Container  from 'Container';
-import Row        from 'Row';
+import React from 'react';
+
+import {
+  // Form
+  Button,
+
+  // Grid
+  Container, Row, Col,
+
+  // UI
+  Article, Progress
+} from 'export';
 
 const Main = props =>(
   <Container>
-  abc
-    Hello world
-    <Icon />
-    <Progress />
-    <Progress type='circular' />
-
-    <Message>
-      hello world
-    </Message>
-    <Message>
-      hello world
-    </Message>
-    <Avatar />
+    <Row>
+      <Col xs={6}><Progress /></Col>
+      <Col xs={6}><Progress /></Col>
+      <Col xs={6}><Progress /></Col>
+      <Col xs={6}><Progress /></Col>
+      <Col xs={12}><Progress /></Col>
+    </Row>
+    <Row>
+      <Col xs={12} sm={6} md={4}><Article /></Col>
+      <Col xs={12} sm={6} md={4}><Article /></Col>
+      <Col xs={12} sm={6} md={4}><Article /></Col>
+      <Col xs={12} sm={6} md={4}><Article /></Col>
+      <Col xs={12} sm={6} md={4}><Article /></Col>
+    </Row>
   </Container>
 );
 
