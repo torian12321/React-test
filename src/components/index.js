@@ -1,7 +1,6 @@
-export * from './form';
-export * from './grid';
+export * from './_form';
+export * from './_grid';
 
-export Add       from './Add';
 export Accordion from './Accordion';
 export Article   from './Article';
 export Avatar    from './Avatar';

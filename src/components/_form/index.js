@@ -1,3 +1,4 @@
+export Add      from './Add';
 export Button   from './Button';
 export Checkbox from './Checkbox';
 export Fieldset from './Fieldset';

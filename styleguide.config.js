@@ -13,9 +13,9 @@ module.exports = {
 	skipComponentsWithoutExample: true,
 	webpackConfig : wp_common,
 	sections: [
-		{ name: 'Grid'		, components: 'src/components/grid/**/index.jsx' },
+		{ name: 'Grid'		, components: 'src/components/_grid/**/index.jsx' },
 		{ name: 'Components', components: 'src/components/*/index.jsx' },
-		{ name: 'Form'      , components: 'src/components/form/**/index.jsx' },
+		{ name: 'Form'      , components: 'src/components/_form/**/index.jsx' },
 		{ name: 'Helpers'   , components: 'src/components/helpers/**/index.jsx' }
 	],
     getComponentPathLine: function (componentPath) {

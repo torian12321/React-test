@@ -1,6 +1,11 @@
 #### Basic
 ```
-<Add />
+<div>
+    <Add />
+    <Add />
+    <Add />
+    <Add />
+</div>
 ```
 
 #### Custom text
