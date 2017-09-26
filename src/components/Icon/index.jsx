@@ -1,35 +1,38 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React      from 'react';
+import PropTypes  from 'prop-types';
 import classNames from 'classnames';
 
 var icons = require('./icons');
 
+class Icon extends React.PureComponent {
+  render(){
+    const
+    props     = this.props,
+    iconPaths = props.name ? icons[props.name] : props.paths,
+    styles    = {
+        width    : `${props.width}em`,
+        height   : props.height ? `${props.height}em` : null,
+        fill     : props.color || null,
+        transform: props.rotate ? `rotate(${props.rotate}deg)` : null,
+        ...props.styles
+    };
 
-const Icon = props => {
-  const
-  iconPaths = props.name ? icons[props.name] : props.paths,
-  styles = {
-      width    : `${props.width}em`,
-      height   : props.height ? `${props.height}em` : null,
-      fill     : props.color || null,
-      transform: props.rotate ? `rotate(${props.rotate}deg)` : null,
-      ...props.styles
-  };
-
-  return (
-    <svg
-      viewBox  ={`0 0 ${props.viewBox} ${props.viewBox}`}
-      style    ={styles}
-      className={classNames(
-        'icon',
-        props.className
-      )}
-    >
-      <g>
-        {iconPaths && iconPaths.map((pathProps, i) => <path {...pathProps} key={i} />)}
-      </g>
-    </svg>
-  )
+    return (
+      <svg
+      style
+        viewBox  ={`0 0 ${props.viewBox} ${props.viewBox}`}
+        style    ={styles}
+        className={classNames(
+          'icon',
+          props.className
+        )}
+      >
+        <g>
+          {iconPaths && iconPaths.map((pathProps, i) => <path {...pathProps} key={i} />)}
+        </g>
+      </svg>
+    )
+  }
 }
 
 Icon.propTypes = {
