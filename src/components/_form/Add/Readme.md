@@ -1,14 +1,15 @@
 #### Basic
+Styled [input file](https://www.w3schools.com/TagS/att_input_accept.asp) component
 ```
-<div>
-    <Add />
-    <Add />
-    <Add />
-    <Add />
-</div>
+<Add />
 ```
 
 #### Custom text
 ```
-<Add>Add content</Add>
+<Add text='Add files' multiple />
+```
+
+#### Disabled
+```
+<Add disabled />
 ```

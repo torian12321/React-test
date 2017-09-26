@@ -4,30 +4,77 @@
 @add-color-active : @themeColor_1;
 
 .add{
-  font-size   : 20px;
-  
-  position    : relative;
-  width       : 100%;
-  padding     : 1em 1em 1em 2em;
-  line-height : 1em;
-  box-sizing  : border-box;
-  border      : @add-color-passive 2px dashed;
-  color       : @add-color-passive;
-  cursor      : pointer;
-  .rounded();
-  &:hover{
+  input{
+    position: absolute;
+    opacity : 0;
+    z-index : -1;
+  }
+
+  label{
+    font-size   : 18px;
+    
+    display     : inline-block;
+    position    : relative;
+    width       : 100%;
+    padding     : .8em .8em .8em 2.6em;
+    line-height : 1em;
+    box-sizing  : border-box;
+    border      : @add-color-passive 2px dashed;
+    color       : @add-color-passive;
+    cursor      : pointer;
+    .rounded();
+  }
+
+  .add-icon{
+    position: absolute;
+    left    : .6em;
+    top     : .6em;
+    fill    : @white;
+    font-size: .8em;
+
+    display   : flex;
+    text-align: center;
+    height    : 2em;
+    width     : 2em;
+    background: @add-color-passive;
+    .rounded(50%);
+    .icon{
+      margin: auto;
+    }
+  }
+
+  //----------------------
+  //----    STATES    ----
+  //----------------------
+
+  // Focus
+  // Hover
+  &:hover label,
+  input:focus + label{
     background  : darken(@white, 5%);
     border-color: @add-color-active;
     color       : @add-color-active;
+    
     .add-icon{
-        fill: @add-color-active;
+      background: @add-color-active;
+      fill      : darken(@white, 5%);
     }
   }
-}
 
-.add-icon{
-  position: absolute;
-  left    : .5em;
-  top     : 1em;
-  fill    : @add-color-passive;
+  // With content
+  &.add-filled label{
+    border-style: solid;
+  }
+
+  // Disabled
+  input:disabled + label{
+    background  : darken(@white, 2%);
+    color       : @colorState_disable;
+    border-color: @colorState_disable;
+    cursor      : not-allowed;
+    .add-icon{
+      background: @colorState_disable;;
+      fill      : darken(@white, 5%);
+    }
+  }
 }
