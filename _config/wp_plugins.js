@@ -5,15 +5,14 @@ Clean   = require('clean-webpack-plugin'),
 Copy    = require('copy-webpack-plugin'),
 HTML    = require('html-webpack-plugin'),
 root    = path.join(__dirname, '..'),
-manifest= require('../src/static/manifest');
+manifest= require('../src/static/manifest'),
+DashboardPlugin = require('webpack-dashboard/plugin');
 
 
-
-module.exports = (outDir, isProd) => {
+module.exports = (isProd) => {
   
   // base plugins array
   const plugins = [
-    new Clean([outDir], { root }),
     new Copy([{ context: './src/static/', from: '**/*.*' }]),
     new HTML({
       template: path.resolve(__dirname, '../src/index.ejs'),
@@ -35,6 +34,7 @@ module.exports = (outDir, isProd) => {
   // prod only
   if (isProd) {
 		plugins.push(
+      new Clean([path.resolve(__dirname, '../dist')], { root }),
 			new webpack.optimize.ModuleConcatenationPlugin(),
       new webpack.LoaderOptionsPlugin({
         minimize: true,
@@ -60,7 +60,7 @@ module.exports = (outDir, isProd) => {
 	} else {
 		// dev only
 		plugins.push(
-			
+			new DashboardPlugin({ port: 9830 })
 		);
 	}
 
