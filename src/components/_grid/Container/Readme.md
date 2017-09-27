@@ -4,7 +4,7 @@ Use a grid system the same as [Bootstrap](https://v4-alpha.getbootstrap.com/layo
 ```
 const imgExample = require ('./_style_styleguide.less');
 
-<Container>
+<Container className="styleguideExample">
   <Col xs={6} sm={4} md={3} lg={2}><p>xs=6 sm=4 md=3 lg=2</p></Col>
   <Col xs={6} sm={4} md={3} lg={2}><p>xs=6 sm=4 md=3 lg=2</p></Col>
   <Col xs={6} sm={4} md={3} lg={2}><p>xs=6 sm=4 md=3 lg=2</p></Col>
@@ -24,7 +24,7 @@ const imgExample = require ('./_style_styleguide.less');
 
 ## Cols - Nesting
 ```
-<Container>
+<Container className="styleguideExample">
   <Col xs={4}>
     <Col xs={6}><p>Left</p></Col>
     <Col xs={6}><p>Left</p></Col>
@@ -53,7 +53,7 @@ const imgExample = require ('./_style_styleguide.less');
 ## Cols - Offset
 Move the position of the Col component.
 ```
-<Container>
+<Container className="styleguideExample">
   <Col xs={6} xsOffset={3}><p>xs=6 xsOffset=3</p></Col>
   <Col xs={6}><p>xs=6</p></Col>
   <Col xs={6}><p>xs=6</p></Col>
@@ -63,7 +63,7 @@ Move the position of the Col component.
 ## Cols - Pull and Push
 Move the position of the Col component, BUT NOT altering the position of other Cols arround
 ```
-<Container>
+<Container className="styleguideExample">
   <Col xs={6} xsPush={6}><p>First item </p></Col>
   <Col xs={6} xsPull={6}><p>Second item</p></Col>
 </Container>
@@ -72,7 +72,7 @@ Move the position of the Col component, BUT NOT altering the position of other C
 ## Rows
 Forces the content to be in a new line.
 ```
-<Container>
+<Container className="styleguideExample">
   <Row>
     <Col xs={6} sm={4}><p>xs=6 sm=4</p></Col>
     <Col xs={6} sm={4}><p>xs=6 sm=4</p></Col>

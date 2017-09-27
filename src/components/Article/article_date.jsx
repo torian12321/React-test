@@ -1,0 +1,20 @@
+import React      from 'react';
+import PropTypes  from 'prop-types';
+import Icon       from '../Icon';
+
+class ArticleDate extends React.PureComponent {
+  render(){
+    return this.props.val ? (
+      <span className="date">
+        <Icon className="icon-open" name="calendar" />
+        {this.props.val}
+      </span>
+    ) : null
+  }
+}
+
+ArticleDate.propTypes = {
+  val : PropTypes.string,
+};
+
+module.exports = ArticleDate;
