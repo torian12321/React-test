@@ -1,24 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React      from 'react';
+import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-//import styles from './_style.';
-import ListItem from './list_item';
+import ListItem   from './list_item';
 
-function List(props) {
-  const ComponentToRender = props.component;
-  let content = (<div>hello</div>);
+class List extends React.PureComponent {
+  render() {
+    const ComponentToRender = this.props.component;
+    let content = (<div>hello</div>);
 
-  // If we have items, render them
-  if (props.items) {
-    content = props.items.map((item, index) => (
-      <ComponentToRender key={`item-${index}`} item={item} />
-    ));
-  } else {
-    // Otherwise render a single component
-    content = (<ComponentToRender />);
+    // If we have items, render them
+    if (this.props.items) {
+      content = this.props.items.map((item, index) => (
+        <ComponentToRender key={`item-${index}`} item={item} />
+      ));
+    } else {
+      // Otherwise render a single component
+      content = (<ComponentToRender />);
+    }
+
+    return <ul>{content}</ul>
   }
-
-  return <ul>{content}</ul>;
 }
 
 List.propTypes = {

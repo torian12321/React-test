@@ -3,37 +3,43 @@ import PropTypes  from 'prop-types';
 import classNames from 'classnames';
 import styles     from './_style';
 
-const Col = props => (
-    <div  className={classNames(
-      'col',
-      props.xs ? `xs-${props.xs}` : null,
-      props.sm ? `sm-${props.sm}` : null,
-      props.md ? `md-${props.md}` : null,
-      props.lg ? `lg-${props.lg}` : null,
+class Col extends React.Component {
+  render() {
+    const props = this.props;
 
-      // Pull
-      props.xsPull ? `xs-pull-${props.xsPull}` : null,
-      props.smPull ? `sm-pull-${props.smPull}` : null,
-      props.mdPull ? `md-pull-${props.mdPull}` : null,
-      props.lgPull ? `lg-pull-${props.lgPull}` : null,
+    return(
+      <div  className={classNames(
+        'col',
+        props.xs ? `xs-${props.xs}` : null,
+        props.sm ? `sm-${props.sm}` : null,
+        props.md ? `md-${props.md}` : null,
+        props.lg ? `lg-${props.lg}` : null,
 
-      // Push
-      props.xsPush ? `xs-push-${props.xsPush}` : null,
-      props.smPush ? `sm-push-${props.smPush}` : null,
-      props.mdPush ? `md-push-${props.mdPush}` : null,
-      props.lgPush ? `lg-push-${props.lgPush}` : null,
+        // Pull
+        props.xsPull ? `xs-pull-${props.xsPull}` : null,
+        props.smPull ? `sm-pull-${props.smPull}` : null,
+        props.mdPull ? `md-pull-${props.mdPull}` : null,
+        props.lgPull ? `lg-pull-${props.lgPull}` : null,
 
-      // Offset
-      props.xsOffset ? `xs-offset-${props.xsOffset}` : null,
-      props.smOffset ? `sm-offset-${props.smOffset}` : null,
-      props.mdOffset ? `md-offset-${props.mdOffset}` : null,
-      props.lgOffset ? `lg-offset-${props.lgOffset}` : null,
-      
-      props.className
-    )}>
-      {props.children}
-    </div>
-);
+        // Push
+        props.xsPush ? `xs-push-${props.xsPush}` : null,
+        props.smPush ? `sm-push-${props.smPush}` : null,
+        props.mdPush ? `md-push-${props.mdPush}` : null,
+        props.lgPush ? `lg-push-${props.lgPush}` : null,
+
+        // Offset
+        props.xsOffset ? `xs-offset-${props.xsOffset}` : null,
+        props.smOffset ? `sm-offset-${props.smOffset}` : null,
+        props.mdOffset ? `md-offset-${props.mdOffset}` : null,
+        props.lgOffset ? `lg-offset-${props.lgOffset}` : null,
+        
+        props.className
+      )}>
+        {props.children}
+      </div>
+    )
+  }
+}
 
 const sizes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 

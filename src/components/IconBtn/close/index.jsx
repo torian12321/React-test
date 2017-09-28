@@ -1,21 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React      from 'react';
+import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import styles from './_style';
-import Icon from '../../Icon';
+import styles     from './_style';
+import Icon       from '../../Icon';
 
-const IconBtnClose = props =>(
-    <div className={classNames('icon-btn', props.className)} onClick={props.onClick}>
+class IconBtnClose extends React.PureComponent {
+  render() {
+    return (
+      <div className={classNames('icon-btn', this.props.className)} onClick={this.props.onClick}>
         <Icon name='close'/>
-    </div>  
-);
+      </div>  
+    );
+  }
+}
 
 IconBtnClose.propTypes = {
-    className: PropTypes.string,
-    onClick  : PropTypes.func
+  className: PropTypes.string,
+  onClick  : PropTypes.func
 };
 IconBtnClose.defaultProps = {
-    onClick: () => null
+  onClick: () => null
 };
 
 module.exports = IconBtnClose;

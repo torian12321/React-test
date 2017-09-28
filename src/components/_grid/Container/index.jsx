@@ -3,14 +3,18 @@ import PropTypes 	from 'prop-types';
 import classNames from 'classnames';
 import styles     from './_style';
 
-const Container = props => (
-    <div  className={classNames(
-      props.fluid ? 'container-fluid' : 'container',
-      props.className
-    )}>
-      {props.children}
-    </div>
-);
+class Container extends React.Component {
+  render() {
+    return (
+      <div  className={classNames(
+        this.props.fluid ? 'container-fluid' : 'container',
+        this.props.className
+      )}>
+        {this.props.children}
+      </div>
+    )
+  }
+}
 
 Container.propTypes = {
   children: PropTypes.oneOfType([

@@ -4,17 +4,21 @@ import classNames from 'classnames';
 import styles     from './_style';
 import ImgDef     from '../../img/default/user.png';
 
-const Avatar = props => (
-  <div 
-      style    ={{backgroundImage: `url(${props.src})`}}
-      className={classNames(
-        'avatar',
-        props.size,
-        props.state,
-        props.className
-      )}
-  />
-);
+class Avatar extends React.PureComponent {
+  render() {
+    return (
+      <div 
+          style    ={{backgroundImage: `url(${this.props.src})`}}
+          className={classNames(
+            'avatar',
+            this.props.size,
+            this.props.state,
+            this.props.className
+          )}
+      />
+    )
+  }
+}
 
 
 Avatar.propTypes = {

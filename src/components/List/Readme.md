@@ -6,7 +6,7 @@
 #### Basic
 ```
 <div>
-    List below
-    <List items={['abc', 'def', 'aaa']} />
+  List below
+  <List items={['abc', 'def', 'aaa']} />
 </div>
 ```

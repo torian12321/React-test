@@ -1,26 +1,28 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import ImgDef from '../../img/default/img.png';
+import React      from 'react';
+import PropTypes  from 'prop-types';
+import ImgDef     from '../../img/default/img.png';
 
-const Img = (props) => {
-    const { src, alt, ...other } = props;
+class Img extends React.PureComponent {
+  render() {
+    const { src, alt, ...other } = this.props;
 
     return (
-        <img
-            {...other}
-            src ={src}
-            alt ={alt}
-            role={alt ? null : 'presentation'}
-        />
+      <img
+        {...other}
+        src ={src}
+        alt ={alt}
+        role={alt ? null : 'presentation'}
+      />
     );
+  }
 };
 
 Img.propTypes = {
-    src: PropTypes.string.isRequired,
-    alt: PropTypes.string.isRequired
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired
 };
 Img.defaultProps = {
-    src: ImgDef
+  src: ImgDef
 };
 
 module.exports = Img;

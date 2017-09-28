@@ -10,7 +10,7 @@ class ArticleMore extends React.PureComponent {
 }
 
 ArticleMore.propTypes = {
-  url : PropTypes.string,
+  url: PropTypes.string
 };
 
 module.exports = ArticleMore;

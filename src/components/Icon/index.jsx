@@ -10,11 +10,11 @@ class Icon extends React.PureComponent {
     props     = this.props,
     iconPaths = props.name ? icons[props.name] : props.paths,
     styles    = {
-        width    : `${props.width}em`,
-        height   : props.height ? `${props.height}em` : null,
-        fill     : props.color || null,
-        transform: props.rotate ? `rotate(${props.rotate}deg)` : null,
-        ...props.styles
+      width    : `${props.width}em`,
+      height   : props.height ? `${props.height}em` : null,
+      fill     : props.color || null,
+      transform: props.rotate ? `rotate(${props.rotate}deg)` : null,
+      ...props.styles
     };
 
     return (

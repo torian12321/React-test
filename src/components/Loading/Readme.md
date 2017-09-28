@@ -11,17 +11,17 @@
 #### Sizes
 ```
 <div>
-    <Loading size='xs' />
-    <Loading size='sm' />
-    <Loading size='md' />
-    <Loading size='lg' />
+  <Loading size='xs' />
+  <Loading size='sm' />
+  <Loading size='md' />
+  <Loading size='lg' />
 </div>
 ```
 
 #### Inside components
 ```
 <div>
-    <Button><Loading size='xs' /></Button>
-    <Message><Loading /></Message>
+  <Button><Loading size='xs' /></Button>
+  <Message><Loading /></Message>
 </div>
 ```
