@@ -13,8 +13,13 @@ class AccordionGroup extends React.Component {
   }
 }
 
+
+
 AccordionGroup.propTypes = {
-  children : PropTypes.any,
+  children : PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.element
+  ]).isRequired, 
   className: PropTypes.string
 };
 
