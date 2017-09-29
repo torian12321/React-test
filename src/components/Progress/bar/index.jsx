@@ -1,19 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './_style';
+import React      from 'react';
+import PropTypes  from 'prop-types';
+import styles     from './_style';
 
-const ProgressBar = (props) =>(
-    <div className={props.className}>
-        <div style={{ width: `${props.val}%` }}>
-            {`${props.val}%`}
+class ProgressBar extends React.PureComponent {
+  render(){
+    return(
+      <div className={this.props.className}>
+        <div style={{ width: `${this.props.val}%` }}>
+          {`${this.props.val}%`}
         </div>
-    </div>
-);
-
+      </div>
+    );
+  }
+}
 
 ProgressBar.propTypes = {
-    val      : PropTypes.number.isRequired,
-    className: PropTypes.string
+  val      : PropTypes.number.isRequired,
+  className: PropTypes.string
 };
 
 module.exports = ProgressBar;

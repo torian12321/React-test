@@ -1,24 +1,32 @@
 // Wrapper for checkboxes and radioButtons
-import React from 'react';
-import PropTypes from 'prop-types';
+import React      from 'react';
+import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import styles from './_style-check';
+import styles     from './_style-check';
 
-const Wrapper = props => (
-    <label className={classNames('wrapper-2', props.className)} htmlFor={props.id}>
-        {props.children}
-        <span>{props.label}</span>
-    </label>
-);
-
+class Wrapper extends React.Component {
+  render() {
+    return(
+      <label
+        htmlFor  = {this.props.id}
+        className= {classNames(
+          'wrapper-2',
+          this.props.className
+        )}
+      >
+        {this.props.children}
+        <span>{this.props.label}</span>
+      </label>
+    )
+  }
+}
 
 Wrapper.propTypes = {
-    children : PropTypes.node.isRequired,
-    label    : PropTypes.string,
-    id       : PropTypes.string,
-    className: PropTypes.string,
-    type     : PropTypes.oneOf(['error', 'success', 'warning'])
+  children : PropTypes.node.isRequired,
+  label    : PropTypes.string,
+  id       : PropTypes.string,
+  className: PropTypes.string,
+  type     : PropTypes.oneOf(['error', 'success', 'warning'])
 };
-
 
 module.exports = Wrapper;

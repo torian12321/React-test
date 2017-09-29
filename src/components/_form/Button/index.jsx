@@ -1,24 +1,30 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React      from 'react';
+import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import styles from './_style';
+import styles     from './_style';
 
-const Button = props => (
-    <button
+class Button extends React.Component {
+  render(){
+    const props = this.props;
+    
+    return(
+      <button
         className= {classNames(
-            'btn',
-            !props.flat ? 'btn-3D'             : null,
-            props.large ? 'btn-large'          : null,
-            props.color ? `btn-${props.color}` : null,
-            props.type  ? `btn-${props.type}`  : null,
-            props.className
+          'btn',
+          !props.flat ? 'btn-3D'             : null,
+          props.large ? 'btn-large'          : null,
+          props.color ? `btn-${props.color}` : null,
+          props.type  ? `btn-${props.type}`  : null,
+          props.className
         )}
         onClick  = {props.onClick}
         disabled = {props.disabled}
-    >
+      >
         {props.children}
-    </button>
-);
+      </button>
+    )
+  }
+}
 
 
 Button.propTypes = {

@@ -1,28 +1,34 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React      from 'react';
+import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import styles from './_style';
+import styles     from './_style';
 
-const Link = props =>(
-    <a 
-        href     ={props.href}
+class Link extends React.PureComponent {
+  render() {
+    return (
+      <a 
+        href     ={this.props.href}
         className={classNames(
-            'link',
-            {'preview': props.preview}
+          'link',
+          {'preview': this.props.preview},
+          this.props.className
         )}
-    >
-        {props.children}
-    </a>
-);
+      >
+        {this.props.children}
+      </a>
+    )
+  }
+}
 
 Link.propTypes = {
-    children : PropTypes.string.isRequired,
-    href     : PropTypes.string,
-    preview  : PropTypes.bool
+  children : PropTypes.string.isRequired,
+  className: PropTypes.string,
+  href     : PropTypes.string,
+  preview  : PropTypes.bool
 };
 Link.defaultProps = {
-    href   : '#',
-    preview: false
+  href   : '#',
+  preview: false
 };
 
 module.exports = Link;

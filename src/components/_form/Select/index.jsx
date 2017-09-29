@@ -1,62 +1,62 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import uniqid from 'uniqid';
-import styles from './_style';
+import React      from 'react';
+import PropTypes  from 'prop-types';
+import uniqid     from 'uniqid';
+import styles     from './_style';
 
 class Select extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: this.props.value,
-        };
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: this.props.value,
+    };
 
-        this.handleChange  = this.handleChange.bind(this);
+    this.handleChange  = this.handleChange.bind(this);
+  }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.checked !== this.state.checked) {
+      this.setState({ checked: nextProps.checked });
     }
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.checked !== this.state.checked) {
-            this.setState({ checked: nextProps.checked });
-        }
-    }
+  }
 
-    handleChange(){
-        this.props.onChange(this.state.checked);
-    }
-    render() {
-        const
-        id      = this.props.id || uniqid('select_'),
-        options = this.props.options.map((opt) => (
-            <option value={opt.value} key={opt.value}>
-                {opt.label}
-            </option>
-        ));
-        
-        return (
-            <select onChange={this.handleChange()}>
-                {options}
-            </select>
-        );
-    }
+  handleChange(){
+    this.props.onChange(this.state.checked);
+  }
+  render() {
+    const
+    id      = this.props.id || uniqid('select_'),
+    options = this.props.options.map((opt) => (
+      <option value={opt.value} key={opt.value}>
+        {opt.label}
+      </option>
+    ));
+    
+    return (
+      <select onChange={this.handleChange()}>
+        {options}
+      </select>
+    );
+  }
 }
 
 
 Select.propTypes = {
-    options : PropTypes.array.isRequired,
-    disabled: PropTypes.bool,
-    value   : PropTypes.number,
-    step    : PropTypes.number,
-    min     : PropTypes.number,
-    max     : PropTypes.number,
-    texted  : PropTypes.bool,
-    onChange: PropTypes.func
+  options : PropTypes.array.isRequired,
+  disabled: PropTypes.bool,
+  value   : PropTypes.number,
+  step    : PropTypes.number,
+  min     : PropTypes.number,
+  max     : PropTypes.number,
+  texted  : PropTypes.bool,
+  onChange: PropTypes.func
 };
 Select.defaultProps = {
-    disabled: false,
-    value   : 0,
-    step    : 1,
-    min     : 0,
-    max     : 100,
-    texted  : false,
-    onChange: () => null
+  disabled: false,
+  value   : 0,
+  step    : 1,
+  min     : 0,
+  max     : 100,
+  texted  : false,
+  onChange: () => null
 };
 
 module.exports = Select;

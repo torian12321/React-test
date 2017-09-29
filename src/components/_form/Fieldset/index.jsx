@@ -2,16 +2,23 @@ import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
 import styles     from './_style';
+import Title      from './fieldset_title';
 
-const Fieldset = props => (
-    <fieldset disabled={props.disabled} className={classNames('fieldset', props.className)}>
-        {props.title ?
-          <legend>{props.title}</legend> : 
-          null
-        }
-        {props.children}
-    </fieldset>
-);
+class Fieldset extends React.Component {
+  render() {
+    return (
+      <fieldset
+        disabled ={this.props.disabled}
+        className={classNames(
+          'fieldset',
+          this.props.className
+        )}>
+          <Title text={this.props.title} />
+          {this.props.children}
+      </fieldset>
+    )
+  }
+}
 
 Fieldset.propTypes = {
   /** Fieldset content. */

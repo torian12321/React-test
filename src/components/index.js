@@ -4,8 +4,6 @@ export * from './_grid';
 export Accordion from './Accordion';
 export Article   from './Article';
 export Avatar    from './Avatar';
-export Gallery   from './Gallery';
-export Grid      from './Grid';
 export Icon      from './Icon';
 //export IconBtn   from './IconBtn';
 export Img       from './Img';
