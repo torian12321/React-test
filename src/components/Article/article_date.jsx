@@ -3,7 +3,7 @@ import PropTypes  from 'prop-types';
 import Icon       from '../Icon';
 
 class ArticleDate extends React.PureComponent {
-  render(){
+  render() {
     return this.props.val ? (
       <span className="date">
         <Icon className="icon-open" name="calendar" />

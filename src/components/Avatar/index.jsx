@@ -8,13 +8,13 @@ class Avatar extends React.PureComponent {
   render() {
     return (
       <div 
-          style    ={{backgroundImage: `url(${this.props.src})`}}
-          className={classNames(
-            'avatar',
-            this.props.size,
-            this.props.state,
-            this.props.className
-          )}
+        style    ={{backgroundImage: `url(${this.props.src})`}}
+        className={classNames(
+          'avatar',
+          this.props.size,
+          this.props.state,
+          this.props.className
+        )}
       />
     )
   }

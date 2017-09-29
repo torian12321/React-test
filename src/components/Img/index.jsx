@@ -13,9 +13,9 @@ class Img extends React.PureComponent {
         alt ={alt}
         role={alt ? null : 'presentation'}
       />
-    );
+    )
   }
-};
+}
 
 Img.propTypes = {
   src: PropTypes.string.isRequired,

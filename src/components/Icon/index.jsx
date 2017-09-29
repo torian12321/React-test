@@ -19,7 +19,6 @@ class Icon extends React.PureComponent {
 
     return (
       <svg
-      style
         viewBox  ={`0 0 ${props.viewBox} ${props.viewBox}`}
         style    ={styles}
         className={classNames(

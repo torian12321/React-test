@@ -1,8 +1,9 @@
-import React      from 'react';
-import PropTypes  from 'prop-types';
-import styles     from './_style';
+import React          from 'react';
+import PropTypes      from 'prop-types';
+import styles         from './_style';
+import RangeTextBall  from './range_text_ball';
 
-class Range extends React.Component {
+class Range extends React.PureComponent {
   constructor(props){
     super(props);
     if(this.props.min < this.props.max){
@@ -38,10 +39,6 @@ class Range extends React.Component {
       percentage: p,
       style     : {
         backgroundSize: `${p}% 100%`
-      },
-      styleTxt  : {
-        left     : `${p}%`,
-        transform: `translate(-${p}%, 0%)`
       }
     });
   }
@@ -59,10 +56,11 @@ class Range extends React.Component {
           step     = {this.props.step}
           onChange = {this.handleChange}
         />
-        {this.props.texted ? 
-          <span style= {this.state.styleTxt}>{this.state.value}</span>
-          : null
-        }
+        <RangeTextBall
+          show      = {this.props.texted}
+          value     = {this.state.value}
+          percentage= {this.state.percentage}
+        />
       </div>
     );
   }

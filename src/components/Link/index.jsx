@@ -4,23 +4,25 @@ import classNames from 'classnames';
 import styles     from './_style';
 
 class Link extends React.PureComponent {
-  render(){
-    return(
+  render() {
+    return (
       <a 
         href     ={this.props.href}
         className={classNames(
           'link',
-          {'preview': this.props.preview}
+          {'preview': this.props.preview},
+          this.props.className
         )}
       >
         {this.props.children}
       </a>
-    );
+    )
   }
-};
+}
 
 Link.propTypes = {
   children : PropTypes.string.isRequired,
+  className: PropTypes.string,
   href     : PropTypes.string,
   preview  : PropTypes.bool
 };

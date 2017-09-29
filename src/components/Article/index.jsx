@@ -9,8 +9,8 @@ import Date       from './article_date';
 import More       from './article_more';
 
 class Article extends React.PureComponent {
-  render(){
-    return(
+  render() {
+    return (
       <article className={classNames('article', {'important': this.props.important})}>
         <div className="img" style={{backgroundImage: `url(${this.props.src})`}} />
         <div className="content">
