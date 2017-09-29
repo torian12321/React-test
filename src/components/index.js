@@ -2,6 +2,7 @@ export * from './_form';
 export * from './_grid';
 
 export Accordion from './Accordion';
+export AccordionGroup from './AccordionGroup';
 export Article   from './Article';
 export Avatar    from './Avatar';
 export Icon      from './Icon';

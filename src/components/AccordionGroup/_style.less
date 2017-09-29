@@ -1,0 +1,17 @@
+@import '~LESS_conf';
+
+.accordion-group{
+	margin: 0 10px;
+	.accordion{
+		margin: 0;
+		border-bottom: 2px solid @themeColor_1;
+		.rounded(0);
+		&:first-child{
+			.rounded(@BRadious; @BRadious; 0; 0;);
+		}
+		&:last-child{
+			.rounded(0; 0; @BRadious; @BRadious;);
+			border-bottom: 0;
+		}
+	}
+}
