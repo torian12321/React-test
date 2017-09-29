@@ -1,8 +1,9 @@
 @import '~LESS_conf';
 
-@ball-size   : 2em;
-@color       : @themeColor_1;
-@color-active: @themeColor_2;
+@ball-size    : 2em;
+@color        : @themeColor_1;
+@color-active : @themeColor_2;
+@color-disable: @colorState_disable;
 
 .form-range{
   position : relative;
@@ -39,6 +40,18 @@
       &:hover{
         &::-webkit-slider-thumb{background: @color-active;}
         &::-moz-range-thumb    {background: @color-active;}
+      }
+      &:disabled,
+      &[disabled]{
+        cursor: not-allowed;
+        &::-webkit-slider-thumb{background: @color-disable;}
+        &::-moz-range-thumb    {background: @color-disable;}
+        .gradient(
+          darken(@color-disable, 15%),
+          darken(@color-disable, 15%)
+        );
+        background-repeat: no-repeat;
+        background-color : @color-disable;
       }
   }
   span{

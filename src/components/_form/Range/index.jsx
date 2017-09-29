@@ -1,7 +1,7 @@
 import React          from 'react';
 import PropTypes      from 'prop-types';
-import styles         from './_style';
 import RangeTextBall  from './range_text_ball';
+import './_style';
 
 class Range extends React.PureComponent {
   constructor(props){
