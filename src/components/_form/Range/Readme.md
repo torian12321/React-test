@@ -1,9 +1,9 @@
 #### Basic
 ```
 <div>
-	<Range />
-	<Range value={40} />
-	<Range value={70} />
+  <Range />
+  <Range value={40} />
+  <Range value={70} />
 </div>
 ```
 
@@ -15,7 +15,7 @@
 #### Disabled
 ```
 <div>
-	<Range value={40} disabled />
+  <Range value={40} disabled />
   <Range value={80} disabled texted/>
 </div>
 ```
