@@ -1,11 +1,11 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import styles     from './_style';
+import './_style';
 
 class Row extends React.Component {
   render() {
-    return(
+    return (
       <div  className={classNames(
         'grid-row',
         this.props.className)}
@@ -17,11 +17,11 @@ class Row extends React.Component {
 }
 
 Row.propTypes = {
-    className: PropTypes.string,
-    children: PropTypes.oneOfType([
-      PropTypes.element,
-      PropTypes.arrayOf(require('../Col')),
-    ]).isRequired
+  className: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(require('../Col')),
+  ]).isRequired
 };
 
 module.exports = Row;

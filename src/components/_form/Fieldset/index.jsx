@@ -1,8 +1,8 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import styles     from './_style';
 import Title      from './fieldset_title';
+import './_style';
 
 class Fieldset extends React.Component {
   render() {

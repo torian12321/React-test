@@ -1,8 +1,8 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import styles     from './_style';
 import Icon       from '../Icon';
+import './_style';
 
 class Quote extends React.PureComponent {
   render(){

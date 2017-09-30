@@ -3,10 +3,10 @@ import PropTypes  from 'prop-types';
 import uniqid     from 'uniqid';
 import classNames from 'classnames';
 import Icon       from '../../Icon';
-import styles     from './_style';
+import './_style';
 
-class Add extends React.Component{
-  constructor(props){
+class Add extends React.Component {
+  constructor(props) {
     super(props);
     this.state = {
       text  : this.props.text,
@@ -15,7 +15,7 @@ class Add extends React.Component{
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(files){
+  handleChange(files) {
     const fl = files.length;
 
     this.setState({

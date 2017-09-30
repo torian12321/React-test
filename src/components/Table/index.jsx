@@ -1,18 +1,18 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import styles     from './_style';
+import './_style';
 
 class Table extends React.Component {
   render() {
     return(
       <table className={classNames(
-          'table',
-          {"striped"  : this.props.striped},
-          {"bordered" : this.props.bordered},
-          this.props.className,
+        'table',
+        {"striped"  : this.props.striped},
+        {"bordered" : this.props.bordered},
+        this.props.className,
       )}>
-          {this.props.children}
+        {this.props.children}
       </table>
     )
   }

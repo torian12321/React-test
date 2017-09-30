@@ -6,6 +6,5 @@ module.exports = {
   // // Not necessary unless you consume a module using `createClass`
   // 'create-react-class': 'preact-compat/lib/create-react-class',
 
-  LESS_conf: path.resolve(__dirname, '../src/styles/conf'),
-  export   : path.resolve(__dirname, '../export')
+  export: path.resolve(__dirname, '../export')
 };

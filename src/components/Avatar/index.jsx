@@ -1,8 +1,8 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import styles     from './_style';
 import ImgDef     from '../../img/default/user.png';
+import './_style';
 
 class Avatar extends React.PureComponent {
   render() {

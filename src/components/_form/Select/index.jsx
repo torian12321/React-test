@@ -1,7 +1,7 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import uniqid     from 'uniqid';
-import styles     from './_style';
+import './_style';
 
 class Select extends React.Component {
   constructor(props) {

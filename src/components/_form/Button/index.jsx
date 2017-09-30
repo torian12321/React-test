@@ -1,13 +1,13 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import styles     from './_style';
+import './_style';
 
 class Button extends React.Component {
-  render(){
+  render() {
     const props = this.props;
     
-    return(
+    return (
       <button
         className= {classNames(
           'btn',
@@ -28,20 +28,20 @@ class Button extends React.Component {
 
 
 Button.propTypes = {
-    children : PropTypes.any,
-    className: PropTypes.string,
-    disabled : PropTypes.bool,
-    flat     : PropTypes.bool,
-    large    : PropTypes.bool,
-    color    : PropTypes.oneOf(['main', 'sec', 'green', 'red', 'blue', 'white', 'grey', 'black']),
-    type     : PropTypes.oneOf(['success', 'danger', 'warning']),
-    onClick  : PropTypes.func
+  children : PropTypes.any,
+  className: PropTypes.string,
+  disabled : PropTypes.bool,
+  flat     : PropTypes.bool,
+  large    : PropTypes.bool,
+  color    : PropTypes.oneOf(['main', 'sec', 'green', 'red', 'blue', 'white', 'grey', 'black']),
+  type     : PropTypes.oneOf(['success', 'danger', 'warning']),
+  onClick  : PropTypes.func
 };
 Button.defaultProps = {
-    children : 'Submit',
-    disabled : false,
-    large    : false,
-    flat     : true
+  children : 'Submit',
+  disabled : false,
+  large    : false,
+  flat     : true
 };
 
 module.exports = Button;
