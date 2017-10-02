@@ -1,11 +1,11 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import uniqid     from 'uniqid';
-import styles     from './_style';
 import Wrapper    from '../_wrapper';
+import './_style';
 
 class Input extends React.Component {
-    constructor(props) {
+  constructor(props) {
     super(props);
     
     this.state = {value: 1}
@@ -25,21 +25,18 @@ class Input extends React.Component {
     const id = this.props.id || uniqid('input_');
     
     return (
-        <Wrapper
-          id        = {id}
-          className = "styled-input-number"
-          label     = {this.props.placeholder}
-		    >
-
-
+      <Wrapper
+        id        = {id}
+        className = "styled-input-number"
+        label     = {this.props.placeholder}
+      >
         <div className="quantity-input">
           <div className="quantity-input__modifier quantity-input__modifier--left" onClick={this.decrement}>&mdash;</div>
           <input className="quantity-input__screen" type="number" value={this.state.value} readOnly />
           <div className="quantity-input__modifier quantity-input__modifier--right" onClick={this.increment}>&#xff0b;</div>  
         </div>
-
-        </Wrapper>
-    );
+      </Wrapper>
+    )
   }
 }
 

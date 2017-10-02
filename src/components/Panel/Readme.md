@@ -1,9 +1,9 @@
 #### Basic
 ```
-<Panel><Lorem /></Panel>
+<Panel>Lorem Ipsum</Panel>
 ```
 
 #### With title
 ```
-<Panel title='Title'><Lorem /></Panel>
+<Panel title='Title'>Doler set</Panel>
 ```

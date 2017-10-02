@@ -2,8 +2,8 @@
 import React        from 'react';
 import PropTypes    from 'prop-types';
 import classNames   from 'classnames';
-import styles       from './_style';
 import WrapperLabel from './wrapper_label';
+import './_style';
 
 class Wrapper extends React.Component {
   render() {

@@ -1,6 +1,6 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
-import styles     from './_style';
+import './_style';
 
 class ProgressCircle extends React.PureComponent {
   render(){

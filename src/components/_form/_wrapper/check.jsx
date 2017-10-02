@@ -2,11 +2,11 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import styles     from './_style-check';
+import './_style-check';
 
 class Wrapper extends React.Component {
   render() {
-    return(
+    return (
       <label
         htmlFor  = {this.props.id}
         className= {classNames(

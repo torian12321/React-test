@@ -1,6 +1,6 @@
-import React from 'react';
+import React    from 'react';
 import ReactDOM from 'react-dom';
-import Modal from './modal';
+import Modal    from './modal';
 
 class ModalWrapper extends React.Component{
 	componentDidMount() {

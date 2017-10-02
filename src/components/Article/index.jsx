@@ -1,12 +1,12 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import styles     from './_style';
 import Icon       from '../Icon';
 import ImgDef     from '../../img/default/img.png';
 
 import Date       from './article_date';
 import More       from './article_more';
+import './_style';
 
 class Article extends React.PureComponent {
   render() {

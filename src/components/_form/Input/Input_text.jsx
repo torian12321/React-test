@@ -1,37 +1,37 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import uniqid from 'uniqid';
-import Wrapper from '../_wrapper';
+import React 	    from 'react';
+import PropTypes  from 'prop-types';
+import uniqid     from 'uniqid';
+import Wrapper    from '../_wrapper';
 
 class Input extends React.Component {
-	constructor(props){
-        super(props);
-        this.state = {
-            value : this.props.value,
-			filled: false
-        };
+  constructor(props){
+    super(props);
+    this.state = {
+      value : this.props.value,
+      filled: false
+    };
 
-        this.handleChange  = this.handleChange.bind(this);
-        this.handleFocusIn = this.handleFocusIn.bind(this);
-        this.handleFocusOut= this.handleFocusOut.bind(this);
-    }
+    this.handleChange  = this.handleChange.bind(this);
+    this.handleFocusIn = this.handleFocusIn.bind(this);
+    this.handleFocusOut= this.handleFocusOut.bind(this);
+  }
 	componentDidMount() {
 		this.focus();
 	}
 	componentWillReceiveProps(nextProps) {
-        if (nextProps.value !== this.state.value) {
-            this.setState({ value: nextProps.value });
-        }
+    if (nextProps.value !== this.state.value) {
+      this.setState({ value: nextProps.value });
     }
+  }
 
     handleChange(e){
-        let v = e.target.value;
+      let v = e.target.value;
 
-        this.setState({
-			value : v,
-			filled: !this.isEmpty(v)
-		});
-        this.props.onChange(v);
+      this.setState({
+        value : v,
+        filled: !this.isEmpty(v)
+  		});
+      this.props.onChange(v);
     }
     handleFocusIn(e) {this.props.onFocusIn(e.target.value);}
     handleFocusOut(e){this.props.onFocusOut(e.target.value);}
@@ -47,7 +47,7 @@ class Input extends React.Component {
 
 
 	render(){
-        const id = this.props.id || uniqid('input_');
+    const id = this.props.id || uniqid('input_');
 
 		return(
 			<Wrapper
@@ -71,25 +71,25 @@ class Input extends React.Component {
 }
 
 Input.propTypes = {
-	id         : PropTypes.string,
-	disabled   : PropTypes.bool,
-	value      : PropTypes.string,
-	className  : PropTypes.string,
-	maxlength  : PropTypes.number,
-	type       : PropTypes.string,
-	placeholder: PropTypes.string,
-	focus      : PropTypes.bool,
-	onChange   : PropTypes.func,
-    onFocusIn  : PropTypes.func,
-    onFocusOut : PropTypes.func
+  id         : PropTypes.string,
+  disabled   : PropTypes.bool,
+  value      : PropTypes.string,
+  className  : PropTypes.string,
+  maxlength  : PropTypes.number,
+  type       : PropTypes.string,
+  placeholder: PropTypes.string,
+  focus      : PropTypes.bool,
+  onChange   : PropTypes.func,
+  onFocusIn  : PropTypes.func,
+  onFocusOut : PropTypes.func
 };
 Input.defaultProps = {
-	type      : 'text', 
-	disabled  : false,
-	focus     : false,
-	onChange  : () => null,
-    onFocusIn : () => null,
-    onFocusOut: () => null
+  type      : 'text', 
+  disabled  : false,
+  focus     : false,
+  onChange  : () => null,
+  onFocusIn : () => null,
+  onFocusOut: () => null
 };
 
 module.exports = Input;

@@ -7,14 +7,14 @@ import Circle     from './circular';
 class Progress extends React.PureComponent {
   render(){
     let conf = {
-        val      : this.props.val,
-        className: classNames(
-          'pb',
-          `pb-${this.props.type}`,
-          this.props.state,
-          this.props.size,
-          this.props.className
-        )
+      val      : this.props.val,
+      className: classNames(
+        'pb',
+        `pb-${this.props.type}`,
+        this.props.state,
+        this.props.size,
+        this.props.className
+      )
     };
 
     if(this.props.type === 'circular'){
