@@ -1,17 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Avatar changes the class when hovered 1`] = `
-<div
-  className="avatar"
-  style={
-    Object {
-      "backgroundImage": "url(test-file-stub)",
-    }
-  }
-/>
-`;
-
-exports[`Link changes the class when hovered 1`] = `
+exports[`Should render Avatar 1`] = `
 <div
   className="avatar"
   style={
