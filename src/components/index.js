@@ -1,5 +1,6 @@
 export * from './_form';
 export * from './_grid';
+export * from './_others';
 
 export Accordion from './Accordion';
 export AccordionGroup from './AccordionGroup';

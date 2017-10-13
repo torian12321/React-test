@@ -15,7 +15,8 @@ module.exports = {
 	sections: [
 		{ name: 'Grid'		, components: 'src/components/_grid/**/index.jsx' },
 		{ name: 'Components', components: 'src/components/*/index.jsx' },
-		{ name: 'Form'      , components: 'src/components/_form/**/index.jsx' }
+		{ name: 'Form'      , components: 'src/components/_form/**/index.jsx' },
+		{ name: 'Others'    , components: 'src/components/_others/**/index.jsx' },
 	],
     getComponentPathLine: function (componentPath) {
 		// Use folder name as import reference
