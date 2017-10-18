@@ -8,7 +8,7 @@ class ListItem extends React.PureComponent {
 }
 
 ListItem.propTypes = {
-  item: React.PropTypes.any,
+  item: PropTypes.any,
 };
 
 module.exports = ListItem;
