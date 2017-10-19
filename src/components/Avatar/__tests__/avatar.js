@@ -4,10 +4,9 @@ import Avatar   from '../index';
 
 jest.unmock('../index.jsx');
 
-test('Should render Avatar', () => {
+it('Should render Avatar', () => {
   const component = renderer.create(
     <Avatar src='img.png' />
   );
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component).toMatchSnapshot();
 });

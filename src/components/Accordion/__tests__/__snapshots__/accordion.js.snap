@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Accordion 1`] = `
+<div
+  className="accordion"
+>
+  <div
+    className="acc-header"
+    onClick={[Function]}
+  >
+    Show Details
+  </div>
+  <div
+    className="acc-body"
+    style={Object {}}
+  >
+    <div
+      className="acc-body-content"
+    >
+      Accordion content
+    </div>
+  </div>
+</div>
+`;
