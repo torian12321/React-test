@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component <Message /> Should render danger type 1`] = `
+<div
+  className="message danger"
+>
+  Lorem Ipsum
+</div>
+`;
+
+exports[`component <Message /> Should render important state 1`] = `
+<div
+  className="message important"
+>
+  Lorem Ipsum
+</div>
+`;
+
+exports[`component <Message /> should render correctly 1`] = `
+<div
+  className="message"
+>
+  Lorem Ipsum
+</div>
+`;

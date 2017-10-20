@@ -25,11 +25,9 @@ describe('component', () => {
     });
 
     it('should render hearts', () => {
-      const comp = renderer.create(
+      expect(renderer.create(
         <Rating icon='heart' />
-      ).toJSON();
-
-      expect(comp).toMatchSnapshot();
+      )).toMatchSnapshot();
     });
 
   });

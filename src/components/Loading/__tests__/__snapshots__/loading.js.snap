@@ -1,7 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render Loading 1`] = `
+exports[`component <Loading /> should render correctly 1`] = `
 <div
   className="loading spinner"
+/>
+`;
+
+exports[`component <Loading /> should render pulse type 1`] = `
+<div
+  className="loading pulse"
+/>
+`;
+
+exports[`component <Loading /> should render small size 1`] = `
+<div
+  className="loading spinner sm"
 />
 `;

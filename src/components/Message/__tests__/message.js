@@ -1,25 +1,25 @@
 import React    from 'react';
 import renderer from 'react-test-renderer';
-import Avatar   from '../index';
+import Message  from '../index';
 
 describe('component', () => {
-  describe('<Avatar />', () => {
+  describe('<Message />', () => {
 
     it('should render correctly', () => {
       expect(renderer.create(
-        <Avatar src='img.png' />
+        <Message>Lorem Ipsum</Message>
       )).toMatchSnapshot();
     });
 
-    it('Should render small size', () => {
+    it('Should render danger type', () => {
       expect(renderer.create(
-        <Avatar src='img.png' size='sm' />
+        <Message type='danger'>Lorem Ipsum</Message>
       )).toMatchSnapshot();
     });
 
-    it('Should render small danger State', () => {
+    it('Should render important state', () => {
       expect(renderer.create(
-        <Avatar src='img.png' state='danger' />
+        <Message important>Lorem Ipsum</Message>
       )).toMatchSnapshot();
     });
 

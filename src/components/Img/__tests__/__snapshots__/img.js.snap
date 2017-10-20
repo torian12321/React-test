@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render Img 1`] = `
+exports[`component <Img /> should render correctly 1`] = `
 <img
   alt="image description"
   role={null}
