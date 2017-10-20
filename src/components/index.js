@@ -5,6 +5,7 @@ export Accordion from './Accordion';
 export AccordionGroup from './AccordionGroup';
 export Article   from './Article';
 export Avatar    from './Avatar';
+export Divider   from './Divider';
 export Icon      from './Icon';
 //export IconBtn   from './IconBtn';
 export Img       from './Img';
