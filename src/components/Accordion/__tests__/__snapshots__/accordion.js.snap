@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`component <Accordion /> should allow to click the header 1`] = `
+<div
+  className="accordion"
+>
+  <div
+    className="acc-header"
+    onClick={[Function]}
+  >
+    Show Details
+  </div>
+  <div
+    className="acc-body"
+    style={Object {}}
+  >
+    <div
+      className="acc-body-content"
+    >
+      Accordion content
+    </div>
+  </div>
+</div>
+`;
+
 exports[`component <Accordion /> should render correctly 1`] = `
 <div
   className="accordion"
@@ -9,6 +32,52 @@ exports[`component <Accordion /> should render correctly 1`] = `
     onClick={[Function]}
   >
     Show Details
+  </div>
+  <div
+    className="acc-body"
+    style={Object {}}
+  >
+    <div
+      className="acc-body-content"
+    >
+      Accordion content
+    </div>
+  </div>
+</div>
+`;
+
+exports[`component <Accordion /> should render open initially 1`] = `
+<div
+  className="accordion active"
+>
+  <div
+    className="acc-header"
+    onClick={[Function]}
+  >
+    Show Details
+  </div>
+  <div
+    className="acc-body"
+    style={Object {}}
+  >
+    <div
+      className="acc-body-content"
+    >
+      Accordion content
+    </div>
+  </div>
+</div>
+`;
+
+exports[`component <Accordion /> should render with custom title 1`] = `
+<div
+  className="accordion"
+>
+  <div
+    className="acc-header"
+    onClick={[Function]}
+  >
+    Open me
   </div>
   <div
     className="acc-body"
