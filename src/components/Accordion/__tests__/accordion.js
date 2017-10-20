@@ -1,14 +1,16 @@
 import React     from 'react';
 import renderer  from 'react-test-renderer';
-import {shallow} from 'enzyme';
 import Accordion from '../index';
 
+describe('component', () => {
+  describe('<Accordion />', () => {
+    it('should render correctly', () => {
+      const comp = renderer.create(
+        <Accordion>Accordion content</Accordion>
+      ).toJSON();
 
-it('Should render Accordion', () => {
-  const component = renderer.create(
-    <Accordion>Accordion content</Accordion>
-  );
-  let tree = component.toJSON();
-
-  expect(component.toJSON()).toMatchSnapshot();
+      expect(comp).toMatchSnapshot();
+      expect(comp.props.className).toEqual('accordion');      
+    });
+  });
 });

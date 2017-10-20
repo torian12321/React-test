@@ -4,6 +4,7 @@ import Button   from '../index';
 
 describe('component', () => {
   describe('<Button />', () => {
+    
     it('should render correctly', () => {
       const clickHander = jest.fn();
       const button = renderer.create(
@@ -26,14 +27,6 @@ describe('component', () => {
       expect(button.props.className).toEqual('btn btn-3D btn-large');
     });
 
-    // it('should have a small size', () => {
-    //   const button = renderer.create(
-    //     <Button type={'solid'} size={'btn-sm'}>click me small</Button>
-    //   ).toJSON();
-    //   expect(button).toMatchSnapshot();
-    //   expect(button.props.className).toEqual('btn btn-solid btn-sm init-caps');
-    // });
-
     it('should have disabled', () => {
       const clickHander = jest.fn();
       const button = renderer.create(
@@ -44,5 +37,6 @@ describe('component', () => {
       expect(clickHander).toBeCalled();
       expect(button).toMatchSnapshot();
     });
+    
   });
 });
