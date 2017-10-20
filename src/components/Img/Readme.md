@@ -6,6 +6,12 @@ Use this just for wireframing
 <Img alt="desc" />
 ```
 
+#### Without Alt attribute
+If there is no alt, the picture will be considered as presentation
+```
+<Img />
+```
+
 #### Custom src
 Use a local image or from a url
 ```

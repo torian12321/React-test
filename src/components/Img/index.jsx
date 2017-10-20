@@ -19,7 +19,7 @@ class Img extends React.PureComponent {
 
 Img.propTypes = {
   src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired
+  alt: PropTypes.string
 };
 Img.defaultProps = {
   src: ImgDef
