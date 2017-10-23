@@ -2,7 +2,7 @@ import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
 import uniqid     from 'uniqid';
-import './_style';
+import './_style.less';
 
 class Switch extends React.PureComponent {
   constructor(props) {
