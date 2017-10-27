@@ -15,9 +15,9 @@
     "jest": "jest",
     "build": "cross-env NODE_ENV=production  webpack --progress -p",
     "check-updates": "node _config/updatePackages",
-    "watch": "cross-env webpack --watch",
-    "styleguide": "cross-env styleguidist server",
-    "styleguide:build": "cross-env styleguidist build"
+    "watch": "cross-env NODE_ENV=development webpack --watch",
+    "styleguide": "cross-env NODE_ENV=development styleguidist server",
+    "styleguide:build": "cross-env NODE_ENV=development  styleguidist build"
   },
   "dependencies": {
     "loaders": "1.1.3",
