@@ -9,6 +9,7 @@ export Divider   from './Divider';
 export Icon      from './Icon';
 //export IconBtn   from './IconBtn';
 export Img       from './Img';
+export ImgCard   from './ImgCard';
 export Link      from './Link';
 export List      from './List';
 export Loading   from './Loading';
