@@ -13,11 +13,6 @@ class Switch extends React.PureComponent {
 
     this.handleChange = this.handleChange.bind(this);
   }
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.checked !== this.state.checked) {
-      this.setState({ checked: nextProps.checked });
-    }
-  }
 
   handleChange(){
     this.setState({
@@ -30,8 +25,9 @@ class Switch extends React.PureComponent {
     return (
       <div className={classNames(
         'form-switch',
-        {'texted': this.props.texted})
-      }>
+        {'texted': this.props.texted},
+        this.props.className
+      )}>
         <input
           id      = {id}
           type    = "checkbox"
@@ -47,11 +43,12 @@ class Switch extends React.PureComponent {
 
 
 Switch.propTypes = {
-  id      : PropTypes.string,
-  checked : PropTypes.bool,
-  texted  : PropTypes.bool,
-  disabled: PropTypes.bool,
-  onChange: PropTypes.func
+  id       : PropTypes.string,
+  className: PropTypes.string,
+  checked  : PropTypes.bool,
+  texted   : PropTypes.bool,
+  disabled : PropTypes.bool,
+  onChange : PropTypes.func
 };
 Switch.defaultProps = {
   checked : false,
