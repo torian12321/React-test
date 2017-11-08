@@ -16,50 +16,50 @@ On add your own icons, consider to use [SVGOMG](https://jakearchibald.github.io/
 #### List of Icons
 ```
 <div>
-	<Icon name='twitter' />
-	<Icon name='facebook' />
-	<Icon name='google' />
-	<Icon name='instagram' />
-	<Icon name='youtube' />
-	<Icon name='linkedin' />
-	<Icon name='calendar' />
-	<Icon name='chat' />
-	<Icon name='check' />
-	<Icon name='chevron' />
-	<Icon name='close' />
-	<Icon name='cog' />
-	<Icon name='dollar' />
-	<Icon name='heart' />
-	<Icon name='home' />
-	<Icon name='mail' />
-	<Icon name='menu' />
-	<Icon name='minus' />
-	<Icon name='pin' />
-	<Icon name='plus' />
-	<Icon name='search' />
-	<Icon name='star' />
-	<Icon name='warning' />
-	<Icon name='quote' />
+  <Icon name='twitter' />
+  <Icon name='facebook' />
+  <Icon name='google' />
+  <Icon name='instagram' />
+  <Icon name='youtube' />
+  <Icon name='linkedin' />
+  <Icon name='calendar' />
+  <Icon name='chat' />
+  <Icon name='check' />
+  <Icon name='chevron' />
+  <Icon name='close' />
+  <Icon name='cog' />
+  <Icon name='dollar' />
+  <Icon name='heart' />
+  <Icon name='home' />
+  <Icon name='mail' />
+  <Icon name='menu' />
+  <Icon name='minus' />
+  <Icon name='pin' />
+  <Icon name='plus' />
+  <Icon name='search' />
+  <Icon name='star' />
+  <Icon name='warning' />
+  <Icon name='quote' />
 </div>
 ```
 
 #### Set width
 ```
 <div>
-	<Icon width={.5} />
-	<Icon width={1} />
-	<Icon width={2} />
-	<Icon width={5} />
-	<Icon width={10} />
+  <Icon width={.5} />
+  <Icon width={1} />
+  <Icon width={2} />
+  <Icon width={5} />
+  <Icon width={10} />
 </div>
 ```
 
 #### Set color
 ```
 <div>
-	<Icon color='red' />
-	<Icon color='green' />
-	<Icon color='#2b9c7d' />
+  <Icon color='red' />
+  <Icon color='green' />
+  <Icon color='#2b9c7d' />
 </div>
 ```
 
@@ -68,13 +68,13 @@ On add your own icons, consider to use [SVGOMG](https://jakearchibald.github.io/
 initialState = {val: 180};
 
 <div>
-	<Range 
-		value    = {state.val}
-		max      = {360}
-		onChange = {(e) => setState({val: e})}
-		texted
-	/>
+  <Range 
+    value    = {state.val}
+    max      = {360}
+    onChange = {(e) => setState({val: e})}
+    texted
+  />
 
-	<Icon rotate={state.val} />
+  <Icon rotate={state.val} />
 </div>
 ```
