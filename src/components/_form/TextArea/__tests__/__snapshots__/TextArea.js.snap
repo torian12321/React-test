@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component <TextArea /> should render correctly 1`] = `
+<div
+  className="styled-input"
+>
+  <textarea
+    className={null}
+    defaultValue={undefined}
+    disabled={false}
+    id="ta"
+    maxLength={undefined}
+    onChange={[Function]}
+    rows={4}
+  />
+  <span />
+</div>
+`;
+
+exports[`component <TextArea /> should render disabled 1`] = `
+<div
+  className="styled-input"
+>
+  <textarea
+    className={null}
+    defaultValue={undefined}
+    disabled={true}
+    id="ta"
+    maxLength={undefined}
+    onChange={[Function]}
+    rows={4}
+  />
+  <span />
+</div>
+`;
+
+exports[`component <TextArea /> should render placeholder 1`] = `
+<div
+  className="styled-input"
+>
+  <textarea
+    className={null}
+    defaultValue={undefined}
+    disabled={false}
+    id="ta"
+    maxLength={undefined}
+    onChange={[Function]}
+    rows={4}
+  />
+  <label
+    htmlFor="ta"
+  >
+    Add your comments
+  </label>
+  <span />
+</div>
+`;

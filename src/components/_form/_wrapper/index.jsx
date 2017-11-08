@@ -3,7 +3,7 @@ import React        from 'react';
 import PropTypes    from 'prop-types';
 import classNames   from 'classnames';
 import WrapperLabel from './wrapper_label';
-import './_style';
+import './_style.less';
 
 class Wrapper extends React.Component {
   render() {

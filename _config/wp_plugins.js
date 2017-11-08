@@ -1,5 +1,6 @@
 const
 webpack = require('webpack'),
+ExtractText = require('extract-text-webpack-plugin'),
 path    = require('path'),
 Clean   = require('clean-webpack-plugin'),
 Copy    = require('copy-webpack-plugin'),
@@ -7,7 +8,6 @@ HTML    = require('html-webpack-plugin'),
 root    = path.join(__dirname, '..'),
 manifest= require('../src/static/manifest'),
 DashboardPlugin = require('webpack-dashboard/plugin');
-
 
 module.exports = (isProd) => {
   
@@ -35,7 +35,8 @@ module.exports = (isProd) => {
   if (isProd) {
 		plugins.push(
       new Clean([path.resolve(__dirname, '../dist')], { root }),
-			new webpack.optimize.ModuleConcatenationPlugin(),
+      new webpack.optimize.ModuleConcatenationPlugin(),
+      new ExtractText('styles.[hash].css'),
       new webpack.LoaderOptionsPlugin({
         minimize: true,
         debug   : false
@@ -63,7 +64,6 @@ module.exports = (isProd) => {
 			new DashboardPlugin({ port: 9830 })
 		);
 	}
-
 
   return plugins;
 };

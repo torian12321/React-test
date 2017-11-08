@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component <Progress /> Bar should render 73 progress 1`] = `
+<div
+  className="pb pb-bar"
+>
+  <div
+    style={
+      Object {
+        "width": "73%",
+      }
+    }
+  >
+    73%
+  </div>
+</div>
+`;
+
+exports[`component <Progress /> Bar should render correctly 1`] = `
+<div
+  className="pb pb-bar"
+>
+  <div
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
+  >
+    50%
+  </div>
+</div>
+`;
+
+exports[`component <Progress /> Bar should render info state 1`] = `
+<div
+  className="pb pb-bar info"
+>
+  <div
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
+  >
+    50%
+  </div>
+</div>
+`;
+
+exports[`component <Progress /> Bar should render small 1`] = `
+<div
+  className="pb pb-bar sm"
+>
+  <div
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
+  >
+    50%
+  </div>
+</div>
+`;

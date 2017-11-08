@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component <Divider /> Should render a texted version 1`] = `
+<hr
+  className="divider divider_texted"
+  data-content="Chapter 1"
+/>
+`;
+
+exports[`component <Divider /> should render correctly 1`] = `
+<hr
+  className="divider"
+  data-content={undefined}
+/>
+`;

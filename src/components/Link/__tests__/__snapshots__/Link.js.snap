@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component <Link /> should render correctly 1`] = `
+<a
+  className="link"
+  href="https://www.google.ie"
+>
+  Extenal link
+</a>
+`;
+
+exports[`component <Link /> should render preview link 1`] = `
+<a
+  className="link preview"
+  href="https://www.google.ie"
+>
+  Extenal link
+</a>
+`;

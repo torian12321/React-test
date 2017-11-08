@@ -23,8 +23,8 @@ class List extends React.PureComponent {
 }
 
 List.propTypes = {
-  component: React.PropTypes.func,
-  items    : React.PropTypes.array,
+  component: PropTypes.func,
+  items    : PropTypes.array,
 };
 
 List.defaultProps = {
