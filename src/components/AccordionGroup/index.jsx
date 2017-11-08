@@ -1,7 +1,7 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import './_style';
+import './_style.less';
 
 class AccordionGroup extends React.Component {
   render() {
@@ -12,8 +12,6 @@ class AccordionGroup extends React.Component {
     )
   }
 }
-
-
 
 AccordionGroup.propTypes = {
   children : PropTypes.oneOfType([

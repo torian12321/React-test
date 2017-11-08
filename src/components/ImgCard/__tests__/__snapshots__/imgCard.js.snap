@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component <ImgCard /> should render correctly 1`] = `
+<figure
+  className="imageCard"
+>
+  <img
+    alt={undefined}
+    role="presentation"
+    src="img.png"
+  />
+</figure>
+`;
+
+exports[`component <ImgCard /> should render with alt text 1`] = `
+<figure
+  className="imageCard"
+>
+  <img
+    alt="image description"
+    role={null}
+    src="img.png"
+  />
+  <figcaption>
+    image description
+  </figcaption>
+</figure>
+`;
+
+exports[`component <ImgCard /> should render with alt text 2`] = `
+<figure
+  className="imageCard"
+>
+  <img
+    alt="image description"
+    role={null}
+    src="img.png"
+  />
+  <figcaption>
+    caption text
+  </figcaption>
+</figure>
+`;

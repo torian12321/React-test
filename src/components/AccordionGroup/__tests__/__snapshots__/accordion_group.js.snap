@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component <AccordionGroup /> should render correctly 1`] = `
+<div
+  className="accordion-group accordion-group"
+>
+  <div
+    className="accordion"
+  >
+    <div
+      className="acc-header"
+      onClick={[Function]}
+    >
+      Accordion 1
+    </div>
+    <div
+      className="acc-body"
+      style={Object {}}
+    >
+      <div
+        className="acc-body-content"
+      >
+        Content 1
+      </div>
+    </div>
+  </div>
+  <div
+    className="accordion active"
+  >
+    <div
+      className="acc-header"
+      onClick={[Function]}
+    >
+      Accordion 2
+    </div>
+    <div
+      className="acc-body"
+      style={Object {}}
+    >
+      <div
+        className="acc-body-content"
+      >
+        Content 2
+      </div>
+    </div>
+  </div>
+  <div
+    className="accordion active"
+  >
+    <div
+      className="acc-header"
+      onClick={[Function]}
+    >
+      Accordion 3
+    </div>
+    <div
+      className="acc-body"
+      style={Object {}}
+    >
+      <div
+        className="acc-body-content"
+      >
+        Content 3
+      </div>
+    </div>
+  </div>
+</div>
+`;

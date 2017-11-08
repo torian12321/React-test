@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component <Avatar /> Should render small danger State 1`] = `
+<div
+  className="avatar danger"
+  style={
+    Object {
+      "backgroundImage": "url(img.png)",
+    }
+  }
+/>
+`;
+
+exports[`component <Avatar /> Should render small size 1`] = `
+<div
+  className="avatar sm"
+  style={
+    Object {
+      "backgroundImage": "url(img.png)",
+    }
+  }
+/>
+`;
+
+exports[`component <Avatar /> should render correctly 1`] = `
+<div
+  className="avatar"
+  style={
+    Object {
+      "backgroundImage": "url(img.png)",
+    }
+  }
+/>
+`;

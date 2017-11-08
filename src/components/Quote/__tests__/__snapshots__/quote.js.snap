@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component <Quote /> should render Autor and Cite 1`] = `
+<blockquote
+  cite="somewhere"
+  className="quote"
+>
+  Lorem ipsum
+  <span
+    className="quote-author"
+  >
+    someone
+  </span>
+  <svg
+    className="icon icon-open"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M0 16v8h8v-8H4s0-4 4-4V8s-8 0-8 8zm20-4V8s-8 0-8 8v8h8v-8h-4s0-4 4-4z"
+      />
+    </g>
+  </svg>
+  <svg
+    className="icon icon-close"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": "rotate(180deg)",
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M0 16v8h8v-8H4s0-4 4-4V8s-8 0-8 8zm20-4V8s-8 0-8 8v8h8v-8h-4s0-4 4-4z"
+      />
+    </g>
+  </svg>
+</blockquote>
+`;
+
+exports[`component <Quote /> should render correctly 1`] = `
+<blockquote
+  cite={undefined}
+  className="quote"
+>
+  Lorem ipsum
+  <svg
+    className="icon icon-open"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M0 16v8h8v-8H4s0-4 4-4V8s-8 0-8 8zm20-4V8s-8 0-8 8v8h8v-8h-4s0-4 4-4z"
+      />
+    </g>
+  </svg>
+  <svg
+    className="icon icon-close"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": "rotate(180deg)",
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M0 16v8h8v-8H4s0-4 4-4V8s-8 0-8 8zm20-4V8s-8 0-8 8v8h8v-8h-4s0-4 4-4z"
+      />
+    </g>
+  </svg>
+</blockquote>
+`;

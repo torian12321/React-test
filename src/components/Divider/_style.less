@@ -1,0 +1,41 @@
+@import '../../styles/conf/index.less';
+
+@themeColor_BG: @white;
+
+.divider {
+  position  : relative;
+  height    : 1px;
+  width     : 100%;
+  margin    : 1em auto;
+  border    : none;
+  overflow  : visible;
+  text-align: center;
+  color     : @themeColor_1;
+  opacity   : .8;
+  background: linear-gradient(to right, transparent, @themeColor_1, transparent);
+
+  &:before {
+    @size: 8px;
+
+    content: '';
+    position  : absolute;
+    left      : 50%;
+    font-size : @size;
+    height    : 1em;
+    width     : 1em;
+    margin    : -.5em;
+    background: @white;
+    border    : @themeColor_1 1px solid;
+    box-sizing: border-box;
+    .rotate(45deg);
+  }
+  &:after {
+    content: attr(data-content);
+    position   : relative;
+    top        : -.8em;
+    display    : inline-block;
+    padding    : 0 .8em;
+    line-height: 1.6em;
+    background : @themeColor_BG;
+  }
+}

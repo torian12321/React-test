@@ -1,0 +1,30 @@
+@import '../../styles/conf/index.less';
+
+@ImgCard-captionBG: @black;
+
+.imageCard{
+    position: relative;
+    overflow: hidden;
+    .rounded();
+    
+    img{
+        width  : 100%;
+        display: block;
+    }
+    figcaption{
+        position  : absolute;
+        bottom    : 0;
+        left      : 0;
+        right     : 0;
+        padding   : .4em 1em;
+        background: @ImgCard-captionBG;
+        opacity   : 0;
+        .transition(opacity);
+        .smart-text-color(@ImgCard-captionBG);
+    }
+    &:hover{
+        figcaption{
+            opacity: .6;
+        }
+    }
+}

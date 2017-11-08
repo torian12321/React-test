@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component <Switch /> should render checked 1`] = `
+<div
+  className="form-switch"
+>
+  <input
+    checked={true}
+    disabled={false}
+    id="sw"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    htmlFor="sw"
+  />
+</div>
+`;
+
+exports[`component <Switch /> should render correctly 1`] = `
+<div
+  className="form-switch"
+>
+  <input
+    checked={false}
+    disabled={false}
+    id="sw"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    htmlFor="sw"
+  />
+</div>
+`;
+
+exports[`component <Switch /> should render disabled 1`] = `
+<div
+  className="form-switch"
+>
+  <input
+    checked={false}
+    disabled={true}
+    id="sw"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    htmlFor="sw"
+  />
+</div>
+`;
+
+exports[`component <Switch /> should render texted 1`] = `
+<div
+  className="form-switch texted"
+>
+  <input
+    checked={false}
+    disabled={false}
+    id="sw"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    htmlFor="sw"
+  />
+</div>
+`;
+
+exports[`component <Switch /> should trigger onChange 1`] = `
+<div
+  className="form-switch"
+>
+  <input
+    checked={false}
+    disabled={false}
+    id="sw"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    htmlFor="sw"
+  />
+</div>
+`;

@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component <Icon /> Should render a mail icon 1`] = `
+<svg
+  className="icon"
+  style={
+    Object {
+      "fill": null,
+      "height": null,
+      "transform": null,
+      "width": "1em",
+    }
+  }
+  viewBox="0 0 32 32"
+>
+  <g>
+    <path
+      d="M0 6l16 10L32 6zm0 3v17h32V9L16 19z"
+    />
+  </g>
+</svg>
+`;
+
+exports[`component <Icon /> Should render rotated 1`] = `
+<svg
+  className="icon"
+  style={
+    Object {
+      "fill": null,
+      "height": null,
+      "transform": "rotate(180deg)",
+      "width": "1em",
+    }
+  }
+  viewBox="0 0 32 32"
+>
+  <g>
+    <path
+      d="M16 0l16 16h-4v14h-8V20h-8v10H4V16H0z"
+    />
+  </g>
+</svg>
+`;
+
+exports[`component <Icon /> Should render with grey color 1`] = `
+<svg
+  className="icon"
+  style={
+    Object {
+      "fill": "#DDD",
+      "height": null,
+      "transform": null,
+      "width": "1em",
+    }
+  }
+  viewBox="0 0 32 32"
+>
+  <g>
+    <path
+      d="M16 0l16 16h-4v14h-8V20h-8v10H4V16H0z"
+    />
+  </g>
+</svg>
+`;
+
+exports[`component <Icon /> should render correctly 1`] = `
+<svg
+  className="icon"
+  style={
+    Object {
+      "fill": null,
+      "height": null,
+      "transform": null,
+      "width": "1em",
+    }
+  }
+  viewBox="0 0 32 32"
+>
+  <g>
+    <path
+      d="M16 0l16 16h-4v14h-8V20h-8v10H4V16H0z"
+    />
+  </g>
+</svg>
+`;

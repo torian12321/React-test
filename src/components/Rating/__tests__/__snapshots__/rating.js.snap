@@ -1,0 +1,328 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component <Rating /> should render 7 starts 1`] = `
+<div
+  className="rating"
+>
+  <svg
+    className="icon"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M16 0l5 11 11 1-9 7 3 12-10-6-10 6 3-12-9-7 11-1"
+      />
+    </g>
+  </svg>
+  <svg
+    className="icon"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M16 0l5 11 11 1-9 7 3 12-10-6-10 6 3-12-9-7 11-1"
+      />
+    </g>
+  </svg>
+  <svg
+    className="icon"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M16 0l5 11 11 1-9 7 3 12-10-6-10 6 3-12-9-7 11-1"
+      />
+    </g>
+  </svg>
+  <svg
+    className="icon"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M16 0l5 11 11 1-9 7 3 12-10-6-10 6 3-12-9-7 11-1"
+      />
+    </g>
+  </svg>
+  <svg
+    className="icon"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M16 0l5 11 11 1-9 7 3 12-10-6-10 6 3-12-9-7 11-1"
+      />
+    </g>
+  </svg>
+  <svg
+    className="icon o"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M16 0l5 11 11 1-9 7 3 12-10-6-10 6 3-12-9-7 11-1"
+      />
+    </g>
+  </svg>
+  <svg
+    className="icon o"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M16 0l5 11 11 1-9 7 3 12-10-6-10 6 3-12-9-7 11-1"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`component <Rating /> should render correctly 1`] = `
+<div
+  className="rating"
+>
+  <svg
+    className="icon o"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M16 0l5 11 11 1-9 7 3 12-10-6-10 6 3-12-9-7 11-1"
+      />
+    </g>
+  </svg>
+  <svg
+    className="icon o"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M16 0l5 11 11 1-9 7 3 12-10-6-10 6 3-12-9-7 11-1"
+      />
+    </g>
+  </svg>
+  <svg
+    className="icon o"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M16 0l5 11 11 1-9 7 3 12-10-6-10 6 3-12-9-7 11-1"
+      />
+    </g>
+  </svg>
+  <svg
+    className="icon o"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M16 0l5 11 11 1-9 7 3 12-10-6-10 6 3-12-9-7 11-1"
+      />
+    </g>
+  </svg>
+  <svg
+    className="icon o"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M16 0l5 11 11 1-9 7 3 12-10-6-10 6 3-12-9-7 11-1"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`component <Rating /> should render hearts 1`] = `
+<div
+  className="rating"
+>
+  <svg
+    className="icon o"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M0 10c0-4 3-8 8-8 4 0 7 3 8 4 1-1 4-4 8-4 6 0 8 4 8 8 0 8-14 19-16 20-2-1-16-12-16-20"
+      />
+    </g>
+  </svg>
+  <svg
+    className="icon o"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M0 10c0-4 3-8 8-8 4 0 7 3 8 4 1-1 4-4 8-4 6 0 8 4 8 8 0 8-14 19-16 20-2-1-16-12-16-20"
+      />
+    </g>
+  </svg>
+  <svg
+    className="icon o"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M0 10c0-4 3-8 8-8 4 0 7 3 8 4 1-1 4-4 8-4 6 0 8 4 8 8 0 8-14 19-16 20-2-1-16-12-16-20"
+      />
+    </g>
+  </svg>
+  <svg
+    className="icon o"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M0 10c0-4 3-8 8-8 4 0 7 3 8 4 1-1 4-4 8-4 6 0 8 4 8 8 0 8-14 19-16 20-2-1-16-12-16-20"
+      />
+    </g>
+  </svg>
+  <svg
+    className="icon o"
+    style={
+      Object {
+        "fill": null,
+        "height": null,
+        "transform": null,
+        "width": "1em",
+      }
+    }
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <path
+        d="M0 10c0-4 3-8 8-8 4 0 7 3 8 4 1-1 4-4 8-4 6 0 8 4 8 8 0 8-14 19-16 20-2-1-16-12-16-20"
+      />
+    </g>
+  </svg>
+</div>
+`;

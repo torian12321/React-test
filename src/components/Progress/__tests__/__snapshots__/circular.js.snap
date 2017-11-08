@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component <Progress /> Circular should render 73 progress 1`] = `
+<div
+  className="pb pb-circular"
+>
+  <label>
+    73%
+  </label>
+  <svg
+    viewBox="0 0 80 80"
+  >
+    <circle
+      cx="40"
+      cy="40"
+      r="35"
+    />
+    <circle
+      className="fill"
+      cx="40"
+      cy="40"
+      r="35"
+      strokeDashoffset={-380.6}
+    />
+  </svg>
+</div>
+`;
+
+exports[`component <Progress /> Circular should render correctly 1`] = `
+<div
+  className="pb pb-circular"
+>
+  <label>
+    50%
+  </label>
+  <svg
+    viewBox="0 0 80 80"
+  >
+    <circle
+      cx="40"
+      cy="40"
+      r="35"
+    />
+    <circle
+      className="fill"
+      cx="40"
+      cy="40"
+      r="35"
+      strokeDashoffset={-330}
+    />
+  </svg>
+</div>
+`;
+
+exports[`component <Progress /> Circular should render info state 1`] = `
+<div
+  className="pb pb-circular info"
+>
+  <label>
+    50%
+  </label>
+  <svg
+    viewBox="0 0 80 80"
+  >
+    <circle
+      cx="40"
+      cy="40"
+      r="35"
+    />
+    <circle
+      className="fill"
+      cx="40"
+      cy="40"
+      r="35"
+      strokeDashoffset={-330}
+    />
+  </svg>
+</div>
+`;
+
+exports[`component <Progress /> Circular should render small 1`] = `
+<div
+  className="pb pb-circular sm"
+>
+  <label>
+    50%
+  </label>
+  <svg
+    viewBox="0 0 80 80"
+  >
+    <circle
+      cx="40"
+      cy="40"
+      r="35"
+    />
+    <circle
+      className="fill"
+      cx="40"
+      cy="40"
+      r="35"
+      strokeDashoffset={-330}
+    />
+  </svg>
+</div>
+`;
