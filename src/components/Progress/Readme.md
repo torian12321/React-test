@@ -1,9 +1,9 @@
 #### Basic
 ```
 <div>
-	<Progress />
-	<Progress val={80} />
-	<Progress val={20} />
+  <Progress />
+  <Progress val={80} />
+  <Progress val={20} />
 </div>
 ```
 
@@ -12,17 +12,17 @@
 initialState = {val: 50};
 
 <div>
-	<Range 
-		value    = {state.val}
-		onChange = {(e) => setState({val: e})}
-		texted
-	/>
+  <Range 
+    value    = {state.val}
+    onChange = {(e) => setState({val: e})}
+    texted
+  />
 
-	<Progress val={state.val} state='main'/>
-	<Progress val={state.val} state='sec'/>
-	<Progress val={state.val} state='success'/>
-	<Progress val={state.val} state='danger'/>
-	<Progress val={state.val} state='warning'/>
+  <Progress val={state.val} state='main'/>
+  <Progress val={state.val} state='sec'/>
+  <Progress val={state.val} state='success'/>
+  <Progress val={state.val} state='danger'/>
+  <Progress val={state.val} state='warning'/>
 </div>
 ```
 
@@ -31,16 +31,16 @@ initialState = {val: 50};
 initialState = {val: 50};
 
 <div>
-	<Range 
-		value    = {state.val}
-		onChange = {(e) => setState({val: e})}
-		texted
-	/>
+  <Range 
+    value    = {state.val}
+    onChange = {(e) => setState({val: e})}
+    texted
+  />
 
-	<Progress val={state.val} size='xs'/>
-	<Progress val={state.val} size='sm'/>
-	<Progress val={state.val} size='md'/>
-	<Progress val={state.val} size='lg'/>
+  <Progress val={state.val} size='xs'/>
+  <Progress val={state.val} size='sm'/>
+  <Progress val={state.val} size='md'/>
+  <Progress val={state.val} size='lg'/>
 </div>
 ```
 
@@ -59,26 +59,26 @@ Check the reference [here](https://codepen.io/mavrK/pen/pRGPNO?editors=1000)
 initialState = {val: 50};
 
 <div>
-	<Range 
-		value    = {state.val}
-		onChange = {(e) => setState({val: e})}
-		texted
-	/>
+  <Range 
+    value    = {state.val}
+    onChange = {(e) => setState({val: e})}
+    texted
+  />
 
-	<Progress val={state.val} type='circular' state='main'/>
-	<Progress val={state.val} type='circular' state='sec'/>
-	<Progress val={state.val} type='circular' state='success'/>
-	<Progress val={state.val} type='circular' state='danger'/>
-	<Progress val={state.val} type='circular' state='warning'/>
+  <Progress val={state.val} type='circular' state='main'/>
+  <Progress val={state.val} type='circular' state='sec'/>
+  <Progress val={state.val} type='circular' state='success'/>
+  <Progress val={state.val} type='circular' state='danger'/>
+  <Progress val={state.val} type='circular' state='warning'/>
 </div>
 ```
 
 #### Sizes
 ```
 <div>
-	<Progress type='circular' size='xs'/>
-	<Progress type='circular' size='sm'/>
-	<Progress type='circular' size='md'/>
-	<Progress type='circular' size='lg'/>
+  <Progress type='circular' size='xs'/>
+  <Progress type='circular' size='sm'/>
+  <Progress type='circular' size='md'/>
+  <Progress type='circular' size='lg'/>
 </div>
 ```

@@ -18,7 +18,7 @@ const imgExample = require ('./example.jpg');
 May be used for 'online', 'in a meeting' etc.
 ```
 <div>
-	<Avatar state='main'/>
+  <Avatar state='main'/>
   <Avatar state='sec'/>
   <Avatar state='success'/>
   <Avatar state='danger'/>
@@ -30,9 +30,9 @@ May be used for 'online', 'in a meeting' etc.
 #### Sizes
 ```
 <div>
-	<Avatar size='xs'/>
-	<Avatar size='sm'/>
-	<Avatar size='md'/>
-	<Avatar size='lg'/>
+  <Avatar size='xs'/>
+  <Avatar size='sm'/>
+  <Avatar size='md'/>
+  <Avatar size='lg'/>
 </div>
 ```
