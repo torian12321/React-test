@@ -1,0 +1,29 @@
+@import '../../styles/conf/index.scss';
+
+// Vars
+$message-color-border: $themeColor_1 !default;
+$message-color-bg    : $white !default;
+
+// Block
+.message{
+  display    : block;
+  margin     : 20px 0;
+  padding    : 20px 10px;
+  border     : $message-color-border $BStyle $BWidth;
+  border-left: $message-color-border solid 10px;
+  background : $message-color-bg;
+  
+  @include rounded();
+
+  // Modifiers
+  &--important{
+    @include shadow();
+  }
+
+  @each $stateName, $stateColor in $states {
+    &--#{$stateName} {
+      background  : nth($stateColor, 2);
+      border-color: nth($stateColor, 1);
+    }
+  }
+}

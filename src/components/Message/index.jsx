@@ -1,12 +1,18 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import './_style.less';
+import './_style.scss';
 
 class Message extends React.Component {
   render(){
       return(
-        <div className={classNames('message', this.props.type, {"important" : this.props.important})}>
+        <div className={classNames(
+          'message',
+          this.props.type,
+          {[`message--${this.props.type}`] : this.props.type},
+          {'message--important' : this.props.important},
+          this.props.className,
+        )}>
           {this.props.children}
         </div>
     );
@@ -16,6 +22,7 @@ class Message extends React.Component {
 
 Message.propTypes = {
   children : PropTypes.any.isRequired,
+  className: PropTypes.string,
   type     : PropTypes.oneOf(['info', 'success', 'danger', 'warning']),
   important: PropTypes.bool
 };
