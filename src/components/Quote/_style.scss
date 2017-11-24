@@ -1,0 +1,39 @@
+@import '../../styles/conf/index.scss';
+
+// Vars
+$quote-fontSize  : $fontSize !default;
+$quote-icon-size : .8em !default;
+$quote-icon-color: $themeColor_2 !default;
+
+// Block
+.quote{
+	font-size  : $quote-fontSize;
+	position   : relative;
+	display    : inline-block;
+	max-width  : $bp_lg * 0.8;
+	padding    : .5em 2.5em;
+	text-align : center;
+  line-height: 1.75;
+
+  @include smart-text-color();
+  @include font_elegant();
+  
+  // Elements
+	&__author{
+		display   : block;
+		margin-top: 1em;
+		font-size : $quote-icon-size;
+		text-align: right;
+		opacity   : .8;
+	}
+	&__icon{
+		position : absolute;
+		top      : -.2em;
+		font-size: 2.5em;
+    fill     : $quote-icon-color;
+
+    // Element Modifiers
+		&--open {left : 0;}
+		&--close{right: 0;}
+	}
+}
