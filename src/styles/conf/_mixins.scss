@@ -1,0 +1,69 @@
+@mixin rounded ($radius: $BRadious) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius   : $radius;
+  -ms-border-radius    : $radius;
+  border-radius        : $radius;
+}
+
+@mixin shadow (
+  $radius: $shadow,
+  $merge : false
+) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow   : $shadow;
+  box-shadow        : $shadow;
+}
+
+
+// .shadow(
+// 	@shadow: @shadow;
+// 	@merge : false;
+// 	){
+// 	// Transitions
+// 	& when (@merge = true){
+// 		-webkit-box-shadow +: @shadow;
+// 		-moz-box-shadow    +: @shadow;
+// 		box-shadow         +: @shadow;
+// 	}
+// 	& when (@merge = false){
+// 		-webkit-box-shadow: @shadow;
+// 		-moz-box-shadow   : @shadow;
+// 		box-shadow        : @shadow;
+// 	}
+// }
+
+@function smartColor (
+  $color     : $themeColor_BG,
+  $colorLight: $white,
+	$colorDark : $black
+) {
+  @if (lightness( $color ) > 50) {
+    @return $colorDark;
+  } @else {
+    @return $colorLight;
+  }
+}
+
+@mixin smart-text-color (
+  $BG        : $themeColor_BG,
+	$colorLight: $fontColor_white,
+  $colorDark : $fontColor_black
+) {
+  color: smartColor($BG, $colorLight, $colorDark);    
+}
+
+@mixin smart-bg-color (
+  $BG        : $themeColor_BG,
+	$colorLight: $white,
+  $colorDark : $black2
+) {
+  background: smartColor($BG, $colorLight, $colorDark);    
+}
+
+@mixin smart-fill-color (
+  $BG        : $themeColor_BG,
+	$colorLight: $white,
+  $colorDark : $black2
+) {
+  fill: smartColor($BG, $colorLight, $colorDark);    
+}
