@@ -18,18 +18,18 @@ $avatar-color: $themeColor_2 !default;
   // Modifiers
 
   // States
-  &.main {border-color: $themeColor_1;}
-  &.sec  {border-color: $themeColor_2;}
+  &--main {border-color: $themeColor_1;}
+  &--sec  {border-color: $themeColor_2;}
 
   @each $stateName, $stateColor in $states {
-    &.#{$stateName} {
+    &--#{$stateName} {
       border-color: nth($stateColor, 1);
     }
   }
 
   // Sizes
-  &.xs {font-size: $avatar-size * 0.5;}
-  &.sm {font-size: $avatar-size;}
-  &.md {font-size: $avatar-size * 1.5;}
-  &.lg {font-size: $avatar-size * 2.5;}
+  &--xs {font-size: $avatar-size * 0.5;}
+  &--sm {font-size: $avatar-size;}
+  &--md {font-size: $avatar-size * 1.5;}
+  &--lg {font-size: $avatar-size * 2.5;}
 }

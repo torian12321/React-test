@@ -5,8 +5,12 @@ import classNames from 'classnames';
 import './_style.scss';
 
 class Loading extends React.PureComponent {
-  render(){
-    return <div className={classNames('loading', this.props.type, this.props.size)} />;
+  render() {
+    return <div className={classNames(
+      'loading',
+      this.props.type ? `loading--${this.props.type}` : null,
+      this.props.size ? `loading--${this.props.size}` : null
+    )}/>;
   }
 };
 

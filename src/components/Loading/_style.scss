@@ -16,14 +16,14 @@ $loading-color-disable: $colorState_disable !default;
   height    : 1em;
 
   @include rounded(50%);
-  &.spinner{
+  &--spinner{
     background      : transparent;
     border          : $loading-color-disable .1em solid;
     border-top-color: $loading-color;
     // .animation_spin();
     // .animation(spin; 1s);
   }
-  &.pulse{
+  &--pulse{
     width     : .4em;
     height    : .4em;
     margin    : 1em auto;
@@ -33,8 +33,8 @@ $loading-color-disable: $colorState_disable !default;
   }
 
   // // Sizes
-  &.xs{font-size: $loading-size * 0.5;}
-  &.sm{font-size: $loading-size;}
-  &.md{font-size: $loading-size * 1.5;}
-  &.lg{font-size: $loading-size * 2.5;}
+  &--xs{font-size: $loading-size * 0.5;}
+  &--sm{font-size: $loading-size;}
+  &--md{font-size: $loading-size * 1.5;}
+  &--lg{font-size: $loading-size * 2.5;}
 }

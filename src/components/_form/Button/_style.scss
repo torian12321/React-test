@@ -1,0 +1,113 @@
+@import '../../../styles/conf/index.scss';
+
+// Vars
+$btn-threeD-deep: 4px;
+$btn-padding_v  : 8px;
+$btn-padding_h  : 24px;
+
+
+// Mixin
+@mixin btn_palette(
+  $color-main: $themeColor_1,
+  $color-sec : $white
+){
+	color     : $color-sec;
+	background: $color-main;
+	border    : 1px $color-sec solid;
+
+	&:hover,
+	&:focus {
+		color       : $color-main;
+		background  : $color-sec;
+		border-color: $color-main;
+
+		// & when ($color-sec = $white) {
+		// 	color: $color-main;
+		// }
+	}
+
+	&.btn--threeD {
+		box-shadow  : 0px $btn-threeD-deep 0px 0px darken($color-main, 15%);
+
+		// & when (@color-main = @black) {
+		// 	background: lighten(@black, 25%);
+		// }
+		&:hover,
+		&:focus {
+			color     : $color-sec;
+			background: darken($color-main, 10%);
+		}
+		&:active,
+		&.active {
+			box-shadow: 0px 0px 0px 0px darken($color-main, 15%);
+		}
+	}
+}
+
+// Block
+.btn{
+  position       : relative;
+  min-width      : 100px;
+  padding        : $btn-padding_v $btn-padding_h;
+  font-size      : 14px;
+  cursor         : pointer;
+  text-transform : uppercase;
+  text-decoration: none;
+  outline        : none !important;
+  letter-spacing : 0.8px;
+
+  @include rounded($BRadious);
+  @include transition($time:0.20s);
+
+  // Status
+  @include btn_palette();
+  &:active,
+  &.active{
+    @include shadow()
+  }
+	&:disabled,
+	&[disabled]{
+		background  : $colorState_disable !important;
+		border-color: $colorState_disable !important;
+		color       : $fontColor_disable;
+		box-shadow  : none !important;
+		cursor      : not-allowed;
+		@include opacity(0.8);
+	}
+
+  // Modifiers
+
+	// Options
+	&--large{
+		min-width: 200px;
+	}
+	&--auto{
+		min-width: auto;
+	}
+	&--threeD{
+		top         : 0;
+		position    : relative;
+		border-width: 0 !important;
+		&:active,
+		&.active{
+			top: $btn-threeD-deep;
+		}
+	}
+
+	// Styles
+	&--main   { @include btn_palette(); }
+	&--sec    { @include btn_palette($themeColor_2);}
+  &--green  { @include btn_palette($green); }
+	&--red    { @include btn_palette($red); }
+	&--orange { @include btn_palette($orange); }
+	&--white  { @include btn_palette($white, $themeColor_1); }
+
+  &--black  { @include btn_palette($black); }
+	&--grey   { @include btn_palette($grey); }
+	&--blue   { @include btn_palette($blue); }
+    
+  &--info   { @include btn_palette($colorState_info); }
+  &--success{ @include btn_palette($colorState_success); }
+  &--warning{ @include btn_palette($colorState_warning); }
+  &--danger { @include btn_palette($colorState_danger); }
+}
