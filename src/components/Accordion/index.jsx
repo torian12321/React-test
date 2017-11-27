@@ -1,7 +1,7 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import './_style.less';
+import './_style.scss';
 
 class Accordion extends React.Component {
   constructor(props) {
@@ -30,12 +30,12 @@ class Accordion extends React.Component {
 
   render() {
     return (
-      <div className={classNames('accordion', {'active': this.state.isOpen})}>
-        <div className="acc-header" onClick= {this.expand.bind(this)}>
+      <div className={classNames('accordion', {'accordion--active': this.state.isOpen}, this.props.className)}>
+        <div className="accordion__header" onClick= {this.expand.bind(this)}>
           {this.props.title}
         </div>
-        <div className="acc-body" style={this.state.body_style}>
-          <div className="acc-body-content" ref={(c) => { this.accContent = c; }}>
+        <div className="accordion__body" style={this.state.body_style}>
+          <div className="accordion__body__content" ref={(c) => { this.accContent = c; }}>
             {this.props.children}
           </div>
         </div>
@@ -45,10 +45,10 @@ class Accordion extends React.Component {
 }
 
 Accordion.propTypes = {
-  /** Accordion content. */
-  children: PropTypes.any.isRequired,
-  title   : PropTypes.string,
-  isOpen  : PropTypes.bool
+  children : PropTypes.any.isRequired,
+  className: PropTypes.string,
+  title    : PropTypes.string,
+  isOpen   : PropTypes.bool
 };
 Accordion.defaultProps = {
   title : 'Show Details',

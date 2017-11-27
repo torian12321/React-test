@@ -1,7 +1,7 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import './_style.less';
+import './_style.scss';
 
 class Link extends React.PureComponent {
   render() {
@@ -10,7 +10,7 @@ class Link extends React.PureComponent {
         href     ={this.props.href}
         className={classNames(
           'link',
-          {'preview': this.props.preview},
+          {'link--preview': this.props.preview},
           this.props.className
         )}
       >

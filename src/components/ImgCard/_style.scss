@@ -1,0 +1,32 @@
+@import '../../styles/conf/index.scss';
+
+// Vars
+$ImgCard-captionBG: $black !default;
+
+// Block
+.imageCard{
+  position: relative;
+  overflow: hidden;
+  @include rounded();
+
+  img{
+    width  : 100%;
+    display: block;
+  }
+  figcaption{
+    position  : absolute;
+    bottom    : 0;
+    left      : 0;
+    right     : 0;
+    padding   : .4em 1em;
+    background: $ImgCard-captionBG;
+    opacity   : 0;
+    @include transition(opacity);
+    @include smart-text-color($ImgCard-captionBG);
+  }
+  &:hover{
+    figcaption{
+      opacity: .6;
+    }
+  }
+}

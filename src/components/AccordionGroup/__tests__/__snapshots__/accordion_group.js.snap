@@ -8,57 +8,57 @@ exports[`component <AccordionGroup /> should render correctly 1`] = `
     className="accordion"
   >
     <div
-      className="acc-header"
+      className="accordion__header"
       onClick={[Function]}
     >
       Accordion 1
     </div>
     <div
-      className="acc-body"
+      className="accordion__body"
       style={Object {}}
     >
       <div
-        className="acc-body-content"
+        className="accordion__body__content"
       >
         Content 1
       </div>
     </div>
   </div>
   <div
-    className="accordion active"
+    className="accordion accordion--active"
   >
     <div
-      className="acc-header"
+      className="accordion__header"
       onClick={[Function]}
     >
       Accordion 2
     </div>
     <div
-      className="acc-body"
+      className="accordion__body"
       style={Object {}}
     >
       <div
-        className="acc-body-content"
+        className="accordion__body__content"
       >
         Content 2
       </div>
     </div>
   </div>
   <div
-    className="accordion active"
+    className="accordion accordion--active"
   >
     <div
-      className="acc-header"
+      className="accordion__header"
       onClick={[Function]}
     >
       Accordion 3
     </div>
     <div
-      className="acc-body"
+      className="accordion__body"
       style={Object {}}
     >
       <div
-        className="acc-body-content"
+        className="accordion__body__content"
       >
         Content 3
       </div>

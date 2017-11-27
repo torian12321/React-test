@@ -3,7 +3,7 @@ import PropTypes  from 'prop-types';
 import classNames from 'classnames';
 import Img        from '../Img';
 import Caption    from './ImgCardCaption';
-import './_style.less';
+import './_style.scss';
 
 class ImgCard extends React.PureComponent {
 	render() {

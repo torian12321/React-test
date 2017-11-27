@@ -60,7 +60,8 @@ $states: (
   'info'    : ($colorState_info   , lighten($colorState_info, 30%)),
   'success' : ($colorState_success, lighten($colorState_success, 30%)),
   'warning' : ($colorState_warning, lighten($colorState_warning, 30%)),
-  'danger'  : ($colorState_danger , lighten($colorState_danger, 30%))
+  'danger'  : ($colorState_danger , lighten($colorState_danger, 30%)),
+  'disable' : ($colorState_disable, lighten($colorState_disable, 30%))
 );
 
 

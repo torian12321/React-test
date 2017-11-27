@@ -1,0 +1,40 @@
+@import '../../styles/conf/index.scss';
+
+// Vars
+$panel-color-main: $white !default;
+$panel-color-sec : $themeColor_1 !default;
+$panel-font-size : $fontSize !default;
+
+// Block
+.panel {
+  position  : relative;
+  width     : 100%;
+  padding   : 0;
+  background: $panel-color-main;
+  box-sizing: content-box;
+  font-size : $panel-font-size;
+  box-sizing: border-box;
+  @include rounded();
+  @include shadow(0 2px 5px 0 rgba(0,0,0,.3));
+  @include smart-text-color($panel-color-main);
+
+  // Elements
+  &__title,
+  &__body,
+  &__footer{
+    padding: .5em 1em;
+  }
+  &__title{
+    background: $panel-color-sec;
+    @include smart-text-color($panel-color-sec);
+    @include rounded($BRadious $BRadious 0 0);
+
+    span{
+      text-transform: capitalize;
+      font-size     : 1.25em;
+    }
+  }
+  &__body{
+    min-height: 100px;
+  }
+}

@@ -1,0 +1,35 @@
+@import '../../styles/conf/index.scss';
+
+// Vars
+$avatar-size : 80px !default;
+$avatar-color: $themeColor_2 !default;
+
+// Block
+.avatar{
+  font-size : $avatar-size;
+  height    : 1em;
+  width     : 1em;
+  border    : $avatar-color 2px solid;
+  background: $avatar-color center center no-repeat;
+  box-sizing: border-box;
+  @include rounded(50%);
+  @include background-cover();
+
+  // Modifiers
+
+  // States
+  &.main   {border-color: $themeColor_1;}
+  &.sec    {border-color: $themeColor_2;}
+
+  @each $stateName, $stateColor in $states {
+    &.#{$stateName} {
+      border-color: nth($stateColor, 1);
+    }
+  }
+
+  // Sizes
+  &.xs{font-size: $avatar-size * 0.5;}
+  &.sm{font-size: $avatar-size;}
+  &.md{font-size: $avatar-size * 1.5;}
+  &.lg{font-size: $avatar-size * 2.5;}
+}

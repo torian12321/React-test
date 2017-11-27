@@ -1,0 +1,83 @@
+@import '../../styles/conf/index.scss';
+
+// Vars
+$accordion-font-size : $fontSize !default;
+$accordion-color-main: $themeColor_2 !default;
+$accordion-color-sec : $themeColor_1 !default;
+$accordion-icon-w    : 14px !default;
+$accordion-icon-h    : 3px !default;
+
+// Block
+.accordion{
+  margin    : 10px 0;
+  width     : 100%;
+  overflow  : hidden;
+  background: $accordion-color-main;
+  font-size : $accordion-font-size;
+  @include rounded();
+  @include transition();
+  @include smart-text-color($accordion-color-main);
+
+  // Elements
+	&__header {		
+		$gutter_x : 10px;
+
+    font-size  : 1.2em;
+    line-height: 2;
+    position   : relative;
+    width      : 100%;
+    padding    : 0 $gutter_x 0 (($gutter_x * 2) + $accordion-icon-w);
+    cursor     : pointer;
+
+    // @include transition(background border-color);
+    @include smart-text-color($accordion-color-main);
+    &:before,
+    &:after {
+      content : '';
+      position: absolute;
+      top     : calc(1em - (#{$accordion-icon-h}) / 2);
+      left    : $gutter_x;
+      width   : $accordion-icon-w;
+      height  : $accordion-icon-h;
+
+      @include rounded();
+      @include transition(transform);
+      @include smart-bg-color($accordion-color-main);
+		}
+    &:before{@include rotate(90deg);}
+    &:after {@include rotate(180deg);}
+	}
+	&__body {
+		position  : relative;
+		max-height: 0;
+		@include transition(max-height);
+    
+    &__content {
+			padding: 20px 10px;
+		}
+	}
+
+  // Modifiers
+  &:hover {
+    @include shadow();
+  }
+  &--active {
+    background: lighten($accordion-color-sec, 5%);
+    @include smart-text-color(lighten($accordion-color-sec, 5%));
+
+    .accordion {
+      &__header {
+        background  : $accordion-color-sec;
+        border-color: darken($accordion-color-sec, 5%);
+
+        &:before,
+        &:after {
+          @include rotate(0);
+        }
+      }
+      &__body {
+        max-height: 500px;
+      }
+    }
+  }
+}

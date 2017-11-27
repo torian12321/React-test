@@ -5,17 +5,17 @@ exports[`component <Accordion /> should allow to click the header 1`] = `
   className="accordion"
 >
   <div
-    className="acc-header"
+    className="accordion__header"
     onClick={[Function]}
   >
     Show Details
   </div>
   <div
-    className="acc-body"
+    className="accordion__body"
     style={Object {}}
   >
     <div
-      className="acc-body-content"
+      className="accordion__body__content"
     >
       Accordion content
     </div>
@@ -28,17 +28,17 @@ exports[`component <Accordion /> should render correctly 1`] = `
   className="accordion"
 >
   <div
-    className="acc-header"
+    className="accordion__header"
     onClick={[Function]}
   >
     Show Details
   </div>
   <div
-    className="acc-body"
+    className="accordion__body"
     style={Object {}}
   >
     <div
-      className="acc-body-content"
+      className="accordion__body__content"
     >
       Accordion content
     </div>
@@ -48,20 +48,20 @@ exports[`component <Accordion /> should render correctly 1`] = `
 
 exports[`component <Accordion /> should render open initially 1`] = `
 <div
-  className="accordion active"
+  className="accordion accordion--active"
 >
   <div
-    className="acc-header"
+    className="accordion__header"
     onClick={[Function]}
   >
     Show Details
   </div>
   <div
-    className="acc-body"
+    className="accordion__body"
     style={Object {}}
   >
     <div
-      className="acc-body-content"
+      className="accordion__body__content"
     >
       Accordion content
     </div>
@@ -74,17 +74,17 @@ exports[`component <Accordion /> should render with custom title 1`] = `
   className="accordion"
 >
   <div
-    className="acc-header"
+    className="accordion__header"
     onClick={[Function]}
   >
     Open me
   </div>
   <div
-    className="acc-body"
+    className="accordion__body"
     style={Object {}}
   >
     <div
-      className="acc-body-content"
+      className="accordion__body__content"
     >
       Accordion content
     </div>

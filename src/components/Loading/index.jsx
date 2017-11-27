@@ -1,7 +1,8 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import './_style.less';
+//import './_style.less';
+import './_style.scss';
 
 class Loading extends React.PureComponent {
   render(){

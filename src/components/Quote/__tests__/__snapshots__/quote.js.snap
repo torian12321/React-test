@@ -7,12 +7,12 @@ exports[`component <Quote /> should render Autor and Cite 1`] = `
 >
   Lorem ipsum
   <span
-    className="quote-author"
+    className="quote__author"
   >
     someone
   </span>
   <svg
-    className="icon icon-open"
+    className="icon quote__icon quote__icon--open"
     style={
       Object {
         "fill": null,
@@ -30,7 +30,7 @@ exports[`component <Quote /> should render Autor and Cite 1`] = `
     </g>
   </svg>
   <svg
-    className="icon icon-close"
+    className="icon quote__icon quote__icon--close"
     style={
       Object {
         "fill": null,
@@ -57,7 +57,7 @@ exports[`component <Quote /> should render correctly 1`] = `
 >
   Lorem ipsum
   <svg
-    className="icon icon-open"
+    className="icon quote__icon quote__icon--open"
     style={
       Object {
         "fill": null,
@@ -75,7 +75,7 @@ exports[`component <Quote /> should render correctly 1`] = `
     </g>
   </svg>
   <svg
-    className="icon icon-close"
+    className="icon quote__icon quote__icon--close"
     style={
       Object {
         "fill": null,

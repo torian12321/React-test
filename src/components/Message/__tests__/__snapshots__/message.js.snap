@@ -2,7 +2,7 @@
 
 exports[`component <Message /> Should render danger type 1`] = `
 <div
-  className="message danger"
+  className="message danger message--danger"
 >
   Lorem Ipsum
 </div>
@@ -10,7 +10,7 @@ exports[`component <Message /> Should render danger type 1`] = `
 
 exports[`component <Message /> Should render important state 1`] = `
 <div
-  className="message important"
+  className="message message--important"
 >
   Lorem Ipsum
 </div>

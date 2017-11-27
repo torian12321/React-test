@@ -1,7 +1,7 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import './_style.less';
+import './_style.scss';
 
 class Divider extends React.PureComponent {
   render(){
@@ -10,7 +10,7 @@ class Divider extends React.PureComponent {
         data-content={this.props.text}
         className   ={classNames(
           'divider',
-          {'divider_texted': this.props.text},
+          {'divider--texted': this.props.text},
           this.props.className
         )}
       />

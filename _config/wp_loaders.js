@@ -17,5 +17,14 @@ module.exports = [
     use: isProd ?
       ExtractText.extract({ fallback: 'style-loader', use: styles }) :
       [{loader: "style-loader"}, ...styles]
+  },{
+      test: /\.scss$/,
+      use: [{
+          loader: "style-loader" // creates style nodes from JS strings 
+      }, {
+          loader: "css-loader" // translates CSS into CommonJS 
+      }, {
+          loader: "sass-loader" // compiles Sass to CSS 
+      }]
   }
 ];

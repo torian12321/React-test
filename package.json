@@ -24,11 +24,11 @@
     "prop-types": "15.6.0",
     "preact": "8.2.6",
     "preact-compat": "3.17.0",
-    "react": "16.0.0",
-    "react-dom": "16.0.0",
+    "react": "16.1.1",
+    "react-dom": "16.1.1",
     "react-classnames": "0.1.2",
     "uniquid": "1.1.4",
-    "react-styleguidist": "6.0.31",
+    "react-styleguidist": "6.0.33",
     "less-loader": "4.0.5",
     "less": "3.0.0-alpha.3",
     "css-loader": "0.28.7",
@@ -44,23 +44,25 @@
     "babel-preset-react": "6.24.1",
     "babel-preset-stage-1": "6.24.1",
     "clean-webpack-plugin": "0.1.17",
-    "copy-webpack-plugin": "4.2.0",
+    "copy-webpack-plugin": "4.2.3",
     "cross-env": "5.1.0",
     "ejs": "2.5.7",
-    "ejs-html-loader": "^3.1.0",
+    "ejs-html-loader": "3.1.0",
     "enzyme": "3.1.0",
     "extract-text-webpack-plugin": "3.0.2",
     "html-webpack-plugin": "2.30.1",
     "jest": "21.2.1",
-    "jest-css-modules": "^1.1.0",
+    "jest-css-modules": "1.1.0",
+    "node-sass": "4.7.2",
     "npm-check-updates": "2.13.0",
-    "react-test-renderer": "16.0.0",
+    "react-test-renderer": "16.1.1",
+    "sass-loader": "6.0.6",
     "uniqid": "4.1.1",
     "url-loader": "0.6.2",
     "webpack": "3.8.1",
-    "webpack-dashboard": "1.0.0",
-    "webpack-dev-server": "2.9.3",
-    "webpack-merge": "4.1.0",
+    "webpack-dashboard": "1.0.2",
+    "webpack-dev-server": "2.9.4",
+    "webpack-merge": "4.1.1",
     "webpack-preset": "0.2.0",
     "webpack-preset-babel": "0.2.0",
     "webpack-preset-babel-es2015": "0.2.0"
@@ -79,6 +81,8 @@
       "\\.(mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/audio_mock.js",
       "\\.(css|less|scss)$": "<rootDir>/test/style_mock.js"
     },
-      "transform": {".*": "<rootDir>/node_modules/jest-css-modules"}
+    "transform": {
+      ".*": "<rootDir>/node_modules/jest-css-modules"
+    }
   }
 }

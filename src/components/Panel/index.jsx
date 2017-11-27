@@ -2,7 +2,7 @@ import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
 import Title      from './panel_title';
-import './_style.less';
+import './_style.scss';
 
 class Panel extends React.Component {
   render() {
@@ -12,7 +12,7 @@ class Panel extends React.Component {
         this.props.className
       )}>
         <Title text={this.props.title} />
-        <div className='panel-body'>{this.props.children}</div>
+        <div className='panel__body'>{this.props.children}</div>
       </div>
     )
   }

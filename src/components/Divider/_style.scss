@@ -1,7 +1,10 @@
-@import '../../styles/conf/index.less';
+@import '../../styles/conf/index.scss';
 
-@themeColor_BG: @white;
+// Vars
+$divider-color    : $themeColor_1 !default;
+$divider-color-sec: $themeColor_BG !default;
 
+// Block
 .divider {
   position  : relative;
   height    : 1px;
@@ -10,32 +13,32 @@
   border    : none;
   overflow  : visible;
   text-align: center;
-  color     : @themeColor_1;
+  color     : $divider-color;
   opacity   : .8;
-  background: linear-gradient(to right, transparent, @themeColor_1, transparent);
+  background: linear-gradient(to right, transparent, $divider-color, transparent);
 
   &:before {
-    @size: 8px;
+    $size: 8px;
 
     content: '';
     position  : absolute;
     left      : 50%;
-    font-size : @size;
+    font-size : $size;
     height    : 1em;
     width     : 1em;
     margin    : -.5em;
-    background: @white;
-    border    : @themeColor_1 1px solid;
+    background: $divider-color-sec;
+    border    : $divider-color 1px solid;
     box-sizing: border-box;
-    .rotate(45deg);
+    @include  rotate(45deg);
   }
   &:after {
-    content: attr(data-content);
+    content    : attr(data-content);
     position   : relative;
     top        : -.8em;
     display    : inline-block;
     padding    : 0 .8em;
     line-height: 1.6em;
-    background : @themeColor_BG;
+    background : $divider-color-sec;
   }
 }

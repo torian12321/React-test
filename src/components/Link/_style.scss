@@ -1,0 +1,46 @@
+@import '../../styles/conf/index.scss';
+
+// Vars
+$link-color-main: $themeColor_1 !default;
+$link-color-sec : $themeColor_2 !default;
+
+// Block
+.link {
+	color          : $link-color-main;
+	cursor         : pointer;
+  text-decoration: none;
+
+	&:hover {
+		color: $link-color-sec;
+	}
+	&:visited {
+		color: desaturate($link-color-main, 25%);
+	}
+
+  // Modifiers
+	&--preview {
+		position: relative;
+		&::before {
+			$BG: lighten($link-color-sec, 10%);
+
+			position  : absolute;
+			content   : attr(href);
+			top       : 100%;
+			left      : 0;
+			opacity   : 0;
+			padding   : .25em 1em;
+			margin-top: 0.5em;
+			background: $BG;
+			z-index   : 1;
+			font-size : 0.8em;
+
+      @include shadow(0 0 3px 0 rgba(0,0,0,.3));
+			@include smart-text-color($BG);
+			@include transition();
+		}
+		&:hover::before {
+			opacity: 1;
+			left   : 24px;
+		}
+	}
+}

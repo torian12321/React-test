@@ -4,7 +4,7 @@ import PropTypes  from 'prop-types';
 class PanelTitle extends React.PureComponent {
   render(){
     return this.props.text ? (
-      <div className='panel-title'>
+      <div className='panel__title'>
         <span>{this.props.text}</span>
       </div>
     ) : null
