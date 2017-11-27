@@ -1,0 +1,19 @@
+@import '../../styles/conf/index.scss';
+
+// Vars
+$rating-color-main: $themeColor_1;
+
+// Block
+.rating {
+  .icon {
+    fill  : $rating-color-main;
+    margin: 0 .4em 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+    &.o {
+      fill: $colorState_disable;
+    }
+  }
+}

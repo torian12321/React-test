@@ -11,7 +11,7 @@ class ImgCard extends React.PureComponent {
 
 		return(
       <figure className={classNames('imageCard', this.props.className)}>
-        <Img src={this.props.src} alt={this.props.alt} />
+        <Img className='imageCard__img' src={this.props.src} alt={this.props.alt} />
         <Caption text={captionString} />
       </figure>
 		);

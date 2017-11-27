@@ -1,0 +1,63 @@
+@import '../../styles/conf/index.scss';
+
+// Vars
+$modal-BG: $white;
+
+// Block
+.modal {
+  z-index: 1000;
+  
+  &,
+  &__bg,
+  &__container {
+    position: fixed;
+    top     : 0;
+    bottom  : 0;
+    right   : 0;
+    left    : 0;
+  }
+
+  // Elements
+  &__bg{
+    background: fade-out($black, .4);
+  }
+
+  &__container {
+    position  : absolute;
+    top       : 20%;
+    left      : 50%;
+    bottom    : auto;
+    width     : 100vw;
+    max-width : 315px;
+    min-width : 200px;
+    min-height: 120px;
+    background: $modal-BG;
+    padding   : 24px 10px 10px;
+    box-sizing: border-box;
+    @include rounded();
+    //@include animation_fadein();
+    @include transform(translate(-50%, -50%));
+    @include animation(
+      $animation : fadein,
+      $time      : .6s,
+      $iterations: 1
+    );
+
+    &__content{
+      position: relative;
+    }
+    
+    &__closeIcon{
+      position : relative;  
+      top      : -14px;
+      right    : 0;
+      font-size: 16px;
+      float    : right;
+    
+      // X icon
+      path{
+        fill: $modal-BG;
+      }
+    }
+  }
+}

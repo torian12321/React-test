@@ -1,0 +1,51 @@
+@import '../../../styles/conf/index.scss';
+
+// Vars
+$progressBar-size: 16px !default;
+
+@mixin progressBar-palette($color: $themeColor_1){
+  .pb-bar__bar{ background: $color; }
+}
+
+// Block
+.pb-bar{
+  font-size : $progressBar-size;
+  padding   : .2em;
+  background: $colorState_disable;
+  background: darken($white, 10%);
+  @include rounded();
+  
+  // Elements
+  &__bar {
+    font-size  : .8em;
+    line-height: 1.5em;
+    min-width  : 2.5em;
+    margin     : 0;
+    padding    : 0 .5em;
+    text-align : right;
+    box-sizing : border-box;
+    overflow   : hidden;
+    color      : $fontColor_white;
+    text-shadow: 2px 2px 2px fade-out($black, .6);
+    @include rounded();
+    @include transition();
+  }
+
+  // Modifiers
+
+  // States
+  &         {@include progressBar-palette($themeColor_1);}
+  &.main    {@include progressBar-palette($themeColor_1);}
+  &.sec     {@include progressBar-palette($themeColor_2);}
+  @each $stateName, $stateColor in $states {
+    &.#{$stateName} {
+      @include progressBar-palette(nth($stateColor, 1));
+    }
+  }
+
+  // Sizes
+  &.xs {font-size: $progressBar-size * 0.5;}
+  &.sm {font-size: $progressBar-size;}
+  &.md {font-size: $progressBar-size * 1.5;}
+  &.lg {font-size: $progressBar-size * 2.5;}
+}

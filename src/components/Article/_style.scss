@@ -1,0 +1,105 @@
+@import '../../styles/conf/index.scss';
+
+// Vars
+$article-color--BG  : $white;
+$article-color--main: $themeColor_1;
+$article-fontSize   : $fontSize;
+
+// Block
+.article {
+  position  : relative;
+  display   : inline-block;
+  width     : 100%;
+  margin    : 0;
+  padding   : 0;
+  background: $article-color--BG;
+  overflow  : hidden;
+  font-size : $article-fontSize;
+  @include smart-text-color($article-color--BG);
+  @include border($color: darken($article-color--BG, 20%));
+  @include rounded();
+
+  // Elements
+  h3 {
+    margin   : 0 0 .6em;
+    font-size: 1.2em;
+    color    : $article-color--main;
+  }
+  p {
+    margin: 0 0 1em;
+  }
+
+  &__img {
+    height    : 10em;
+    background: darken($article-color--BG, 20%);
+    @include background-cover();
+  }
+  &__content {
+    padding: 1em 1em .6em;
+  }
+
+  &__info {
+    width  : 100%;
+    margin : 0;
+    display: inline-block;
+
+    &__date,
+    &__more {
+      font-size      : .6em;
+      padding        : .6em 1.2em;
+      text-align     : center;
+      text-decoration: none;
+      @include rounded(2em);
+    }
+    &__date {
+      $BG: darken($article-color--BG, 10%);
+
+      min-width : 8em;
+      background: $BG;
+      @include smart-text-color($BG);
+      @include smart-fill-color($BG);
+      .icon {
+        margin: 0 .6em -.2em 0;
+      }
+    }
+
+    &__more {
+      margin         : 0 10px 10px 0;
+      float          : right;
+      text-transform : uppercase;
+      text-decoration: none;
+      @include transition();
+      @include smart-text-color($article-color--BG);
+      &:hover {
+        $BG: $article-color--main;
+  
+        background: $BG;
+        @include smart-text-color($BG);
+      }
+    }
+  }
+  // Line
+  &:after {
+    content   : '';
+    position  : absolute;
+    height    : 2px;
+    bottom    : 0;
+    left      : 50%;
+    right     : 50%;
+    background: $article-color--main;
+    @include transition();
+  }
+
+  // Modifiers
+  &--important {
+    border-color: $article-color--main;
+    @include shadow();
+  }
+  &:hover {
+    // Line
+    &:after{
+      left : 0;
+      right: 0;
+    }
+  }
+}

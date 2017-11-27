@@ -30,7 +30,7 @@ $divider-color-sec: $themeColor_BG !default;
     background: $divider-color-sec;
     border    : $divider-color 1px solid;
     box-sizing: border-box;
-    @include  rotate(45deg);
+    @include rotate(45deg);
   }
   &:after {
     content    : attr(data-content);

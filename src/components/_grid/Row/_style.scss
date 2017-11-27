@@ -1,0 +1,12 @@
+@import '../../../styles/conf/index.scss';
+
+.grid-row {
+  display: block;
+
+  &:before,
+  &:after {
+    content: '';
+    clear  : both;
+    display: table;
+  }
+}

@@ -2,7 +2,7 @@ import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
 import Icon       from '../Icon';
-import './_style.less';
+import './_style.scss';
 
 class Rating extends React.PureComponent {
   render(){

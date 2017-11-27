@@ -9,11 +9,12 @@ $ImgCard-captionBG: $black !default;
   overflow: hidden;
   @include rounded();
 
-  img{
+  // Elements
+  &__img{
     width  : 100%;
     display: block;
   }
-  figcaption{
+  &__caption {
     position  : absolute;
     bottom    : 0;
     left      : 0;
@@ -24,8 +25,10 @@ $ImgCard-captionBG: $black !default;
     @include transition(opacity);
     @include smart-text-color($ImgCard-captionBG);
   }
+
+  // Modifiers
   &:hover{
-    figcaption{
+    .imageCard__caption {
       opacity: .6;
     }
   }

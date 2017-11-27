@@ -2,7 +2,7 @@ import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
 import IconClose  from '../IconBtn/close';
-import './_style';
+import './_style.scss';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -28,10 +28,10 @@ class Modal extends React.Component {
   render(){
     return (this.state.isOpen ? (
       <div className={classNames('modal', this.props.className)}>
-        <div className='modal-bg' />
-        <div className='modal-container'>
-          <IconClose onClick={this.handleClose} className="close-icon" />
-          <div className='modal-content'>   
+        <div className='modal__bg' />
+        <div className='modal__container'>
+          <IconClose onClick={this.handleClose} className="modal__container__closeIcon" />
+          <div className='modal__container__content'>   
             {this.props.children}
           </div>
         </div>

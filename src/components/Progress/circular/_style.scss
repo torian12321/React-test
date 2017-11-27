@@ -1,0 +1,58 @@
+@import '../../../styles/conf/index.scss';
+
+// Block
+.pb-circular {
+  $size: 100px;
+
+  font-size: $size;
+  position : relative;
+  width    : 1em;
+  height   : 1em;
+
+  // Elements
+  svg {
+    position: absolute;
+    top     : .1em;
+    left    : .1em;
+    width   : .8em;
+    height  : .8em;
+    @include rotate(-90deg);
+  }
+  circle {
+    stroke      : rgba(0,0,0,0.08);
+    stroke-width: 8;
+    fill        : none;
+      &.fill {
+      stroke-dasharray: 220;
+    }
+  }
+
+  label {
+    position   : absolute;
+    left       : calc(50% - 1em);
+    top        : calc(50% - .5em);
+    width      : 2em;
+    height     : 1em;
+    font-size  : .2em;
+    line-height: 1;
+    text-align : center
+  }
+
+  // Modifiers
+  
+  // States
+  &         circle.fill {stroke: $themeColor_1;}
+  &.main    circle.fill {stroke: $themeColor_1;}
+  &.sec     circle.fill {stroke: $themeColor_2;}
+  @each $stateName, $stateColor in $states {
+    &.#{$stateName} circle.fill {
+      stroke: nth($stateColor, 1);
+    }
+  }
+
+  // Sizes
+  &.xs {font-size: $size * 0.5;}
+  &.sm {font-size: $size;}
+  &.md {font-size: $size * 1.5;}
+  &.lg {font-size: $size * 2.5;}
+}
