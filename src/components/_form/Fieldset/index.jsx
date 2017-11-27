@@ -2,7 +2,7 @@ import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
 import Title      from './fieldset_title';
-import './_style';
+import './_style.scss';
 
 class Fieldset extends React.Component {
   render() {

@@ -1,16 +1,16 @@
 @import '../../../styles/conf/index.scss';
 
 // Vars
-$btn-threeD-deep: 4px;
-$btn-padding_v  : 8px;
-$btn-padding_h  : 24px;
+$btn-threeD-deep: 4px !default;
+$btn-padding_v  : 8px !default;
+$btn-padding_h  : 24px !default;
 
 
 // Mixin
 @mixin btn_palette(
   $color-main: $themeColor_1,
-  $color-sec : $white
-){
+  $color-sec : smartColor($color-main, $white, $themeColor_1, 90)
+) {
 	color     : $color-sec;
 	background: $color-main;
 	border    : 1px $color-sec solid;
@@ -19,19 +19,17 @@ $btn-padding_h  : 24px;
 	&:focus {
 		color       : $color-main;
 		background  : $color-sec;
-		border-color: $color-main;
 
-		// & when ($color-sec = $white) {
-		// 	color: $color-main;
-		// }
+		@if ($color-sec == $white) {
+			border-color: $color-main;
+		} @else {
+			border-color: $color-sec;
+		}
 	}
 
 	&.btn--threeD {
 		box-shadow  : 0px $btn-threeD-deep 0px 0px darken($color-main, 15%);
 
-		// & when (@color-main = @black) {
-		// 	background: lighten(@black, 25%);
-		// }
 		&:hover,
 		&:focus {
 			color     : $color-sec;
@@ -100,7 +98,7 @@ $btn-padding_h  : 24px;
   &--green  { @include btn_palette($green); }
 	&--red    { @include btn_palette($red); }
 	&--orange { @include btn_palette($orange); }
-	&--white  { @include btn_palette($white, $themeColor_1); }
+	&--white  { @include btn_palette($white); }
 
   &--black  { @include btn_palette($black); }
 	&--grey   { @include btn_palette($grey); }

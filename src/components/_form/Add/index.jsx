@@ -3,7 +3,7 @@ import PropTypes  from 'prop-types';
 import uniqid     from 'uniqid';
 import classNames from 'classnames';
 import Icon       from '../../Icon';
-import './_style';
+import './_style.scss';
 
 class Add extends React.Component {
   constructor(props) {
@@ -35,7 +35,7 @@ class Add extends React.Component {
     return (
       <div className={classNames(
         'add',
-        {'add-filled': this.state.filled},
+        this.state.filled ? 'add--filled' : null,
         props.className,
       )}>
         <input 
@@ -48,7 +48,7 @@ class Add extends React.Component {
           onChange= {(e) => this.handleChange(e.target.files)}
         />
         <label htmlFor={id}>
-          <div className='add-icon'><Icon name="plus" /></div>
+          <div className='add__icon'><Icon name="plus" /></div>
           <span>{this.state.text}</span>
         </label>
       </div>

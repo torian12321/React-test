@@ -1,0 +1,24 @@
+@import '../../../styles/conf/index.scss';
+
+// Vars
+$fieldset-font-size : $fontSize !default;
+$fieldset-color-main: $themeColor_2 !default;
+
+// Block
+.fieldset {
+  font-size: $fieldset-font-size;
+  padding  : 1.2em;
+  @include border();
+  @include rounded();
+
+  // Elements
+  legend {
+    margin-left   : -.4em;
+    padding       : 0 .4em;
+    font-size     : 1.2em;
+    font-weight   : bold;
+    line-height   : 1;
+    color         : $fieldset-color-main;
+    text-transform: capitalize;
+  }
+}

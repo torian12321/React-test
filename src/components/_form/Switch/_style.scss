@@ -1,0 +1,86 @@
+@import '../../../styles/conf/index.scss';
+
+// Vars
+$formSwitch-color-bg       : $colorState_disable !default;
+$formSwitch-color-main     : $themeColor_2 !default;
+$formSwitch-color-sec      : $themeColor_1 !default;
+$formSwitch-height         : $inputHeight !default;
+$formSwitch-transition-time: .2s !default;
+
+// Block
+.form-switch {
+  font-size  : $formSwitch-height;
+  line-height: 1;
+
+  &__cb {
+    opacity : 0;
+    position: absolute;
+  }
+  &__ball {
+    position  : relative;
+    display   : block;
+    width     : 2em;
+    height    : 1em;
+    background: $formSwitch-color-bg;
+    cursor    : pointer;
+    @include rounded(1em);
+    @include transition($property: background-color, $time: $formSwitch-transition-time);
+    
+    &:after{
+      position  : absolute;
+      content   : '';
+      left      : .15em;
+      top       : .15em;
+      height    : .7em;
+      width     : .7em;
+      background: darken($formSwitch-color-bg, 20%);
+      @include rounded(50%);
+      @include transition($time: $formSwitch-transition-time);
+    }
+  }
+
+  //----  Modifiers  -----
+
+  // Active
+  &--checked .form-switch__ball:after {
+    left      : 1.15em;
+    background: $formSwitch-color-sec;
+  }
+
+  // Focus
+  // Hover
+  &__cb:focus,
+  &__cb:hover {
+    + .form-switch__ball:after {
+      background: $formSwitch-color-main;
+    }
+  }
+  
+  // Disabled
+  &--disabled .form-switch__ball {
+    color : $fontColor_disable;
+    cursor: not-allowed;
+    
+    &:after {
+      background: darken($colorState_disable, 30) !important;
+    }
+  }	
+	
+
+  // Texted version
+	&--texted {
+		.form-switch__ball:before {
+      position   : absolute;
+      content    : 'Off';
+      right      : 12.5%;
+      font-size  : .5em;
+      line-height: 2em;
+      @include smart-text-color($formSwitch-color-bg);
+      @include transition($property: right, $time: $formSwitch-transition-time);
+		}
+		&.form-switch--checked .form-switch__ball:before {
+      content: 'On';
+      right  : 55%;
+		}
+	}
+}

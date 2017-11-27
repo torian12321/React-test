@@ -2,7 +2,7 @@ import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
 import uniqid     from 'uniqid';
-import './_style.less';
+import './_style.scss';
 
 class Switch extends React.PureComponent {
   constructor(props) {
@@ -25,17 +25,20 @@ class Switch extends React.PureComponent {
     return (
       <div className={classNames(
         'form-switch',
-        {'texted': this.props.texted},
+        this.state.checked ? 'form-switch--checked' : null,
+        this.props.texted  ? 'form-switch--texted'  : null,
+        this.props.disabled? 'form-switch--disabled': null,
         this.props.className
       )}>
         <input
-          id      = {id}
-          type    = "checkbox"
-          checked = {this.state.checked}
-          disabled= {this.props.disabled}
-          onChange= {this.handleChange}
+          id       = {id}
+          className= 'form-switch__cb'
+          type     = "checkbox"
+          checked  = {this.state.checked}
+          disabled = {this.props.disabled}
+          onChange = {this.handleChange}
         />
-        <label htmlFor={id} />
+        <label htmlFor={id} className= 'form-switch__ball' />
       </div>
     );
   }
