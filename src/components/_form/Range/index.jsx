@@ -1,7 +1,7 @@
 import React          from 'react';
 import PropTypes      from 'prop-types';
 import RangeTextBall  from './range_text_ball';
-import './_style';
+import './_style.scss';
 
 class Range extends React.PureComponent {
   constructor(props){
@@ -47,6 +47,7 @@ class Range extends React.PureComponent {
     return (
       <div className="form-range">
         <input
+          className= 'form-range__input'
           type     = "range"
           style    = {this.state.style}
           disabled = {this.props.disabled}    

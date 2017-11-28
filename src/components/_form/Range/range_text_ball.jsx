@@ -11,10 +11,13 @@ class RangeTextBall extends React.Component {
 
   render() {
     return this.props.show ? (
-      <span style= {{
-        left     : `${this.props.percentage}%`,
-        transform: `translate(-${this.props.percentage}%, 0%)`
-      }}>{this.props.value}</span>
+      <span 
+        className= 'form-range__textedBall'
+        style    = {{
+          left     : `${this.props.percentage}%`,
+          transform: `translate(-${this.props.percentage}%, 0%)`
+        }}
+      >{this.props.value}</span>
     ) : null
   }
 }

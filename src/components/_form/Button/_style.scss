@@ -6,7 +6,7 @@ $btn-padding_v  : 8px !default;
 $btn-padding_h  : 24px !default;
 
 
-// Mixin
+// Mixins
 @mixin btn_palette(
   $color-main: $themeColor_1,
   $color-sec : smartColor($color-main, $white, $themeColor_1, 90)

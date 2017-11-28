@@ -1,7 +1,7 @@
 @import '../../styles/conf/index.scss';
 
 // Vars
-$modal-BG: $white;
+$modal-BG: $white  !default;
 
 // Block
 .modal {

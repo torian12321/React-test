@@ -1,0 +1,95 @@
+@import '../../../styles/conf/index.scss';
+
+// Vars
+$formSwitch-ball-size    : 2em !default;
+$formSwitch-color-main   : $themeColor_1 !default;
+$formSwitch-color-active : $themeColor_2 !default;
+$formSwitch-color-disable: $colorState_disable !default;
+
+// Mixins
+@mixin range_track() {
+  box-shadow        : none;
+  border            : none;
+  background        : transparent;
+  -webkit-appearance: none;
+}
+@mixin range_ball() {
+  width             : $formSwitch-ball-size;
+  height            : $formSwitch-ball-size;
+  background        : $formSwitch-color-main;
+  border            : .1em solid $white;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  @include rounded(50%);
+  @include transition(background);
+}
+
+// Block
+.form-range {
+  position : relative;
+  font-size: 12px;
+  height   : 2em;
+
+  // Elements
+  &__textedBall {
+    position      : absolute;
+    top           : 12%;
+    left          : 0;
+    text-align    : center;
+    font-size     : 1em * 0.8;
+    width         : $formSwitch-ball-size / 0.8;
+    height        : $formSwitch-ball-size / 0.8;
+    line-height   : $formSwitch-ball-size / 0.8;
+    cursor        : pointer;
+    pointer-events: none;
+    font-family   : sans-serif;
+    @include rounded(50%);
+    @include smart-text-color($formSwitch-color-main);
+  }
+  &__input {
+    margin   : auto;
+    outline  : none;
+    padding  : 0;
+    width    : 100%;
+    height   : .5em;
+    position : absolute;
+    top      : 50%;
+    left     : 0;
+    cursor   : pointer;
+    font-size: 1em;
+    -webkit-appearance: none;
+    @include gradient($themeColor_1, $themeColor_1);
+    @include rounded(1em);
+    background-repeat: no-repeat;
+    background-color : $colorState_disable;
+
+    // Track
+    &::-webkit-slider-runnable-track { @include range_track(); }
+    &::-moz-range-track              { @include range_track(); }
+    &::-moz-focus-outer              { border: 0; }
+
+    // Ball
+    &::-webkit-slider-thumb { @include range_ball(); }
+    &::-moz-range-thumb     { @include range_ball(); }
+
+
+    // Modifiers
+    &:focus,
+    &:hover {
+      &::-webkit-slider-thumb{background: $formSwitch-color-active;}
+      &::-moz-range-thumb    {background: $formSwitch-color-active;}
+    }
+    &:disabled,
+    &[disabled] {
+      cursor: not-allowed;
+      &::-webkit-slider-thumb{background: $formSwitch-color-disable;}
+      &::-moz-range-thumb    {background: $formSwitch-color-disable;}
+      @include gradient(
+        darken($formSwitch-color-disable, 15%),
+        darken($formSwitch-color-disable, 15%)
+      );
+      background-repeat: no-repeat;
+      background-color : $formSwitch-color-disable;
+    }
+  }
+}
