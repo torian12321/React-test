@@ -1,0 +1,51 @@
+@import '../../styles/conf/index.scss';
+
+// Vars
+$tabs-color-main   : $themeColor_1;
+$tabs-color-sec    : $themeColor_2;
+$tabs-color-disable: $colorState_disable;
+
+// Block
+.tabs {
+	&__header {
+    margin : 0;
+    padding: 0;
+		&__tab {
+			display   : inline-table;
+			width     : 120px;
+			height    : 70px; 
+			padding   : 8px;
+      margin    : 0 2px 5px;
+      &:last-child { margin-right: 0; }
+			background: $tabs-color-disable;
+			font-size : 14px;
+			text-align: center;
+			overflow  : hidden;
+			cursor    : pointer;
+			@include rounded();
+			@include transition();
+      @include smart-text-color($tabs-color-disable);
+      
+			&:hover,
+			&--active {
+				background: $tabs-color-sec;
+				@include smart-text-color($tabs-color-sec);
+			}
+		}
+	}
+
+	&__body > input {
+		&,
+		& + div {
+			display   : none;
+			min-height: 200px;
+			padding   : 12px;
+			background: $tabs-color-main;
+			@include smart-text-color($tabs-color-main);
+			@include rounded();
+		}
+		&:checked + div {
+			display: block;
+		}
+	}
+}

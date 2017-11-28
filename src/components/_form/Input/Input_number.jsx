@@ -2,7 +2,7 @@ import React      from 'react';
 import PropTypes  from 'prop-types';
 import uniqid     from 'uniqid';
 import Wrapper    from '../_wrapper';
-import './_style';
+import './_style.scss';
 
 class Input extends React.Component {
   constructor(props) {

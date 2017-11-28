@@ -41,7 +41,7 @@ $add-color-active : $themeColor_1 !default;
     height    : 2em;
     width     : 2em;
     background: $add-color-passive;
-    @include rounded(50%);
+    @include rounded-circular();
     .icon {
       margin: auto;
     }

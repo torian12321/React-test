@@ -1,0 +1,88 @@
+@import '../../../styles/conf/index.scss';
+
+// Vars
+$formCheck-color-main: $grey !default;
+$formCheck-color-sec : $themeColor_1 !default;
+
+.wrapper-2 {
+  display    : block;
+  position   : relative;
+  padding    : 0;
+  cursor     : pointer;
+  font-size  : 18px;
+  line-height: 1.5;
+  input {
+    position: absolute;
+    z-index : -1;
+    opacity : 0;
+  }
+
+  span {
+    display: block;
+    padding: 0 0 0 1.5em;
+    @include transition(color);
+
+    &:before,
+    &:after {
+      content   : '';
+      position  : absolute;
+      left      : 0;
+      top       : .25em;
+      height    : 1em;
+      width     : 1em;
+      font-size : 1em;
+      background: transparent;
+      box-sizing: border-box;
+      @include transition();
+    }
+
+    &:before{
+      border: .15em solid $colorState_disable;
+    }
+  }
+  // Checkbox inside
+    input[type='checkbox'] + span:after{
+    top        : .3em;
+    left       : .3em;
+    border     : .1em solid $black;
+    border-left: none;
+    border-top : none;
+    width      : .4em;
+    height     : .7em;
+    @include scale(0);
+    @include rotate(90deg);
+  }
+
+  //----------------------
+  //----    STATES    ----
+  //----------------------
+
+  // Focus
+  // Hover
+  input:focus + span,
+  &:hover input + span {
+    color: $formCheck-color-sec;
+    &:before {
+      border-color: $formCheck-color-sec;
+    }
+  }
+    
+  // Checked
+  input:checked + span {
+    &:before {
+      border-width: .5em;
+    }
+    &:after {
+      @include scale(1);
+      @include rotate(45deg);
+    }
+  }
+
+  // Disabled
+  input:disabled + span {
+    color : $fontColor_disable;
+    cursor: not-allowed;
+    &:before{ border-color: $colorState_disable; }
+    &:after { border-color: darken($colorState_disable, 30); }
+  }
+}

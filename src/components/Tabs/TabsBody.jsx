@@ -3,7 +3,7 @@ import PropTypes  from 'prop-types';
 import classNames from 'classnames';
 
 const TabsBody = props => (
-  <div className={classNames('tabs-body', props.style)}>
+  <div className={classNames('tabs__body', props.style)}>
     <input type="radio" checked="checked"/>
     <div>
       {props.children}

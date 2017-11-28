@@ -34,7 +34,7 @@ $formSwitch-transition-time: .2s !default;
       height    : .7em;
       width     : .7em;
       background: darken($formSwitch-color-bg, 20%);
-      @include rounded(50%);
+      @include rounded-circular();
       @include transition($time: $formSwitch-transition-time);
     }
   }

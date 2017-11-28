@@ -2,7 +2,7 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import './_style-check.less';
+import './_style-check.scss';
 
 class Wrapper extends React.Component {
   render() {

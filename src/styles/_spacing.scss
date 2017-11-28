@@ -9,11 +9,11 @@
   margin-right: auto;
 }
 
-.generate-margins(10, 10)  !important;
-.generate-paddings(10, 10) !important;
+@include generate-margins(10, 10);
+@include generate-paddings(10, 10);
 
 
-.generate-margins(@n, @step, @i: 0) when (@i =< @n) {
+@mixin generate-margins($n, $step, $i: 0) when (@i =< @n) {
   @value: @i * @step;
 
   .m-@{value}   { margin       : (@value * 1px); }

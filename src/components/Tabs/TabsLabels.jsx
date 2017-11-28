@@ -7,10 +7,13 @@ const TabsLabels = (props) => {
     props.onChange(index);
   }
   return (
-    <ul className={classNames('tabs-header', props.className)}>
+    <ul className={classNames('tabs__header', props.className)}>
     { props.children.map((child, index) =>
       <label
-        className={classNames({'active' : (props.selected === index)})}
+        className= {classNames(
+          'tabs__header__tab',
+          props.selected === index ? 'tabs__header__tab--active' : null
+        )}
         key      = {index}
         onClick  = {click.bind(this, index)}>
         {child.props.label}

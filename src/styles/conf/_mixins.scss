@@ -1,6 +1,6 @@
 //-- Generic mixins -
 //-------------------
-@mixin css3-prefix($property, $values...) {
+@mixin css3-prefix ($property, $values...) {
   -webkit-#{$property}: #{$values};  /* Chrome, Safari, Opera */
    -khtml-#{$property}: #{$values};
      -moz-#{$property}: #{$values};  /* Firefox all */
@@ -15,7 +15,7 @@
 	$timing  : ease-out,
 	$delay   : false,
 	$merge   : true
-	) {
+) {
 	@if ($delay != false) {
 		-webkit-transition-delay: $delay;
 		transition-delay        : $delay;
@@ -28,12 +28,15 @@
 	$width: $BWidth,
 	$color: $BColor,
 	$style: $BStyle
-	){
+){
 	border: $width $color $style;
 }
 
 @mixin rounded ($radius: $BRadious) {
   @include css3-prefix('border-radius', $radius);
+}
+@mixin rounded-circular () {
+  @include rounded(50%);
 }
 
 @mixin opacity($value) {
@@ -52,13 +55,13 @@
 	display: flex;
 }
 
-@mixin transform($transformation) {
+@mixin transform ($transformation) {
   @include css3-prefix('transform', $transformation);
 }
 @mixin transform-origin ($origin: center center) {
   @include css3-prefix('transform-origin', $origin);
 }
-@mixin transform-style($style: preserve-3d) {
+@mixin transform-style ($style: preserve-3d) {
   @include css3-prefix('transform-style', $style);
 }
 
@@ -76,7 +79,7 @@
 	$y-axis: 50%
 ) {
 	@include transform(scale($value));
-	@include transform-origin($x-axis, $y-axis);
+	@include transform-origin($x-axis $y-axis);
 }
 
 

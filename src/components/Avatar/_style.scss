@@ -12,7 +12,7 @@ $avatar-color: $themeColor_2 !default;
   border    : $avatar-color 2px solid;
   background: $avatar-color;
   box-sizing: border-box;
-  @include rounded(50%);
+  @include rounded-circular();
   @include background-cover();
 
   // Modifiers

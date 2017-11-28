@@ -3,7 +3,7 @@ import PropTypes  from 'prop-types';
 import classNames from 'classnames';
 import TabsLabels from './TabsLabels';
 import TabsBody   from './TabsBody';
-import './_style';
+import './_style.scss';
 
 class Tabs extends React.Component {
   constructor(props) {

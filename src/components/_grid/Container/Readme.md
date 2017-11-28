@@ -2,7 +2,7 @@ Use a grid system the same as [Bootstrap](https://v4-alpha.getbootstrap.com/layo
 
 ## Container - Estandar
 ```
-const imgExample = require ('./_style_styleguide.less');
+const imgExample = require ('./_style_styleguide.scss');
 
 <Container className="styleguideExample">
   <Col xs={6} sm={4} md={3} lg={2}><p>xs=6 sm=4 md=3 lg=2</p></Col>

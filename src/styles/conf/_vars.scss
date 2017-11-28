@@ -16,9 +16,9 @@ $grid-gutter-width: 30px;
 
 // //== Container sizes
 // //## Define the maximum width of `.container` for different screen sizes.
-// @container-sm: (720px  + @grid-gutter-width);
-// @container-md: (940px  + @grid-gutter-width);
-// @container-lg: (1140px + @grid-gutter-width);
+$container-sm: (720px  + $grid-gutter-width);
+$container-md: (940px  + $grid-gutter-width);
+$container-lg: (1140px + $grid-gutter-width);
 
 // //-------------------
 // //--- Directories ---
@@ -82,7 +82,7 @@ $shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
 
 // //@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Lobster);
 @mixin font(){
-    font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 @mixin font-regular(){
 	font-weight: 400;
@@ -91,7 +91,7 @@ $shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
 	font-weight: 700;
 }
 @mixin font_elegant() {
-    font-family: 'Cinzel Decorative', cursive;
+  font-family: 'Cinzel Decorative', cursive;
 }
 // //-------------------
 // //------- More ------

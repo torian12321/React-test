@@ -20,7 +20,7 @@ $formSwitch-color-disable: $colorState_disable !default;
   border            : .1em solid $white;
   -webkit-appearance: none;
   box-sizing: border-box;
-  @include rounded(50%);
+  @include rounded-circular();
   @include transition(background);
 }
 
@@ -43,7 +43,7 @@ $formSwitch-color-disable: $colorState_disable !default;
     cursor        : pointer;
     pointer-events: none;
     font-family   : sans-serif;
-    @include rounded(50%);
+    @include rounded-circular();
     @include smart-text-color($formSwitch-color-main);
   }
   &__input {

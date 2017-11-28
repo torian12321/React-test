@@ -1,7 +1,7 @@
 import React  		from 'react';
 import PropTypes 	from 'prop-types';
 import classNames from 'classnames';
-import './_style';
+import './_style.scss';
 
 class Container extends React.Component {
   render() {

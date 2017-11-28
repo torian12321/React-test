@@ -14,8 +14,8 @@ $loading-color-disable: $colorState_disable !default;
   margin    : auto;
   width     : 1em;
   height    : 1em;
+  @include rounded-circular();
 
-  @include rounded(50%);
   &--spinner{
     background      : transparent;
     border          : $loading-color-disable .1em solid;

@@ -9,7 +9,7 @@
   cursor     : pointer;
   background : $grey2;
   opacity    : .6;
-  @include rounded(50%);
+  @include rounded-circular();
   @include transition(opacity);
   &:hover{
     opacity: 1;

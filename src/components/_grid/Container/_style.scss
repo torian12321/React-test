@@ -1,0 +1,27 @@
+@import '../../../styles/conf/index.scss';
+
+.container,
+.container-fluid {
+  width     : 100%;
+  display   : block;
+  margin    : 0 auto;
+  box-sizing: border-box;
+  padding   : 0 floor(($grid-gutter-width / 2));
+//  &:extend(.clearfix all);
+  &:before,
+  &:after{
+    content: '';
+    clear  : both;
+    display: table;
+  }
+}
+
+@media (min-width: $bp_sm) {
+	.container{max-width: ($bp_xs - 40);}
+}
+@media (min-width: $bp_md) {
+	.container{max-width: ($bp_md - 40);}
+}
+@media (min-width: $bp_lg) {
+	.container{max-width: ($bp_lg - 40);}
+}
