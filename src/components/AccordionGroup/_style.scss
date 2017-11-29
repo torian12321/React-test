@@ -6,8 +6,12 @@
 
   .accordion{
     margin       : 0;
-    border-bottom: 2px solid $themeColor_1;
+    border-bottom: 2px solid saturate($themeColor_2, 30);
     @include rounded(0);
+
+    &--active{
+      border-color: $themeColor_1;
+    }
     
     &:first-child{
       @include rounded($BRadious $BRadious 0 0);
