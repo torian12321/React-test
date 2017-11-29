@@ -1,7 +1,7 @@
 body {
-	font-size  : $fontSize;
-	line-height: 1.25;
-	color      : $fontColor_black;
+  font-size  : $fontSize;
+  line-height: 1.25;
+  color      : $fontColor_black;
   @include font();
   @include font-regular();
 }

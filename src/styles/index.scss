@@ -8,15 +8,7 @@
 //---- Viewports ---
 //------------------
 @import "./viewports/default.scss";
-@media (max-width: $bp_xs) {
-	@import "./viewports/screen_xs.scss";
-}
-@media (min-width: $bp_sm) {
-	@import "./viewports/screen_sm.scss";
-}
-@media (min-width: $bp_md) {
-	@import "./viewports/screen_md.scss";
-}
-@media (min-width: $bp_lg) {
-	@import "./viewports/screen_lg.scss";
-}
+@include bp-xs { @import "./viewports/screen_xs.scss"; }
+@include bp-sm { @import "./viewports/screen_sm.scss"; }
+@include bp-md { @import "./viewports/screen_md.scss"; }
+@include bp-lg { @import "./viewports/screen_lg.scss"; }

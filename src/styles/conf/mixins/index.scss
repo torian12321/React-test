@@ -1,0 +1,86 @@
+@import "./_animations.scss";
+@import "./_background.scss";
+@import "./_border-radius.scss";
+@import "./_breakpoints.scss";
+@import "./_clearfix.scss";
+@import "./_filters.scss";
+@import "./_font-size.scss";
+@import "./_smart-colors.scss";
+@import "./_transform.scss";
+
+//-------------------
+//-- Generic mixins -
+//-------------------
+@mixin css3-prefix ($property, $values...) {
+  -webkit-#{$property} : #{$values};  /* Chrome, Safari, Opera */
+    -khtml-#{$property}: #{$values};
+      -moz-#{$property}: #{$values};  /* Firefox all */
+      -ms-#{$property} : #{$values};  /* IE 9 */
+        -o-#{$property}: #{$values};
+          #{$property} : #{$values};  /* Likely future */
+}
+
+@mixin transition (
+  $property: all,
+  $time    : .5s,
+  $timing  : ease-out,
+  $delay   : false,
+  $merge   : true
+) {
+  @if ($delay != false) {
+    -webkit-transition-delay: $delay;
+    transition-delay        : $delay;
+  }
+  -webkit-transition: $property $timing $time;
+  transition        : $property $timing $time;
+}
+
+@mixin border (
+  $width: $BWidth,
+  $color: $BColor,
+  $style: $BStyle
+){
+  border: $width $color $style;
+}
+
+@mixin opacity($value) {
+  @include css3-prefix('opacity', $value);
+
+  // IE8 filter
+  $IEValue: $value*100;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+@mixin flex() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin shadow ($shadows...) {
+  @if($shadows = "") {
+    $shadows: $shadow;
+  }
+  @include css3-prefix('box-shadow', $shadows);
+}
+
+// https://stackoverflow.com/questions/17181849/placeholder-mixin-scss-css
+@mixin placeholder() {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+@mixin oneLineText() {
+  text-overflow: ellipsis;
+  overflow     : hidden;
+  white-space  : nowrap;
+}
+
+@mixin userSelect($select: text){
+  // text | none | all
+  @include css3-prefix('user-select', $select);
+}

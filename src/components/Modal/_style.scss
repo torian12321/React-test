@@ -35,10 +35,13 @@ $modal-BG: $white  !default;
     padding   : 24px 10px 10px;
     box-sizing: border-box;
     @include rounded();
-    //@include animation_fadein();
     @include transform(translate(-50%, -50%));
+    @include keyframes(modal-fadein) {
+      0%  { opacity: 0; margin-top: 10px; }
+      90% { opacity: 1; margin-top: 0; }
+    }
     @include animation(
-      $animation : fadein,
+      $animation : modal-fadein,
       $time      : .6s,
       $iterations: 1
     );

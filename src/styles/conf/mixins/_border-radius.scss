@@ -1,0 +1,11 @@
+@mixin border-radius ($r: $BRadious) {
+  @include css3-prefix('border-radius', $r);
+}
+
+@mixin rounded ($r: $BRadious) {
+  @include border-radius($r);
+}
+
+@mixin rounded-circular () {
+  @include border-radius(50%);
+}

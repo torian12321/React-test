@@ -1,0 +1,63 @@
+@import '../../styles/conf/index.scss';
+
+// Vars
+$table-color-main: $themeColor_2 !default;
+$table-color-sec : $white !default;
+
+// Mixins
+@mixin tableRow_style($color) {
+  background: $color;
+  @include smart-text-color($color, $fontColor_white, $fontColor_grey);
+}
+@mixin tableRow_style_hover() {
+  &:hover {
+    @include tableRow_style(fade-out($table-color-main, .5));
+  }
+}
+
+// Block
+.table {
+  width          : 100%;
+  text-align     : left; 
+  border-collapse: collapse;
+
+  // Elements
+	thead,
+  tfoot {
+    th {
+      @include tableRow_style($table-color-main);
+    }
+  }
+  tr {
+    @include tableRow_style($table-color-sec);
+    @include tableRow_style_hover();
+  }
+  th,
+  td {
+    padding: 10px 40px 10px 16px;
+  }
+
+  // Border radious
+  thead th {
+    &:first-child{ border-top-left-radius : $BRadious; }
+    &:last-child { border-top-right-radius: $BRadious; }
+  }
+  tfoot th {
+    &:first-child{ border-bottom-left-radius : $BRadious;}
+    &:last-child { border-bottom-right-radius: $BRadious;}
+  }
+  
+  // Modifiers
+  &--striped {
+    tr:nth-child(odd) {
+      @include tableRow_style(darken($table-color-sec, 10%));
+      @include tableRow_style_hover();
+    }
+  }
+  &--bordered {
+    //th,
+    td {
+      border: 1px solid $table-color-main;
+    }
+  }
+}

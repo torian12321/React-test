@@ -12,7 +12,7 @@ const TabsLabels = (props) => {
       <label
         className= {classNames(
           'tabs__header__tab',
-          props.selected === index ? 'tabs__header__tab--active' : null
+          {'tabs__header__tab--active' : props.selected === index}
         )}
         key      = {index}
         onClick  = {click.bind(this, index)}>
