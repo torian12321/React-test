@@ -5,10 +5,11 @@ For more options and information:
 https://css-tricks.com/custom-scrollbars-in-webkit/
 */
 
-@mixin scrollbars(
-  $color_main : darken ($themeColor_2, 20%),
-  $color_sec  : lighten($themeColor_2, 20%),
-  $size       : 14px
+
+@mixin scrollbars (
+  $color_main :  darken($themeColor_2, 20%),
+  $color_sec  : lighten($color_main  , 40%),
+  $size       : 12px
 ){
   ::-webkit-scrollbar {
     width : $size;

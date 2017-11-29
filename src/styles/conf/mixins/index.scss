@@ -5,8 +5,10 @@
 @import "./_clearfix.scss";
 @import "./_filters.scss";
 @import "./_font-size.scss";
+@import "./_placeholder.scss";
 @import "./_smart-colors.scss";
 @import "./_transform.scss";
+@import "./_visually-hidden.scss";
 
 //-------------------
 //-- Generic mixins -
@@ -64,14 +66,6 @@
     $shadows: $shadow;
   }
   @include css3-prefix('box-shadow', $shadows);
-}
-
-// https://stackoverflow.com/questions/17181849/placeholder-mixin-scss-css
-@mixin placeholder() {
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}
 }
 
 @mixin oneLineText() {

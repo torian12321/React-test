@@ -26,8 +26,8 @@
   @include transition();
 }
 .quantity-input__modifier:hover {
-    background: $themeColor_1;
-    @include smart-text-color($themeColor_1);
+  background: $themeColor_1;
+  @include smart-text-color($themeColor_1);
 }
 .quantity-input__modifier--left {
   border-radius: 3px 0 0 3px;

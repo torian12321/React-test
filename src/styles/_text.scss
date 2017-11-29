@@ -59,11 +59,11 @@ strong {
 .txt-upp { text-transform: uppercase; }
 .txt-cap { text-transform: capitalize; }
 
-// Test selected
+// Text selected
 @mixin textSelected() {
-	background : fadeout($pink, 40%);
-	color      : $fontColor_white;
-	text-shadow: none;
+  text-shadow: none;
+  background : fade-out($themeColor_3, .4);
+  @include smart-text-color($themeColor_3);
 }
 
 *::selection {

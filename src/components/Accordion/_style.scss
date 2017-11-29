@@ -29,7 +29,7 @@ $accordion-icon-h    : 3px !default;
     padding    : 0 $gutter_x 0 (($gutter_x * 2) + $accordion-icon-w);
     cursor     : pointer;
 
-    // @include transition(background border-color);
+    @include transition(background);
     @include smart-text-color($accordion-color-main);
     &:before,
     &:after {
