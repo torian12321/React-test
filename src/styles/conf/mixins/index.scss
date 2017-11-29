@@ -78,3 +78,12 @@
   // text | none | all
   @include css3-prefix('user-select', $select);
 }
+
+@mixin sticky($top: -1px){
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+  top     : $top;
+}
