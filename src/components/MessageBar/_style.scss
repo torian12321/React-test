@@ -1,0 +1,22 @@
+@import '../../styles/conf/index.scss';
+
+// Vars
+$messageBar-color-border: $themeColor_1 !default;
+$messageBar-color-bg    : darken($white, 5) !default;
+
+// Block
+.messageBar{
+  display    : block;
+  margin     : 20px 0;
+  padding    : 8px 12px;
+  border-left: $messageBar-color-border solid 4px;
+  background : $messageBar-color-bg;
+  @include smart-text-color($messageBar-color-bg);
+  
+  // Modifiers
+  @each $stateName, $stateColor in $states {
+    &--#{$stateName} {
+      border-color: nth($stateColor, 1);
+    }
+  }
+}
