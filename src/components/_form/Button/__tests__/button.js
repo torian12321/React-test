@@ -24,7 +24,7 @@ describe('component', () => {
         <Button large flat={false} />
       ).toJSON();
       expect(button).toMatchSnapshot();
-      expect(button.props.className).toEqual('btn btn-3D btn-large');
+      expect(button.props.className).toEqual('btn btn--threeD btn--large');
     });
 
     it('should have disabled', () => {
