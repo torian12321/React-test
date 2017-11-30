@@ -1,3 +1,40 @@
+// Mixins
+@mixin generate-margins (
+  $steps    : 10,
+  $increment: 5
+){
+  @for $index from 1 through $steps {
+    $val : $index * $increment;
+    $size: unquote($val + 'px');
+
+    .m-#{$val}   { margin       : $size; }
+    .m-x-#{$val} { margin-right : $size; margin-left  : $size; }
+    .m-y-#{$val} { margin-top   : $size; margin-bottom: $size; }
+    .m-t-#{$val} { margin-top   : $size; }
+    .m-r-#{$val} { margin-right : $size; }
+    .m-b-#{$val} { margin-bottom: $size; }
+    .m-l-#{$val} { margin-left  : $size; }
+  }
+}
+@mixin generate-paddings (
+  $steps    : 10,
+  $increment: 5
+){
+  @for $index from 1 through $steps {
+    $val : $index * $increment;
+    $size: unquote($val + 'px');
+
+    .p-#{$val}   { padding       : $size; }
+    .p-x-#{$val} { padding-right : $size; padding-left  : $size; }
+    .p-y-#{$val} { padding-top   : $size; padding-bottom: $size; }
+    .p-t-#{$val} { padding-top   : $size; }
+    .p-r-#{$val} { padding-right : $size; }
+    .p-b-#{$val} { padding-bottom: $size; }
+    .p-l-#{$val} { padding-left  : $size; }
+  }
+}
+
+// Boilerplate
 .m-x-auto {
   margin-right: auto;
   margin-left:  auto;
@@ -11,29 +48,3 @@
 
 @include generate-margins(10, 10);
 @include generate-paddings(10, 10);
-
-
-@mixin generate-margins($n, $step, $i: 0) when (@i =< @n) {
-  @value: @i * @step;
-
-  .m-@{value}   { margin       : (@value * 1px); }
-  .m-x-@{value} { margin-right : (@value * 1px); margin-left  : (@value * 1px); }
-  .m-y-@{value} { margin-top   : (@value * 1px); margin-bottom: (@value * 1px);}
-  .m-t-@{value} { margin-top   : (@value * 1px); }
-  .m-r-@{value} { margin-right : (@value * 1px); }
-  .m-b-@{value} { margin-bottom: (@value * 1px); }
-  .m-l-@{value} { margin-left  : (@value * 1px); }
-  .generate-margins(@n, @step, (@i + 1));
-}
-.generate-paddings(@n, @step, @i: 0) when (@i =< @n) {
-  @value: @i * @step;
-
-  .p-@{value}   { padding       : (@value * 1px); }
-  .p-x-@{value} { padding-right : (@value * 1px); padding-left  : (@value * 1px);}
-  .p-y-@{value} { padding-top   : (@value * 1px); padding-bottom: (@value * 1px);}
-  .p-t-@{value} { padding-top   : (@value * 1px); }
-  .p-r-@{value} { padding-right : (@value * 1px); }
-  .p-b-@{value} { padding-bottom: (@value * 1px); }
-  .p-l-@{value} { padding-left  : (@value * 1px); }
-  .generate-paddings(@n, @step, (@i + 1));
-}
