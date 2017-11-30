@@ -13,7 +13,7 @@ now, is just my playground :)
 Technologies
 ---------------
 
-- [LESS](http://lesscss.org/)
+- [SASS](http://sass-lang.com/)
 - [react-styleguidist](https://github.com/styleguidist/react-styleguidist)
 
 
