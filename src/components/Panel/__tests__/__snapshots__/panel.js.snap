@@ -5,14 +5,14 @@ exports[`component <Panel /> Should render danger a title on header 1`] = `
   className="panel"
 >
   <div
-    className="panel-title"
+    className="panel__title"
   >
     <span>
       danger
     </span>
   </div>
   <div
-    className="panel-body"
+    className="panel__body"
   >
     Lorem Ipsum
   </div>
@@ -24,7 +24,7 @@ exports[`component <Panel /> should render correctly 1`] = `
   className="panel"
 >
   <div
-    className="panel-body"
+    className="panel__body"
   >
     Lorem Ipsum
   </div>

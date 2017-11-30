@@ -2,16 +2,18 @@
 
 exports[`component <Switch /> should render checked 1`] = `
 <div
-  className="form-switch"
+  className="form-switch form-switch--checked"
 >
   <input
     checked={true}
+    className="form-switch__cb"
     disabled={false}
     id="sw"
     onChange={[Function]}
     type="checkbox"
   />
   <label
+    className="form-switch__ball"
     htmlFor="sw"
   />
 </div>
@@ -23,12 +25,14 @@ exports[`component <Switch /> should render correctly 1`] = `
 >
   <input
     checked={false}
+    className="form-switch__cb"
     disabled={false}
     id="sw"
     onChange={[Function]}
     type="checkbox"
   />
   <label
+    className="form-switch__ball"
     htmlFor="sw"
   />
 </div>
@@ -36,16 +40,18 @@ exports[`component <Switch /> should render correctly 1`] = `
 
 exports[`component <Switch /> should render disabled 1`] = `
 <div
-  className="form-switch"
+  className="form-switch form-switch--disabled"
 >
   <input
     checked={false}
+    className="form-switch__cb"
     disabled={true}
     id="sw"
     onChange={[Function]}
     type="checkbox"
   />
   <label
+    className="form-switch__ball"
     htmlFor="sw"
   />
 </div>
@@ -53,16 +59,18 @@ exports[`component <Switch /> should render disabled 1`] = `
 
 exports[`component <Switch /> should render texted 1`] = `
 <div
-  className="form-switch texted"
+  className="form-switch form-switch--texted"
 >
   <input
     checked={false}
+    className="form-switch__cb"
     disabled={false}
     id="sw"
     onChange={[Function]}
     type="checkbox"
   />
   <label
+    className="form-switch__ball"
     htmlFor="sw"
   />
 </div>
@@ -74,12 +82,14 @@ exports[`component <Switch /> should trigger onChange 1`] = `
 >
   <input
     checked={false}
+    className="form-switch__cb"
     disabled={false}
     id="sw"
     onChange={[Function]}
     type="checkbox"
   />
   <label
+    className="form-switch__ball"
     htmlFor="sw"
   />
 </div>

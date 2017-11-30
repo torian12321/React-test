@@ -6,6 +6,7 @@ exports[`component <ImgCard /> should render correctly 1`] = `
 >
   <img
     alt={undefined}
+    className="imageCard__img"
     role="presentation"
     src="img.png"
   />
@@ -18,10 +19,13 @@ exports[`component <ImgCard /> should render with alt text 1`] = `
 >
   <img
     alt="image description"
+    className="imageCard__img"
     role={null}
     src="img.png"
   />
-  <figcaption>
+  <figcaption
+    className="imageCard__caption"
+  >
     image description
   </figcaption>
 </figure>
@@ -33,10 +37,13 @@ exports[`component <ImgCard /> should render with alt text 2`] = `
 >
   <img
     alt="image description"
+    className="imageCard__img"
     role={null}
     src="img.png"
   />
-  <figcaption>
+  <figcaption
+    className="imageCard__caption"
+  >
     caption text
   </figcaption>
 </figure>

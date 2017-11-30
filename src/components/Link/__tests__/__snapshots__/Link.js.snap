@@ -11,7 +11,7 @@ exports[`component <Link /> should render correctly 1`] = `
 
 exports[`component <Link /> should render preview link 1`] = `
 <a
-  className="link preview"
+  className="link link--preview"
   href="https://www.google.ie"
 >
   Extenal link

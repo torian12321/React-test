@@ -2,7 +2,7 @@
 
 exports[`component <Avatar /> Should render small danger State 1`] = `
 <div
-  className="avatar danger"
+  className="avatar avatar--danger"
   style={
     Object {
       "backgroundImage": "url(img.png)",
@@ -13,7 +13,7 @@ exports[`component <Avatar /> Should render small danger State 1`] = `
 
 exports[`component <Avatar /> Should render small size 1`] = `
 <div
-  className="avatar sm"
+  className="avatar avatar--sm"
   style={
     Object {
       "backgroundImage": "url(img.png)",

@@ -2,7 +2,7 @@
 
 exports[`component <Divider /> Should render a texted version 1`] = `
 <hr
-  className="divider divider_texted"
+  className="divider divider--texted"
   data-content="Chapter 1"
 />
 `;

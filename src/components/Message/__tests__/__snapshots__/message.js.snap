@@ -2,7 +2,7 @@
 
 exports[`component <Message /> Should render danger type 1`] = `
 <div
-  className="message danger message--danger"
+  className="message message--danger"
 >
   Lorem Ipsum
 </div>
