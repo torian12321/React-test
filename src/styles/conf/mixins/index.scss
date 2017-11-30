@@ -4,7 +4,9 @@
 @import "./_breakpoints.scss";
 @import "./_clearfix.scss";
 @import "./_filters.scss";
+@import "./_flex.scss";
 @import "./_font-size.scss";
+@import "./_oneLineText.scss";
 @import "./_placeholder.scss";
 @import "./_smart-colors.scss";
 @import "./_transform.scss";
@@ -54,24 +56,11 @@
   filter: alpha(opacity=$IEValue);
 }
 
-@mixin flex() {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 @mixin shadow ($shadows...) {
   @if($shadows = "") {
     $shadows: $shadow;
   }
   @include css3-prefix('box-shadow', $shadows);
-}
-
-@mixin oneLineText() {
-  text-overflow: ellipsis;
-  overflow     : hidden;
-  white-space  : nowrap;
 }
 
 @mixin userSelect($select: text){
