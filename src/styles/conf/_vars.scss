@@ -2,7 +2,7 @@
 // //--- Breakpints ----
 // //-------------------
 $bp_xs: 767px;
-$bp_sm: 768px;		//@bp_xs + 1px
+$bp_sm: $bp_xs + 1;
 $bp_md: 992px;
 $bp_lg: 1200px;
 
@@ -23,12 +23,10 @@ $container-lg: (1140px + $grid-gutter-width);
 // //-------------------
 // //--- Directories ---
 // //-------------------
-// @imgDir   : '../img';
-// @iconsDir : '@{imgDir}/icons';
-// @defImgDir: '@{imgDir}/default';
-
-// @fontDir       : '../fonts';
-// @fontAwesomeDir: '@{fontDir}/fontAwesome';
+$fontDir  : '../fonts/';
+$imgDir   : '../img/';
+$iconsDir : $imgDir + 'icons/';
+$defImgDir: $imgDir + 'default/';
 
 // //-------------------
 // //----- Colors ------
