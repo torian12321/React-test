@@ -14,17 +14,17 @@ import {
 const Main = props =>(
   <Container>
 
-  <Tabs>
-  <Tabs.Panel label="Tab 1">
+    <Tabs>
+      <Tabs.Panel label="Tab 1">
       This is my tab 1 contents!!!!
-  </Tabs.Panel>
-  <Tabs.Panel label="Tab 2">
-      <div>This is my tab 2 contents!</div>
-  </Tabs.Panel>
-  <Tabs.Panel label="Tab 3">
-      <h1>Content 3</h1>
-  </Tabs.Panel>
-</Tabs>
+        </Tabs.Panel>
+      <Tabs.Panel label="Tab 2">
+        <div>This is my tab 2 contents!</div>
+      </Tabs.Panel>
+      <Tabs.Panel label="Tab 3">
+        <h1>Content 3</h1>
+      </Tabs.Panel>
+    </Tabs>
 
 
     <Row>
