@@ -6,7 +6,7 @@ $quote-icon-size : .8em !default;
 $quote-icon-color: $themeColor_2 !default;
 
 // Block
-.quote{
+.quote {
 	font-size  : $quote-fontSize;
 	position   : relative;
 	display    : inline-block;
@@ -19,14 +19,14 @@ $quote-icon-color: $themeColor_2 !default;
   @include font_elegant();
   
   // Elements
-	&__author{
+	&__author {
 		display   : block;
 		margin-top: 1em;
 		font-size : $quote-icon-size;
 		text-align: right;
 		opacity   : .8;
 	}
-	&__icon{
+	&__icon {
 		position : absolute;
 		top      : -.2em;
 		font-size: 2.5em;
