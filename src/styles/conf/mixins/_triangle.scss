@@ -1,8 +1,8 @@
 @mixin css-triangle(
-  $direction,
-  $size    : 6px,
-  $color   : $themeColor_1,  
-  $round   : false
+  $direction: up,
+  $size     : 6px,
+  $color    : $themeColor_1,  
+  $round    : false
 ){
   content : '';
   position: absolute;
