@@ -26,7 +26,7 @@ class Modal extends React.Component {
   }
   
   render(){
-    return (this.state.isOpen ? (
+    return (this.state.isOpen &&
       <div className={classNames('modal', this.props.className)}>
         <div className='modal__bg' />
         <div className='modal__container'>
@@ -36,7 +36,7 @@ class Modal extends React.Component {
           </div>
         </div>
       </div>
-    ) : null)
+    )
   }
 };
 

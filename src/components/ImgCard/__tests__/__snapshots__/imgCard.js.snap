@@ -20,7 +20,7 @@ exports[`component <ImgCard /> should render with alt text 1`] = `
   <img
     alt="image description"
     className="imageCard__img"
-    role={null}
+    role={false}
     src="img.png"
   />
   <figcaption
@@ -38,7 +38,7 @@ exports[`component <ImgCard /> should render with alt text 2`] = `
   <img
     alt="image description"
     className="imageCard__img"
-    role={null}
+    role={false}
     src="img.png"
   />
   <figcaption

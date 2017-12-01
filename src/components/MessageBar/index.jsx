@@ -8,7 +8,7 @@ class MessageBar extends React.Component {
       return(
         <div className={classNames(
           'messageBar',
-          this.props.type ? `messageBar--${this.props.type}` : null,
+          this.props.type && `messageBar--${this.props.type}`,
           this.props.className,
         )}>
           {this.props.children}

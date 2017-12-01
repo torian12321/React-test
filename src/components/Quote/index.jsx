@@ -9,9 +9,8 @@ class Quote extends React.PureComponent {
     return(
       <blockquote className={classNames('quote', this.props.className)} cite={this.props.cite}>
         {this.props.children}
-        {this.props.author ?
-          <span className="quote__author">{ this.props.author }</span> :
-          null
+        {this.props.author &&
+          <span className="quote__author">{ this.props.author }</span>
         }
         <Icon className="quote__icon quote__icon--open"  name="quote" />
         <Icon className="quote__icon quote__icon--close" name="quote" rotate={180} />

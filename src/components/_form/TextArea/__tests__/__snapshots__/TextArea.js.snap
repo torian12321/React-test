@@ -5,7 +5,7 @@ exports[`component <TextArea /> should render correctly 1`] = `
   className="styled-input"
 >
   <textarea
-    className={null}
+    className={false}
     defaultValue={undefined}
     disabled={false}
     id="ta"
@@ -22,7 +22,7 @@ exports[`component <TextArea /> should render disabled 1`] = `
   className="styled-input"
 >
   <textarea
-    className={null}
+    className={false}
     defaultValue={undefined}
     disabled={true}
     id="ta"
@@ -39,7 +39,7 @@ exports[`component <TextArea /> should render placeholder 1`] = `
   className="styled-input"
 >
   <textarea
-    className={null}
+    className={false}
     defaultValue={undefined}
     disabled={false}
     id="ta"

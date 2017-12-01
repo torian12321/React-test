@@ -10,7 +10,7 @@ class Link extends React.PureComponent {
         href     ={this.props.href}
         className={classNames(
           'link',
-          this.props.preview ? 'link--preview' : null,
+          this.props.preview && 'link--preview',
           this.props.className
         )}
       >

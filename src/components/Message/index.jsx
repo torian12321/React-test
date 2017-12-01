@@ -8,8 +8,8 @@ class Message extends React.Component {
       return(
         <div className={classNames(
           'message',
-          this.props.type      ? `message--${this.props.type}` : null,
-          this.props.important ? 'message--important'          : null,
+          this.props.type      && `message--${this.props.type}`,
+          this.props.important && 'message--important',
           this.props.className,
         )}>
           {this.props.children}

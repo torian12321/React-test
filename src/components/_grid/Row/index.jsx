@@ -6,10 +6,7 @@ import './_style.scss';
 class Row extends React.Component {
   render() {
     return (
-      <div  className={classNames(
-        'grid-row',
-        this.props.className)}
-      >
+      <div  className={classNames('grid-row', this.props.className)}>
         {this.props.children}
       </div>
     )

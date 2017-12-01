@@ -10,28 +10,28 @@ class Col extends React.Component {
     return(
       <div  className={classNames(
         'col',
-        props.xs ? `xs-${props.xs}` : null,
-        props.sm ? `sm-${props.sm}` : null,
-        props.md ? `md-${props.md}` : null,
-        props.lg ? `lg-${props.lg}` : null,
+        props.xs && `xs-${props.xs}`,
+        props.sm && `sm-${props.sm}`,
+        props.md && `md-${props.md}`,
+        props.lg && `lg-${props.lg}`,
 
         // Pull
-        props.xsPull ? `xs-pull-${props.xsPull}` : null,
-        props.smPull ? `sm-pull-${props.smPull}` : null,
-        props.mdPull ? `md-pull-${props.mdPull}` : null,
-        props.lgPull ? `lg-pull-${props.lgPull}` : null,
+        props.xsPull && `xs-pull-${props.xsPull}`,
+        props.smPull && `sm-pull-${props.smPull}`,
+        props.mdPull && `md-pull-${props.mdPull}`,
+        props.lgPull && `lg-pull-${props.lgPull}`,
 
         // Push
-        props.xsPush ? `xs-push-${props.xsPush}` : null,
-        props.smPush ? `sm-push-${props.smPush}` : null,
-        props.mdPush ? `md-push-${props.mdPush}` : null,
-        props.lgPush ? `lg-push-${props.lgPush}` : null,
+        props.xsPush && `xs-push-${props.xsPush}`,
+        props.smPush && `sm-push-${props.smPush}`,
+        props.mdPush && `md-push-${props.mdPush}`,
+        props.lgPush && `lg-push-${props.lgPush}`,
 
         // Offset
-        props.xsOffset ? `xs-offset-${props.xsOffset}` : null,
-        props.smOffset ? `sm-offset-${props.smOffset}` : null,
-        props.mdOffset ? `md-offset-${props.mdOffset}` : null,
-        props.lgOffset ? `lg-offset-${props.lgOffset}` : null,
+        props.xsOffset && `xs-offset-${props.xsOffset}`,
+        props.smOffset && `sm-offset-${props.smOffset}`,
+        props.mdOffset && `md-offset-${props.mdOffset}`,
+        props.lgOffset && `lg-offset-${props.lgOffset}`,
         
         props.className
       )}>

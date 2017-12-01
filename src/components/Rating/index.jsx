@@ -15,8 +15,8 @@ class Rating extends React.PureComponent {
         <Icon
           key      = {i}
           name     = {this.props.icon}
-          color    = {(i+1) > rate ? null : this.props.color}
-          className= {(i+1) > rate ? 'o'  : null}
+          color    = {!(i+1) > rate ? this.props.color : null}
+          className= {(i+1)  > rate ? 'o' : null}
         />
       );
     }

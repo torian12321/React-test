@@ -11,7 +11,7 @@ exports[`component <Img /> should render correctly 1`] = `
 exports[`component <Img /> should render with alt text 1`] = `
 <img
   alt="image description"
-  role={null}
+  role={false}
   src="img.png"
 />
 `;

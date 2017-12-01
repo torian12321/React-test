@@ -58,7 +58,7 @@ class Input extends React.Component {
 				<input
 					id           = {id}
 					type         = {this.props.type}
-					className    = {this.state.filled ? 'filled': null}
+					className    = {this.state.filled && 'filled'}
 					ref          = {(r) => { this.input = r; }}
 					maxLength    = {this.props.maxlength}
 					onChange     = {this.handleChange}

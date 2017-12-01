@@ -7,11 +7,10 @@ import './_style.scss';
 class Panel extends React.Component {
   render() {
     return(
-      <div className={classNames(
-        'panel',
-        this.props.className
-      )}>
-        <Title text={this.props.title} />
+      <div className={classNames('panel', this.props.className)}>
+        { this.props.title &&
+          <Title text={this.props.title} />
+        }
         <div className='panel__body'>{this.props.children}</div>
       </div>
     )

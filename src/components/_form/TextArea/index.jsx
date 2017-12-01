@@ -57,7 +57,7 @@ class Textarea extends React.Component {
 			>
 				<textarea
 					id           = {id}
-					className    = {this.state.filled ? 'filled': null}
+					className    = {this.state.filled && 'filled'}
 					ref          = {(r) => { this.textArea = r; }}
 					maxLength    = {this.props.maxlength}
 					rows         = {this.props.rows}

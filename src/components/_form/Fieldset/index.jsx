@@ -9,12 +9,11 @@ class Fieldset extends React.Component {
     return (
       <fieldset
         disabled ={this.props.disabled}
-        className={classNames(
-          'fieldset',
-          this.props.className
-        )}>
+        className={classNames('fieldset', this.props.className)}>
+        { this.props.title &&
           <Title text={this.props.title} />
-          {this.props.children}
+        }
+        {this.props.children}
       </fieldset>
     )
   }

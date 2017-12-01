@@ -10,7 +10,7 @@ class Divider extends React.PureComponent {
         data-content={this.props.text}
         className   ={classNames(
           'divider',
-          this.props.text ? 'divider--texted' : null,
+          this.props.text && 'divider--texted',
           this.props.className
         )}
       />

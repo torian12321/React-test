@@ -11,10 +11,10 @@ class Button extends React.Component {
       <button
         className= {classNames(
           'btn',
-          !props.flat ? 'btn--threeD'         : null,
-          props.large ? 'btn--large'          : null,
-          props.color ? `btn--${props.color}` : null,
-          props.type  ? `btn--${props.type}`  : null,
+          !props.flat && 'btn--threeD',
+          props.large && 'btn--large',
+          props.color && `btn--${props.color}`,
+          props.type  && `btn--${props.type}`,
           props.className
         )}
         onClick  = {props.onClick}

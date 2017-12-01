@@ -25,9 +25,9 @@ class Switch extends React.PureComponent {
     return (
       <div className={classNames(
         'form-switch',
-        this.state.checked ? 'form-switch--checked' : null,
-        this.props.texted  ? 'form-switch--texted'  : null,
-        this.props.disabled? 'form-switch--disabled': null,
+        this.state.checked  && 'form-switch--checked',
+        this.props.texted   && 'form-switch--texted',
+        this.props.disabled && 'form-switch--disabled',
         this.props.className
       )}>
         <input

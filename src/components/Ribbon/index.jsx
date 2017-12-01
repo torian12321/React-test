@@ -6,10 +6,7 @@ import './_style.scss';
 class Ribbon extends React.Component {
   render() {
     return(
-      <div className={classNames(
-        'ribbon',
-        this.props.className
-      )}>
+      <div className={classNames('ribbon', this.props.className)}>
         {this.props.children}
       </div>
     )

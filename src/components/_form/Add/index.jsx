@@ -35,7 +35,7 @@ class Add extends React.Component {
     return (
       <div className={classNames(
         'add',
-        this.state.filled ? 'add--filled' : null,
+        this.state.filled && 'add--filled',
         props.className,
       )}>
         <input 

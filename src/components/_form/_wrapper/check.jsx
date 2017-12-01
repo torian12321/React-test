@@ -9,10 +9,7 @@ class Wrapper extends React.Component {
     return (
       <label
         htmlFor  = {this.props.id}
-        className= {classNames(
-          'wrapper-2',
-          this.props.className
-        )}
+        className= {classNames('wrapper-2', this.props.className)}
       >
         {this.props.children}
         <span>{this.props.label}</span>

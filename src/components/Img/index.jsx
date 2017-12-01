@@ -11,7 +11,7 @@ class Img extends React.PureComponent {
         {...other}
         src ={src}
         alt ={alt}
-        role={alt ? null : 'presentation'}
+        role={!alt && 'presentation'}
       />
     )
   }
