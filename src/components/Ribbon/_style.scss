@@ -1,0 +1,54 @@
+@import '../../styles/conf/index.scss';
+
+// Vars
+$ribbon-offset        : 1em !default;
+$ribbon-font-size     : $fontSize !default;
+$ribbon-color-main    : $themeColor_1 !default;
+$ribbon-border-radious: $BRadious !default;
+
+// Mixins
+@mixin ribbon-palette($color: $ribbon-color-main) {
+  background: $color;
+  @include smart-text-color($color);
+
+  &:after {
+    border-top-color: darken($color, 10%);
+  }
+}
+
+// Block
+.ribbon {
+  position   : absolute;
+  font-size  : $ribbon-font-size;
+  right      : -$ribbon-offset;
+  min-width  : 48px;
+  padding    : .4em 1em;
+  line-height: 1em;
+
+  @include rounded($ribbon-border-radious 0 0 $ribbon-border-radious);
+
+  // Create distance between different ribbons
+  @for $index from 1 through 10 {
+    &:nth-child(#{$index}) {
+      top: calc(-1em + (#{$index} * 2.4em));
+    }
+  }
+
+  // arrow
+  &:after{
+    $size: $ribbon-offset;
+
+    content     : '';
+    position    : absolute;
+    top         : 100%;
+    right       : 0;
+    width       : 0;
+    height      : 0;
+    background  : transparent;
+    border      : solid transparent;
+    border-width: $size $size 0 0;
+  }
+
+  // Colors
+  @include ribbon-palette($ribbon-color-main);
+}

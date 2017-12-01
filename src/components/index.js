@@ -21,5 +21,6 @@ export Panel      from './Panel';
 export Progress   from './Progress';
 export Quote      from './Quote';
 export Rating     from './Rating';
+export Ribbon     from './Ribbon';
 export Table      from './Table';
 export Tabs       from './Tabs';
