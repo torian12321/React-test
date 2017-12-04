@@ -1,0 +1,73 @@
+@import '../../styles/conf/index.scss';
+
+// Vars
+$menu-w         : 300px !default;
+$menu-color-bg: darken($white, 5%) !default;
+
+// Styles
+.menu {
+  // http://codepen.io/jeffmccarthyesq/pen/LEEKLZ?editors=0100
+
+  position  : fixed;
+  overflow  : hidden;
+  top       : 0%;
+  width     : $menu-w;
+  height    : 100vh;
+  left      : 0;
+  padding   : 0;
+  display   : block;
+  visibility: hidden;
+  z-index   : 500;
+  transform : translate(-50px);
+  transition: all 0.5s;
+  
+  // Elements
+  &__content {
+    opacity: 0;
+    height : 100vh;
+  }
+   
+  &:before {
+    // Backgroun with boble effect
+    content   : "";
+    position  : absolute;
+    width     : 0;
+    height    : 0;
+    background: menu-color-bg;
+    left      : 0;
+    top       : 10%;
+    -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    @include rounded(50%);
+  }
+
+  // Modifier
+  &--active {
+    display   : block;
+    visibility: visible;
+    transform : translateZ(0px);
+    transition: all 0.5s;
+    @include shadow();
+
+    // Elements
+    .menu__content {
+      position: relative;
+      z-index : 1;
+      opacity : 1;
+      transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    &:before {
+      $size: 200vmax;
+
+      display    : block;
+      top        : 50%;
+      left       : 0;
+      height     : $size;
+      width      : $size;
+      margin-left: -$size / 2;
+      margin-top : -$size / 2;
+      -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  }
+}

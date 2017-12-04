@@ -1,0 +1,52 @@
+@import '../../../styles/conf/index.scss';
+
+// Vars
+$menuButton-size      : 32px !default;
+$menuButton-color-main: $themeColor_3 !default;
+$menuButton-color-sec : $white !default;
+
+// Styles
+.menuButton {
+  font-size  : 50px;
+  position   : fixed;
+  right      : 20px;
+  top        : 20px;
+  width      : 1em;
+  height     : 1em;
+  background : $menuButton-color-main;
+  cursor     : pointer;
+  z-index    : 500;
+  overflow   : hidden;
+  @include shadow();
+  @include rounded-circular();
+  @include transition(opacity);
+
+  // Components
+  div {
+    position  : absolute;
+    display   : block;
+    left      : .235em;
+    width     : .55em;
+    height    : .05em;
+    background: $menuButton-color-sec;
+    @include transition();
+    @include rounded(.05em);
+    &:nth-child(1) {top: .3em;}
+    &:nth-child(2) {top: .5em;}
+    &:nth-child(3) {top: .7em}
+  }
+
+  // Modifiers
+  &--active {
+    div {
+      // Center bar out of circle
+      &:nth-child(2){ left: 1em;}
+
+      // Create X shape
+      &:nth-child(1),
+      &:nth-child(3){ top: .5em; }
+      &:nth-child(3){ @include transform(rotate(45deg));  }
+      &:nth-child(1){ @include transform(rotate(-45deg)); }
+    }
+  }
+}
