@@ -5,6 +5,7 @@ $formCheck-color-main: $themeColor_1 !default;
 $formCheck-color-sec : $themeColor_2 !default;
 $formCheck-color-disable : $fontColor_disable !default;
 
+// Block
 .form-checkBox {
   display    : block;
   position   : relative;
@@ -13,6 +14,7 @@ $formCheck-color-disable : $fontColor_disable !default;
   font-size  : 18px;
   line-height: 1.5;
 
+  // Elements
   input {
     position: absolute;
     z-index : -1;
@@ -55,9 +57,7 @@ $formCheck-color-disable : $fontColor_disable !default;
     }
   }
 
-  //----------------------
-  //----    STATES    ----
-  //----------------------
+  // Modifiers
 
   // Focus
   // Hover
