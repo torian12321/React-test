@@ -1,7 +1,6 @@
 import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
-import Title      from './fieldset_title';
 import './_style.scss';
 
 class Fieldset extends React.Component {
@@ -10,8 +9,8 @@ class Fieldset extends React.Component {
       <fieldset
         disabled ={this.props.disabled}
         className={classNames('fieldset', this.props.className)}>
-        { this.props.title &&
-          <Title text={this.props.title} />
+        {this.props.title &&
+          <legend>{this.props.title}</legend>
         }
         {this.props.children}
       </fieldset>

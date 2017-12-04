@@ -2,7 +2,6 @@ import React      from 'react';
 import PropTypes  from 'prop-types';
 import classNames from 'classnames';
 import Img        from '../Img';
-import Caption    from './ImgCardCaption';
 import './_style.scss';
 
 class ImgCard extends React.PureComponent {
@@ -12,7 +11,9 @@ class ImgCard extends React.PureComponent {
 		return(
       <figure className={classNames('imageCard', this.props.className)}>
         <Img className='imageCard__img' src={this.props.src} alt={this.props.alt} />
-        <Caption text={captionString} />
+        { captionString &&
+          <figcaption className='imageCard__caption'>{captionString}</figcaption>
+        }
       </figure>
 		);
 	}

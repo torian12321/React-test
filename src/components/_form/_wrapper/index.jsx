@@ -2,7 +2,6 @@
 import React        from 'react';
 import PropTypes    from 'prop-types';
 import classNames   from 'classnames';
-import WrapperLabel from './wrapper_label';
 import './_style.scss';
 
 class Wrapper extends React.Component {
@@ -10,7 +9,9 @@ class Wrapper extends React.Component {
     return (
       <div className={classNames('styled-input', this.props.className)}>
         {this.props.children}
-        <WrapperLabel id={this.props.id} text={this.props.label} />   
+        {this.props.label &&
+          <label htmlFor={this.props.id}>{this.props.label}</label>
+        }
         <span />
       </div>
     )
