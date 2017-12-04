@@ -12,7 +12,7 @@
 <Switch texted />
 ```
 
-On change events
+#### On change events
 ```
 <Switch onChange={(v) => alert('The checkbox value is: ' + v)} />
 ```
