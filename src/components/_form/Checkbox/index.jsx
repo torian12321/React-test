@@ -2,7 +2,8 @@ import React      from 'react';
 import PropTypes  from 'prop-types';
 import uniqid     from 'uniqid';
 import classNames from 'classnames';
-import Wrapper    from '../_wrapper/check';
+//import Wrapper    from '../_wrapper/check';
+import './_style.scss';
 
 class Checkbox extends React.Component {
   constructor(props) {
@@ -29,10 +30,14 @@ class Checkbox extends React.Component {
     const id = this.props.id || uniqid('checkBox_');
 
     return (
-      <Wrapper
-        id        = {id}
-        className = {this.props.className}
-        label     = {this.props.label}
+      <label
+        htmlFor  = {id}
+        className= {classNames(
+          'form-checkBox',
+          this.state.checked  && 'form-checkBox--checked',
+          this.props.disabled && 'form-checkBox--disabled',
+          this.props.className
+        )}
       >
         <input
           id      = {id}
@@ -41,7 +46,10 @@ class Checkbox extends React.Component {
           disabled= {this.props.disabled}
           onChange= {this.handleChange}
         />
-      </Wrapper>
+        <span className='form-checkBox__text'>
+          {this.props.label}
+        </span>
+      </label>
     );
   }
 }

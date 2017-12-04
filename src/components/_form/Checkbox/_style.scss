@@ -1,23 +1,25 @@
 @import '../../../styles/conf/index.scss';
 
 // Vars
-$formCheck-color-main: $grey !default;
-$formCheck-color-sec : $themeColor_1 !default;
+$formCheck-color-main: $themeColor_1 !default;
+$formCheck-color-sec : $themeColor_2 !default;
+$formCheck-color-disable : $fontColor_disable !default;
 
-.wrapper-2 {
+.form-checkBox {
   display    : block;
   position   : relative;
   padding    : 0;
   cursor     : pointer;
   font-size  : 18px;
   line-height: 1.5;
+
   input {
     position: absolute;
     z-index : -1;
     opacity : 0;
   }
 
-  span {
+  &__text {
     display: block;
     padding: 0 0 0 1.5em;
     @include transition(color);
@@ -37,20 +39,20 @@ $formCheck-color-sec : $themeColor_1 !default;
     }
 
     &:before{
-      border: .15em solid $colorState_disable;
+      border: .15em solid $formCheck-color-disable;
     }
-  }
-  // Checkbox inside
-    input[type='checkbox'] + span:after{
-    top        : .3em;
-    left       : .3em;
-    border     : .1em solid $black;
-    border-left: none;
-    border-top : none;
-    width      : .4em;
-    height     : .7em;
-    @include scale(0);
-    @include rotate(90deg);
+    // Checkbox inside
+    &:after {
+      top        : .3em;
+      left       : .3em;
+      border     : .1em solid $black;
+      border-left: none;
+      border-top : none;
+      width      : .4em;
+      height     : .7em;
+      opacity    : 0;
+      @include rotate(90deg);
+    }
   }
 
   //----------------------
@@ -60,7 +62,7 @@ $formCheck-color-sec : $themeColor_1 !default;
   // Focus
   // Hover
   input:focus + span,
-  &:hover input + span {
+  &:hover .form-checkBox__text {
     color: $formCheck-color-sec;
     &:before {
       border-color: $formCheck-color-sec;
@@ -68,21 +70,22 @@ $formCheck-color-sec : $themeColor_1 !default;
   }
     
   // Checked
-  input:checked + span {
+  &--checked .form-checkBox__text {
     &:before {
       border-width: .5em;
+      border-color: $formCheck-color-main;
     }
     &:after {
-      @include scale(1);
+      opacity: 1;
       @include rotate(45deg);
     }
   }
 
   // Disabled
-  input:disabled + span {
-    color : $fontColor_disable;
+  &--disabled .form-checkBox__text {
+    color : $formCheck-color-disable !important;
     cursor: not-allowed;
-    &:before{ border-color: $colorState_disable; }
-    &:after { border-color: darken($colorState_disable, 30); }
+    &:before{ border-color: $formCheck-color-disable !important; }
+    &:after { border-color: darken($formCheck-color-disable, 30) !important; }
   }
 }
