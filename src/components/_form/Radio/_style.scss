@@ -1,0 +1,104 @@
+@import '../../../styles/conf/index.scss';
+
+// Vars
+$form-radio-circle-size   : 16px !default;
+$form-radio-color-main    : $themeColor_1 !default;
+$form-radio-color-sec     : $themeColor_2 !default;
+$form-radio-color-disabled: $fontColor_disable !default;
+
+// Block
+.form-rb {
+  display: block;
+
+  &__text{
+    position: relative;
+    padding-left: 21px;
+    cursor: pointer;
+    line-height: 1.4em;
+
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      border: 1px solid $form-radio-color-main;
+      border-radius: 100%;
+      background: #fff;
+      box-sizing: border-box;
+    }
+  }
+
+  
+  input {
+    position: absolute;
+    left: -9999px;
+
+    // Border
+    &:checked+label:before,
+    &:not(:checked)+label:before {
+      
+    }
+    &:not(:checked)+label:before {
+      border-color: $form-radio-color-disabled;
+    }
+    &:not(:checked)+label:hover{
+      color: $form-radio-color-sec;
+      &:before {
+        border-color: $form-radio-color-sec;
+      }
+    } 
+    // Circle
+    &:checked+label:after,
+    &:not(:checked)+label:after {
+      content: '';
+      width: $form-radio-circle-size;
+      height: $form-radio-circle-size;
+      background: radial-gradient(ellipse at center,
+        rgba($form-radio-color-main, 1) 0%,
+        rgba($form-radio-color-main, 1) 38%,
+        rgba(255, 255, 255, 0) 44%,
+        rgba(255, 255, 255, 0) 100%);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      border-radius: 0;
+      transition: all .2s ease;
+      z-index: 1;
+      box-sizing: border-box;
+      transform-origin: 50% 1%;
+    }
+    &:not(:checked)+label:after {
+      opacity: 0;
+      transform: scale(0) translateY(-50%);
+    }
+    &:checked+label:after {
+      opacity: 1;
+      transform: scale(1) translateY(-50%);
+    }
+    //  Disabled
+    &:disabled:checked+label:before {
+      border-color: #cbcbcb;
+    }
+    &:disabled:checked+label:after {
+      background: radial-gradient(ellipse at center,
+        rgba(#cbcbcb, 1) 0%,
+        rgba(#cbcbcb, 1) 43%,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(255, 255, 255, 0) 100%);
+    }
+    &:disabled+label {
+      cursor: not-allowed;
+      color: #cbcbcb;
+    }
+    &:disabled+label:hover:before {
+      border-color: #cbcbcb;
+    }
+    &:disabled:not(:checked)+label:before {
+      background: rgba(243, 243, 243, 1);
+    }
+  }
+  
+}

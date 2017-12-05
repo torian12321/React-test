@@ -2,7 +2,6 @@ import React      from 'react';
 import PropTypes  from 'prop-types';
 import uniqid     from 'uniqid';
 import classNames from 'classnames';
-//import Wrapper    from '../_wrapper/check';
 import './_style.scss';
 
 class Checkbox extends React.Component {
