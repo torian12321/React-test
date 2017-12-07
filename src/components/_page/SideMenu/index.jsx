@@ -1,10 +1,10 @@
-import React      from 'react';
-import PropTypes  from 'prop-types';
-import classNames from 'classnames';
-import MenuButton from './MenuButton';
+import React          from 'react';
+import PropTypes      from 'prop-types';
+import classNames     from 'classnames';
+import SideMenuButton from './SideMenuButton';
 import './_style.scss';
 
-class Menu extends React.Component {
+class SideMenu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,10 +21,12 @@ class Menu extends React.Component {
     return (
       <div className={classNames(
         'menu__wrap',
-        !this.state.isVisible && 'menu__wrap--hidden',
+        !this.state.isVisible && 'sidemenu__wrap--hidden',
         this.state.isOpen     && 'menu__wrap--active'
       )}>
-        <MenuButton isOpen={this.state.isOpen} onClick={this.toggleSlide.bind(this)} />
+        {this.props.btnShow &&
+          <SideMenuButton isOpen={this.state.isOpen} onClick={this.toggleSlide.bind(this)} />
+        }
         <div className={classNames('menu', (this.state.isOpen && 'menu--active'))}>
           <div className="menu__content">{this.props.children}</div>
         </div>
@@ -33,14 +35,16 @@ class Menu extends React.Component {
   }
 }
 
-Menu.propTypes = {
+SideMenu.propTypes = {
   children : PropTypes.any,
-  isOpen   : PropTypes.bool.isRequired,
-  isVisible: PropTypes.bool
+  isOpen   : PropTypes.bool,
+  isVisible: PropTypes.bool,
+  btnShow  : PropTypes.bool
 };
-Menu.defaultProps = {
+SideMenu.defaultProps = {
   isOpen   : false,
-  isVisible: true
+  isVisible: true,
+  btnShow  : true
 };
 
-module.exports = Menu;
+module.exports = SideMenu;

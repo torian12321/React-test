@@ -1,5 +1,6 @@
 export * from './_form';
 export * from './_grid';
+export * from './_page';
 export * from './_others';
 
 export Accordion  from './Accordion';
@@ -14,7 +15,6 @@ export ImgCard    from './ImgCard';
 export Link       from './Link';
 export List       from './List';
 export Loading    from './Loading';
-export Menu       from './Menu';
 export Message    from './Message';
 export MessageBar from './MessageBar';
 export Modal      from './Modal';

@@ -3,7 +3,7 @@ import PropTypes  from 'prop-types';
 import classNames from 'classnames';
 import './_style.scss';
 
-class MenuButton extends React.PureComponent {
+class SideMenuButton extends React.PureComponent {
   render() {
     return (
       <div
@@ -18,12 +18,12 @@ class MenuButton extends React.PureComponent {
   }
 };
 
-MenuButton.propTypes = {
+SideMenuButton.propTypes = {
   isOpen : PropTypes.bool.isRequired,
   onClick: PropTypes.func
 };
-MenuButton.defaultProps = {
+SideMenuButton.defaultProps = {
   isOpen: false
 };
 
-module.exports = MenuButton;
+module.exports = SideMenuButton;
