@@ -32,10 +32,15 @@ $grid-columns: 12 !default;
 }
 
 // Boilerplate
-.col{
+.col {
   float     : left;
+  width     : 100%;
   box-sizing: border-box;
-  padding   : 4px; 
+  padding   : 4px;
+
+  &--elastic {
+    @include transition(width);
+  }
 }
 @include make-rows($prefix-xs);
 @media (min-width: $bp_sm) { @include make-rows($prefix-sm); }

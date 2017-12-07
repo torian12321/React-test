@@ -22,6 +22,26 @@ const imgExample = require ('./_style_styleguide.scss');
 </Container>
 ```
 
+## Cols - Elastic
+Change the width with a transition.
+```
+initialState = {val: 4};
+
+<div>
+  <Range 
+    value    = {state.val}
+    min      = {2}
+    max      = {10}
+    onChange = {(e) => setState({val: e})}
+    texted
+  />
+  <Container className="styleguideExample">
+    <Col elastic xs={state.val}><p>{state.val} Colmns</p></Col>
+    <Col elastic xs={12 - state.val}><p>{12 - state.val} Columns</p></Col>
+  </Container>
+</div>
+```
+
 ## Cols - Nesting
 ```
 <Container className="styleguideExample">
