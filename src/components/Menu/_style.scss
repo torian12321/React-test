@@ -1,7 +1,7 @@
 @import '../../styles/conf/index.scss';
 
 // Vars
-$menu-w         : 300px !default;
+$menu-w       : 300px !default;
 $menu-color-bg: darken($white, 5%) !default;
 
 // Styles
@@ -30,15 +30,17 @@ $menu-color-bg: darken($white, 5%) !default;
   &:before {
     // Backgroun with boble effect
     content   : "";
+    display   : block;
     position  : absolute;
     width     : 0;
     height    : 0;
-    background: menu-color-bg;
+    background: $menu-color-bg;
     left      : 0;
     top       : 10%;
+    margin    : 0;
     -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-    @include rounded(50%);
+    transition        : all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    @include rounded-circular;
   }
 
   // Modifier
@@ -58,16 +60,11 @@ $menu-color-bg: darken($white, 5%) !default;
     }
     &:before {
       $size: 200vmax;
-
-      display    : block;
-      top        : 50%;
-      left       : 0;
-      height     : $size;
-      width      : $size;
-      margin-left: -$size / 2;
-      margin-top : -$size / 2;
-      -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-      transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+      
+      top   : 50%;
+      height: $size;
+      width : $size;
+      margin: (-$size / 2) 0 0 (-$size / 2);
     }
   }
 }

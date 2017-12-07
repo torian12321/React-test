@@ -1,13 +1,13 @@
 @import '../../../styles/conf/index.scss';
 
 // Vars
-$menuButton-size      : 32px !default;
+$menuButton-size      : 50px !default;
 $menuButton-color-main: $themeColor_3 !default;
 $menuButton-color-sec : $white !default;
 
 // Styles
 .menuButton {
-  font-size  : 50px;
+  font-size  : $menuButton-size;
   position   : fixed;
   right      : 20px;
   top        : 20px;
