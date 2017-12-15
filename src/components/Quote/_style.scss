@@ -1,7 +1,7 @@
 @import '../../styles/conf/index.scss';
 
 // Vars
-$quote-fontSize  : $fontSize !default;
+$quote-fontSize  : $font-size !default;
 $quote-icon-size : .8em !default;
 $quote-icon-color: $themeColor_2 !default;
 
@@ -16,7 +16,7 @@ $quote-icon-color: $themeColor_2 !default;
   line-height: 1.75;
 
   @include smart-text-color();
-  @include font_elegant();
+  @include font-elegant();
   
   // Elements
 	&__author {

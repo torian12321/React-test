@@ -1,8 +1,8 @@
-@mixin border-radius ($r: $BRadious) {
+@mixin border-radius ($r: $border-radious) {
   @include css3-prefix('border-radius', $r);
 }
 
-@mixin rounded ($r: $BRadious) {
+@mixin rounded ($r: $border-radious) {
   @include border-radius($r);
 }
 

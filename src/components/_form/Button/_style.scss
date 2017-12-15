@@ -54,7 +54,7 @@ $btn-padding_h  : 24px !default;
   outline        : none !important;
   letter-spacing : 0.8px;
 
-  @include rounded($BRadious);
+  @include rounded();
   @include transition($time:0.20s);
 
   // Status

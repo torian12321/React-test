@@ -41,9 +41,9 @@
 }
 
 @mixin border (
-  $width: $BWidth,
-  $color: $BColor,
-  $style: $BStyle
+  $width: $border-width,
+  $color: $border-color,
+  $style: $border-style
 ){
   border: $width $color $style;
 }

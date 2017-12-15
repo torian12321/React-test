@@ -1,5 +1,8 @@
 @import '../../styles/conf/index.scss';
 
+// Vars
+$accordionGroup-border-r: $border-radious !default;
+
 // Block
 .accordion-group{
   margin: 0 10px;
@@ -14,10 +17,10 @@
     }
     
     &:first-child{
-      @include rounded($BRadious $BRadious 0 0);
+      @include rounded($accordionGroup-border-r $accordionGroup-border-r 0 0);
     }
     &:last-child{
-      @include rounded(0 0 $BRadious $BRadious);
+      @include rounded(0 0 $accordionGroup-border-r $accordionGroup-border-r);
       border-bottom: 0;
     }
   }

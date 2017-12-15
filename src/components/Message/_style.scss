@@ -9,7 +9,7 @@ $message-color-bg    : $white !default;
   display    : block;
   margin     : 20px 0;
   padding    : 20px 10px;
-  border     : $message-color-border $BStyle $BWidth;
+  border     : $message-color-border $border-style $border-width;
   border-left: $message-color-border solid 10px;
   background : $message-color-bg;
   

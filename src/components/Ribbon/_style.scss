@@ -2,9 +2,9 @@
 
 // Vars
 $ribbon-offset        : 1em !default;
-$ribbon-font-size     : $fontSize !default;
+$ribbon-font-size     : $font-size !default;
 $ribbon-color-main    : $themeColor_1 !default;
-$ribbon-border-radious: $BRadious !default;
+$ribbon-border-radious: $border-radious !default;
 
 // Mixins
 @mixin ribbon-palette($color: $ribbon-color-main) {

@@ -1,9 +1,10 @@
 @import '../../styles/conf/index.scss';
 
 // Vars
-$accordion-font-size : $fontSize !default;
+$accordion-font-size : $font-size !default;
 $accordion-color-main: $themeColor_2 !default;
 $accordion-color-sec : $themeColor_1 !default;
+$accordion-border-r  : $border-radious !default;
 $accordion-icon-w    : 14px !default;
 $accordion-icon-h    : 3px !default;
 
@@ -14,7 +15,7 @@ $accordion-icon-h    : 3px !default;
   overflow  : hidden;
   background: $accordion-color-main;
   font-size : $accordion-font-size;
-  @include rounded();
+  @include rounded($accordion-border-r);
   @include transition();
   @include smart-text-color($accordion-color-main);
 

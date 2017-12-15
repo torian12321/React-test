@@ -1,8 +1,9 @@
 @import '../../styles/conf/index.scss';
 
 // Vars
-$table-color-main: $themeColor_2 !default;
-$table-color-sec : $white !default;
+$table-color-main    : $themeColor_2 !default;
+$table-color-sec     : $white !default;
+$table-border-radious: $border-radious !default;
 
 // Mixins
 @mixin tableRow_style($color) {
@@ -39,12 +40,12 @@ $table-color-sec : $white !default;
 
   // Border radious
   thead th {
-    &:first-child{ border-top-left-radius : $BRadious; }
-    &:last-child { border-top-right-radius: $BRadious; }
+    &:first-child{ border-top-left-radius : $table-border-radious; }
+    &:last-child { border-top-right-radius: $table-border-radious; }
   }
   tfoot th {
-    &:first-child{ border-bottom-left-radius : $BRadious;}
-    &:last-child { border-bottom-right-radius: $BRadious;}
+    &:first-child{ border-bottom-left-radius : $table-border-radious;}
+    &:last-child { border-bottom-right-radius: $table-border-radious;}
   }
   
   // Modifiers

@@ -3,7 +3,7 @@
 // Vars
 $panel-color-main: $white !default;
 $panel-color-sec : $themeColor_1 !default;
-$panel-font-size : $fontSize !default;
+$panel-font-size : $font-size !default;
 
 // Block
 .panel {
@@ -27,7 +27,7 @@ $panel-font-size : $fontSize !default;
   &__title{
     background: $panel-color-sec;
     @include smart-text-color($panel-color-sec);
-    @include rounded($BRadious $BRadious 0 0);
+    @include rounded($border-radious $border-radious 0 0);
 
     span{
       text-transform: capitalize;
