@@ -1,0 +1,127 @@
+#### Basic
+```
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Firstname</Th>
+      <Th>Lastname</Th>
+      <Th>Savings</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>Peter</Td>
+      <Td>Griffin</Td>
+      <Td>$100</Td>
+    </Tr>
+    <Tr>
+      <Td>Lois</Td>
+      <Td>Griffin</Td>
+      <Td>$150</Td>
+    </Tr>
+    <Tr>
+      <Td>Joe</Td>
+      <Td>Swanson</Td>
+      <Td>$300</Td>
+    </Tr>
+    <Tr>
+      <Td>Cleveland</Td>
+      <Td>Brown</Td>
+      <Td>$250</Td>
+    </Tr>
+  </Tbody>
+  <Tfoot>
+    <Tr>
+      <Th>Firstname</Th>
+      <Th>Lastname</Th>
+      <Th>Savings</Th>
+    </Tr>
+  </Tfoot>
+</Table>
+```
+
+
+#### Bordered table
+```
+<Table bordered>
+  <Thead>
+    <Tr>
+      <Th>Firstname</Th>
+      <Th>Lastname</Th>
+      <Th>Savings</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>Peter</Td>
+      <Td>Griffin</Td>
+      <Td>$100</Td>
+    </Tr>
+    <Tr>
+      <Td>Lois</Td>
+      <Td>Griffin</Td>
+      <Td>$150</Td>
+    </Tr>
+    <Tr>
+      <Td>Joe</Td>
+      <Td>Swanson</Td>
+      <Td>$300</Td>
+    </Tr>
+    <Tr>
+      <Td>Cleveland</Td>
+      <Td>Brown</Td>
+      <Td>$250</Td>
+    </Tr>
+  </Tbody>
+  <Tfoot>
+    <Tr>
+      <Th>Firstname</Th>
+      <Th>Lastname</Th>
+      <Th>Savings</Th>
+    </Tr>
+  </Tfoot>
+</Table>
+```
+
+
+#### Non striped table
+```
+<Table striped={false}>
+  <Thead>
+    <Tr>
+      <Th>Firstname</Th>
+      <Th>Lastname</Th>
+      <Th>Savings</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>Peter</Td>
+      <Td>Griffin</Td>
+      <Td>$100</Td>
+    </Tr>
+    <Tr>
+      <Td>Lois</Td>
+      <Td>Griffin</Td>
+      <Td>$150</Td>
+    </Tr>
+    <Tr>
+      <Td>Joe</Td>
+      <Td>Swanson</Td>
+      <Td>$300</Td>
+    </Tr>
+    <Tr>
+      <Td>Cleveland</Td>
+      <Td>Brown</Td>
+      <Td>$250</Td>
+    </Tr>
+  </Tbody>
+  <Tfoot>
+    <Tr>
+      <Th>Firstname</Th>
+      <Th>Lastname</Th>
+      <Th>Savings</Th>
+    </Tr>
+  </Tfoot>
+</Table>
+```

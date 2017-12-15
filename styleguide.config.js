@@ -16,6 +16,7 @@ module.exports = {
 	sections: [
     { name: 'Grid'      , components: 'src/components/_grid/**/index.jsx' },
     { name: 'Components', components: 'src/components/*/index.jsx' },
+    { name: 'Table'     , components: 'src/components/_table/**/index.jsx' },
     { name: 'Form'      , components: 'src/components/_form/**/index.jsx' },
     { name: 'Others'    , components: 'src/components/_others/**/index.jsx' },
 	],
