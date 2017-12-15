@@ -1,6 +1,6 @@
 export * from './_form';
 export * from './_grid';
-export * from './_page';
+export * from './_layout';
 export * from './_others';
 export * from './_table';
 

@@ -1,7 +1,7 @@
 // http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
 
 @function calculateRem($size) {
-  $remSize: $size / $fontSize;
+  $remSize: $size / $font-size;
   @return $remSize * 1rem;
 }
 

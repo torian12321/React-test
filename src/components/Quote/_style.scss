@@ -1,13 +1,13 @@
 @import '../../styles/conf/index.scss';
 
 // Vars
-$quote-fontSize  : $font-size !default;
+$quote-font-size  : $font-size !default;
 $quote-icon-size : .8em !default;
 $quote-icon-color: $themeColor_2 !default;
 
 // Block
 .quote {
-	font-size  : $quote-fontSize;
+	font-size  : $quote-font-size;
 	position   : relative;
 	display    : inline-block;
 	max-width  : $bp_lg * 0.8;
