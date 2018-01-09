@@ -19,4 +19,4 @@ Technologies
 
 Autor
 ---------------
-[Aitor](https://torian12321.github.io/my_web/dist/)
+[Aitor](https://torian12321.github.io/)
