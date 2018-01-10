@@ -12,7 +12,7 @@ import {
 
   // UI
   Article, Progress, Tabs
-} from 'export';
+} from '../components';
 
 const Main = props =>(
   <div>
